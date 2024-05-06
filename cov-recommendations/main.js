@@ -92,18 +92,16 @@ class AppComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.activityLog = _t.first);
       }
     },
-    decls: 4,
+    decls: 3,
     vars: 1,
     consts: [[3, "displayInline"]],
     template: function AppComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "Covenant Recommendations");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "mpage-log-component", 0)(3, "app-component-version");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, "This will pull in the recommendations based on the patient's criteria\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "mpage-log-component", 0)(2, "app-component-version");
       }
       if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("displayInline", true);
       }
     },
