@@ -2,7 +2,8 @@
   "runDtTm": "2024-10-07T18:20:38.000+00:00",
   "elapsedTime": {
     "total": 1500,
-    "pds": 600
+    "pds": 600,
+    "cachedData": 1
   },
   "param1": 1,
   "param2": 1,
