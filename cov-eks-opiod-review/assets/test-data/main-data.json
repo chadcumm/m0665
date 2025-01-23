@@ -1,0 +1,35 @@
+{
+    "runDtTm": "2025-01-23T21:53:35.000+00:00",
+    "patientSource": "{\"PATIENT_SOURCE\":{\"VISITS\":[{\"PERSON_ID\":24479434.000000,\"ENCNTR_ID\":144003729.000000}],\"PATIENTS\":[{\"PERSON_ID\":24479434.000000}]}}",
+    "prsnlId": 0,
+    "positionCd": 0,
+    "position": "",
+    "udsComplianceInd": 1,
+    "udsComplianceRequired": 1,
+    "udsComplianceDtTm": "2025-01-23T21:53:35.000+00:00",
+    "udsComplianceDisplay": "Last Completed: 23-JAN-2025",
+    "udsComplianceError": "A UDS test is required to proceed.",
+    "pdmpComplianceInd": 1,
+    "pdmpComplianceRequired": 1,
+    "pdmpComplianceDtTm": "0000-00-00T00:00:00.000+00:00",
+    "pdmpComplianceDisplay": "",
+    "pdmpComplianceError": "The PDMP must be reviewed before proceeding.",
+    "ctsaComplianceInd": 0,
+    "ctsaComplianceRequired": 0,
+    "ctsaComplianceDtTm": "0000-00-00T00:00:00.000+00:00",
+    "ctsaComplianceDisplay": "",
+    "ctsaComplianceError": "",
+    "apptComplianceInd": 0,
+    "apptComplianceRequired": 0,
+    "apptComplianceDtTm": "0000-00-00T00:00:00.000+00:00",
+    "apptComplianceDisplay": "",
+    "apptComplianceError": "",
+    "contextOptions": [],
+    "cnt": 1,
+    "visits": [
+      {
+        "encntrId": 144003729,
+        "personId": 24479434
+      }
+    ]
+  }
