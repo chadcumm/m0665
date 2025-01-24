@@ -4,7 +4,7 @@
     "prsnlId": 0,
     "positionCd": 0,
     "position": "",
-    "udsComplianceInd": 1,
+    "udsComplianceInd": 0,
     "udsComplianceRequired": 1,
     "udsComplianceDtTm": "2025-01-23T21:53:35.000+00:00",
     "udsComplianceDisplay": "Last Completed: 23-JAN-2025",
