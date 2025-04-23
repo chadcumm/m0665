@@ -7,7 +7,7 @@
         "originatingEncntrId": 143961726,
         "patientName": "ZZZTEST, SURGERY",
         "clinicName": "Fort Sanders Regional Medical Center",
-        "financialClass": "",
+        "financialClass": "Medicare",
         "orderCnt": 1,
         "orderQual": [
           {
@@ -30,7 +30,7 @@
         "originatingEncntrId": 143989723,
         "patientName": "ZZZTEST, AMB ONC",
         "clinicName": "Claiborne Primary Care",
-        "financialClass": "",
+        "financialClass": "Medicare",
         "orderCnt": 10,
         "orderQual": [
           {
