@@ -1,34 +1,13 @@
 {
-    "patientCnt": 5,
+    "patientCnt": 4,
     "patientList": [
-      {
-        "personId": 24431432,
-        "encntrId": 0,
-        "originatingEncntrId": 0,
-        "patientName": "",
-        "clinicName": "",
-        "orderCnt": 1,
-        "orderQual": [
-          {
-            "orderId": 10826778441,
-            "catalogCd": 2553874791,
-            "mnemonic": "US AAA Screening Only",
-            "origOrderDtTm": "2024-11-05T13:14:23.000+00:00",
-            "mcCheckInd": 0,
-            "authorizationInd": 0,
-            "authorization": "",
-            "readyToSendInd": 0,
-            "sentInd": 0,
-            "worklistStatus": ""
-          }
-        ]
-      },
       {
         "personId": 24433436,
         "encntrId": 0,
         "originatingEncntrId": 143961726,
-        "patientName": "",
-        "clinicName": "",
+        "patientName": "ZZZTEST, SURGERY",
+        "clinicName": "Fort Sanders Regional Medical Center",
+        "financialClass": "",
         "orderCnt": 1,
         "orderQual": [
           {
@@ -49,9 +28,10 @@
         "personId": 24443432,
         "encntrId": 0,
         "originatingEncntrId": 143989723,
-        "patientName": "",
-        "clinicName": "",
-        "orderCnt": 11,
+        "patientName": "ZZZTEST, AMB ONC",
+        "clinicName": "Claiborne Primary Care",
+        "financialClass": "",
+        "orderCnt": 10,
         "orderQual": [
           {
             "orderId": 10827071413,
@@ -172,7 +152,18 @@
             "readyToSendInd": 0,
             "sentInd": 0,
             "worklistStatus": ""
-          },
+          }
+        ]
+      },
+      {
+        "personId": 24443432,
+        "encntrId": 0,
+        "originatingEncntrId": 143997722,
+        "patientName": "ZZZTEST, AMB ONC",
+        "clinicName": "Fort Loudoun Medical Center",
+        "financialClass": "Self Pay",
+        "orderCnt": 1,
+        "orderQual": [
           {
             "orderId": 10826991361,
             "catalogCd": 5309722839,
@@ -188,33 +179,12 @@
         ]
       },
       {
-        "personId": 24459432,
-        "encntrId": 0,
-        "originatingEncntrId": 0,
-        "patientName": "",
-        "clinicName": "",
-        "orderCnt": 1,
-        "orderQual": [
-          {
-            "orderId": 10827159503,
-            "catalogCd": 2553874791,
-            "mnemonic": "US AAA Screening Only",
-            "origOrderDtTm": "2025-01-06T17:31:50.000+00:00",
-            "mcCheckInd": 0,
-            "authorizationInd": 0,
-            "authorization": "",
-            "readyToSendInd": 0,
-            "sentInd": 0,
-            "worklistStatus": ""
-          }
-        ]
-      },
-      {
         "personId": 24489432,
         "encntrId": 0,
         "originatingEncntrId": 144015722,
-        "patientName": "",
-        "clinicName": "",
+        "patientName": "ZZZTEST, AMBCPM",
+        "clinicName": "Clinton Family Physicians",
+        "financialClass": "Blue Cross",
         "orderCnt": 3,
         "orderQual": [
           {
