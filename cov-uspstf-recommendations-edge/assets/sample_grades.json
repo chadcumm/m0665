@@ -1,0 +1,80 @@
+{
+    "note": "See README.md for specific usage instructions.",
+    "lastUpdated": "1744643203",
+    "lastUpdatedText": "04/14/2025 10:06:43 EST",
+    "grades": {
+        "D": [
+            "The USPSTF recommends against the service. There is moderate or high certainty that the service has no net benefit or that the harms outweigh the benefits",
+            "The USPSTF recommends against the service. There is moderate or high certainty that the service has no net benefit or that the harms outweigh the benefits"
+        ],
+        "C": [
+            "The USPSTF recommends against routinely providing the service. There may be considerations that support providing the service in an individual patient. There is at least moderate certainty that the net benefit is small.",
+            "The USPSTF recommends against routinely providing the service. There may be considerations that support providing the service in an individual patient. There is at least moderate certainty that the net benefit is small."
+        ],
+        "B": [
+            "The USPSTF recommends the service. There is high certainty that the net benefit is moderate or there is moderate certainty that the net benefit is moderate to substantial.",
+            "The USPSTF recommends the service. There is high certainty that the net benefit is moderate or there is moderate certainty that the net benefit is moderate to substantial."
+        ],
+        "A": [
+            "The USPSTF recommends the service. There is high certainty that the net benefit is substantial.",
+            "The USPSTF recommends the service. There is high certainty that the net benefit is substantial."
+        ],
+        "I": [
+            "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of the service. Evidence is lacking, of poor quality, or conflicting, and the balance of benefits and harms cannot be determined.",
+            "The USPSTF concludes that the current evidence is insufficient to assess the balance of benefits and harms of the service. Evidence is lacking, of poor quality, or conflicting, and the balance of benefits and harms cannot be determined."
+        ]
+    },
+    
+    "categories": {
+        "1": {
+            "name": "Development and Behavior"
+        },
+        "2": {
+            "name": "Obstetric and Gynecologic Conditions"
+        },
+        "3": {
+            "name": "Cancer"
+        },
+        "4": {
+            "name": "Metabolic, nutritional, and Endocrine Conditions"
+        },
+        "5": {
+            "name": "Cardiovascular Disorders (Heart and Vascular Diseases)"
+        },
+        "6": {
+            "name": "Vision and Hearing Disorders"
+        },
+        "7": {
+            "name": "Musculoskeletal Disorders"
+        },
+        "8": {
+            "name": "Mental Health Conditions and Substance Abuse"
+        },
+        "9": {
+            "name": "Perinatal Care"
+        },
+        "10": {
+            "name": "Injury Prevention"
+        },
+        "11": {
+            "name": "Miscellaneous"
+        },
+        "12": {
+            "name": "Infectious Diseases"
+        }
+    },
+    "risks": {
+        "39": {
+            "code": "PREGNANT",
+            "name": "Pregnant"
+        },
+        "40": {
+            "code": "SEXUALLYACTIVE",
+            "name": "Sexually Active"
+        },
+        "41": {
+            "code": "TOBACCO",
+            "name": "Tobacco user"
+        }
+    }
+}
