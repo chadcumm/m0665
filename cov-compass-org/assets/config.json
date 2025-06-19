@@ -1,8 +1,6 @@
 {
-    "contextRoot": "http://cernwsp0665.covhlth.net/discern/p0665.chs_tn.cernerasp.com/mpages/reports",
+    "contextRoot": "http://cernwsb0665.covhlth.net/discern/b0665.chs_tn.cernerasp.com/mpages/reports",
     "domain":[
-        "B0665",
-        "M0665",
-        "P0665"
+        "M0665"
     ]
 }
