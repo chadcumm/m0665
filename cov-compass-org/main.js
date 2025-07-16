@@ -16977,30 +16977,74 @@ class UserPreferencesService {
       encntrId: 0
     }], () => {
       const raw = this.customService.get('userPreferences');
-      if (raw && !raw.error && raw.preferences) {
-        // Map the raw response to UserData
-        const userData = {
-          userId: raw.userId || userId,
-          fullName: raw.fullName || 'Unknown User',
-          username: raw.username || 'UNKNOWN',
-          position: raw.position,
-          preferences: {
-            columns: raw.preferences?.columns || this.columnConfigService.getDefaultColumns(this._currentRoute()),
-            filters: raw.preferences?.filters || _models_user_data_model__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_USER_PREFERENCES.filters,
-            displaySettings: {
-              ...raw.preferences?.displaySettings
-            }
-          },
-          performanceSettings: raw.performanceSettings,
-          runDtTm: raw.runDtTm ? new Date(raw.runDtTm) : new Date()
-        };
-        this.setUserData(userData);
+      // Check if we have preferences in the raw response
+      if (raw && !raw.error && raw.preferences && (raw.preferences.columns || raw.preferences.filters)) {
+        // Use preferences from raw response
+        this.processUserData(userId, raw, raw.preferences);
       } else {
-        // If no preferences found, set default preferences with all tabs enabled
+        // Fall back to DMInfo table for preferences
+        this.loadPreferencesFromDMInfo(userId, raw);
+      }
+    });
+  }
+  /**
+   * Helper method to process user data and preferences from any source
+   * Always uses displaySettings from rawUserData (cov_compass_user_data response)
+   */
+  processUserData(userId, rawUserData, preferences) {
+    const userData = {
+      userId: rawUserData?.userId || userId,
+      fullName: rawUserData?.fullName || 'Unknown User',
+      username: rawUserData?.username || 'UNKNOWN',
+      position: rawUserData?.position,
+      preferences: {
+        columns: preferences?.columns || this.columnConfigService.getDefaultColumns(this._currentRoute()),
+        filters: preferences?.filters || _models_user_data_model__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_USER_PREFERENCES.filters,
+        displaySettings: {
+          // Always use displaySettings from cov_compass_user_data response
+          ...rawUserData?.preferences?.displaySettings
+        }
+      },
+      performanceSettings: rawUserData?.performanceSettings,
+      runDtTm: rawUserData?.runDtTm ? new Date(rawUserData.runDtTm) : new Date()
+    };
+    this.setUserData(userData);
+    this._preferencesLoaded.set(true);
+  }
+  /**
+   * Load user preferences from DMInfo table as fallback
+   */
+  loadPreferencesFromDMInfo(userId, rawUserData) {
+    this.customService.executeDmInfoAction('loadUserPreferences', 'r', [{
+      infoDomain: 'COMPASS_USER_PREFS',
+      infoName: 'USER_PREFERENCES',
+      infoDate: new Date(),
+      infoChar: '',
+      infoNumber: 0,
+      infoLongText: '',
+      infoDomainId: userId // Using prsnl_id as infoDomainId
+    }], () => {
+      const dmInfoResult = this.customService.get('loadUserPreferences');
+      if (dmInfoResult && !dmInfoResult.error && dmInfoResult.length > 0) {
+        try {
+          // Parse the JSON preferences from DMInfo
+          const dmInfoRecord = dmInfoResult[0];
+          const parsedPreferences = dmInfoRecord.infoLongText ? JSON.parse(dmInfoRecord.infoLongText) : {};
+          // Check if we have meaningful preferences data
+          if (parsedPreferences.columns || parsedPreferences.filters) {
+            this.processUserData(userId, rawUserData, parsedPreferences);
+          } else {
+            // No preferences in DMInfo either, use defaults
+            this.setOfflineDefaults(userId);
+          }
+        } catch (parseError) {
+          // JSON parsing failed, use defaults
+          this.setOfflineDefaults(userId);
+        }
+      } else {
+        // No DMInfo record found, use defaults
         this.setOfflineDefaults(userId);
       }
-      // Update loading state
-      this._preferencesLoaded.set(true);
     });
   }
   setOfflineDefaults(userId) {
@@ -17025,6 +17069,7 @@ class UserPreferencesService {
       runDtTm: new Date()
     };
     this.setUserData(defaultUserData);
+    this._preferencesLoaded.set(true);
   }
   /**
    * Get current column configuration using signals
@@ -17126,11 +17171,11 @@ class UserPreferencesService {
       return;
     }
     try {
-      // Prepare preferences data as JSON string
+      // Prepare preferences data as JSON string (excluding displaySettings)
+      // displaySettings are always loaded from cov_compass_user_data response
       const preferencesJson = JSON.stringify({
         columns: userData.preferences.columns,
-        filters: userData.preferences.filters,
-        displaySettings: userData.preferences.displaySettings
+        filters: userData.preferences.filters
       });
       // Use CustomService executeDmInfoAction to write preferences to DM_INFO table
       this.customService.executeDmInfoAction('saveUserPreferences', 'w', [{
@@ -17250,9 +17295,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-16T05:07:49.929Z
-const buildVersion = 'v0.0.183-save-get-user-prefs';
-const packageVersion = '0.0.183';
+// Generated on: 2025-07-16T05:19:04.337Z
+const buildVersion = 'v0.0.184-save-get-user-prefs';
+const packageVersion = '0.0.184';
 const gitBranch = 'save-get-user-prefs';
 
 /***/ }),
@@ -17263,7 +17308,7 @@ const gitBranch = 'save-get-user-prefs';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.183","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.184","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
