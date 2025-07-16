@@ -7159,18 +7159,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PriorAuthSiderComponent: () => (/* binding */ PriorAuthSiderComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/drag-drop */ 7792);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/drag-drop */ 7792);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
 /* harmony import */ var _services_column_config_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../services/column-config.service */ 676);
-/* harmony import */ var _services_user_preferences_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/user-preferences.service */ 6636);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 6575);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 8849);
-/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/icon */ 4740);
-/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/table */ 8138);
-/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 479);
-/* harmony import */ var ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/card */ 9831);
-/* harmony import */ var ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-zorro-antd/switch */ 2913);
-
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-zorro-antd/icon */ 4740);
+/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/table */ 8138);
+/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 479);
+/* harmony import */ var ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/card */ 9831);
+/* harmony import */ var ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/switch */ 2913);
 
 
 
@@ -7184,37 +7182,36 @@ __webpack_require__.r(__webpack_exports__);
 
 function PriorAuthSiderComponent_tr_12_Template(rf, ctx) {
   if (rf & 1) {
-    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "tr", 8)(1, "td", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "span", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "td", 11)(4, "span");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "td", 9)(7, "nz-switch", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function PriorAuthSiderComponent_tr_12_Template_nz_switch_ngModelChange_7_listener($event) {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r4);
+    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr", 8)(1, "td", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "span", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "td", 11)(4, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "td", 9)(7, "nz-switch", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function PriorAuthSiderComponent_tr_12_Template_nz_switch_ngModelChange_7_listener($event) {
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4);
       const column_r1 = restoredCtx.$implicit;
-      const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r3.onColumnDisplayChange(column_r1, $event));
+      const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresetView"](ctx_r3.onColumnDisplayChange(column_r1, $event));
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
   }
   if (rf & 2) {
     const column_r1 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassProp"]("disabled-row", !column_r1.display);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassProp"]("disabled-text", !column_r1.display);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](column_r1.name);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngModel", column_r1.display);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("disabled-row", !column_r1.display);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("disabled-text", !column_r1.display);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](column_r1.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", column_r1.display);
   }
 }
 class PriorAuthSiderComponent {
-  constructor(columnConfig, userPreferences) {
+  constructor(columnConfig) {
     this.columnConfig = columnConfig;
-    this.userPreferences = userPreferences;
     this.columns = [];
     this.selectedColumns = [];
   }
@@ -7223,77 +7220,66 @@ class PriorAuthSiderComponent {
   }
   /**
    * Handle changes to column display when user toggles switches
-   * This method ensures both ColumnConfigService and UserPreferencesService are updated
+   * This method ensures the ColumnConfigService signal is updated
    */
   onColumnDisplayChange(column, display) {
-    console.log(`[DEBUG] onColumnDisplayChange called - column: ${column.name}, display: ${display}`);
     // Update the column display property
     column.display = display;
     // Trigger the ColumnConfigService signal update for reactive UI changes
     this.columnConfig.triggerUpdate();
-    // CRITICAL FIX: Also update the UserPreferencesService so save function gets current state
-    // Get all current columns and update the user preferences
-    const allCurrentColumns = this.columnConfig.getColumns('prior-auth');
-    console.log('[DEBUG] onColumnDisplayChange - updating UserPreferencesService with columns:', allCurrentColumns);
-    this.userPreferences.updateColumns(allCurrentColumns);
   }
   /**
    * Handle drag and drop reordering of columns
-   * Updates column order in both ColumnConfigService and UserPreferencesService
+   * Updates column order in the ColumnConfigService
    */
   onColumnDrop(event) {
     if (event.previousIndex !== event.currentIndex) {
-      console.log(`[DEBUG] onColumnDrop - moving column from ${event.previousIndex} to ${event.currentIndex}`);
       // Move item in local array for immediate UI feedback
-      (0,_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__.moveItemInArray)(this.columns, event.previousIndex, event.currentIndex);
+      (0,_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__.moveItemInArray)(this.columns, event.previousIndex, event.currentIndex);
       // Update the service with the new order
       const route = this.columns[0]?.route || 'prior-auth';
       this.columnConfig.moveColumn(route, event.previousIndex, event.currentIndex);
-      // CRITICAL FIX: Also update the UserPreferencesService so save function gets current state
-      const allCurrentColumns = this.columnConfig.getColumns(route);
-      console.log('[DEBUG] onColumnDrop - updating UserPreferencesService with reordered columns:', allCurrentColumns);
-      this.userPreferences.updateColumns(allCurrentColumns);
     }
   }
   static #_ = this.ɵfac = function PriorAuthSiderComponent_Factory(t) {
-    return new (t || PriorAuthSiderComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_0__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_1__.UserPreferencesService));
+    return new (t || PriorAuthSiderComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_0__.ColumnConfigService));
   };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
     type: PriorAuthSiderComponent,
     selectors: [["app-prior-auth-sider"]],
     inputs: {
       columns: "columns"
     },
-    features: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵNgOnChangesFeature"]],
+    features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]],
     decls: 13,
     vars: 5,
     consts: [[1, "prior-auth-sider"], ["nzTitle", "Column Configuration"], [1, "column-toggle-table", "draggable-table", 3, "nzData", "nzBordered", "nzSize", "nzShowPagination"], [2, "width", "30px", "text-align", "center"], [2, "text-align", "left"], [2, "text-align", "center", "width", "80px"], ["cdkDropList", "", 1, "draggable-tbody", 3, "cdkDropListDropped"], ["cdkDrag", "", "class", "draggable-row", 3, "disabled-row", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "draggable-row"], [2, "text-align", "center", "padding", "4px"], ["cdkDragHandle", "", "nz-icon", "", "nzType", "holder", "nzTheme", "outline", 1, "drag-handle"], [2, "padding", "8px"], ["nzSize", "small", 3, "ngModel", "ngModelChange"]],
     template: function PriorAuthSiderComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "nz-card", 1)(2, "nz-table", 2)(3, "thead")(4, "tr")(5, "th", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, "Order");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "th", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8, "Column");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "th", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](10, "Show");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "tbody", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("cdkDropListDropped", function PriorAuthSiderComponent_Template_tbody_cdkDropListDropped_11_listener($event) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "nz-card", 1)(2, "nz-table", 2)(3, "thead")(4, "tr")(5, "th", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "Order");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "th", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "Column");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "th", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "Show");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "tbody", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("cdkDropListDropped", function PriorAuthSiderComponent_Template_tbody_cdkDropListDropped_11_listener($event) {
           return ctx.onColumnDrop($event);
         });
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](12, PriorAuthSiderComponent_tr_12_Template, 8, 6, "tr", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, PriorAuthSiderComponent_tr_12_Template, 8, 6, "tr", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
       }
       if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzData", ctx.columns)("nzBordered", true)("nzSize", "small")("nzShowPagination", false);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.columns);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("nzData", ctx.columns)("nzBordered", true)("nzSize", "small")("nzShowPagination", false);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.columns);
       }
     },
-    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgForOf, _angular_forms__WEBPACK_IMPORTED_MODULE_5__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_5__.NgModel, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__.CdkDropList, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__.CdkDrag, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__.CdkDragHandle, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_6__.NzIconDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_7__.NzTableComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_7__.NzTableCellDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_7__.NzThMeasureDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_7__.NzTheadComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_7__.NzTbodyComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_7__.NzTrDirective, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_8__["ɵNzTransitionPatchDirective"], ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_9__.NzCardComponent, ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_10__.NzSwitchComponent],
+    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.NgForOf, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgModel, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__.CdkDropList, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__.CdkDrag, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__.CdkDragHandle, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_5__.NzIconDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_6__.NzTableComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_6__.NzTableCellDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_6__.NzThMeasureDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_6__.NzTheadComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_6__.NzTbodyComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_6__.NzTrDirective, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_7__["ɵNzTransitionPatchDirective"], ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_8__.NzCardComponent, ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_9__.NzSwitchComponent],
     styles: [".prior-auth-sider[_ngcontent-%COMP%] {\n  padding: 16px;\n}\n\n.column-config-instructions[_ngcontent-%COMP%] {\n  margin-bottom: 16px;\n  padding: 12px;\n  background-color: #f6f8fa;\n  border-radius: 6px;\n  border-left: 4px solid #1890ff;\n}\n.column-config-instructions[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0 0 8px 0;\n  font-size: 14px;\n}\n.column-config-instructions[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding-left: 20px;\n}\n.column-config-instructions[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  font-size: 13px;\n  color: #666;\n  margin-bottom: 4px;\n}\n\n.draggable-table[_ngcontent-%COMP%]   .draggable-tbody[_ngcontent-%COMP%]   .draggable-row[_ngcontent-%COMP%] {\n  cursor: move;\n  transition: background-color 0.2s ease;\n}\n.draggable-table[_ngcontent-%COMP%]   .draggable-tbody[_ngcontent-%COMP%]   .draggable-row[_ngcontent-%COMP%]:hover {\n  background-color: #f5f5f5;\n}\n.draggable-table[_ngcontent-%COMP%]   .draggable-tbody[_ngcontent-%COMP%]   .draggable-row.disabled-row[_ngcontent-%COMP%] {\n  opacity: 0.6;\n}\n.draggable-table[_ngcontent-%COMP%]   .draggable-tbody[_ngcontent-%COMP%]   .draggable-row.disabled-row[_ngcontent-%COMP%]:hover {\n  background-color: #fafafa;\n}\n.draggable-table[_ngcontent-%COMP%]   .draggable-tbody[_ngcontent-%COMP%]   .draggable-row.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);\n  background: white;\n  border: 1px solid #d9d9d9;\n  border-radius: 6px;\n}\n.draggable-table[_ngcontent-%COMP%]   .draggable-tbody[_ngcontent-%COMP%]   .draggable-row.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  background: #f0f0f0;\n  border: 2px dashed #d9d9d9;\n  opacity: 0.5;\n}\n.draggable-table[_ngcontent-%COMP%]   .draggable-tbody[_ngcontent-%COMP%]   .draggable-row.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n.draggable-table[_ngcontent-%COMP%]   .drag-handle[_ngcontent-%COMP%] {\n  color: #bfbfbf;\n  cursor: grab;\n  font-size: 16px;\n}\n.draggable-table[_ngcontent-%COMP%]   .drag-handle[_ngcontent-%COMP%]:hover {\n  color: #1890ff;\n}\n.draggable-table[_ngcontent-%COMP%]   .drag-handle[_ngcontent-%COMP%]:active {\n  cursor: grabbing;\n}\n.draggable-table[_ngcontent-%COMP%]   .disabled-text[_ngcontent-%COMP%] {\n  color: #bfbfbf;\n}\n\n.cdk-drop-list-dragging[_ngcontent-%COMP%]   .cdk-drag[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.cdk-drop-list-dragging[_ngcontent-%COMP%]   .cdk-drag[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L3ByaW9yLWF1dGgvcHJpb3ItYXV0aC1zaWRlci9wcmlvci1hdXRoLXNpZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtBQUNGOztBQUVBO0VBQ0UsbUJBQUE7RUFDQSxhQUFBO0VBQ0EseUJBQUE7RUFDQSxrQkFBQTtFQUNBLDhCQUFBO0FBQ0Y7QUFDRTtFQUNFLGlCQUFBO0VBQ0EsZUFBQTtBQUNKO0FBRUU7RUFDRSxTQUFBO0VBQ0Esa0JBQUE7QUFBSjtBQUVJO0VBQ0UsZUFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtBQUFOOztBQU9JO0VBQ0UsWUFBQTtFQUNBLHNDQUFBO0FBSk47QUFNTTtFQUNFLHlCQUFBO0FBSlI7QUFPTTtFQUNFLFlBQUE7QUFMUjtBQU9RO0VBQ0UseUJBQUE7QUFMVjtBQVNNO0VBQ0Usb0hBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7QUFQUjtBQVVNO0VBQ0UsbUJBQUE7RUFDQSwwQkFBQTtFQUNBLFlBQUE7QUFSUjtBQVdNO0VBQ0Usc0RBQUE7QUFUUjtBQWNFO0VBQ0UsY0FBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0FBWko7QUFjSTtFQUNFLGNBQUE7QUFaTjtBQWVJO0VBQ0UsZ0JBQUE7QUFiTjtBQWlCRTtFQUNFLGNBQUE7QUFmSjs7QUFvQkE7RUFDRSxzREFBQTtBQWpCRjs7QUFvQkE7RUFDRSxzREFBQTtBQWpCRiIsInNvdXJjZXNDb250ZW50IjpbIi5wcmlvci1hdXRoLXNpZGVyIHtcbiAgcGFkZGluZzogMTZweDtcbn1cblxuLmNvbHVtbi1jb25maWctaW5zdHJ1Y3Rpb25zIHtcbiAgbWFyZ2luLWJvdHRvbTogMTZweDtcbiAgcGFkZGluZzogMTJweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y2ZjhmYTtcbiAgYm9yZGVyLXJhZGl1czogNnB4O1xuICBib3JkZXItbGVmdDogNHB4IHNvbGlkICMxODkwZmY7XG5cbiAgcCB7XG4gICAgbWFyZ2luOiAwIDAgOHB4IDA7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICB9XG5cbiAgdWwge1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nLWxlZnQ6IDIwcHg7XG4gICAgXG4gICAgbGkge1xuICAgICAgZm9udC1zaXplOiAxM3B4O1xuICAgICAgY29sb3I6ICM2NjY7XG4gICAgICBtYXJnaW4tYm90dG9tOiA0cHg7XG4gICAgfVxuICB9XG59XG5cbi5kcmFnZ2FibGUtdGFibGUge1xuICAuZHJhZ2dhYmxlLXRib2R5IHtcbiAgICAuZHJhZ2dhYmxlLXJvdyB7XG4gICAgICBjdXJzb3I6IG1vdmU7XG4gICAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDAuMnMgZWFzZTtcbiAgICAgIFxuICAgICAgJjpob3ZlciB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7XG4gICAgICB9XG5cbiAgICAgICYuZGlzYWJsZWQtcm93IHtcbiAgICAgICAgb3BhY2l0eTogMC42O1xuICAgICAgICBcbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZhZmFmYTtcbiAgICAgICAgfVxuICAgICAgfVxuXG4gICAgICAmLmNkay1kcmFnLXByZXZpZXcge1xuICAgICAgICBib3gtc2hhZG93OiAwIDNweCA2cHggLTRweCByZ2JhKDAsIDAsIDAsIDAuMTIpLCAwIDZweCAxNnB4IDAgcmdiYSgwLCAwLCAwLCAwLjA4KSwgMCA5cHggMjhweCA4cHggcmdiYSgwLCAwLCAwLCAwLjA1KTtcbiAgICAgICAgYmFja2dyb3VuZDogd2hpdGU7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNkOWQ5ZDk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIH1cblxuICAgICAgJi5jZGstZHJhZy1wbGFjZWhvbGRlciB7XG4gICAgICAgIGJhY2tncm91bmQ6ICNmMGYwZjA7XG4gICAgICAgIGJvcmRlcjogMnB4IGRhc2hlZCAjZDlkOWQ5O1xuICAgICAgICBvcGFjaXR5OiAwLjU7XG4gICAgICB9XG5cbiAgICAgICYuY2RrLWRyYWctYW5pbWF0aW5nIHtcbiAgICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDI1MG1zIGN1YmljLWJlemllcigwLCAwLCAwLjIsIDEpO1xuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5kcmFnLWhhbmRsZSB7XG4gICAgY29sb3I6ICNiZmJmYmY7XG4gICAgY3Vyc29yOiBncmFiO1xuICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICBcbiAgICAmOmhvdmVyIHtcbiAgICAgIGNvbG9yOiAjMTg5MGZmO1xuICAgIH1cblxuICAgICY6YWN0aXZlIHtcbiAgICAgIGN1cnNvcjogZ3JhYmJpbmc7XG4gICAgfVxuICB9XG5cbiAgLmRpc2FibGVkLXRleHQge1xuICAgIGNvbG9yOiAjYmZiZmJmO1xuICB9XG59XG5cbi8vIEdsb2JhbCBDREsgZHJhZyBkcm9wIHN0eWxlc1xuLmNkay1kcm9wLWxpc3QtZHJhZ2dpbmcgLmNkay1kcmFnIHtcbiAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDI1MG1zIGN1YmljLWJlemllcigwLCAwLCAwLjIsIDEpO1xufVxuXG4uY2RrLWRyb3AtbGlzdC1kcmFnZ2luZyAuY2RrLWRyYWc6bm90KC5jZGstZHJhZy1wbGFjZWhvbGRlcikge1xuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
   });
 }
@@ -16991,74 +16977,30 @@ class UserPreferencesService {
       encntrId: 0
     }], () => {
       const raw = this.customService.get('userPreferences');
-      // Check if we have preferences in the raw response
-      if (raw && !raw.error && raw.preferences && (raw.preferences.columns || raw.preferences.filters)) {
-        // Use preferences from raw response
-        this.processUserData(userId, raw, raw.preferences);
+      if (raw && !raw.error && raw.preferences) {
+        // Map the raw response to UserData
+        const userData = {
+          userId: raw.userId || userId,
+          fullName: raw.fullName || 'Unknown User',
+          username: raw.username || 'UNKNOWN',
+          position: raw.position,
+          preferences: {
+            columns: raw.preferences?.columns || this.columnConfigService.getDefaultColumns(this._currentRoute()),
+            filters: raw.preferences?.filters || _models_user_data_model__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_USER_PREFERENCES.filters,
+            displaySettings: {
+              ...raw.preferences?.displaySettings
+            }
+          },
+          performanceSettings: raw.performanceSettings,
+          runDtTm: raw.runDtTm ? new Date(raw.runDtTm) : new Date()
+        };
+        this.setUserData(userData);
       } else {
-        // Fall back to DMInfo table for preferences
-        this.loadPreferencesFromDMInfo(userId, raw);
-      }
-    });
-  }
-  /**
-   * Helper method to process user data and preferences from any source
-   * Always uses displaySettings from rawUserData (cov_compass_user_data response)
-   */
-  processUserData(userId, rawUserData, preferences) {
-    const userData = {
-      userId: rawUserData?.userId || userId,
-      fullName: rawUserData?.fullName || 'Unknown User',
-      username: rawUserData?.username || 'UNKNOWN',
-      position: rawUserData?.position,
-      preferences: {
-        columns: preferences?.columns || this.columnConfigService.getDefaultColumns(this._currentRoute()),
-        filters: preferences?.filters || _models_user_data_model__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_USER_PREFERENCES.filters,
-        displaySettings: {
-          // Always use displaySettings from cov_compass_user_data response
-          ...rawUserData?.preferences?.displaySettings
-        }
-      },
-      performanceSettings: rawUserData?.performanceSettings,
-      runDtTm: rawUserData?.runDtTm ? new Date(rawUserData.runDtTm) : new Date()
-    };
-    this.setUserData(userData);
-    this._preferencesLoaded.set(true);
-  }
-  /**
-   * Load user preferences from DMInfo table as fallback
-   */
-  loadPreferencesFromDMInfo(userId, rawUserData) {
-    this.customService.executeDmInfoAction('loadUserPreferences', 'r', [{
-      infoDomain: 'COMPASS_USER_PREFS',
-      infoName: 'USER_PREFERENCES',
-      infoDate: new Date(),
-      infoChar: '',
-      infoNumber: 0,
-      infoLongText: '',
-      infoDomainId: userId // Using prsnl_id as infoDomainId
-    }], () => {
-      const dmInfoResult = this.customService.get('loadUserPreferences');
-      if (dmInfoResult && !dmInfoResult.error && dmInfoResult.length > 0) {
-        try {
-          // Parse the JSON preferences from DMInfo
-          const dmInfoRecord = dmInfoResult[0];
-          const parsedPreferences = dmInfoRecord.infoLongText ? JSON.parse(dmInfoRecord.infoLongText) : {};
-          // Check if we have meaningful preferences data
-          if (parsedPreferences.columns || parsedPreferences.filters) {
-            this.processUserData(userId, rawUserData, parsedPreferences);
-          } else {
-            // No preferences in DMInfo either, use defaults
-            this.setOfflineDefaults(userId);
-          }
-        } catch (parseError) {
-          // JSON parsing failed, use defaults
-          this.setOfflineDefaults(userId);
-        }
-      } else {
-        // No DMInfo record found, use defaults
+        // If no preferences found, set default preferences with all tabs enabled
         this.setOfflineDefaults(userId);
       }
+      // Update loading state
+      this._preferencesLoaded.set(true);
     });
   }
   setOfflineDefaults(userId) {
@@ -17083,7 +17025,6 @@ class UserPreferencesService {
       runDtTm: new Date()
     };
     this.setUserData(defaultUserData);
-    this._preferencesLoaded.set(true);
   }
   /**
    * Get current column configuration using signals
@@ -17185,21 +17126,12 @@ class UserPreferencesService {
       return;
     }
     try {
-      // Get the current columns state from the computed signal (reflects UI changes)
-      const currentColumns = this.getColumns();
-      const currentRoute = this._currentRoute();
-      // Prepare preferences data as JSON string (excluding displaySettings)
-      // displaySettings are always loaded from cov_compass_user_data response
-      // Use current columns state instead of stored userData to capture UI changes
-      const columnsToSave = {
-        ...userData.preferences.columns,
-        [currentRoute]: currentColumns
-      };
+      // Prepare preferences data as JSON string
       const preferencesJson = JSON.stringify({
-        columns: columnsToSave,
-        filters: userData.preferences.filters
+        columns: userData.preferences.columns,
+        filters: userData.preferences.filters,
+        displaySettings: userData.preferences.displaySettings
       });
-      console.log('Saving preferences - JSON being saved:', preferencesJson);
       // Use CustomService executeDmInfoAction to write preferences to DM_INFO table
       this.customService.executeDmInfoAction('saveUserPreferences', 'w', [{
         infoDomain: 'COMPASS_USER_PREFS',
@@ -17318,9 +17250,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-16T06:04:46.050Z
-const buildVersion = 'v0.0.186-save-get-user-prefs';
-const packageVersion = '0.0.186';
+// Generated on: 2025-07-16T06:20:14.929Z
+const buildVersion = 'v0.0.183-save-get-user-prefs';
+const packageVersion = '0.0.183';
 const gitBranch = 'save-get-user-prefs';
 
 /***/ }),
@@ -17331,7 +17263,7 @@ const gitBranch = 'save-get-user-prefs';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.186","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.183","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
