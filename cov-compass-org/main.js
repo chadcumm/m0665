@@ -7995,43 +7995,62 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function GlidianProcessViewComponent_button_2_Template(rf, ctx) {
+function GlidianProcessViewComponent_nz_descriptions_item_4_span_4_Template(rf, ctx) {
   if (rf & 1) {
-    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 33);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_button_2_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15);
-      const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r14.createGlidianAuth());
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r14.glidianActionMessage);
+  }
+}
+function GlidianProcessViewComponent_nz_descriptions_item_4_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 33)(1, "button", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_Template_button_click_1_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r16);
+      const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r15.createGlidianAuth());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "span", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, " Submit to Glidian ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "span", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_span_4_Template, 2, 1, "span", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r0.isCreatingAuth);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpin", ctx_r0.isCreatingAuth);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r0.submitToGlidianLabel, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.glidianActionMessage);
   }
 }
 function GlidianProcessViewComponent_span_7_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "(Required)");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_span_8_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "(Optional)");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_9_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -8043,7 +8062,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_9_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_10_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -8055,7 +8074,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_10_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_11_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 42);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -8067,7 +8086,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_11_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_12_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](2, "date");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -8080,7 +8099,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_12_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_13_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 41)(1, "a", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 44)(1, "a", 45);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
@@ -8094,7 +8113,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_13_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_14_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 46);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](2, "date");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -8115,20 +8134,20 @@ function GlidianProcessViewComponent_div_15_li_4_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const data_r17 = ctx.$implicit;
+    const data_r18 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("", data_r17.name, ":");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("", data_r18.name, ":");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", data_r17.valueText || _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](4, 2, data_r17.valueDate, "short"), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", data_r18.valueText || _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](4, 2, data_r18.valueDate, "short"), " ");
   }
 }
 function GlidianProcessViewComponent_div_15_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 44)(1, "h4");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 47)(1, "h4");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Current Step Data");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_div_15_li_4_Template, 5, 5, "li", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_div_15_li_4_Template, 5, 5, "li", 48);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -8154,23 +8173,23 @@ function GlidianProcessViewComponent_div_16_tr_15_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const action_r19 = ctx.$implicit;
+    const action_r20 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r19.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r20.name);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r19.description);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r20.description);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r19.status);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r20.status);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](9, 4, action_r19.actionDtTm, "short"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](9, 4, action_r20.actionDtTm, "short"));
   }
 }
 function GlidianProcessViewComponent_div_16_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 46)(1, "h4");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 49)(1, "h4");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Milestone History");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "table", 47)(4, "thead")(5, "tr")(6, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "table", 50)(4, "thead")(5, "tr")(6, "th");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](7, "Action");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "th");
@@ -8183,7 +8202,7 @@ function GlidianProcessViewComponent_div_16_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](13, "Date/Time");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](15, GlidianProcessViewComponent_div_16_tr_15_Template, 10, 7, "tr", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](15, GlidianProcessViewComponent_div_16_tr_15_Template, 10, 7, "tr", 48);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
   }
   if (rf & 2) {
@@ -8194,20 +8213,20 @@ function GlidianProcessViewComponent_div_16_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_div_42_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 52);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const action_r21 = ctx.$implicit;
+    const action_r22 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate2"](" ", action_r21.actionId, " (", action_r21.name, ") ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate2"](" ", action_r22.actionId, " (", action_r22.name, ") ");
   }
 }
 function GlidianProcessViewComponent_div_42_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GlidianProcessViewComponent_div_42_div_1_Template, 2, 2, "div", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GlidianProcessViewComponent_div_42_div_1_Template, 2, 2, "div", 51);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -8218,7 +8237,7 @@ function GlidianProcessViewComponent_div_42_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_ng_template_43_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 53);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "No actions");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -8229,11 +8248,21 @@ class GlidianProcessViewComponent {
     this.priorAuthService = priorAuthService;
     this.messagingService = messagingService;
     this.isCreatingAuth = false;
+    /**
+     * Message to display to the user for Glidian actions (e.g., success, error, or info).
+     * Used in the template for user feedback.
+     */
+    this.glidianActionMessage = '';
     this.destroy$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__.Subject();
     this.milestone = data.milestone;
     this.worklistItem = data.worklistItem;
   }
   ngOnInit() {
+    // Debug: Log milestone actions and resubmit logic
+    console.log('[GlidianProcessViewComponent] milestoneActions:', this.milestoneActions);
+    const resubmitActions = this.milestoneActions.filter(action => action.name?.toLowerCase().includes('submit') && action.name?.toLowerCase().includes('glidian') && action.status?.toLowerCase() === 'complete');
+    console.log('[GlidianProcessViewComponent] resubmitActions:', resubmitActions);
+    console.log('[GlidianProcessViewComponent] hasSubmittedToGlidianAction:', this.hasSubmittedToGlidianAction());
     // Subscribe to item refresh events to update modal data when worklist item is refreshed
     this.priorAuthService.itemRefresh$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.takeUntil)(this.destroy$)).subscribe(itemId => {
       if (itemId === this.worklistItem.compass_worklist_id) {
@@ -8259,6 +8288,28 @@ class GlidianProcessViewComponent {
   isQueuedStatus() {
     const currentStep = this.milestone.milestoneData?.find(md => md.type === 'CURRENT_STEP');
     return currentStep?.valueText === 'Queued';
+  }
+  /**
+   * Determines if there are Glidian actions to take for this milestone.
+   * Returns true if the current step is 'Queued' OR if there is a previous completed 'Submitted to Glidian' action.
+   */
+  hasGlidianActions() {
+    return this.isQueuedStatus() || this.hasSubmittedToGlidianAction();
+  }
+  /**
+   * Returns true if there is a completed 'Submitted to Glidian' action for this milestone.
+   * This is used to determine if the button should say 'Resubmit to Glidian'.
+   * Criteria: name === 'Submitted to Glidian' and status === 'Completed'.
+   */
+  hasSubmittedToGlidianAction() {
+    const resubmitActions = this.milestoneActions.filter(action => action.name === 'Submitted to Glidian' && action.status === 'Completed');
+    return resubmitActions.length > 0;
+  }
+  /**
+   * Returns the label for the submit button based on milestone action history.
+   */
+  get submitToGlidianLabel() {
+    return this.hasSubmittedToGlidianAction() ? 'Resubmit to Glidian' : 'Submit to Glidian';
   }
   /**
    * Refresh the modal data when the worklist item is updated
@@ -8294,18 +8345,23 @@ class GlidianProcessViewComponent {
   createGlidianAuth() {
     if (!this.worklistItem?.compass_worklist_id) {
       this.messagingService.error('No worklist item ID available');
+      this.glidianActionMessage = 'No worklist item ID available.';
       return;
     }
     this.isCreatingAuth = true;
+    this.glidianActionMessage = '';
     this.priorAuthService.createGlidianAuth(this.worklistItem.compass_worklist_id).subscribe({
       next: response => {
         // The service already handles success/error messages, so we just need to handle the loading state
         console.log('[GlidianProcessViewComponent.createGlidianAuth] Response received:', response);
         this.isCreatingAuth = false;
+        // Optionally set a user message here
+        this.glidianActionMessage = response?.message || 'Glidian authorization created successfully.';
       },
       error: error => {
         console.error('[GlidianProcessViewComponent.createGlidianAuth] Error:', error);
         this.isCreatingAuth = false;
+        this.glidianActionMessage = 'Failed to create Glidian authorization.';
       }
     });
   }
@@ -8347,13 +8403,14 @@ class GlidianProcessViewComponent {
     selectors: [["app-glidian-process-view"]],
     decls: 48,
     vars: 31,
-    consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Create Glidian Authorization", "class", "submit-glidian-btn", 3, "disabled", "click", 4, "ngIf"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], ["class", "milestone-history", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Create Glidian Authorization", 1, "submit-glidian-btn", 3, "disabled", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [2, "margin-top", "16px"], [4, "ngFor", "ngForOf"], [1, "milestone-history"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"]],
+    consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Glidian Actions", 4, "ngIf"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], ["class", "milestone-history", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], ["nzTitle", "Glidian Actions"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Create Glidian Authorization", 1, "submit-glidian-btn", 3, "disabled", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], ["class", "glidian-action-message", 4, "ngIf"], [1, "glidian-action-message"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [2, "margin-top", "16px"], [4, "ngFor", "ngForOf"], [1, "milestone-history"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"]],
     template: function GlidianProcessViewComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, GlidianProcessViewComponent_button_2_Template, 3, 2, "button", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 3)(4, "nz-descriptions", 4)(5, "nz-descriptions-item", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 2)(3, "nz-descriptions", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_Template, 5, 4, "nz-descriptions-item", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "nz-descriptions-item", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](7, GlidianProcessViewComponent_span_7_Template, 2, 0, "span", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](8, GlidianProcessViewComponent_span_8_Template, 2, 0, "span", 7);
@@ -8409,10 +8466,10 @@ class GlidianProcessViewComponent {
       }
       if (rf & 2) {
         const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](44);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.isQueuedStatus());
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzColumn", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.hasGlidianActions());
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.milestone.status, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
@@ -11324,6 +11381,35 @@ const basePriorAuthData = [{
   },
   actions: []
 }];
+// Add glidianData, renderingInfo, and orderingInfo to each PriorAuthItem in basePriorAuthData
+basePriorAuthData.forEach((item, idx) => {
+  // Add GlidianData (mock values)
+  item.glidianData = {
+    recordId: `GENMOCK${item.compass_worklist_id}`,
+    portalUrl: `https://my.sandbox.glidian.com/app/dashboard/GENMOCK${item.compass_worklist_id}`,
+    latestStatusDtTm: new Date(),
+    latestStatus: 'Draft',
+    latestStatusId: 100000000 + idx,
+    authNumber: '',
+    payorReferenceNumber: ''
+  };
+  // Add RenderingInfo (mock values)
+  item.renderingInfo = {
+    organizationId: 4191332 + idx,
+    locFacilityCd: 4365396101 + idx
+  };
+  // Add OrderingInfo (mock values)
+  item.orderingInfo = {
+    orderingProviderId: 12000000 + idx,
+    orderingProvider: item.orderingProvider,
+    internalProviderInd: 0,
+    orderingProviderInfo: [],
+    orderingLocation: item.orderingLocation,
+    orderingLocationInfo: []
+  };
+  // Optionally add feedback as empty object for compatibility
+  item.feedback = {};
+});
 // Randomize locations and providers
 basePriorAuthData.forEach((item, idx) => {
   item.orderingLocation = orderingLocations[Math.floor(Math.random() * orderingLocations.length)];
@@ -16255,6 +16341,41 @@ class PriorAuthService {
         state: raw.schedule.state || undefined
       };
     }
+    // Map GlidianData if present
+    let glidianData = undefined;
+    if (raw.glidianData) {
+      glidianData = {
+        recordId: raw.glidianData.recordId || '',
+        portalUrl: raw.glidianData.portalUrl || '',
+        latestStatusDtTm: raw.glidianData.latestStatusDtTm ? new Date(raw.glidianData.latestStatusDtTm) : new Date(0),
+        latestStatus: raw.glidianData.latestStatus || '',
+        latestStatusId: raw.glidianData.latestStatusId || 0,
+        authNumber: raw.glidianData.authNumber || '',
+        payorReferenceNumber: raw.glidianData.payorReferenceNumber || ''
+      };
+    }
+    // Map RenderingInfo if present
+    let renderingInfo = undefined;
+    if (raw.renderingInfo) {
+      renderingInfo = {
+        organizationId: raw.renderingInfo.organizationId || 0,
+        locFacilityCd: raw.renderingInfo.locFacilityCd || 0
+      };
+    }
+    // Map OrderingInfo if present
+    let orderingInfo = undefined;
+    if (raw.orderingInfo) {
+      orderingInfo = {
+        orderingProviderId: raw.orderingInfo.orderingProviderId || 0,
+        orderingProvider: raw.orderingInfo.orderingProvider || '',
+        internalProviderInd: raw.orderingInfo.internalProviderInd || 0,
+        orderingProviderInfo: raw.orderingInfo.orderingProviderInfo || [],
+        orderingLocation: raw.orderingInfo.orderingLocation || '',
+        orderingLocationInfo: raw.orderingInfo.orderingLocationInfo || []
+      };
+    }
+    // Map feedback if present
+    let feedback = raw.feedback || undefined;
     const mapped = {
       compass_worklist_id: raw.compassWorklistId || raw.compass_worklist_id || raw.id,
       workflow_id: raw.workflowId,
@@ -16295,7 +16416,13 @@ class PriorAuthService {
       edosDate: raw.edosdate ? new Date(raw.edosdate) : undefined,
       origOrderDtTm: raw.origOrderDtTm ? new Date(raw.origOrderDtTm) : undefined,
       dataRefreshDtTm: new Date(),
-      schedule: schedule // Add the mapped schedule object
+      schedule: schedule,
+      glidianData: glidianData,
+      renderingInfo: renderingInfo,
+      orderingInfo: orderingInfo,
+      financialClass: raw.financialClass || '',
+      reasonForExam: raw.reasonForExam || '',
+      feedback: feedback
     };
     // Successfully mapped raw data to PriorAuthItem with current timestamp
     return mapped;
@@ -17425,9 +17552,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-17T14:31:56.891Z
-const buildVersion = 'v0.0.187-develop';
-const packageVersion = '0.0.187';
+// Generated on: 2025-07-17T17:42:36.573Z
+const buildVersion = 'v0.0.190-develop';
+const packageVersion = '0.0.190';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -17438,7 +17565,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.187","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.190","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
