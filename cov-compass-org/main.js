@@ -8062,7 +8062,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_8_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r0.isCreatingAuth);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r0.isCreatingAuth || !ctx_r0.isEdosTodayOrEarlier())("nzTooltipTitle", !ctx_r0.isEdosTodayOrEarlier() ? "Cannot submit until EDOS date is today or earlier." : "Create Glidian Authorization");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpin", ctx_r0.isCreatingAuth);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
@@ -8401,7 +8401,7 @@ class GlidianProcessViewComponent {
     });
   }
   /**
-   * Create Glidian authorization for this worklist item
+   * Submit to Glidian for this worklist item
    */
   createGlidianAuth() {
     if (!this.worklistItem?.compass_worklist_id) {
@@ -8417,12 +8417,12 @@ class GlidianProcessViewComponent {
         console.log('[GlidianProcessViewComponent.createGlidianAuth] Response received:', response);
         this.isCreatingAuth = false;
         // Optionally set a user message here
-        this.glidianActionMessage = response?.message || 'Glidian authorization created successfully.';
+        this.glidianActionMessage = response?.message || 'Glidian submission created successfully.';
       },
       error: error => {
         console.error('[GlidianProcessViewComponent.createGlidianAuth] Error:', error);
         this.isCreatingAuth = false;
-        this.glidianActionMessage = 'Failed to create Glidian authorization.';
+        this.glidianActionMessage = 'Failed to submit to Glidian.';
       }
     });
   }
@@ -8456,6 +8456,31 @@ class GlidianProcessViewComponent {
   getCurrentStep() {
     return this.milestone.milestoneData?.find(md => md.type === 'CURRENT_STEP')?.valueText;
   }
+  /**
+   * Helper to get the EDOS (Earliest Date of Service) from milestone data.
+   * Returns the valueDate for the milestoneData entry with type 'EDOS', if present.
+   */
+  getEdosDate() {
+    return this.milestone.milestoneData?.find(md => md.type === 'EDOS')?.valueDate;
+  }
+  /**
+   * Returns true if the EDOS date is today or earlier, or if no EDOS date is present.
+   * If the EDOS date is invalid or in the future, disables the submit/resubmit button.
+   */
+  isEdosTodayOrEarlier() {
+    const edos = this.getEdosDate();
+    if (!edos) return true; // If no EDOS, allow by default
+    // Handle both string and Date types
+    const edosDate = edos instanceof Date ? edos : new Date(edos);
+    if (isNaN(edosDate.getTime())) {
+      // Invalid date, disable the button
+      return false;
+    }
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    edosDate.setHours(0, 0, 0, 0);
+    return edosDate <= today;
+  }
   static #_ = this.ɵfac = function GlidianProcessViewComponent_Factory(t) {
     return new (t || GlidianProcessViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_5__.NZ_MODAL_DATA), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService));
   };
@@ -8464,7 +8489,7 @@ class GlidianProcessViewComponent {
     selectors: [["app-glidian-process-view"]],
     decls: 53,
     vars: 33,
-    consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], [1, "refresh-btn-row", 2, "text-align", "right", "margin-bottom", "12px"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "Refresh Item", 3, "disabled", "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Glidian Actions", 4, "ngIf"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], ["nzHeader", "Milestone History", 3, "nzActive", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], ["nzTitle", "Glidian Actions"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Submit to Glidian", 1, "submit-glidian-btn", 3, "disabled", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], ["class", "glidian-action-message", 4, "ngIf"], [1, "glidian-action-message"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [2, "margin-top", "16px"], [4, "ngFor", "ngForOf"], ["nzHeader", "Milestone History", 3, "nzActive"], [1, "milestone-history-scrollable"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"]],
+    consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], [1, "refresh-btn-row", 2, "text-align", "right", "margin-bottom", "12px"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "Refresh Item", 3, "disabled", "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Glidian Actions", 4, "ngIf"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], ["nzHeader", "Milestone History", 3, "nzActive", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], ["nzTitle", "Glidian Actions"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", 1, "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], ["class", "glidian-action-message", 4, "ngIf"], [1, "glidian-action-message"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [2, "margin-top", "16px"], [4, "ngFor", "ngForOf"], ["nzHeader", "Milestone History", 3, "nzActive"], [1, "milestone-history-scrollable"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"]],
     template: function GlidianProcessViewComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
@@ -8477,7 +8502,7 @@ class GlidianProcessViewComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, " Refresh ");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "div", 5)(7, "nz-descriptions", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](8, GlidianProcessViewComponent_nz_descriptions_item_8_Template, 5, 4, "nz-descriptions-item", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](8, GlidianProcessViewComponent_nz_descriptions_item_8_Template, 5, 5, "nz-descriptions-item", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "nz-descriptions-item", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](10);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](11, GlidianProcessViewComponent_span_11_Template, 2, 0, "span", 9);
@@ -16813,7 +16838,7 @@ class PriorAuthService {
             });
           } else {
             // Handle failure case - check for error message in response
-            const errorMessage = replyData?.text || 'Failed to create Glidian authorization';
+            const errorMessage = replyData?.text || 'Failed to submit to Glidian';
             console.log('[PriorAuthService.createGlidianAuth] Failure detected, showing error message');
             this.messagingService.error(errorMessage);
             observer.next({
@@ -17626,9 +17651,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-17T19:03:00.364Z
-const buildVersion = 'v0.0.191-develop';
-const packageVersion = '0.0.191';
+// Generated on: 2025-07-17T19:28:04.964Z
+const buildVersion = 'v0.0.192-develop';
+const packageVersion = '0.0.192';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -17639,7 +17664,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.191","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.192","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
