@@ -6943,13 +6943,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_column_config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/column-config.service */ 676);
 /* harmony import */ var _services_prior_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/prior-auth.service */ 6537);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ 6575);
-/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/icon */ 4740);
-/* harmony import */ var ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/grid */ 7253);
-/* harmony import */ var ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/button */ 8619);
-/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 479);
-/* harmony import */ var ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-zorro-antd/core/wave */ 915);
-/* harmony import */ var ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng-zorro-antd/space */ 1932);
-/* harmony import */ var ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ng-zorro-antd/segmented */ 7464);
+/* harmony import */ var ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/input */ 7852);
+/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/icon */ 4740);
+/* harmony import */ var ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/grid */ 7253);
+/* harmony import */ var ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/button */ 8619);
+/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 479);
+/* harmony import */ var ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng-zorro-antd/core/wave */ 915);
+/* harmony import */ var ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ng-zorro-antd/space */ 1932);
+/* harmony import */ var ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ng-zorro-antd/segmented */ 7464);
+
 
 
 
@@ -6966,51 +6968,51 @@ __webpack_require__.r(__webpack_exports__);
 
 function PriorAuthFilterBarComponent_button_4_Template(rf, ctx) {
   if (rf & 1) {
-    const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 10);
+    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_4_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r7);
-      const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r6.sidebarState.toggle());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r8);
+      const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r7.sidebarState.toggle());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_button_5_Template(rf, ctx) {
   if (rf & 1) {
-    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 12);
+    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_5_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r9);
-      const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r8.userPreferences.saveUserPreferences());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r10);
+      const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r9.userPreferences.saveUserPreferences());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_button_6_Template(rf, ctx) {
   if (rf & 1) {
-    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 14);
+    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_6_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r11);
-      const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r10.resetColumnWidths());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r12);
+      const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r11.resetColumnWidths());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_nz_segmented_9_Template(rf, ctx) {
   if (rf & 1) {
-    const _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "nz-segmented", 16);
+    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "nz-segmented", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("nzValueChange", function PriorAuthFilterBarComponent_nz_segmented_9_Template_nz_segmented_nzValueChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r13);
-      const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r12.onDaysFilterChange($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r14);
+      const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r13.onDaysFilterChange($event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
@@ -7019,37 +7021,50 @@ function PriorAuthFilterBarComponent_nz_segmented_9_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzOptions", ctx_r4.daysOptions);
   }
 }
-function PriorAuthFilterBarComponent_button_10_span_2_Template(rf, ctx) {
+function PriorAuthFilterBarComponent_input_10_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "span", 20);
+    const _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "input", 18, 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("input", function PriorAuthFilterBarComponent_input_10_Template_input_input_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r17);
+      const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵreference"](1);
+      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r16.onGlobalSearch(_r15.value));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+}
+function PriorAuthFilterBarComponent_button_11_span_2_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "span", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+    const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r14.processingCount);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r18.processingCount);
   }
 }
-function PriorAuthFilterBarComponent_button_10_Template(rf, ctx) {
+function PriorAuthFilterBarComponent_button_11_Template(rf, ctx) {
   if (rf & 1) {
-    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_10_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r16);
-      const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r15.onRefreshData());
+    const _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_11_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r20);
+      const ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r19.onRefreshData());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, PriorAuthFilterBarComponent_button_10_span_2_Template, 2, 1, "span", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, PriorAuthFilterBarComponent_button_11_span_2_Template, 2, 1, "span", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+    const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzSpin", ctx_r5.isLoading);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzSpin", ctx_r6.isLoading);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r5.processingCount > 0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r6.processingCount > 0);
   }
 }
 class PriorAuthFilterBarComponent {
@@ -7069,6 +7084,10 @@ class PriorAuthFilterBarComponent {
     this.columnWidthsReset = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.EventEmitter();
     this.daysFilterChange = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.EventEmitter();
     this.refreshData = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.EventEmitter();
+    /**
+     * Emits the global search string to the parent component for filtering.
+     */
+    this.globalSearch = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.EventEmitter();
     // Days filter options for the segmented control
     this.daysOptions = [{
       label: '30',
@@ -7099,6 +7118,12 @@ class PriorAuthFilterBarComponent {
     }
   }
   /**
+   * Handles input from the global search box and emits the value.
+   */
+  onGlobalSearch(value) {
+    this.globalSearch.emit(value);
+  }
+  /**
    * Reset column widths to default
    */
   resetColumnWidths() {
@@ -7122,11 +7147,12 @@ class PriorAuthFilterBarComponent {
     outputs: {
       columnWidthsReset: "columnWidthsReset",
       daysFilterChange: "daysFilterChange",
-      refreshData: "refreshData"
+      refreshData: "refreshData",
+      globalSearch: "globalSearch"
     },
-    decls: 11,
+    decls: 12,
     vars: 0,
-    consts: [["nz-row", "", "nzAlign", "middle", "nzJustify", "end", "nzGutter", "[0,0]"], ["nz-col", "", "nzFlex", "75px"], ["userPreferenceButtons", ""], ["direction", "horizontal", "size", "small"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click", 4, "nzSpaceItem"], ["nz-col", "", "nzFlex", "auto", 1, "fill-rest-col"], [3, "nzOptions", "nzValueChange", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", "class", "refresh-button", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click"], ["nz-icon", "", "nzType", "appstore", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click"], ["nz-icon", "", "nzType", "save", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click"], ["nz-icon", "", "nzType", "undo", "nzTheme", "outline"], [3, "nzOptions", "nzValueChange"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", 1, "refresh-button", 3, "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"], ["class", "processing-badge", 4, "ngIf"], [1, "processing-badge"]],
+    consts: [["nz-row", "", "nzAlign", "middle", "nzJustify", "end", "nzGutter", "[0,0]"], ["nz-col", "", "nzFlex", "75px"], ["userPreferenceButtons", ""], ["direction", "horizontal", "size", "small"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click", 4, "nzSpaceItem"], ["nz-col", "", "nzFlex", "auto", 1, "fill-rest-col"], [3, "nzOptions", "nzValueChange", 4, "nzSpaceItem"], ["nz-input", "", "placeholder", "Global Search", "style", "width: 220px;", 3, "input", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", "class", "refresh-button", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click"], ["nz-icon", "", "nzType", "appstore", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click"], ["nz-icon", "", "nzType", "save", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click"], ["nz-icon", "", "nzType", "undo", "nzTheme", "outline"], [3, "nzOptions", "nzValueChange"], ["nz-input", "", "placeholder", "Global Search", 2, "width", "220px", 3, "input"], ["globalSearchInput", ""], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", 1, "refresh-button", 3, "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"], ["class", "processing-badge", 4, "ngIf"], [1, "processing-badge"]],
     template: function PriorAuthFilterBarComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0)(1, "div", 1, 2)(3, "nz-space", 3);
@@ -7136,11 +7162,12 @@ class PriorAuthFilterBarComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](7, "div", 7)(8, "nz-space", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](9, PriorAuthFilterBarComponent_nz_segmented_9_Template, 1, 1, "nz-segmented", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](10, PriorAuthFilterBarComponent_button_10_Template, 3, 2, "button", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](10, PriorAuthFilterBarComponent_input_10_Template, 2, 0, "input", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](11, PriorAuthFilterBarComponent_button_11_Template, 3, 2, "button", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
       }
     },
-    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_6__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_7__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_7__.NzRowDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_8__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_9__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_10__.NzWaveDirective, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_11__.NzSpaceComponent, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_11__.NzSpaceItemDirective, ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_12__.NzSegmentedComponent],
+    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_6__.NzInputDirective, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_7__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_8__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_8__.NzRowDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_9__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_10__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_11__.NzWaveDirective, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_12__.NzSpaceComponent, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_12__.NzSpaceItemDirective, ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_13__.NzSegmentedComponent],
     styles: ["[_nghost-%COMP%]     .toolbar-row [nz-col] {\n  padding: 0px 0px 0px 0px !important;\n}\n\n[_nghost-%COMP%]     [nz-col] {\n  padding: 0px 0px 0px 0px;\n}\n\n.fill-rest-col[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.refresh-button[_ngcontent-%COMP%] {\n  position: relative;\n}\n.refresh-button[_ngcontent-%COMP%]   .processing-badge[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -8px;\n  right: -8px;\n  background-color: #1890ff;\n  color: white;\n  border-radius: 50%;\n  min-width: 18px;\n  height: 18px;\n  font-size: 10px;\n  font-weight: bold;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2px;\n  line-height: 1;\n  z-index: 1;\n  animation: _ngcontent-%COMP%_pulse 2s infinite;\n}\n\n@keyframes _ngcontent-%COMP%_pulse {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L3ByaW9yLWF1dGgvcHJpb3ItYXV0aC1maWx0ZXItYmFyL3ByaW9yLWF1dGgtZmlsdGVyLWJhci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1DQUFBO0FBQ0Y7O0FBR0E7RUFDRSx3QkFBQTtBQUFGOztBQUdBO0VBQ0UsaUJBQUE7QUFBRjs7QUFJQTtFQUNFLGtCQUFBO0FBREY7QUFHRTtFQUNFLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxZQUFBO0VBQ0EsY0FBQTtFQUNBLFVBQUE7RUFDQSw0QkFBQTtBQURKOztBQU1BO0VBQ0U7SUFDRSxtQkFBQTtFQUhGO0VBS0E7SUFDRSxxQkFBQTtFQUhGO0VBS0E7SUFDRSxtQkFBQTtFQUhGO0FBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCA6Om5nLWRlZXAgLnRvb2xiYXItcm93IFtuei1jb2xdIHtcclxuICBwYWRkaW5nOiAwcHggMHB4IDBweCAwcHggIWltcG9ydGFudDtcclxufVxyXG5cclxuLy8gQWRkIGEgYm9yZGVyIGFuZCBwYWRkaW5nIHRvIGVhY2ggbnotY29sIGluIHRoZSBmaWx0ZXIgYmFyXHJcbjpob3N0IDo6bmctZGVlcCBbbnotY29sXSB7XHJcbiAgcGFkZGluZzogMHB4IDBweCAwcHggMHB4O1xyXG59XHJcblxyXG4uZmlsbC1yZXN0LWNvbCB7XHJcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn1cclxuXHJcbi8vIFN0eWxlcyBmb3IgdGhlIHJlZnJlc2ggYnV0dG9uIHdpdGggcHJvY2Vzc2luZyBiYWRnZVxyXG4ucmVmcmVzaC1idXR0b24ge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBcclxuICAucHJvY2Vzc2luZy1iYWRnZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IC04cHg7XHJcbiAgICByaWdodDogLThweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxODkwZmY7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBtaW4td2lkdGg6IDE4cHg7XHJcbiAgICBoZWlnaHQ6IDE4cHg7XHJcbiAgICBmb250LXNpemU6IDEwcHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nOiAycHg7XHJcbiAgICBsaW5lLWhlaWdodDogMTtcclxuICAgIHotaW5kZXg6IDE7XHJcbiAgICBhbmltYXRpb246IHB1bHNlIDJzIGluZmluaXRlO1xyXG4gIH1cclxufVxyXG5cclxuLy8gUHVsc2UgYW5pbWF0aW9uIGZvciB0aGUgYmFkZ2VcclxuQGtleWZyYW1lcyBwdWxzZSB7XHJcbiAgMCUge1xyXG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxKTtcclxuICB9XHJcbiAgNTAlIHtcclxuICAgIHRyYW5zZm9ybTogc2NhbGUoMS4xKTtcclxuICB9XHJcbiAgMTAwJSB7XHJcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEpO1xyXG4gIH1cclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
   });
 }
@@ -7361,11 +7388,31 @@ const _c0 = function () {
  */
 class PriorAuthComponent {
   /**
+   * Handler for the global search event from the filter bar.
+   * Updates the search term and triggers filtering.
+   */
+  onGlobalSearch(term) {
+    this.globalSearchTerm = term;
+  }
+  /**
    * Reactive computed signal for filtered worklist items
-   * This automatically updates when the service data changes
+   * This automatically updates when the service data changes or the global search term changes
    */
   get filteredWorklistItems() {
-    return this.worklistService.filteredItems();
+    const items = this.worklistService.filteredItems();
+    const search = this.globalSearchTerm.trim().toLowerCase();
+    if (!search) return items;
+    return items.filter(item => {
+      // Patient Name
+      const patientName = item.patient?.name?.toLowerCase() || '';
+      // FIN
+      const fin = item.patient?.fin?.toLowerCase() || '';
+      // MRN
+      const mrn = item.patient?.mrn?.toLowerCase() || '';
+      // Order Description
+      const orderDesc = item.itemDescription?.toLowerCase() || '';
+      return patientName.includes(search) || fin.includes(search) || mrn.includes(search) || orderDesc.includes(search);
+    });
   }
   constructor(columnConfig, worklistService) {
     this.columnConfig = columnConfig;
@@ -7375,6 +7422,10 @@ class PriorAuthComponent {
      * The current days filter value.
      */
     this.currentDaysFilter = 'all';
+    /**
+     * The current global search term for filtering the worklist.
+     */
+    this.globalSearchTerm = '';
     this.listOfColumns = this.columnConfig.getColumns('prior-auth');
   }
   ngOnInit() {
@@ -7449,7 +7500,7 @@ class PriorAuthComponent {
     },
     decls: 5,
     vars: 6,
-    consts: [["nz-row", "", 1, "prior-auth-container", 3, "nzGutter"], ["nz-col", "", 3, "nzSpan"], [3, "sideBarToggle", "columnWidthsReset", "daysFilterChange", "refreshData"], [3, "worklistItems", "loading"]],
+    consts: [["nz-row", "", 1, "prior-auth-container", 3, "nzGutter"], ["nz-col", "", 3, "nzSpan"], [3, "sideBarToggle", "columnWidthsReset", "daysFilterChange", "refreshData", "globalSearch"], [3, "worklistItems", "loading"]],
     template: function PriorAuthComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "app-prior-auth-filter-bar", 2);
@@ -7461,6 +7512,8 @@ class PriorAuthComponent {
           return ctx.onDaysFilterChange($event);
         })("refreshData", function PriorAuthComponent_Template_app_prior_auth_filter_bar_refreshData_2_listener() {
           return ctx.onRefreshData();
+        })("globalSearch", function PriorAuthComponent_Template_app_prior_auth_filter_bar_globalSearch_2_listener($event) {
+          return ctx.onGlobalSearch($event);
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div", 1);
@@ -9135,7 +9188,10 @@ function PatientInfoComponent_div_0_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "date");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](11, "date");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -9145,7 +9201,9 @@ function PatientInfoComponent_div_0_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("FIN: ", ctx_r0.item.patient == null ? null : ctx_r0.item.patient.fin, "");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("DOB: ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 3, ctx_r0.item.patient == null ? null : ctx_r0.item.patient.dateOfBirth, "shortDate"), "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("MRN: ", ctx_r0.item.patient == null ? null : ctx_r0.item.patient.mrn, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("DOB: ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](11, 4, ctx_r0.item.patient == null ? null : ctx_r0.item.patient.dateOfBirth, "shortDate"), "");
   }
 }
 class PatientInfoComponent {
@@ -9177,7 +9235,7 @@ class PatientInfoComponent {
     consts: [[4, "ngIf"], ["href", "javascript:void(0)", 3, "click"], [2, "font-size", "10px"]],
     template: function PatientInfoComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, PatientInfoComponent_div_0_Template, 10, 6, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, PatientInfoComponent_div_0_Template, 12, 7, "div", 0);
       }
       if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.item);
@@ -17367,9 +17425,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-17T14:15:21.715Z
-const buildVersion = 'v0.0.184-develop';
-const packageVersion = '0.0.184';
+// Generated on: 2025-07-17T14:31:56.891Z
+const buildVersion = 'v0.0.187-develop';
+const packageVersion = '0.0.187';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -17380,7 +17438,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.184","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.187","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
