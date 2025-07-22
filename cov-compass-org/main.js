@@ -9882,6 +9882,12 @@ class WorklistTableComponent {
      * Used for displaying details in the drawer
      */
     this._selectedItem = (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.signal)(null);
+    /**
+     * Persistent filter state for each filterable column.
+     * Keyed by column meaning, value is array of selected filter values.
+     * This is used to re-apply filters after data refresh.
+     */
+    this.filterSelections = {};
     // === READ-ONLY SIGNALS FOR EXTERNAL ACCESS ===
     /**
      * Read-only access to expanded row IDs
@@ -9934,6 +9940,10 @@ class WorklistTableComponent {
   ngOnInit() {
     // Load saved column widths
     this.columnConfig.loadColumnWidths();
+    // Restore filter selections if present (e.g., after a data refresh)
+    setTimeout(() => {
+      this.restoreTableFilters();
+    }, 0);
     // Subscribe to automatic item refresh events from the service
     // Note: The service already handles the refresh, so we just need to update the UI state
     this.worklistService.itemRefresh$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.takeUntil)(this.destroy$)).subscribe(itemId => {
@@ -10308,6 +10318,47 @@ class WorklistTableComponent {
     // If you use a local columns array, update it here as well
     // this.columns = this.columnConfig.getColumns('prior-auth');
   }
+  /**
+   * Handler for NG-Zorro table filter changes.
+   * Updates the persistent filterSelections state.
+   * @param filters - Array of filter objects from NG-Zorro table
+   */
+  onTableFilterChange(filters) {
+    // Defensive: handle both array and event cases
+    if (Array.isArray(filters)) {
+      filters.forEach(f => {
+        if (f.key && Array.isArray(f.value)) {
+          this.filterSelections[f.key] = f.value;
+        }
+      });
+    } else if (filters && filters.detail && Array.isArray(filters.detail)) {
+      filters.detail.forEach(f => {
+        if (f.key && Array.isArray(f.value)) {
+          this.filterSelections[f.key] = f.value;
+        }
+      });
+    } else {
+      // Unexpected payload, log for debugging
+      console.warn('Unexpected nzFilterChange payload:', filters);
+    }
+  }
+  /**
+   * Restore table filters after data refresh by setting byDefault on column filters.
+   * This ensures the user's filter selections are re-applied.
+   */
+  restoreTableFilters() {
+    const columns = this.columnConfig.getColumns('prior-auth');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        const selected = this.filterSelections[col.meaning] || [];
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = selected.includes(opt.value);
+        }
+      }
+    }
+    // Trigger update to columns so the table re-renders with correct filters
+    this.columnConfig.triggerUpdate();
+  }
   static #_ = this.ɵfac = function WorklistTableComponent_Factory(t) {
     return new (t || WorklistTableComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_1__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_2__.ColumnConfigService));
   };
@@ -10329,10 +10380,14 @@ class WorklistTableComponent {
     },
     decls: 12,
     vars: 17,
-    consts: [[3, "nzData", "nzBordered", "nzPageSize", "nzShowPagination", "nzLoading"], ["worklistTable", ""], [4, "ngFor", "ngForOf"], ["appResizableColumn", "", "columnKey", "workflow", 3, "minWidth", "maxWidth", "columnResize"], ["appResizableColumn", "", "columnKey", "actions", 3, "minWidth", "maxWidth", "columnResize"], [3, "loading", 4, "ngFor", "ngForOf"], [3, "worklistItem", "visible", "visibleChange", "itemRefreshed"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "width", "columnKey", "minWidth", "maxWidth", "columnResize", 4, "ngIf"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "nzFilters", "nzFilterFn", "width", "columnKey", "minWidth", "maxWidth", "columnResize", 4, "ngIf"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "columnKey", "minWidth", "maxWidth", "columnResize"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "nzFilters", "nzFilterFn", "columnKey", "minWidth", "maxWidth", "columnResize"], [3, "ngSwitch"], [3, "worklistItem", 4, "ngSwitchCase"], ["nz-button", "", "nzType", "default", "style", "cursor: pointer;", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "style", "cursor: pointer;", 3, "disabled", "click", 4, "nzSpaceItem"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["itemInfoCell", ""], [3, "item"], ["codesCell", ""], ["assignedUserCell", ""], ["defaultCell", ""], [3, "worklistItem"], ["nz-button", "", "nzType", "default", 2, "cursor", "pointer", 3, "click"], ["nz-icon", "", "nzType", "eye"], ["nz-button", "", "nzType", "default", 2, "cursor", "pointer", 3, "disabled", "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"]],
+    consts: [[3, "nzData", "nzBordered", "nzPageSize", "nzShowPagination", "nzLoading", "nzFilterChange"], ["worklistTable", ""], [4, "ngFor", "ngForOf"], ["appResizableColumn", "", "columnKey", "workflow", 3, "minWidth", "maxWidth", "columnResize"], ["appResizableColumn", "", "columnKey", "actions", 3, "minWidth", "maxWidth", "columnResize"], [3, "loading", 4, "ngFor", "ngForOf"], [3, "worklistItem", "visible", "visibleChange", "itemRefreshed"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "width", "columnKey", "minWidth", "maxWidth", "columnResize", 4, "ngIf"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "nzFilters", "nzFilterFn", "width", "columnKey", "minWidth", "maxWidth", "columnResize", 4, "ngIf"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "columnKey", "minWidth", "maxWidth", "columnResize"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "nzFilters", "nzFilterFn", "columnKey", "minWidth", "maxWidth", "columnResize"], [3, "ngSwitch"], [3, "worklistItem", 4, "ngSwitchCase"], ["nz-button", "", "nzType", "default", "style", "cursor: pointer;", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "style", "cursor: pointer;", 3, "disabled", "click", 4, "nzSpaceItem"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["itemInfoCell", ""], [3, "item"], ["codesCell", ""], ["assignedUserCell", ""], ["defaultCell", ""], [3, "worklistItem"], ["nz-button", "", "nzType", "default", 2, "cursor", "pointer", 3, "click"], ["nz-icon", "", "nzType", "eye"], ["nz-button", "", "nzType", "default", 2, "cursor", "pointer", 3, "disabled", "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"]],
     template: function WorklistTableComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "nz-table", 0, 1)(2, "thead")(3, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "nz-table", 0, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("nzFilterChange", function WorklistTableComponent_Template_nz_table_nzFilterChange_0_listener($event) {
+          return ctx.onTableFilterChange($event);
+        });
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](2, "thead")(3, "tr");
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](4, WorklistTableComponent_ng_container_4_Template, 3, 2, "ng-container", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](5, "th", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("columnResize", function WorklistTableComponent_Template_th_columnResize_5_listener($event) {
@@ -14147,6 +14202,13 @@ class ColumnConfigService {
   updateColumnFiltersFromData(worklist) {
     // Get current columns and create a mutable copy
     const currentColumns = [...this._columns()];
+    // Capture current filter selections for each column by name
+    const previousSelections = {};
+    for (const col of currentColumns) {
+      if (col.filterable && col.listOfFilter && col.listOfFilter.length > 0) {
+        previousSelections[col.name] = col.listOfFilter.filter(opt => opt.byDefault).map(opt => opt.value);
+      }
+    }
     // Helper function to safely convert values to strings
     const safeString = value => {
       if (value === null || value === undefined) return '';
@@ -14260,6 +14322,15 @@ class ColumnConfigService {
         text: date,
         value: date
       })));
+    }
+    // For each filterable column, re-apply previous selections
+    for (const col of currentColumns) {
+      if (col.filterable && col.listOfFilter && previousSelections[col.name]) {
+        for (const opt of col.listOfFilter) {
+          // Only set byDefault, as 'selected' is not a valid property
+          opt.byDefault = previousSelections[col.name].includes(opt.value);
+        }
+      }
     }
     // Update the signal with the modified columns to trigger reactive updates
     this._columns.set(currentColumns);
@@ -17720,9 +17791,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-21T19:38:54.085Z
-const buildVersion = 'v0.0.201-develop';
-const packageVersion = '0.0.201';
+// Generated on: 2025-07-22T10:05:31.735Z
+const buildVersion = 'v0.0.202-develop';
+const packageVersion = '0.0.202';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -17733,7 +17804,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.201","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.202","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
