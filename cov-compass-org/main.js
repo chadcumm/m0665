@@ -8594,7 +8594,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_4_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", false);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.submitToGlidianLabel !== "Resubmit to Glidian");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.getGlidianId());
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
@@ -8817,7 +8817,7 @@ function GlidianProcessViewComponent_div_49_Template(rf, ctx) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r28.refreshCurrentItem());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "span", 62);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " Refresh Item ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " Refresh Glidian Information ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -8962,14 +8962,12 @@ class GlidianProcessViewComponent {
     this.glidianActionMessage = '';
     this.priorAuthService.createGlidianAuth(this.worklistItem.compass_worklist_id).subscribe({
       next: response => {
-        // The service already handles success/error messages, so we just need to handle the loading state
-        console.log('[GlidianProcessViewComponent.createGlidianAuth] Response received:', response);
+        // Do NOT update this.milestone or this.worklistItem here!
         this.isCreatingAuth = false;
-        // Optionally set a user message here
-        this.glidianActionMessage = response?.message || 'Glidian authorization created successfully.';
+        this.messagingService.success('Glidian action completed. Please refresh to see changes.');
+        this.glidianActionMessage = response?.message || 'Glidian authorization created successfully. Please refresh to see changes.';
       },
       error: error => {
-        console.error('[GlidianProcessViewComponent.createGlidianAuth] Error:', error);
         this.isCreatingAuth = false;
         this.glidianActionMessage = 'Failed to Submit to Glidian.';
       }
@@ -9045,9 +9043,10 @@ class GlidianProcessViewComponent {
     this.isCreatingAuth = true; // Reuse loading state for button spinner
     this.priorAuthService.getLatestGlidianRecord(this.worklistItem.compass_worklist_id).subscribe({
       next: response => {
-        // Handle success or error from the service
+        // Do NOT update this.milestone or this.worklistItem here!
         this.isCreatingAuth = false;
-        this.glidianActionMessage = response?.message || 'Latest Glidian record fetched.';
+        this.messagingService.success('Glidian record fetched. Please refresh to see changes.');
+        this.glidianActionMessage = response?.message || 'Latest Glidian record fetched. Please refresh to see changes.';
       },
       error: error => {
         this.isCreatingAuth = false;
@@ -10569,7 +10568,10 @@ class WorklistTableComponent {
    * ```
    */
   updateStatus(item, status) {
-    this.worklistService.updatePriorAuthItemStatus(item.compass_worklist_id, status);
+    // No-op: Updates are now only applied after refresh.
+    // this.worklistService.updatePriorAuthItemStatus(item.compass_worklist_id, status);
+    // Show message to user
+    // this.messagingService.success('Status updated. Please refresh to see changes.');
   }
   /**
    * Update the priority level of a prior authorization item
@@ -10588,7 +10590,10 @@ class WorklistTableComponent {
    * ```
    */
   updatePriority(item, priority) {
-    this.worklistService.updatePriorAuthItemPriority(item.compass_worklist_id, priority);
+    // No-op: Updates are now only applied after refresh.
+    // this.worklistService.updatePriorAuthItemPriority(item.compass_worklist_id, priority);
+    // Show message to user
+    // this.messagingService.success('Priority updated. Please refresh to see changes.');
   }
   /**
    * Update the status of a specific milestone within a prior authorization item
@@ -10608,7 +10613,10 @@ class WorklistTableComponent {
    * ```
    */
   updateMilestone(item, milestoneName, status) {
-    this.worklistService.updatePriorAuthItemMilestone(item.compass_worklist_id, milestoneName, status);
+    // No-op: Updates are now only applied after refresh.
+    // this.worklistService.updatePriorAuthItemMilestone(item.compass_worklist_id, milestoneName, status);
+    // Show message to user
+    // this.messagingService.success('Milestone updated. Please refresh to see changes.');
   }
   /**
    * Get the appropriate CSS class for milestone status display
@@ -18616,9 +18624,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-24T14:33:00.144Z
-const buildVersion = 'v0.0.209-refresh-updates';
-const packageVersion = '0.0.209';
+// Generated on: 2025-07-24T16:51:11.077Z
+const buildVersion = 'v0.0.210-refresh-updates';
+const packageVersion = '0.0.210';
 const gitBranch = 'refresh-updates';
 
 /***/ }),
@@ -18629,7 +18637,7 @@ const gitBranch = 'refresh-updates';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.209","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.210","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
