@@ -584,8 +584,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function CorepointIntegrationComponent_ng_template_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-tag", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "i", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-tag", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "i", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -600,8 +600,8 @@ function CorepointIntegrationComponent_ng_template_1_Template(rf, ctx) {
 }
 function CorepointIntegrationComponent_div_11_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -612,108 +612,108 @@ function CorepointIntegrationComponent_div_11_Template(rf, ctx) {
 }
 function CorepointIntegrationComponent_div_12_ng_template_17_Template(rf, ctx) {
   if (rf & 1) {
-    const _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "i", 35);
+    const _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "i", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_12_ng_template_17_Template_i_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r13);
-      const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r12.passwordVisible = !ctx_r12.passwordVisible);
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r17);
+      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r16.passwordVisible = !ctx_r16.passwordVisible);
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzType", ctx_r9.passwordVisible ? "eye-invisible" : "eye");
+    const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzType", ctx_r13.passwordVisible ? "eye-invisible" : "eye");
   }
 }
 function CorepointIntegrationComponent_div_12_div_34_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function CorepointIntegrationComponent_div_12_div_35_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 42);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzDescription", ctx_r11.credentialsSaveError);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzDescription", ctx_r15.credentialsSaveError);
   }
 }
 function CorepointIntegrationComponent_div_12_Template(rf, ctx) {
   if (rf & 1) {
-    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    const _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-divider", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "form", 19)(3, "nz-row", 20)(4, "nz-col", 21)(5, "nz-form-item")(6, "nz-form-label", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-divider", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "form", 23)(3, "nz-row", 24)(4, "nz-col", 25)(5, "nz-form-item")(6, "nz-form-label", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](7, "Username");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "nz-form-control", 23)(9, "input", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "nz-form-control", 27)(9, "input", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function CorepointIntegrationComponent_div_12_Template_input_ngModelChange_9_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15);
-      const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r14.credentialsForm.username = $event);
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r18.credentialsForm.username = $event);
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "nz-col", 21)(11, "nz-form-item")(12, "nz-form-label", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "nz-col", 25)(11, "nz-form-item")(12, "nz-form-label", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](13, "Password");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "nz-form-control", 25)(15, "nz-input-group", 26)(16, "input", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "nz-form-control", 29)(15, "nz-input-group", 30)(16, "input", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function CorepointIntegrationComponent_div_12_Template_input_ngModelChange_16_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15);
-      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r16.credentialsForm.password = $event);
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r20.credentialsForm.password = $event);
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](17, CorepointIntegrationComponent_div_12_ng_template_17_Template, 1, 1, "ng-template", null, 28, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](17, CorepointIntegrationComponent_div_12_ng_template_17_Template, 1, 1, "ng-template", null, 32, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "nz-form-item")(20, "nz-form-control")(21, "nz-button-group")(22, "button", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "nz-form-item")(20, "nz-form-control")(21, "nz-button-group")(22, "button", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_12_Template_button_click_22_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15);
-      const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r17.saveCorepointCredentials());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r21.saveCorepointCredentials());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](23, "i", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](23, "i", 34);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](24, " Save Credentials ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](25, "button", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](25, "button", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_12_Template_button_click_25_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15);
-      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r18.resetCredentialsForm());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r22.resetCredentialsForm());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](26, "i", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](26, "i", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](27, " Reset ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](28, "button", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](28, "button", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_12_Template_button_click_28_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15);
-      const ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r19.clearCredentialsForm());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r23.clearCredentialsForm());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](29, "i", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](29, "i", 37);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](30, " Clear ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](31, "button", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](31, "button", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_12_Template_button_click_31_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15);
-      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r20.fetchCorepointCredentials());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r24.fetchCorepointCredentials());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](32, "i", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](32, "i", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](33, " Reload ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](34, CorepointIntegrationComponent_div_12_div_34_Template, 2, 0, "div", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](35, CorepointIntegrationComponent_div_12_div_35_Template, 2, 1, "div", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](34, CorepointIntegrationComponent_div_12_div_34_Template, 2, 0, "div", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](35, CorepointIntegrationComponent_div_12_div_35_Template, 2, 1, "div", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](18);
+    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](18);
     const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzGutter", 16);
@@ -724,7 +724,7 @@ function CorepointIntegrationComponent_div_12_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpan", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSuffix", _r8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSuffix", _r12);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("type", ctx_r3.passwordVisible ? "text" : "password")("ngModel", ctx_r3.credentialsForm.password)("disabled", ctx_r3.credentialsSaving);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
@@ -743,8 +743,8 @@ function CorepointIntegrationComponent_div_12_Template(rf, ctx) {
 }
 function CorepointIntegrationComponent_ng_template_14_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-tag", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "i", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-tag", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "i", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -759,8 +759,8 @@ function CorepointIntegrationComponent_ng_template_14_Template(rf, ctx) {
 }
 function CorepointIntegrationComponent_div_24_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -771,76 +771,76 @@ function CorepointIntegrationComponent_div_24_Template(rf, ctx) {
 }
 function CorepointIntegrationComponent_div_25_div_23_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 46);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function CorepointIntegrationComponent_div_25_div_24_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 47);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    const ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzDescription", ctx_r22.urlSaveError);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzDescription", ctx_r26.urlSaveError);
   }
 }
 function CorepointIntegrationComponent_div_25_Template(rf, ctx) {
   if (rf & 1) {
-    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    const _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-divider", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "form", 19)(3, "nz-form-item")(4, "nz-form-label", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-divider", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "form", 23)(3, "nz-form-item")(4, "nz-form-label", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, "API URL");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "nz-form-control", 40)(7, "input", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "nz-form-control", 44)(7, "input", 45);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function CorepointIntegrationComponent_div_25_Template_input_ngModelChange_7_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r24);
-      const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r23.urlForm.url = $event);
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r28);
+      const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r27.urlForm.url = $event);
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "nz-form-item")(9, "nz-form-control")(10, "nz-button-group")(11, "button", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "nz-form-item")(9, "nz-form-control")(10, "nz-button-group")(11, "button", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_25_Template_button_click_11_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r24);
-      const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r25.saveCorepointUrl());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r28);
+      const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r29.saveCorepointUrl());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](12, "i", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](12, "i", 34);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](13, " Save URL ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "button", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "button", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_25_Template_button_click_14_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r24);
-      const ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r26.resetUrlForm());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r28);
+      const ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r30.resetUrlForm());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](15, "i", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](15, "i", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](16, " Reset ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "button", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "button", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_25_Template_button_click_17_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r24);
-      const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r27.clearUrlForm());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r28);
+      const ctx_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r31.clearUrlForm());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](18, "i", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](18, "i", 37);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](19, " Clear ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](20, "button", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](20, "button", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_25_Template_button_click_20_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r24);
-      const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r28.fetchCorepointUrl());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r28);
+      const ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r32.fetchCorepointUrl());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](21, "i", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](21, "i", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](22, " Reload ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](23, CorepointIntegrationComponent_div_25_div_23_Template, 2, 0, "div", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](24, CorepointIntegrationComponent_div_25_div_24_Template, 2, 1, "div", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](23, CorepointIntegrationComponent_div_25_div_23_Template, 2, 0, "div", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](24, CorepointIntegrationComponent_div_25_div_24_Template, 2, 1, "div", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -859,6 +859,126 @@ function CorepointIntegrationComponent_div_25_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r7.urlSaveSuccess);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r7.urlSaveError);
+  }
+}
+function CorepointIntegrationComponent_ng_template_27_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-tag", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "i", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzColor", ctx_r9.currentRecordUrl.hasUrl ? "success" : "warning");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzType", ctx_r9.currentRecordUrl.hasUrl ? "check-circle" : "warning");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r9.currentRecordUrl.hasUrl ? "Configured" : "Not Configured", " ");
+  }
+}
+function CorepointIntegrationComponent_div_37_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzMessage", ctx_r10.recordUrlError);
+  }
+}
+function CorepointIntegrationComponent_div_38_div_23_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 51);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+}
+function CorepointIntegrationComponent_div_38_div_24_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-alert", 52);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzDescription", ctx_r34.recordUrlSaveError);
+  }
+}
+function CorepointIntegrationComponent_div_38_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r36 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "nz-divider", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "form", 23)(3, "nz-form-item")(4, "nz-form-label", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, "Record API URL");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "nz-form-control", 49)(7, "input", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function CorepointIntegrationComponent_div_38_Template_input_ngModelChange_7_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r36);
+      const ctx_r35 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r35.recordUrlForm.url = $event);
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "nz-form-item")(9, "nz-form-control")(10, "nz-button-group")(11, "button", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_38_Template_button_click_11_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r36);
+      const ctx_r37 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r37.saveCorepointGlidianRecordUrl());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](12, "i", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](13, " Save Record URL ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "button", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_38_Template_button_click_14_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r36);
+      const ctx_r38 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r38.resetRecordUrlForm());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](15, "i", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](16, " Reset ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "button", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_38_Template_button_click_17_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r36);
+      const ctx_r39 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r39.clearRecordUrlForm());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](18, "i", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](19, " Clear ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](20, "button", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function CorepointIntegrationComponent_div_38_Template_button_click_20_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r36);
+      const ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r40.fetchCorepointGlidianRecordUrl());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](21, "i", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](22, " Reload ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](23, CorepointIntegrationComponent_div_38_div_23_Template, 2, 0, "div", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](24, CorepointIntegrationComponent_div_38_div_24_Template, 2, 1, "div", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+  }
+  if (rf & 2) {
+    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngModel", ctx_r11.recordUrlForm.url)("disabled", ctx_r11.recordUrlSaving);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzLoading", ctx_r11.recordUrlSaving)("disabled", ctx_r11.recordUrlSaving);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r11.recordUrlSaving);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r11.recordUrlSaving);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r11.recordUrlLoading || ctx_r11.recordUrlSaving);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r11.recordUrlSaveSuccess);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r11.recordUrlSaveError);
   }
 }
 class CorepointIntegrationComponent {
@@ -896,6 +1016,19 @@ class CorepointIntegrationComponent {
       url: ''
     };
     this.passwordVisible = false; // Controls password visibility toggle
+    // Corepoint Glidian Record URL properties
+    this.recordUrlLoading = false; // Loading state for Record URL
+    this.recordUrlError = null; // Error message for Record URL
+    this.recordUrlSaving = false; // Save loading state for Record URL
+    this.recordUrlSaveSuccess = false; // Save success state for Record URL
+    this.recordUrlSaveError = null; // Save error state for Record URL
+    this.currentRecordUrl = {
+      url: '',
+      hasUrl: false
+    };
+    this.recordUrlForm = {
+      url: ''
+    };
   }
   /**
    * OnInit lifecycle hook to fetch Corepoint Glidian credentials and URL on load.
@@ -903,6 +1036,7 @@ class CorepointIntegrationComponent {
   ngOnInit() {
     this.fetchCorepointCredentials();
     this.fetchCorepointUrl();
+    this.fetchCorepointGlidianRecordUrl();
   }
   /**
    * Fetches the current Corepoint Glidian credentials from the backend.
@@ -1115,15 +1249,113 @@ class CorepointIntegrationComponent {
     this.urlSaveSuccess = false;
     this.urlSaveError = null;
   }
+  /**
+   * Fetches the current Corepoint Glidian Record URL from the backend.
+   */
+  fetchCorepointGlidianRecordUrl() {
+    this.recordUrlLoading = true;
+    this.recordUrlError = null;
+    this.adminService.getCorepointGlidianRecordUrl().subscribe({
+      next: response => {
+        this.ngZone.run(() => {
+          this.currentRecordUrl = {
+            url: response.url || '',
+            hasUrl: response.hasUrl || response.hasurl || false
+          };
+          this.recordUrlForm = {
+            url: this.currentRecordUrl.url
+          };
+          this.recordUrlLoading = false;
+          this.cdr.detectChanges();
+        });
+      },
+      error: err => {
+        this.ngZone.run(() => {
+          this.recordUrlError = 'Failed to load Corepoint Glidian Record URL.';
+          this.recordUrlLoading = false;
+          this.cdr.detectChanges();
+          this.messagingService.error('Failed to load Corepoint Glidian Record URL.');
+        });
+      }
+    });
+  }
+  /**
+   * Saves the updated Corepoint Glidian Record URL to the backend.
+   */
+  saveCorepointGlidianRecordUrl() {
+    this.recordUrlSaveSuccess = false;
+    this.recordUrlSaveError = null;
+    this.recordUrlSaving = true;
+    // Basic validation
+    if (!this.recordUrlForm.url.trim()) {
+      this.recordUrlSaveError = 'Record URL is required.';
+      this.recordUrlSaving = false;
+      this.messagingService.error(this.recordUrlSaveError);
+      return;
+    }
+    // URL format validation
+    try {
+      new URL(this.recordUrlForm.url.trim());
+    } catch (e) {
+      this.recordUrlSaveError = 'Please enter a valid URL (e.g., https://api.example.com).';
+      this.recordUrlSaving = false;
+      this.messagingService.error(this.recordUrlSaveError);
+      return;
+    }
+    const urlData = {
+      url: this.recordUrlForm.url.trim()
+    };
+    this.adminService.storeCorepointGlidianRecordUrl(urlData).subscribe({
+      next: () => {
+        this.ngZone.run(() => {
+          this.recordUrlSaveSuccess = true;
+          this.recordUrlSaving = false;
+          this.currentRecordUrl = {
+            url: urlData.url,
+            hasUrl: true
+          };
+          this.cdr.detectChanges();
+        });
+      },
+      error: err => {
+        this.ngZone.run(() => {
+          this.recordUrlSaveError = 'Failed to save Corepoint Glidian Record URL.';
+          this.recordUrlSaving = false;
+          this.cdr.detectChanges();
+          this.messagingService.error('Failed to save Corepoint Glidian Record URL.');
+        });
+      }
+    });
+  }
+  /**
+   * Resets the Record URL form to the current saved values.
+   */
+  resetRecordUrlForm() {
+    this.recordUrlForm = {
+      url: this.currentRecordUrl.url
+    };
+    this.recordUrlSaveSuccess = false;
+    this.recordUrlSaveError = null;
+  }
+  /**
+   * Clears the Record URL form.
+   */
+  clearRecordUrlForm() {
+    this.recordUrlForm = {
+      url: ''
+    };
+    this.recordUrlSaveSuccess = false;
+    this.recordUrlSaveError = null;
+  }
   static #_ = this.ɵfac = function CorepointIntegrationComponent_Factory(t) {
     return new (t || CorepointIntegrationComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_admin_service__WEBPACK_IMPORTED_MODULE_0__.AdminService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__.NgZone), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectorRef), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService));
   };
   static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
     type: CorepointIntegrationComponent,
     selectors: [["app-corepoint-integration"]],
-    decls: 26,
-    vars: 18,
-    consts: [["nzTitle", "Corepoint Glidian Integration", 2, "margin-bottom", "24px", 3, "nzExtra", "nzBordered"], ["credentialsStatusTemplate", ""], ["nzBordered", "", "nzSize", "small", 2, "margin-bottom", "16px", 3, "nzColumn"], ["nzTitle", "Purpose", 3, "nzSpan"], ["nzTitle", "Current Username"], ["nzTitle", "Password Status"], ["nzTip", "Loading credentials...", 3, "nzSpinning"], ["class", "error-state", "style", "margin-bottom: 16px;", 4, "ngIf"], [4, "ngIf"], ["nzTitle", "Corepoint Glidian URL Configuration", 2, "margin-bottom", "24px", 3, "nzExtra", "nzBordered"], ["urlStatusTemplate", ""], ["nzTitle", "Current URL"], ["nzTitle", "Status"], ["nzTip", "Loading URL...", 3, "nzSpinning"], [3, "nzColor"], ["nz-icon", "", "nzTheme", "fill", 3, "nzType"], [1, "error-state", 2, "margin-bottom", "16px"], ["nzType", "error", "nzShowIcon", "", 3, "nzMessage"], ["nzText", "Update Credentials", "nzOrientation", "left"], ["nz-form", "", "nzLayout", "vertical"], [3, "nzGutter"], [3, "nzSpan"], ["nzRequired", ""], ["nzErrorTip", "Username is required"], ["nz-input", "", "placeholder", "Enter Corepoint Glidian username", "name", "username", 3, "ngModel", "disabled", "ngModelChange"], ["nzErrorTip", "Password is required"], [3, "nzSuffix"], ["nz-input", "", "placeholder", "Enter Corepoint Glidian password", "name", "password", 3, "type", "ngModel", "disabled", "ngModelChange"], ["passwordSuffix", ""], ["nz-button", "", "nzType", "primary", 3, "nzLoading", "disabled", "click"], ["nz-icon", "", "nzType", "save"], ["nz-button", "", "nzType", "default", 3, "disabled", "click"], ["nz-icon", "", "nzType", "reload"], ["nz-icon", "", "nzType", "clear"], ["style", "margin-top: 16px;", 4, "ngIf"], ["nz-icon", "", 1, "password-toggle", 3, "nzType", "click"], [2, "margin-top", "16px"], ["nzType", "success", "nzMessage", "Credentials Saved Successfully", "nzDescription", "Corepoint Glidian integration credentials have been updated.", "nzShowIcon", ""], ["nzType", "error", "nzMessage", "Failed to Save Credentials", "nzShowIcon", "", 3, "nzDescription"], ["nzText", "Update URL", "nzOrientation", "left"], ["nzErrorTip", "URL is required"], ["nz-input", "", "placeholder", "https://api.corepointglidian.com/v1", "name", "url", 3, "ngModel", "disabled", "ngModelChange"], ["nzType", "success", "nzMessage", "URL Saved Successfully", "nzDescription", "Corepoint Glidian integration URL has been updated.", "nzShowIcon", ""], ["nzType", "error", "nzMessage", "Failed to Save URL", "nzShowIcon", "", 3, "nzDescription"]],
+    decls: 39,
+    vars: 27,
+    consts: [["nzTitle", "Corepoint Glidian Integration", 2, "margin-bottom", "24px", 3, "nzExtra", "nzBordered"], ["credentialsStatusTemplate", ""], ["nzBordered", "", "nzSize", "small", 2, "margin-bottom", "16px", 3, "nzColumn"], ["nzTitle", "Purpose", 3, "nzSpan"], ["nzTitle", "Current Username"], ["nzTitle", "Password Status"], ["nzTip", "Loading credentials...", 3, "nzSpinning"], ["class", "error-state", "style", "margin-bottom: 16px;", 4, "ngIf"], [4, "ngIf"], ["nzTitle", "Corepoint Glidian URL Configuration", 2, "margin-bottom", "24px", 3, "nzExtra", "nzBordered"], ["urlStatusTemplate", ""], ["nzTitle", "Current URL"], ["nzTitle", "Status"], ["nzTip", "Loading URL...", 3, "nzSpinning"], ["nzTitle", "Corepoint Glidian Record URL Configuration", 2, "margin-bottom", "24px", 3, "nzExtra", "nzBordered"], ["recordUrlStatusTemplate", ""], ["nzTitle", "Current Record URL"], ["nzTip", "Loading Record URL...", 3, "nzSpinning"], [3, "nzColor"], ["nz-icon", "", "nzTheme", "fill", 3, "nzType"], [1, "error-state", 2, "margin-bottom", "16px"], ["nzType", "error", "nzShowIcon", "", 3, "nzMessage"], ["nzText", "Update Credentials", "nzOrientation", "left"], ["nz-form", "", "nzLayout", "vertical"], [3, "nzGutter"], [3, "nzSpan"], ["nzRequired", ""], ["nzErrorTip", "Username is required"], ["nz-input", "", "placeholder", "Enter Corepoint Glidian username", "name", "username", 3, "ngModel", "disabled", "ngModelChange"], ["nzErrorTip", "Password is required"], [3, "nzSuffix"], ["nz-input", "", "placeholder", "Enter Corepoint Glidian password", "name", "password", 3, "type", "ngModel", "disabled", "ngModelChange"], ["passwordSuffix", ""], ["nz-button", "", "nzType", "primary", 3, "nzLoading", "disabled", "click"], ["nz-icon", "", "nzType", "save"], ["nz-button", "", "nzType", "default", 3, "disabled", "click"], ["nz-icon", "", "nzType", "reload"], ["nz-icon", "", "nzType", "clear"], ["style", "margin-top: 16px;", 4, "ngIf"], ["nz-icon", "", 1, "password-toggle", 3, "nzType", "click"], [2, "margin-top", "16px"], ["nzType", "success", "nzMessage", "Credentials Saved Successfully", "nzDescription", "Corepoint Glidian integration credentials have been updated.", "nzShowIcon", ""], ["nzType", "error", "nzMessage", "Failed to Save Credentials", "nzShowIcon", "", 3, "nzDescription"], ["nzText", "Update URL", "nzOrientation", "left"], ["nzErrorTip", "URL is required"], ["nz-input", "", "placeholder", "https://api.corepointglidian.com/v1", "name", "url", 3, "ngModel", "disabled", "ngModelChange"], ["nzType", "success", "nzMessage", "URL Saved Successfully", "nzDescription", "Corepoint Glidian integration URL has been updated.", "nzShowIcon", ""], ["nzType", "error", "nzMessage", "Failed to Save URL", "nzShowIcon", "", 3, "nzDescription"], ["nzText", "Update Record URL", "nzOrientation", "left"], ["nzErrorTip", "Record URL is required"], ["nz-input", "", "placeholder", "https://api.corepointglidian.com/record", "name", "recordUrl", 3, "ngModel", "disabled", "ngModelChange"], ["nzType", "success", "nzMessage", "Record URL Saved Successfully", "nzDescription", "Corepoint Glidian Record URL has been updated.", "nzShowIcon", ""], ["nzType", "error", "nzMessage", "Failed to Save Record URL", "nzShowIcon", "", 3, "nzDescription"]],
     template: function CorepointIntegrationComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-card", 0);
@@ -1156,10 +1388,26 @@ class CorepointIntegrationComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](24, CorepointIntegrationComponent_div_24_Template, 2, 1, "div", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](25, CorepointIntegrationComponent_div_25_Template, 25, 9, "div", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](26, "nz-card", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](27, CorepointIntegrationComponent_ng_template_27_Template, 3, 3, "ng-template", null, 15, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](29, "nz-descriptions", 2)(30, "nz-descriptions-item", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](31, " API endpoint URL for Corepoint Glidian Record retrieval ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](32, "nz-descriptions-item", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](34, "nz-descriptions-item", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](35);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](36, "nz-spin", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](37, CorepointIntegrationComponent_div_37_Template, 2, 1, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](38, CorepointIntegrationComponent_div_38_Template, 25, 9, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
       }
       if (rf & 2) {
         const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](2);
         const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](15);
+        const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](28);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzExtra", _r0)("nzBordered", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzColumn", 2);
@@ -1191,6 +1439,22 @@ class CorepointIntegrationComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.urlError);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !ctx.urlLoading && !ctx.urlError);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzExtra", _r8)("nzBordered", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzColumn", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpan", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.currentRecordUrl.url || "Not set", " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.currentRecordUrl.hasUrl ? "Configured" : "Not set", " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpinning", ctx.recordUrlLoading);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.recordUrlError);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !ctx.recordUrlLoading && !ctx.recordUrlError);
       }
     },
     dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgModel, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgForm, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_5__.NzInputDirective, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_5__.NzInputGroupComponent, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_5__.NzInputGroupWhitSuffixOrPrefixDirective, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_6__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_7__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_7__.NzRowDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_8__.NzButtonComponent, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_8__.NzButtonGroupComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_9__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_10__.NzWaveDirective, ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_11__.NzTagComponent, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_12__.NzDescriptionsComponent, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_12__.NzDescriptionsItemComponent, ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_13__.NzSpinComponent, ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_14__.NzCardComponent, ng_zorro_antd_alert__WEBPACK_IMPORTED_MODULE_15__.NzAlertComponent, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__.NzFormDirective, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__.NzFormItemComponent, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__.NzFormLabelComponent, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__.NzFormControlComponent, ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_17__.NzDividerComponent],
@@ -7676,8 +7940,10 @@ class PriorAuthComponent {
       const orderDesc = item.itemDescription?.toLowerCase() || '';
       // Glidian Record ID (not displayed in columns, but searchable)
       const glidianRecordId = item.glidianData?.recordId?.toLowerCase() || '';
+      // Order ID
+      const orderId = item.orderId?.toString().toLowerCase() || '';
       // Add more fields here as needed
-      return patientName.includes(search) || fin.includes(search) || mrn.includes(search) || orderDesc.includes(search) || glidianRecordId.includes(search);
+      return patientName.includes(search) || fin.includes(search) || mrn.includes(search) || orderDesc.includes(search) || glidianRecordId.includes(search) || orderId.includes(search);
     });
   }
   constructor(columnConfig, worklistService) {
@@ -7928,10 +8194,8 @@ class EarliestDateMilestoneComponent {
       next: response => {
         // Process milestone update response from backend service
         if (response.success) {
-          // Update the local milestone data on success
-          this.milestone.status = 'Complete';
-          this.milestone.statusDateTime = new Date();
-          this.milestone.completedDate = new Date();
+          this.messagingService.success('Milestone updated. Please refresh to see changes.');
+          // Do NOT update this.milestone or the worklist item here!
         } else {
           // Revert the button state on failure
           this.isButtonChecked = false;
@@ -8271,62 +8535,89 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function GlidianProcessViewComponent_nz_descriptions_item_4_span_5_Template(rf, ctx) {
+function GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    const _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r18.createGlidianAuth());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "span", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
     const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r15.isCreatingAuth || ctx_r15.isEdosInFuture())("nzTooltipTitle", ctx_r15.isEdosInFuture() ? "Cannot submit until EDOS date is today or earlier." : "Submit to Glidian");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r15.glidianActionMessage);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpin", ctx_r15.isCreatingAuth);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r15.submitToGlidianLabel, " ");
+  }
+}
+function GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r21 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r21);
+      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r20.getLatestFromGlidian());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "span", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, " Get Latest from Glidian ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+}
+function GlidianProcessViewComponent_nz_descriptions_item_4_span_4_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r17.glidianActionMessage);
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_4_Template(rf, ctx) {
   if (rf & 1) {
-    const _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 34)(1, "div", 35)(2, "button", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_Template_button_click_2_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r17);
-      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r16.createGlidianAuth());
-    });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](3, "span", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](5, GlidianProcessViewComponent_nz_descriptions_item_4_span_5_Template, 2, 1, "span", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 34)(1, "div", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template, 3, 4, "button", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template, 3, 0, "button", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_span_4_Template, 2, 1, "span", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r0.isCreatingAuth || ctx_r0.isEdosInFuture())("nzTooltipTitle", ctx_r0.isEdosInFuture() ? "Cannot submit until EDOS date is today or earlier." : "Submit to Glidian");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", false);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpin", ctx_r0.isCreatingAuth);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r0.submitToGlidianLabel, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.getGlidianId());
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.glidianActionMessage);
   }
 }
 function GlidianProcessViewComponent_span_7_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "(Required)");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_span_8_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 45);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "(Optional)");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_9_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 46);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -8338,7 +8629,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_9_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_10_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 47);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -8350,7 +8641,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_10_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_11_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 48);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -8362,7 +8653,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_11_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_12_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 49);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](2, "date");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -8375,7 +8666,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_12_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_13_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 46)(1, "a", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 50)(1, "a", 51);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
@@ -8389,7 +8680,7 @@ function GlidianProcessViewComponent_nz_descriptions_item_13_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_nz_descriptions_item_14_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 52);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](2, "date");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -8410,20 +8701,20 @@ function GlidianProcessViewComponent_div_15_li_4_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const data_r19 = ctx.$implicit;
+    const data_r23 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("", data_r19.name, ":");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("", data_r23.name, ":");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", data_r19.valueText || _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](4, 2, data_r19.valueDate, "short"), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", data_r23.valueText || _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](4, 2, data_r23.valueDate, "short"), " ");
   }
 }
 function GlidianProcessViewComponent_div_15_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 49)(1, "h4");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 53)(1, "h4");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Current Step Data");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_div_15_li_4_Template, 5, 5, "li", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_div_15_li_4_Template, 5, 5, "li", 54);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -8449,20 +8740,20 @@ function GlidianProcessViewComponent_nz_collapse_panel_17_tr_14_Template(rf, ctx
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const action_r21 = ctx.$implicit;
+    const action_r25 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r21.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r25.name);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r21.description);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r25.description);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r21.status);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r25.status);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](9, 4, action_r21.actionDtTm, "short"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](9, 4, action_r25.actionDtTm, "short"));
   }
 }
 function GlidianProcessViewComponent_nz_collapse_panel_17_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-collapse-panel", 51)(1, "div", 52)(2, "table", 53)(3, "thead")(4, "tr")(5, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-collapse-panel", 55)(1, "div", 56)(2, "table", 57)(3, "thead")(4, "tr")(5, "th");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, "Action");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "th");
@@ -8475,7 +8766,7 @@ function GlidianProcessViewComponent_nz_collapse_panel_17_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](12, "Date/Time");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](14, GlidianProcessViewComponent_nz_collapse_panel_17_tr_14_Template, 10, 7, "tr", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](14, GlidianProcessViewComponent_nz_collapse_panel_17_tr_14_Template, 10, 7, "tr", 54);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
   }
   if (rf & 2) {
@@ -8487,20 +8778,20 @@ function GlidianProcessViewComponent_nz_collapse_panel_17_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_div_43_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 55);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 59);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const action_r23 = ctx.$implicit;
+    const action_r27 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate2"](" ", action_r23.actionId, " (", action_r23.name, ") ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate2"](" ", action_r27.actionId, " (", action_r27.name, ") ");
   }
 }
 function GlidianProcessViewComponent_div_43_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GlidianProcessViewComponent_div_43_div_1_Template, 2, 2, "div", 54);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GlidianProcessViewComponent_div_43_div_1_Template, 2, 2, "div", 58);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -8511,21 +8802,21 @@ function GlidianProcessViewComponent_div_43_Template(rf, ctx) {
 }
 function GlidianProcessViewComponent_ng_template_44_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 56);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 60);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "No actions");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_div_49_Template(rf, ctx) {
   if (rf & 1) {
-    const _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div")(1, "button", 57);
+    const _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div")(1, "button", 61);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_div_49_Template_button_click_1_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r25);
-      const ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r24.refreshCurrentItem());
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r29);
+      const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r28.refreshCurrentItem());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "span", 58);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "span", 62);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " Refresh Item ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
@@ -8740,6 +9031,30 @@ class GlidianProcessViewComponent {
     edosDate.setHours(0, 0, 0, 0);
     return edosDate > today;
   }
+  /**
+   * Fetch the latest data from Glidian for the current record.
+   * Calls PriorAuthService.getLatestGlidianRecord and updates the UI with the result.
+   */
+  getLatestFromGlidian() {
+    if (!this.worklistItem?.compass_worklist_id) {
+      this.messagingService.error('No worklist item ID available');
+      this.glidianActionMessage = 'No worklist item ID available.';
+      return;
+    }
+    this.glidianActionMessage = '';
+    this.isCreatingAuth = true; // Reuse loading state for button spinner
+    this.priorAuthService.getLatestGlidianRecord(this.worklistItem.compass_worklist_id).subscribe({
+      next: response => {
+        // Handle success or error from the service
+        this.isCreatingAuth = false;
+        this.glidianActionMessage = response?.message || 'Latest Glidian record fetched.';
+      },
+      error: error => {
+        this.isCreatingAuth = false;
+        this.glidianActionMessage = 'Failed to fetch latest Glidian record.';
+      }
+    });
+  }
   static #_ = this.ɵfac = function GlidianProcessViewComponent_Factory(t) {
     return new (t || GlidianProcessViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_5__.NZ_MODAL_DATA), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService));
   };
@@ -8748,13 +9063,13 @@ class GlidianProcessViewComponent {
     selectors: [["app-glidian-process-view"]],
     decls: 50,
     vars: 31,
-    consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Glidian Actions", 4, "ngIf"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], ["nzHeader", "Milestone History", 3, "nzActive", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], [4, "nzModalFooter"], ["nzTitle", "Glidian Actions"], [2, "display", "flex", "align-items", "center"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", 1, "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], ["class", "glidian-action-message", "style", "margin-left: 12px;", 4, "ngIf"], [1, "glidian-action-message", 2, "margin-left", "12px"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [2, "margin-top", "16px"], [4, "ngFor", "ngForOf"], ["nzHeader", "Milestone History", 3, "nzActive"], [2, "max-height", "240px", "overflow-y", "auto"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"], ["nz-button", "", "nzType", "default", 3, "nzLoading", "click"], ["nz-icon", "", "nzType", "reload"]],
+    consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Glidian Actions", 4, "ngIf"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], ["nzHeader", "Milestone History", 3, "nzActive", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], [4, "nzModalFooter"], ["nzTitle", "Glidian Actions"], [2, "display", "flex", "align-items", "center", "gap", "8px"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", "class", "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click", 4, "ngIf"], ["nz-button", "", "nzType", "default", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Fetch the latest data from Glidian for this record.", "class", "get-latest-glidian-btn", 3, "click", 4, "ngIf"], ["class", "glidian-action-message", "style", "margin-left: 12px;", 4, "ngIf"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", 1, "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], ["nz-button", "", "nzType", "default", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Fetch the latest data from Glidian for this record.", 1, "get-latest-glidian-btn", 3, "click"], ["nz-icon", "", "nzType", "sync", "nzTheme", "outline"], [1, "glidian-action-message", 2, "margin-left", "12px"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [2, "margin-top", "16px"], [4, "ngFor", "ngForOf"], ["nzHeader", "Milestone History", 3, "nzActive"], [2, "max-height", "240px", "overflow-y", "auto"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"], ["nz-button", "", "nzType", "default", 3, "nzLoading", "click"], ["nz-icon", "", "nzType", "reload"]],
     template: function GlidianProcessViewComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 2)(3, "nz-descriptions", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_Template, 6, 5, "nz-descriptions-item", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_Template, 5, 3, "nz-descriptions-item", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "nz-descriptions-item", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](7, GlidianProcessViewComponent_span_7_Template, 2, 0, "span", 6);
@@ -9105,15 +9420,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   MedicalNecessityMilestoneComponent: () => (/* binding */ MedicalNecessityMilestoneComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 1699);
 /* harmony import */ var _services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../services/prior-auth.service */ 6537);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ 8849);
-/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ng-zorro-antd/icon */ 4740);
-/* harmony import */ var ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-zorro-antd/grid */ 7253);
-/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 479);
-/* harmony import */ var ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/switch */ 2913);
-/* harmony import */ var ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/tooltip */ 881);
+/* harmony import */ var _services_messaging_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../services/messaging.service */ 9440);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-zorro-antd/icon */ 4740);
+/* harmony import */ var ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/grid */ 7253);
+/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 479);
+/* harmony import */ var ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/switch */ 2913);
+/* harmony import */ var ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/tooltip */ 881);
+
 
 
 
@@ -9125,31 +9442,32 @@ __webpack_require__.r(__webpack_exports__);
 
 function MedicalNecessityMilestoneComponent_ng_container_5_Template(rf, ctx) {
   if (rf & 1) {
-    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "nz-switch", 6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function MedicalNecessityMilestoneComponent_ng_container_5_Template_nz_switch_ngModelChange_1_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4);
-      const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresetView"](ctx_r3.onStatusSwitch($event));
+    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "nz-switch", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function MedicalNecessityMilestoneComponent_ng_container_5_Template_nz_switch_ngModelChange_1_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r4);
+      const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r3.onStatusSwitch($event));
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
   }
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx_r0.milestone.status === "Complete")("nzSize", "small")("disabled", !ctx_r0.milestone.requiredInd);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngModel", ctx_r0.milestone.status === "Complete")("nzSize", "small")("disabled", !ctx_r0.milestone.requiredInd);
   }
 }
 function MedicalNecessityMilestoneComponent_ng_template_6_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "span", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "span", 7);
   }
 }
 class MedicalNecessityMilestoneComponent {
-  constructor(priorAuthService) {
+  constructor(priorAuthService, messagingService) {
     this.priorAuthService = priorAuthService;
+    this.messagingService = messagingService;
   }
   getStatusClass(status) {
     switch (status) {
@@ -9180,9 +9498,8 @@ class MedicalNecessityMilestoneComponent {
     this.priorAuthService.updateMilestone(updateRequest, this.worklistItem.compass_worklist_id).subscribe({
       next: response => {
         if (response.success) {
-          // Success - keep the local change, no need to call updatePriorAuthItemMilestone
-          // as the local milestone object is already updated
-          console.log(`[MedicalNecessityMilestone] Successfully updated milestone ${this.milestone.name} to ${newStatus}`);
+          this.messagingService.success('Milestone updated. Please refresh to see changes.');
+          // Do NOT update this.milestone or the worklist item here!
         } else {
           // Revert the local change if the service call failed
           this.milestone.status = oldStatus;
@@ -9197,9 +9514,9 @@ class MedicalNecessityMilestoneComponent {
     });
   }
   static #_ = this.ɵfac = function MedicalNecessityMilestoneComponent_Factory(t) {
-    return new (t || MedicalNecessityMilestoneComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService));
+    return new (t || MedicalNecessityMilestoneComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService));
   };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
     type: MedicalNecessityMilestoneComponent,
     selectors: [["app-medical-necessity-milestone"]],
     inputs: {
@@ -9211,23 +9528,23 @@ class MedicalNecessityMilestoneComponent {
     consts: [["nzAlign", "middle", "nzGutter", "8", 1, "milestone-row"], ["nzFlex", "1"], [1, "milestone-title"], ["nzFlex", "auto", 1, "milestone-switch"], [4, "ngIf", "ngIfElse"], ["notRequired", ""], [3, "ngModel", "nzSize", "disabled", "ngModelChange"], ["nz-icon", "", "nzType", "stop", "nzTheme", "twotone", "nz-tooltip", "", "nzTooltipTitle", "Not Required"]],
     template: function MedicalNecessityMilestoneComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "nz-row", 0)(1, "nz-col", 1)(2, "span", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "nz-col", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, MedicalNecessityMilestoneComponent_ng_container_5_Template, 2, 3, "ng-container", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, MedicalNecessityMilestoneComponent_ng_template_6_Template, 1, 0, "ng-template", null, 5, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplateRefExtractor"]);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-row", 0)(1, "nz-col", 1)(2, "span", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "nz-col", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](5, MedicalNecessityMilestoneComponent_ng_container_5_Template, 2, 3, "ng-container", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](6, MedicalNecessityMilestoneComponent_ng_template_6_Template, 1, 0, "ng-template", null, 5, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
       }
       if (rf & 2) {
-        const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx.milestone.name);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.milestone.requiredInd)("ngIfElse", _r1);
+        const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx.milestone.name);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.milestone.requiredInd)("ngIfElse", _r1);
       }
     },
-    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgModel, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_4__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_5__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_5__.NzRowDirective, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_6__["ɵNzTransitionPatchDirective"], ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_7__.NzSwitchComponent, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_8__.NzTooltipDirective],
+    dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgModel, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_5__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_6__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_6__.NzRowDirective, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_7__["ɵNzTransitionPatchDirective"], ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_8__.NzSwitchComponent, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_9__.NzTooltipDirective],
     styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
   });
 }
@@ -13594,6 +13911,101 @@ class AdminService {
       });
     });
   }
+  /**
+   * Retrieves the current Corepoint Glidian Record URL from the backend.
+   * Uses the cov_compass_service with requestType 'getCorepointGlidianRecordUrl'.
+   * @returns Observable<any> - Emits the record URL object with url and hasUrl properties.
+   */
+  getCorepointGlidianRecordUrl() {
+    return new rxjs__WEBPACK_IMPORTED_MODULE_0__.Observable(observer => {
+      this.customService.load({
+        customScript: {
+          script: [{
+            name: 'cov_compass_service',
+            run: 'pre',
+            id: 'getCorepointGlidianRecordUrl',
+            parameters: {
+              requestType: 'getCorepointGlidianRecordUrl'
+            }
+          }],
+          clearPatientSource: true
+        }
+      }, [{
+        personId: 0,
+        encntrId: 0
+      }], () => {
+        const raw = this.customService.get('getCorepointGlidianRecordUrl');
+        if (raw) {
+          observer.next(raw);
+        } else {
+          observer.error('No Record URL data returned.');
+        }
+        observer.complete();
+      });
+    });
+  }
+  /**
+   * Stores the updated Corepoint Glidian Record URL to the backend.
+   * Uses the cov_compass_service with requestType 'storeCorepointGlidianRecordUrl'.
+   * @param urlData - The URL object with url property
+   * @returns Observable<any> - Emits success response or throws error
+   */
+  storeCorepointGlidianRecordUrl(record_url_data) {
+    return new rxjs__WEBPACK_IMPORTED_MODULE_0__.Observable(observer => {
+      this.customService.load({
+        customScript: {
+          script: [{
+            name: 'cov_compass_service',
+            run: 'pre',
+            id: 'storeCorepointGlidianRecordUrl',
+            parameters: {
+              requestType: 'storeCorepointGlidianRecordUrl',
+              requestData: JSON.stringify({
+                record_url_data
+              })
+            }
+          }],
+          clearPatientSource: true
+        }
+      }, [{
+        personId: 0,
+        encntrId: 0
+      }], () => {
+        try {
+          const raw = this.customService.get('storeCorepointGlidianRecordUrl');
+          console.log('Store Record URL response:', raw);
+          // Check if response has the expected structure
+          if (raw && raw.reply && raw.reply.statusData) {
+            const status = raw.reply.statusData.status;
+            if (status === 'S') {
+              // Success
+              observer.next(raw);
+              observer.complete();
+            } else if (status === 'F') {
+              // Failure - extract error message from subeventstatus if available
+              let errorMessage = 'Failed to store Corepoint Glidian Record URL.';
+              if (raw.reply.statusData.subeventstatus && raw.reply.statusData.subeventstatus.length > 0) {
+                const subEvent = raw.reply.statusData.subeventstatus[0];
+                if (subEvent.operationstatus) {
+                  errorMessage = `Store failed: ${subEvent.operationstatus}`;
+                }
+              }
+              observer.error(new Error(errorMessage));
+            } else {
+              // Unknown status
+              observer.error(new Error(`Unknown response status: ${status}`));
+            }
+          } else {
+            // Invalid response structure
+            observer.error(new Error('Invalid response format from server'));
+          }
+        } catch (error) {
+          console.error('Store Record URL error:', error);
+          observer.error(new Error('Failed to store Corepoint Glidian Record URL.'));
+        }
+      });
+    });
+  }
   static #_ = this.ɵfac = function AdminService_Factory(t) {
     return new (t || AdminService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_2__.CustomService));
   };
@@ -16500,89 +16912,33 @@ class PriorAuthService {
   /**
    * Update a single prior auth item in the worklist
    * Updates the signal and triggers automatic recalculation of filtered items
+   *
+   * [DEFERRED UPDATE] In-memory update is now deferred until refresh. This method is deprecated for direct use after actions.
    */
   updatePriorAuthItem(item, updateColumnFilters = true) {
-    const currentItems = this._worklistItems();
-    const index = currentItems.findIndex(i => i.compass_worklist_id === item.compass_worklist_id);
-    console.log(`[PriorAuthService.updatePriorAuthItem] Called for item ${item.compass_worklist_id}, found at index: ${index}`);
-    if (index !== -1) {
-      const updatedItems = [...currentItems];
-      updatedItems[index] = {
-        ...item
-      };
-      this._worklistItems.set(updatedItems);
-      // Only update column filters if explicitly requested (prevents filter clearing on milestone updates)
-      if (updateColumnFilters) {
-        // Update column filters with the updated worklist data to reflect new detailed information
-        this.columnConfig.updateColumnFiltersFromData(updatedItems);
-        console.log(`[PriorAuthService.updatePriorAuthItem] Successfully updated item ${item.compass_worklist_id} in worklist and updated column filters`);
-      } else {
-        console.log(`[PriorAuthService.updatePriorAuthItem] Successfully updated item ${item.compass_worklist_id} in worklist (column filters update skipped)`);
-      }
-    } else {
-      console.warn(`[PriorAuthService.updatePriorAuthItem] Item ${item.compass_worklist_id} not found in current worklist for update`);
-    }
+    // No-op: Updates are now only applied after refresh.
+    // See refreshWorklist/refreshWorklistItemById for update logic.
   }
   /**
    * Update just the status of a prior auth item
-   * Updates the signal and triggers automatic recalculation of filtered items
+   * [DEFERRED UPDATE] In-memory update is now deferred until refresh. This method is deprecated for direct use after actions.
    */
   updatePriorAuthItemStatus(id, status) {
-    const currentItems = this._worklistItems();
-    const itemIndex = currentItems.findIndex(i => i.compass_worklist_id === id);
-    if (itemIndex !== -1) {
-      const updatedItems = [...currentItems];
-      updatedItems[itemIndex] = {
-        ...updatedItems[itemIndex],
-        workflowStatus: {
-          ...updatedItems[itemIndex].workflowStatus,
-          status: status,
-          statusDateTime: new Date()
-        }
-      };
-      this._worklistItems.set(updatedItems);
-    }
+    // No-op: Updates are now only applied after refresh.
   }
   /**
    * Update just the priority of a prior auth item
-   * Updates both signals and legacy data structures
+   * [DEFERRED UPDATE] In-memory update is now deferred until refresh. This method is deprecated for direct use after actions.
    */
   updatePriorAuthItemPriority(id, priority) {
-    const currentItems = this._worklistItems();
-    const itemIndex = currentItems.findIndex(i => i.compass_worklist_id === id);
-    if (itemIndex !== -1) {
-      const updatedItems = [...currentItems];
-      updatedItems[itemIndex] = {
-        ...updatedItems[itemIndex],
-        priority: priority
-      };
-      this._worklistItems.set(updatedItems);
-    }
+    // No-op: Updates are now only applied after refresh.
   }
   /**
    * Update a milestone in a prior auth item
-   * Updates both signals and legacy data structures
+   * [DEFERRED UPDATE] In-memory update is now deferred until refresh. This method is deprecated for direct use after actions.
    */
   updatePriorAuthItemMilestone(id, milestoneName, status) {
-    const currentItems = this._worklistItems();
-    const itemIndex = currentItems.findIndex(w => w.compass_worklist_id === id);
-    if (itemIndex !== -1) {
-      const updatedItems = [...currentItems];
-      const item = {
-        ...updatedItems[itemIndex]
-      };
-      const milestoneIndex = item.milestones.findIndex(m => m.name === milestoneName);
-      if (milestoneIndex !== -1) {
-        item.milestones = [...item.milestones];
-        item.milestones[milestoneIndex] = {
-          ...item.milestones[milestoneIndex],
-          status: status,
-          statusDateTime: new Date()
-        };
-        updatedItems[itemIndex] = item;
-        this._worklistItems.set(updatedItems);
-      }
-    }
+    // No-op: Updates are now only applied after refresh.
   }
   // Method to get detailed milestone information
   getMilestoneDetails(id) {
@@ -17392,6 +17748,79 @@ class PriorAuthService {
       });
     });
   }
+  /**
+   * Fetch the latest Glidian record for a specific worklist item.
+   * Calls the cov_compass_service script with requestType 'getGlidianRecord' and requestId = worklistItemId.
+   * Returns an Observable of the backend response.
+   *
+   * @param worklistItemId - The compass_worklist_id of the item to fetch from Glidian
+   * @returns Observable<any> - The response from the Glidian service
+   */
+  getLatestGlidianRecord(worklistItemId) {
+    const uniqueId = `getGlidianRecord_${worklistItemId}`;
+    console.log(`[PriorAuthService.getLatestGlidianRecord] Fetching latest Glidian record for worklist item ${worklistItemId}`);
+    return new rxjs__WEBPACK_IMPORTED_MODULE_9__.Observable(observer => {
+      this.customService.load({
+        customScript: {
+          script: [{
+            name: 'cov_compass_service',
+            run: 'pre',
+            id: uniqueId,
+            parameters: {
+              requestType: 'getGlidianRecord',
+              requestId: worklistItemId
+            }
+          }],
+          clearPatientSource: true
+        }
+      }, [{
+        personId: 0,
+        encntrId: 0
+      }], () => {
+        try {
+          const response = this.customService.get(uniqueId);
+          console.log('[PriorAuthService.getLatestGlidianRecord] Raw response:', response);
+          if (!response) {
+            const errorMessage = 'No response received from Glidian record service';
+            this.messagingService.error(errorMessage);
+            observer.next({
+              success: false,
+              message: errorMessage,
+              data: null
+            });
+            observer.complete();
+            return;
+          }
+          const replyData = response?.reply || response;
+          if (replyData && replyData.statusData && replyData.statusData.status === 'S') {
+            const successMessage = replyData.text || 'Latest Glidian record fetched successfully';
+            this.messagingService.success(successMessage);
+            // Optionally refresh the worklist item if reloadInd === 1
+            if (replyData.reloadInd === 1) {
+              this.refreshWorklistItem(worklistItemId);
+            }
+            observer.next({
+              success: true,
+              message: successMessage,
+              data: replyData
+            });
+          } else {
+            const errorMessage = replyData?.text || 'Failed to fetch latest Glidian record';
+            this.messagingService.error(errorMessage);
+            observer.next({
+              success: false,
+              message: errorMessage,
+              data: replyData
+            });
+          }
+          observer.complete();
+        } catch (error) {
+          this.messagingService.error('Error fetching latest Glidian record');
+          observer.error(error);
+        }
+      });
+    });
+  }
   static #_ = this.ɵfac = function PriorAuthService_Factory(t) {
     return new (t || PriorAuthService)(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_12__.CustomService), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_column_config_service__WEBPACK_IMPORTED_MODULE_1__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_app_status_service__WEBPACK_IMPORTED_MODULE_2__.AppStatusService), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_messaging_service__WEBPACK_IMPORTED_MODULE_3__.MessagingService), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_user_preferences_service__WEBPACK_IMPORTED_MODULE_4__.UserPreferencesService));
   };
@@ -18187,10 +18616,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-23T10:40:31.351Z
-const buildVersion = 'v0.0.207-develop';
-const packageVersion = '0.0.207';
-const gitBranch = 'develop';
+// Generated on: 2025-07-24T14:33:00.144Z
+const buildVersion = 'v0.0.209-refresh-updates';
+const packageVersion = '0.0.209';
+const gitBranch = 'refresh-updates';
 
 /***/ }),
 
@@ -18200,7 +18629,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.207","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.209","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
