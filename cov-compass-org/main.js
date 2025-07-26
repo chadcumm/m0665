@@ -7494,29 +7494,34 @@ __webpack_require__.r(__webpack_exports__);
 
 function PriorAuthFilterBarComponent_nz_tab_4_Template(rf, ctx) {
   if (rf & 1) {
-    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "nz-tab", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("nzClick", function PriorAuthFilterBarComponent_nz_tab_4_Template_nz_tab_nzClick_0_listener() {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r10);
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r11);
       const filter_r8 = restoredCtx.$implicit;
-      const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r9.onPredefinedFilterSelect(filter_r8));
+      const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r10.onPredefinedFilterSelect(filter_r8));
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
     const filter_r8 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzTitle", filter_r8.label);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzTitle", ctx_r0.getTabTitle(filter_r8));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("Content for ", filter_r8.label, "");
   }
 }
 function PriorAuthFilterBarComponent_button_9_Template(rf, ctx) {
   if (rf & 1) {
-    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    const _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_9_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r12);
-      const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r11.sidebarState.toggle());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r13);
+      const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r12.sidebarState.toggle());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
@@ -7524,12 +7529,12 @@ function PriorAuthFilterBarComponent_button_9_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_button_10_Template(rf, ctx) {
   if (rf & 1) {
-    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_10_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r14);
-      const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r13.userPreferences.saveUserPreferences());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r15);
+      const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r14.userPreferences.saveUserPreferences());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
@@ -7537,12 +7542,12 @@ function PriorAuthFilterBarComponent_button_10_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_button_11_Template(rf, ctx) {
   if (rf & 1) {
-    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    const _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 20);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_11_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r16);
-      const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r15.resetColumnWidths());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r17);
+      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r16.resetColumnWidths());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
@@ -7550,12 +7555,12 @@ function PriorAuthFilterBarComponent_button_11_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_nz_segmented_14_Template(rf, ctx) {
   if (rf & 1) {
-    const _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    const _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "nz-segmented", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("nzValueChange", function PriorAuthFilterBarComponent_nz_segmented_14_Template_nz_segmented_nzValueChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r18);
-      const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r17.onDaysFilterChange($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r19);
+      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r18.onDaysFilterChange($event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
@@ -7566,13 +7571,13 @@ function PriorAuthFilterBarComponent_nz_segmented_14_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_input_15_Template(rf, ctx) {
   if (rf & 1) {
-    const _r21 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    const _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "input", 23, 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("input", function PriorAuthFilterBarComponent_input_15_Template_input_input_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r21);
-      const _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵreference"](1);
-      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r20.onGlobalSearch(_r19.value));
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r22);
+      const _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵreference"](1);
+      const ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r21.onGlobalSearch(_r20.value));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
@@ -7584,19 +7589,19 @@ function PriorAuthFilterBarComponent_button_16_span_2_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+    const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r22.processingCount);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r23.processingCount);
   }
 }
 function PriorAuthFilterBarComponent_button_16_Template(rf, ctx) {
   if (rf & 1) {
-    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    const _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_16_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r24);
-      const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r23.onRefreshData());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r25);
+      const ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r24.onRefreshData());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, PriorAuthFilterBarComponent_button_16_span_2_Template, 2, 1, "span", 27);
@@ -7619,6 +7624,24 @@ class PriorAuthFilterBarComponent {
   get processingCount() {
     return this.priorAuthService.processingCount();
   }
+  // Filter counts from PriorAuthService using signals
+  get filterCounts() {
+    return this.priorAuthService.predefinedFilterCounts();
+  }
+  /**
+   * Gets the count for a specific predefined filter
+   */
+  getFilterCount(filterId) {
+    const count = this.filterCounts[filterId] || 0;
+    return count;
+  }
+  /**
+   * Gets the tab title with badge count for a filter
+   */
+  getTabTitle(filter) {
+    const count = this.getFilterCount(filter.id);
+    return count > 0 ? `${filter.label} (${count})` : filter.label;
+  }
   constructor(sidebarState, userPreferences, columnConfig, priorAuthService) {
     this.sidebarState = sidebarState;
     this.userPreferences = userPreferences;
@@ -7635,6 +7658,10 @@ class PriorAuthFilterBarComponent {
      * Emits when a predefined filter tab is selected
      */
     this.predefinedFilterSelect = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.EventEmitter();
+    /**
+     * Emits when column filters should be cleared
+     */
+    this.clearColumnFilters = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.EventEmitter();
     // Days filter options for the segmented control
     this.daysOptions = [{
       label: '30',
@@ -7659,7 +7686,8 @@ class PriorAuthFilterBarComponent {
   }
   // Predefined filter tabs from centralized configuration
   get predefinedFilters() {
-    return this.columnConfig.getPredefinedFilters('prior-auth');
+    const filters = this.columnConfig.getPredefinedFilters('prior-auth');
+    return filters;
   }
   get selectedTabIndex() {
     return this._selectedTabIndex;
@@ -7708,10 +7736,20 @@ class PriorAuthFilterBarComponent {
   }
   /**
    * Handles selection of a predefined filter tab
+   * Clears user-applied column filters when switching between tabs
    */
   onPredefinedFilterSelect(filter) {
+    // Store the previous filter to check if we're actually switching
+    const previousFilter = this.selectedPredefinedFilter;
+    // Update the selected filter
     this.selectedPredefinedFilter = filter;
     this._selectedTabIndex = this.predefinedFilters.findIndex(f => f.id === filter.id);
+    // Clear column filters when switching between predefined filter tabs
+    // This ensures users see the expected predefined filter results
+    if (previousFilter && previousFilter.id !== filter.id) {
+      this.clearColumnFilters.emit();
+    }
+    // Emit the filter selection
     this.predefinedFilterSelect.emit(filter);
   }
   /**
@@ -7732,7 +7770,8 @@ class PriorAuthFilterBarComponent {
       daysFilterChange: "daysFilterChange",
       refreshData: "refreshData",
       globalSearch: "globalSearch",
-      predefinedFilterSelect: "predefinedFilterSelect"
+      predefinedFilterSelect: "predefinedFilterSelect",
+      clearColumnFilters: "clearColumnFilters"
     },
     decls: 17,
     vars: 2,
@@ -7743,7 +7782,7 @@ class PriorAuthFilterBarComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("nzSelectedIndexChange", function PriorAuthFilterBarComponent_Template_nz_tabset_nzSelectedIndexChange_3_listener($event) {
           return ctx.selectedTabIndex = $event;
         });
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, PriorAuthFilterBarComponent_nz_tab_4_Template, 1, 1, "nz-tab", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, PriorAuthFilterBarComponent_nz_tab_4_Template, 3, 2, "nz-tab", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "div", 4)(6, "div", 5, 6)(8, "nz-space", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](9, PriorAuthFilterBarComponent_button_9_Template, 2, 0, "button", 8);
@@ -7764,7 +7803,7 @@ class PriorAuthFilterBarComponent {
       }
     },
     dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_6__.NzInputDirective, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_7__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_8__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_8__.NzRowDirective, ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_9__.NzTabSetComponent, ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_9__.NzTabComponent, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_10__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_11__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_12__.NzWaveDirective, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_13__.NzSpaceComponent, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_13__.NzSpaceItemDirective, ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_14__.NzSegmentedComponent],
-    styles: ["[_nghost-%COMP%]     .toolbar-row [nz-col] {\n  padding: 0px 0px 0px 0px !important;\n}\n\n[_nghost-%COMP%]     [nz-col] {\n  padding: 0px 0px 0px 0px;\n}\n\n.fill-rest-col[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.refresh-button[_ngcontent-%COMP%] {\n  position: relative;\n}\n.refresh-button[_ngcontent-%COMP%]   .processing-badge[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -8px;\n  right: -8px;\n  background-color: #1890ff;\n  color: white;\n  border-radius: 50%;\n  min-width: 18px;\n  height: 18px;\n  font-size: 10px;\n  font-weight: bold;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2px;\n  line-height: 1;\n  z-index: 1;\n  animation: _ngcontent-%COMP%_pulse 2s infinite;\n}\n\n@keyframes _ngcontent-%COMP%_pulse {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n.predefined-filters-row[_ngcontent-%COMP%] {\n  margin-bottom: 8px;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-nav {\n  margin-bottom: 0;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-nav::before {\n  border-bottom: 1px solid #f0f0f0;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-tab {\n  padding: 4px 16px;\n  font-size: 13px;\n  margin-right: 8px;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-tab:hover {\n  color: #1890ff;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {\n  color: #1890ff;\n  font-weight: 500;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {\n  background: #fafafa;\n  border-color: #e8e8e8;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active {\n  background: #fff;\n  border-bottom-color: #fff;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-content-holder {\n  display: none;\n}\n\n.filter-controls-row[_ngcontent-%COMP%] {\n  border-top: 1px solid #f0f0f0;\n  padding-top: 8px;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L3ByaW9yLWF1dGgvcHJpb3ItYXV0aC1maWx0ZXItYmFyL3ByaW9yLWF1dGgtZmlsdGVyLWJhci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1DQUFBO0FBQ0Y7O0FBR0E7RUFDRSx3QkFBQTtBQUFGOztBQUdBO0VBQ0UsaUJBQUE7QUFBRjs7QUFJQTtFQUNFLGtCQUFBO0FBREY7QUFHRTtFQUNFLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxZQUFBO0VBQ0EsY0FBQTtFQUNBLFVBQUE7RUFDQSw0QkFBQTtBQURKOztBQU1BO0VBQ0U7SUFDRSxtQkFBQTtFQUhGO0VBS0E7SUFDRSxxQkFBQTtFQUhGO0VBS0E7SUFDRSxtQkFBQTtFQUhGO0FBQ0Y7QUFPQTtFQUNFLGtCQUFBO0FBTEY7QUFTTTtFQUNFLGdCQUFBO0FBUFI7QUFTUTtFQUNFLGdDQUFBO0FBUFY7QUFXTTtFQUNFLGlCQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0FBVFI7QUFXUTtFQUNFLGNBQUE7QUFUVjtBQWFVO0VBQ0UsY0FBQTtFQUNBLGdCQUFBO0FBWFo7QUFnQk07RUFDRSxtQkFBQTtFQUNBLHFCQUFBO0FBZFI7QUFnQlE7RUFDRSxnQkFBQTtFQUNBLHlCQUFBO0FBZFY7QUFrQk07RUFDRSxhQUFBO0FBaEJSOztBQXNCQTtFQUNFLDZCQUFBO0VBQ0EsZ0JBQUE7QUFuQkYiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCA6Om5nLWRlZXAgLnRvb2xiYXItcm93IFtuei1jb2xdIHtcbiAgcGFkZGluZzogMHB4IDBweCAwcHggMHB4ICFpbXBvcnRhbnQ7XG59XG5cbi8vIEFkZCBhIGJvcmRlciBhbmQgcGFkZGluZyB0byBlYWNoIG56LWNvbCBpbiB0aGUgZmlsdGVyIGJhclxuOmhvc3QgOjpuZy1kZWVwIFtuei1jb2xdIHtcbiAgcGFkZGluZzogMHB4IDBweCAwcHggMHB4O1xufVxuXG4uZmlsbC1yZXN0LWNvbCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuXG4vLyBTdHlsZXMgZm9yIHRoZSByZWZyZXNoIGJ1dHRvbiB3aXRoIHByb2Nlc3NpbmcgYmFkZ2Vcbi5yZWZyZXNoLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgXG4gIC5wcm9jZXNzaW5nLWJhZGdlIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAtOHB4O1xuICAgIHJpZ2h0OiAtOHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMxODkwZmY7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICBtaW4td2lkdGg6IDE4cHg7XG4gICAgaGVpZ2h0OiAxOHB4O1xuICAgIGZvbnQtc2l6ZTogMTBweDtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgcGFkZGluZzogMnB4O1xuICAgIGxpbmUtaGVpZ2h0OiAxO1xuICAgIHotaW5kZXg6IDE7XG4gICAgYW5pbWF0aW9uOiBwdWxzZSAycyBpbmZpbml0ZTtcbiAgfVxufVxuXG4vLyBQdWxzZSBhbmltYXRpb24gZm9yIHRoZSBiYWRnZVxuQGtleWZyYW1lcyBwdWxzZSB7XG4gIDAlIHtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEpO1xuICB9XG4gIDUwJSB7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xuICB9XG4gIDEwMCUge1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMSk7XG4gIH1cbn1cblxuLy8gUHJlZGVmaW5lZCBmaWx0ZXIgdGFicyBzdHlsaW5nXG4ucHJlZGVmaW5lZC1maWx0ZXJzLXJvdyB7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbiAgXG4gIC5wcmVkZWZpbmVkLWZpbHRlci10YWJzIHtcbiAgICA6Om5nLWRlZXAge1xuICAgICAgLmFudC10YWJzLW5hdiB7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDA7XG4gICAgICAgIFxuICAgICAgICAmOjpiZWZvcmUge1xuICAgICAgICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZjBmMGYwO1xuICAgICAgICB9XG4gICAgICB9XG4gICAgICBcbiAgICAgIC5hbnQtdGFicy10YWIge1xuICAgICAgICBwYWRkaW5nOiA0cHggMTZweDtcbiAgICAgICAgZm9udC1zaXplOiAxM3B4O1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDhweDtcbiAgICAgICAgXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGNvbG9yOiAjMTg5MGZmO1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICAmLmFudC10YWJzLXRhYi1hY3RpdmUge1xuICAgICAgICAgIC5hbnQtdGFicy10YWItYnRuIHtcbiAgICAgICAgICAgIGNvbG9yOiAjMTg5MGZmO1xuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICAgIFxuICAgICAgLmFudC10YWJzLWNhcmQgPiAuYW50LXRhYnMtbmF2IC5hbnQtdGFicy10YWIge1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xuICAgICAgICBib3JkZXItY29sb3I6ICNlOGU4ZTg7XG4gICAgICAgIFxuICAgICAgICAmLmFudC10YWJzLXRhYi1hY3RpdmUge1xuICAgICAgICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgICAgICAgYm9yZGVyLWJvdHRvbS1jb2xvcjogI2ZmZjtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgXG4gICAgICAuYW50LXRhYnMtY29udGVudC1ob2xkZXIge1xuICAgICAgICBkaXNwbGF5OiBub25lOyAvLyBIaWRlIHRhYiBjb250ZW50IGFzIHdlIG9ubHkgdXNlIHRhYnMgZm9yIGZpbHRlcmluZ1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuXG4uZmlsdGVyLWNvbnRyb2xzLXJvdyB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBmMGYwO1xuICBwYWRkaW5nLXRvcDogOHB4O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */"]
+    styles: ["[_nghost-%COMP%]     .toolbar-row [nz-col] {\n  padding: 0px 0px 0px 0px !important;\n}\n\n[_nghost-%COMP%]     [nz-col] {\n  padding: 0px 0px 0px 0px;\n}\n\n.fill-rest-col[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\n.refresh-button[_ngcontent-%COMP%] {\n  position: relative;\n}\n.refresh-button[_ngcontent-%COMP%]   .processing-badge[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -8px;\n  right: -8px;\n  background-color: #1890ff;\n  color: white;\n  border-radius: 50%;\n  min-width: 18px;\n  height: 18px;\n  font-size: 10px;\n  font-weight: bold;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 2px;\n  line-height: 1;\n  z-index: 1;\n  animation: _ngcontent-%COMP%_pulse 2s infinite;\n}\n\n@keyframes _ngcontent-%COMP%_pulse {\n  0% {\n    transform: scale(1);\n  }\n  50% {\n    transform: scale(1.1);\n  }\n  100% {\n    transform: scale(1);\n  }\n}\n[_nghost-%COMP%]     .filter-tab-badge .ant-badge-count {\n  background-color: #1890ff;\n  color: white;\n  font-size: 10px;\n  font-weight: 600;\n  min-width: 16px;\n  height: 16px;\n  line-height: 16px;\n  border-radius: 8px;\n  padding: 0 4px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n[_nghost-%COMP%]     .filter-tab-badge .filter-tab-label {\n  font-size: 12px;\n  font-weight: 500;\n  color: #333;\n}\n\n[_nghost-%COMP%]     .predefined-filter-tabs .ant-tabs-tab {\n  padding: 8px 12px;\n}\n[_nghost-%COMP%]     .predefined-filter-tabs .ant-tabs-tab .ant-tabs-tab-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.predefined-filters-row[_ngcontent-%COMP%] {\n  margin-bottom: 8px;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-nav {\n  margin-bottom: 0;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-nav::before {\n  border-bottom: 1px solid #f0f0f0;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-tab {\n  padding: 4px 16px;\n  font-size: 13px;\n  margin-right: 8px;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-tab:hover {\n  color: #1890ff;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {\n  color: #1890ff;\n  font-weight: 500;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {\n  background: #fafafa;\n  border-color: #e8e8e8;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active {\n  background: #fff;\n  border-bottom-color: #fff;\n}\n.predefined-filters-row[_ngcontent-%COMP%]   .predefined-filter-tabs[_ngcontent-%COMP%]     .ant-tabs-content-holder {\n  display: none;\n}\n\n.filter-tab-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.filter-tab-content[_ngcontent-%COMP%]   .filter-count-badge[_ngcontent-%COMP%] {\n  background-color: #1890ff;\n  color: white;\n  font-size: 10px;\n  font-weight: 500;\n  min-width: 18px;\n  height: 18px;\n  line-height: 18px;\n  padding: 0 6px;\n  border-radius: 9px;\n  text-align: center;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.filter-tab-content[_ngcontent-%COMP%]   .filter-count-badge.zero-count[_ngcontent-%COMP%] {\n  background-color: #d9d9d9;\n  color: #666;\n}\n.filter-tab-content[_ngcontent-%COMP%]   .filter-count-badge.active-filter[_ngcontent-%COMP%] {\n  background-color: #52c41a;\n}\n\n.filter-controls-row[_ngcontent-%COMP%] {\n  border-top: 1px solid #f0f0f0;\n  padding-top: 8px;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L3ByaW9yLWF1dGgvcHJpb3ItYXV0aC1maWx0ZXItYmFyL3ByaW9yLWF1dGgtZmlsdGVyLWJhci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1DQUFBO0FBQ0Y7O0FBR0E7RUFDRSx3QkFBQTtBQUFGOztBQUdBO0VBQ0UsaUJBQUE7QUFBRjs7QUFJQTtFQUNFLGtCQUFBO0FBREY7QUFHRTtFQUNFLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxZQUFBO0VBQ0EsY0FBQTtFQUNBLFVBQUE7RUFDQSw0QkFBQTtBQURKOztBQU1BO0VBQ0U7SUFDRSxtQkFBQTtFQUhGO0VBS0E7SUFDRSxxQkFBQTtFQUhGO0VBS0E7SUFDRSxtQkFBQTtFQUhGO0FBQ0Y7QUFRRTtFQUNFLHlCQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLGNBQUE7RUFDQSx3Q0FBQTtBQU5KO0FBU0U7RUFDRSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxXQUFBO0FBUEo7O0FBYUU7RUFDRSxpQkFBQTtBQVZKO0FBWUk7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQVZOOztBQWdCQTtFQUNFLGtCQUFBO0FBYkY7QUFpQk07RUFDRSxnQkFBQTtBQWZSO0FBaUJRO0VBQ0UsZ0NBQUE7QUFmVjtBQW1CTTtFQUNFLGlCQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0FBakJSO0FBbUJRO0VBQ0UsY0FBQTtBQWpCVjtBQXFCVTtFQUNFLGNBQUE7RUFDQSxnQkFBQTtBQW5CWjtBQXdCTTtFQUNFLG1CQUFBO0VBQ0EscUJBQUE7QUF0QlI7QUF3QlE7RUFDRSxnQkFBQTtFQUNBLHlCQUFBO0FBdEJWO0FBMEJNO0VBQ0UsYUFBQTtBQXhCUjs7QUErQkE7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxRQUFBO0FBNUJGO0FBOEJFO0VBQ0UseUJBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0Esd0NBQUE7QUE1Qko7QUErQkk7RUFDRSx5QkFBQTtFQUNBLFdBQUE7QUE3Qk47QUFnQ0k7RUFDRSx5QkFBQTtBQTlCTjs7QUFtQ0E7RUFDRSw2QkFBQTtFQUNBLGdCQUFBO0FBaENGIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3QgOjpuZy1kZWVwIC50b29sYmFyLXJvdyBbbnotY29sXSB7XG4gIHBhZGRpbmc6IDBweCAwcHggMHB4IDBweCAhaW1wb3J0YW50O1xufVxuXG4vLyBBZGQgYSBib3JkZXIgYW5kIHBhZGRpbmcgdG8gZWFjaCBuei1jb2wgaW4gdGhlIGZpbHRlciBiYXJcbjpob3N0IDo6bmctZGVlcCBbbnotY29sXSB7XG4gIHBhZGRpbmc6IDBweCAwcHggMHB4IDBweDtcbn1cblxuLmZpbGwtcmVzdC1jb2wge1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cblxuLy8gU3R5bGVzIGZvciB0aGUgcmVmcmVzaCBidXR0b24gd2l0aCBwcm9jZXNzaW5nIGJhZGdlXG4ucmVmcmVzaC1idXR0b24ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIFxuICAucHJvY2Vzc2luZy1iYWRnZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogLThweDtcbiAgICByaWdodDogLThweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTg5MGZmO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgbWluLXdpZHRoOiAxOHB4O1xuICAgIGhlaWdodDogMThweDtcbiAgICBmb250LXNpemU6IDEwcHg7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHBhZGRpbmc6IDJweDtcbiAgICBsaW5lLWhlaWdodDogMTtcbiAgICB6LWluZGV4OiAxO1xuICAgIGFuaW1hdGlvbjogcHVsc2UgMnMgaW5maW5pdGU7XG4gIH1cbn1cblxuLy8gUHVsc2UgYW5pbWF0aW9uIGZvciB0aGUgYmFkZ2VcbkBrZXlmcmFtZXMgcHVsc2Uge1xuICAwJSB7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxKTtcbiAgfVxuICA1MCUge1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMS4xKTtcbiAgfVxuICAxMDAlIHtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEpO1xuICB9XG59XG5cbi8vIFN0eWxlcyBmb3IgZmlsdGVyIHRhYiBiYWRnZXNcbjpob3N0IDo6bmctZGVlcCAuZmlsdGVyLXRhYi1iYWRnZSB7XG4gIC5hbnQtYmFkZ2UtY291bnQge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMxODkwZmY7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGZvbnQtc2l6ZTogMTBweDtcbiAgICBmb250LXdlaWdodDogNjAwO1xuICAgIG1pbi13aWR0aDogMTZweDtcbiAgICBoZWlnaHQ6IDE2cHg7XG4gICAgbGluZS1oZWlnaHQ6IDE2cHg7XG4gICAgYm9yZGVyLXJhZGl1czogOHB4O1xuICAgIHBhZGRpbmc6IDAgNHB4O1xuICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gIH1cbiAgXG4gIC5maWx0ZXItdGFiLWxhYmVsIHtcbiAgICBmb250LXNpemU6IDEycHg7XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICBjb2xvcjogIzMzMztcbiAgfVxufVxuXG4vLyBFbnN1cmUgcHJvcGVyIHNwYWNpbmcgZm9yIHRhYiB0aXRsZXMgd2l0aCBiYWRnZXNcbjpob3N0IDo6bmctZGVlcCAucHJlZGVmaW5lZC1maWx0ZXItdGFicyB7XG4gIC5hbnQtdGFicy10YWIge1xuICAgIHBhZGRpbmc6IDhweCAxMnB4O1xuICAgIFxuICAgIC5hbnQtdGFicy10YWItYnRuIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgfVxuICB9XG59XG5cbi8vIFByZWRlZmluZWQgZmlsdGVyIHRhYnMgc3R5bGluZ1xuLnByZWRlZmluZWQtZmlsdGVycy1yb3cge1xuICBtYXJnaW4tYm90dG9tOiA4cHg7XG4gIFxuICAucHJlZGVmaW5lZC1maWx0ZXItdGFicyB7XG4gICAgOjpuZy1kZWVwIHtcbiAgICAgIC5hbnQtdGFicy1uYXYge1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAwO1xuICAgICAgICBcbiAgICAgICAgJjo6YmVmb3JlIHtcbiAgICAgICAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2YwZjBmMDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgXG4gICAgICAuYW50LXRhYnMtdGFiIHtcbiAgICAgICAgcGFkZGluZzogNHB4IDE2cHg7XG4gICAgICAgIGZvbnQtc2l6ZTogMTNweDtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiA4cHg7XG4gICAgICAgIFxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBjb2xvcjogIzE4OTBmZjtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgJi5hbnQtdGFicy10YWItYWN0aXZlIHtcbiAgICAgICAgICAuYW50LXRhYnMtdGFiLWJ0biB7XG4gICAgICAgICAgICBjb2xvcjogIzE4OTBmZjtcbiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG4gICAgICBcbiAgICAgIC5hbnQtdGFicy1jYXJkID4gLmFudC10YWJzLW5hdiAuYW50LXRhYnMtdGFiIHtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZhZmFmYTtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiAjZThlOGU4O1xuICAgICAgICBcbiAgICAgICAgJi5hbnQtdGFicy10YWItYWN0aXZlIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiAjZmZmO1xuICAgICAgICAgIGJvcmRlci1ib3R0b20tY29sb3I6ICNmZmY7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICAgIFxuICAgICAgLmFudC10YWJzLWNvbnRlbnQtaG9sZGVyIHtcbiAgICAgICAgZGlzcGxheTogbm9uZTsgLy8gSGlkZSB0YWIgY29udGVudCBhcyB3ZSBvbmx5IHVzZSB0YWJzIGZvciBmaWx0ZXJpbmdcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cblxuLy8gRmlsdGVyIHRhYiBjb250ZW50IHN0eWxpbmcgd2l0aCBjdXN0b20gYmFkZ2VzXG4uZmlsdGVyLXRhYi1jb250ZW50IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZ2FwOiA2cHg7XG4gIFxuICAuZmlsdGVyLWNvdW50LWJhZGdlIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTg5MGZmO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBmb250LXNpemU6IDEwcHg7XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICBtaW4td2lkdGg6IDE4cHg7XG4gICAgaGVpZ2h0OiAxOHB4O1xuICAgIGxpbmUtaGVpZ2h0OiAxOHB4O1xuICAgIHBhZGRpbmc6IDAgNnB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDlweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICBcbiAgICAvLyBEaWZmZXJlbnQgY29sb3JzIGZvciBkaWZmZXJlbnQgc3RhdGVzXG4gICAgJi56ZXJvLWNvdW50IHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkOWQ5ZDk7XG4gICAgICBjb2xvcjogIzY2NjtcbiAgICB9XG4gICAgXG4gICAgJi5hY3RpdmUtZmlsdGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM1MmM0MWE7XG4gICAgfVxuICB9XG59XG5cbi5maWx0ZXItY29udHJvbHMtcm93IHtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNmMGYwZjA7XG4gIHBhZGRpbmctdG9wOiA4cHg7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
   });
 }
 
@@ -8143,6 +8182,17 @@ class PriorAuthComponent {
     }
   }
   /**
+   * Handles clearing column filters when switching between predefined filter tabs
+   * This ensures users see the expected predefined filter results without user-applied filters interfering
+   */
+  onClearColumnFilters() {
+    // Clear column filters in the worklist table component
+    if (this.worklistTable) {
+      // Clear the filter selections in the table component
+      this.worklistTable.clearAllColumnFilters();
+    }
+  }
+  /**
    * Getter for the loading state from the service
    * Used in template to show loading spinner
    */
@@ -8172,7 +8222,7 @@ class PriorAuthComponent {
     },
     decls: 5,
     vars: 7,
-    consts: [["nz-row", "", 1, "prior-auth-container", 3, "nzGutter"], ["nz-col", "", 3, "nzSpan"], [3, "sideBarToggle", "columnWidthsReset", "daysFilterChange", "refreshData", "globalSearch", "predefinedFilterSelect"], [3, "worklistItems", "loading", "activePredefinedFilter"]],
+    consts: [["nz-row", "", 1, "prior-auth-container", 3, "nzGutter"], ["nz-col", "", 3, "nzSpan"], [3, "sideBarToggle", "columnWidthsReset", "daysFilterChange", "refreshData", "globalSearch", "predefinedFilterSelect", "clearColumnFilters"], [3, "worklistItems", "loading", "activePredefinedFilter"]],
     template: function PriorAuthComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "app-prior-auth-filter-bar", 2);
@@ -8188,6 +8238,8 @@ class PriorAuthComponent {
           return ctx.onGlobalSearch($event);
         })("predefinedFilterSelect", function PriorAuthComponent_Template_app_prior_auth_filter_bar_predefinedFilterSelect_2_listener($event) {
           return ctx.onPredefinedFilterSelect($event);
+        })("clearColumnFilters", function PriorAuthComponent_Template_app_prior_auth_filter_bar_clearColumnFilters_2_listener() {
+          return ctx.onClearColumnFilters();
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "div", 1);
@@ -10595,16 +10647,32 @@ class WorklistTableComponent {
      */
     this._drawerVisible = (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.signal)(false);
     /**
-     * Signal tracking the currently selected worklist item
-     * Used for displaying details in the drawer
+     * Signal tracking the currently selected item for drawer display
      */
     this._selectedItem = (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.signal)(null);
     /**
-     * Persistent filter state for each filterable column.
-     * Keyed by column meaning, value is array of selected filter values.
-     * This is used to re-apply filters after data refresh.
+     * Flag to prevent filter restoration when switching predefined filters
+     */
+    this._preventingFilterRestoration = false;
+    /**
+     * Flag to track if we're in the middle of a data refresh operation
+     */
+    this._isDataRefreshing = false;
+    /**
+     * Local storage for filter selections to persist across data updates
      */
     this.filterSelections = {};
+    // === PRIVATE SIGNALS FOR STATE MANAGEMENT ===
+    /**
+     * Signal to track when column filters have been updated and are ready for visual application
+     * This replaces the setTimeout-based timing mechanism
+     */
+    this._columnFiltersReady = (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.signal)(false);
+    /**
+     * Signal to track when predefined filter application is in progress
+     * This prevents race conditions during filter switching
+     */
+    this._applyingPredefinedFilter = (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.signal)(false);
     // === READ-ONLY SIGNALS FOR EXTERNAL ACCESS ===
     /**
      * Read-only access to expanded row IDs
@@ -10626,6 +10694,16 @@ class WorklistTableComponent {
      * Used to display item details in drawer
      */
     this.selectedItem = this._selectedItem.asReadonly();
+    /**
+     * Read-only access to column filters ready state
+     * Used to determine when visual filter application can proceed
+     */
+    this.columnFiltersReady = this._columnFiltersReady.asReadonly();
+    /**
+     * Read-only access to predefined filter application state
+     * Used to prevent race conditions during filter switching
+     */
+    this.applyingPredefinedFilter = this._applyingPredefinedFilter.asReadonly();
     // === COMPUTED SIGNALS FOR DERIVED STATE ===
     /**
      * Computed signal that returns the current column configuration
@@ -10655,6 +10733,42 @@ class WorklistTableComponent {
     this.loading = false;
     // Add a local columns array for the table
     this.columns = [];
+    // Subscribe to column filter update events to trigger visual filter application
+    this.columnConfig.columnFiltersUpdated$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_11__.takeUntil)(this.destroy$)).subscribe(() => {
+      console.log('[WorklistTable] Column filters updated, checking if visual filters should be applied');
+      // If we have an active predefined filter and we're not currently applying one,
+      // apply visual filters now that column filters are ready
+      if (this.activePredefinedFilter && !this._applyingPredefinedFilter()) {
+        console.log('[WorklistTable] Applying visual filters after column filter update');
+        this._applyingPredefinedFilter.set(true);
+        this.applyVisualFilters(this.activePredefinedFilter);
+        // Reset the applying flag after a brief moment to allow UI updates
+        setTimeout(() => {
+          this._applyingPredefinedFilter.set(false);
+        }, 100);
+      }
+    });
+    // Set up reactive effect to automatically apply visual filters when column filters are ready
+    // This replaces the setTimeout-based timing mechanism
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.effect)(() => {
+      const filtersReady = this._columnFiltersReady();
+      const applyingFilter = this._applyingPredefinedFilter();
+      const activeFilter = this.activePredefinedFilter;
+      // Only apply visual filters if:
+      // 1. Column filters are ready
+      // 2. We're not currently applying a filter (to prevent race conditions)
+      // 3. We have an active predefined filter
+      if (filtersReady && !applyingFilter && activeFilter) {
+        console.log('[WorklistTable] Column filters ready, applying visual filters for:', activeFilter.id);
+        this._applyingPredefinedFilter.set(true);
+        // Apply visual filters immediately since column filters are ready
+        this.applyVisualFilters(activeFilter);
+        // Reset the applying flag after a brief moment to allow UI updates
+        setTimeout(() => {
+          this._applyingPredefinedFilter.set(false);
+        }, 100);
+      }
+    });
   }
   ngOnInit() {
     // Load saved column widths
@@ -10678,16 +10792,45 @@ class WorklistTableComponent {
     this.destroy$.complete();
   }
   ngOnChanges(changes) {
-    if (changes['worklistItems'] && !changes['worklistItems'].firstChange) {
-      // console.log('[WorklistTable] worklistItems changed, scheduling filter restoration');
-      // Delay to ensure table has processed the new data
-      setTimeout(() => {
-        this.restoreTableFilters();
-      }, 300);
-    }
-    // Apply predefined filters when they change
+    // Apply predefined filters when they change - this should happen first
     if (changes['activePredefinedFilter']) {
-      this.applyPredefinedFilters();
+      console.log('[WorklistTable] Predefined filter changed:', this.activePredefinedFilter);
+      // Set prevention flag when switching predefined filters
+      this._preventingFilterRestoration = true;
+      this._isDataRefreshing = true;
+      console.log('[WorklistTable] Set _preventingFilterRestoration = true and _isDataRefreshing = true');
+      // Clear existing filter selections immediately
+      this.clearPredefinedFilterSelections();
+      // Mark that we're waiting for column filters to be ready
+      this._columnFiltersReady.set(false);
+      // Reset the flags after a brief delay to allow data processing
+      // The actual visual filter application will be triggered by the column filter update event
+      setTimeout(() => {
+        this._preventingFilterRestoration = false;
+        this._isDataRefreshing = false;
+        console.log('[WorklistTable] Reset _preventingFilterRestoration = false and _isDataRefreshing = false');
+        // Signal that column filters should now be ready
+        this._columnFiltersReady.set(true);
+      }, 100); // Reduced from 500ms to 100ms since we're using reactive events
+    }
+
+    if (changes['worklistItems'] && !changes['worklistItems'].firstChange) {
+      console.log('[WorklistTable] worklistItems changed, _preventingFilterRestoration =', this._preventingFilterRestoration, '_isDataRefreshing =', this._isDataRefreshing);
+      // Only restore filters if we're not preventing restoration (e.g., during predefined filter switches)
+      if (!this._preventingFilterRestoration && !this._isDataRefreshing) {
+        console.log('[WorklistTable] Scheduling filter restoration');
+        // Delay to ensure table has processed the new data
+        setTimeout(() => {
+          // Double-check the flags before actually restoring filters
+          if (!this._preventingFilterRestoration && !this._isDataRefreshing) {
+            this.restoreTableFilters();
+          } else {
+            console.log('[WorklistTable] Skipping filter restoration - flags still active');
+          }
+        }, 300);
+      } else {
+        console.log('[WorklistTable] Skipping filter restoration due to predefined filter switch or data refresh');
+      }
     }
   }
   /**
@@ -11124,6 +11267,63 @@ class WorklistTableComponent {
     // console.log('[WorklistTable] Updated filterSelections:', this.filterSelections);
   }
   /**
+   * Public method to clear all column filters
+   * Called when switching between predefined filter tabs
+   */
+  clearAllColumnFilters() {
+    console.log('[WorklistTable] Clearing all column filters');
+    // Set flags to prevent filter restoration during predefined filter switches
+    this._preventingFilterRestoration = true;
+    this._isDataRefreshing = true;
+    // Clear all filter selections
+    this.filterSelections = {};
+    // Clear filter selections in all columns
+    const columns = this.columnConfig.getColumns('prior-auth');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        // Clear all selections
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = false;
+        }
+      }
+    }
+    // Update columns to reflect the cleared state
+    this.columnConfig.triggerUpdate();
+    // Force change detection to ensure Angular picks up the changes
+    this.cdr.detectChanges();
+    // Reset the flags after a longer delay to allow data updates to complete
+    // Increased from 500ms to 2000ms to ensure data refresh completes
+    setTimeout(() => {
+      this._preventingFilterRestoration = false;
+      this._isDataRefreshing = false;
+      console.log('[WorklistTable] Reset _preventingFilterRestoration = false and _isDataRefreshing = false (from clearAllColumnFilters)');
+    }, 2000);
+  }
+  /**
+   * Clear filter selections that were set by predefined filters.
+   * Preserves user-selected filters on other columns.
+   */
+  clearPredefinedFilterSelections() {
+    console.log('[WorklistTable] Clearing predefined filter selections');
+    // Clear ALL filters when going back to "All Items"
+    this.filterSelections = {};
+    // Clear all column filter selections immediately
+    const columns = this.columnConfig.getColumns('prior-auth');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        // Clear all selections first
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = false;
+        }
+        console.log(`[WorklistTable] Cleared all selections for column ${col.name}`);
+      }
+    }
+    // Update columns to reflect the cleared state immediately
+    this.columnConfig.triggerUpdate();
+    this.cdr.detectChanges();
+    console.log('[WorklistTable] Cleared all column filter selections');
+  }
+  /**
    * Programmatically restore table filters using NG-ZORRO's table API.
    * This ensures filters persist after a refresh, including manual and predefined filters.
    */
@@ -11165,9 +11365,10 @@ class WorklistTableComponent {
   /**
    * Apply predefined filters to the table columns programmatically.
    * This syncs the predefined filter selections with the table's column filters.
+   * Now uses reactive signals instead of setTimeout for timing.
    */
   applyPredefinedFilters() {
-    // console.log('[WorklistTable] Applying predefined filter:', this.activePredefinedFilter);
+    console.log('[WorklistTable] Applying predefined filter:', this.activePredefinedFilter);
     if (!this.activePredefinedFilter) {
       // Clear predefined filter selections if no filter is active
       this.clearPredefinedFilterSelections();
@@ -11175,62 +11376,66 @@ class WorklistTableComponent {
     }
     // Handle "All Items" filter explicitly - it should clear predefined filters
     if (this.activePredefinedFilter.id === 'all') {
-      // console.log('[WorklistTable] All Items filter selected, clearing filters');
+      console.log('[WorklistTable] All Items filter selected, clearing filters');
       this.clearPredefinedFilterSelections();
       return;
     }
-    const filters = this.activePredefinedFilter.filters;
+    // Apply visual filters immediately since column filters should be ready
+    this.applyVisualFilters(this.activePredefinedFilter);
+  }
+  /**
+   * Apply visual filters to the table columns.
+   * This method handles the actual visual application of predefined filters.
+   * @param filter - The predefined filter to apply visually
+   */
+  applyVisualFilters(filter) {
+    const filters = filter.filters;
     if (!filters) return;
-    // console.log('[WorklistTable] Predefined filter settings:', filters);
-    // Clear existing filter selections
+    console.log('[WorklistTable] Applying visual filters for:', filter.id);
+    // Clear existing filter selections completely when switching predefined filters
     this.filterSelections = {};
-    // Wait for the next tick to ensure columns are updated with the filtered data
-    setTimeout(() => {
-      const columns = this.columnConfig.getColumns('prior-auth');
-      // Update the UI to show which filters are applied (visual feedback only)
-      for (const col of columns) {
-        if (col.filterable && col.listOfFilter) {
-          // Clear all selections first
+    console.log('[WorklistTable] Cleared filterSelections');
+    // Clear all column filter selections immediately
+    const columns = this.columnConfig.getColumns('prior-auth');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        // Clear all selections first
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = false;
+        }
+        console.log(`[WorklistTable] Cleared all selections for column ${col.name}`);
+      }
+    }
+    // Update columns to reflect the cleared state immediately
+    this.columnConfig.triggerUpdate();
+    this.cdr.detectChanges();
+    console.log('[WorklistTable] Updated columns after clearing');
+    // Apply visual selection based on predefined filter immediately
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        // Apply visual selection based on predefined filter
+        if (col.meaning === 'WORKFLOWSTATUS' && filters.workflowStatus) {
           for (const opt of col.listOfFilter) {
-            opt.byDefault = false;
-          }
-          // Apply visual selection based on predefined filter
-          if (col.meaning === 'WORKFLOWSTATUS' && filters.workflowStatus) {
-            for (const opt of col.listOfFilter) {
-              if (filters.workflowStatus.includes(opt.value)) {
-                opt.byDefault = true;
-                // console.log(`[WorklistTable] Visually selecting ${opt.value} in Workflow Status filter`);
-              }
+            if (filters.workflowStatus.includes(opt.value)) {
+              opt.byDefault = true;
+              console.log(`[WorklistTable] Visually selecting ${opt.value} in Workflow Status filter`);
             }
           }
-
-          if (col.meaning === 'SCHEDULESTATUS' && filters.schedulingStatus) {
-            for (const opt of col.listOfFilter) {
-              if (filters.schedulingStatus.includes(opt.value)) {
-                opt.byDefault = true;
-                // console.log(`[WorklistTable] Visually selecting ${opt.value} in Schedule Status filter`);
-              }
+        }
+        if (col.meaning === 'SCHEDULESTATUS' && filters.schedulingStatus) {
+          for (const opt of col.listOfFilter) {
+            if (filters.schedulingStatus.includes(opt.value)) {
+              opt.byDefault = true;
+              console.log(`[WorklistTable] Visually selecting ${opt.value} in Schedule Status filter`);
             }
           }
         }
       }
-      // Update columns to reflect the visual state
-      this.columnConfig.triggerUpdate();
-      this.cdr.detectChanges();
-    }, 300);
-  }
-  /**
-   * Clear filter selections that were set by predefined filters.
-   * Preserves user-selected filters on other columns.
-   */
-  clearPredefinedFilterSelections() {
-    // console.log('[WorklistTable] Clearing predefined filter selections');
-    // Clear ALL filters when going back to "All Items"
-    this.filterSelections = {};
-    // Delay to ensure service has updated the data
-    setTimeout(() => {
-      this.restoreTableFilters();
-    }, 100);
+    }
+    // Update columns to reflect the visual state
+    this.columnConfig.triggerUpdate();
+    this.cdr.detectChanges();
+    console.log('[WorklistTable] Visual filter application completed');
   }
   static #_ = this.ɵfac = function WorklistTableComponent_Factory(t) {
     return new (t || WorklistTableComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_1__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_2__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_9__.ChangeDetectorRef));
@@ -14826,6 +15031,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ColumnConfigService: () => (/* binding */ ColumnConfigService)
 /* harmony export */ });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 2513);
+
 
 
 class ColumnConfigService {
@@ -15163,18 +15370,15 @@ class ColumnConfigService {
       route: 'prior-auth',
       filters: {},
       order: 3
-    }, {
-      id: 'work-items-no-cancelled',
-      label: 'Active Work Items',
-      route: 'prior-auth',
-      filters: {
-        workflowStatus: ['Ordered']
-      },
-      excludeFilters: {
-        schedulingStatus: ['Cancelled', 'No Show']
-      },
-      order: 4
     }]);
+    /**
+     * Signal to track when column filter updates are in progress
+     */
+    this._updatingColumnFilters = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.signal)(false);
+    /**
+     * Subject to emit when column filter updates are complete
+     */
+    this._columnFiltersUpdated = new rxjs__WEBPACK_IMPORTED_MODULE_1__.Subject();
     /**
      * Read-only access to the columns signal
      */
@@ -15195,6 +15399,14 @@ class ColumnConfigService {
     this.predefinedFiltersForRoute = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.computed)(() => {
       return route => this._predefinedFilters().filter(filter => filter.route === route).sort((a, b) => (a.order || 0) - (b.order || 0));
     });
+    /**
+     * Read-only access to column filter update state
+     */
+    this.updatingColumnFilters = this._updatingColumnFilters.asReadonly();
+    /**
+     * Observable that emits when column filter updates are complete
+     */
+    this.columnFiltersUpdated$ = this._columnFiltersUpdated.asObservable();
   }
   /**
    * Returns the column configuration for a given route.
@@ -15233,6 +15445,8 @@ class ColumnConfigService {
    * Call this after loading or updating worklist data.
    */
   updateColumnFiltersFromData(worklist) {
+    // Set updating flag
+    this._updatingColumnFilters.set(true);
     // Get current columns and create a mutable copy
     const currentColumns = [...this._columns()];
     // Capture current filter selections for each column by meaning (not name)
@@ -15372,6 +15586,19 @@ class ColumnConfigService {
     }
     // Update the signal with the modified columns to trigger reactive updates
     this._columns.set(currentColumns);
+    // Restore previous selections
+    for (const col of currentColumns) {
+      if (col.filterable && col.listOfFilter && previousSelections[col.meaning]) {
+        const selectedValues = previousSelections[col.meaning];
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = selectedValues.includes(opt.value);
+        }
+      }
+    }
+    // Clear updating flag and emit completion event
+    this._updatingColumnFilters.set(false);
+    this._columnFiltersUpdated.next();
+    console.log('[ColumnConfig] Column filters updated with', worklist.length, 'items');
   }
   /**
    * Update column filters for feedback worklist data
@@ -15690,7 +15917,8 @@ class ColumnConfigService {
    * @param route The route string (e.g. 'prior-auth')
    */
   getPredefinedFilters(route) {
-    return this.predefinedFiltersForRoute()(route);
+    const filters = this.predefinedFiltersForRoute()(route);
+    return filters;
   }
   /**
    * Returns the default predefined filter for a given route
@@ -17214,6 +17442,8 @@ class PriorAuthService {
      * Controls which predefined filter is applied to the worklist
      */
     this._activePredefinedFilter = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.signal)(null);
+    // Track last column filter update to prevent infinite loops
+    this._lastColumnFilterUpdate = '';
     // === READ-ONLY SIGNALS FOR EXTERNAL ACCESS ===
     /**
      * Read-only access to the current days filter setting
@@ -17384,6 +17614,70 @@ class PriorAuthService {
         actor: 'John Authorizer'
       }]
     };
+    /**
+     * Computed signal that calculates item counts for each predefined filter
+     * Returns a map of filter ID to count for display on filter tabs
+     */
+    this.predefinedFilterCounts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.computed)(() => {
+      const allItems = this._worklistItems();
+      const daysFilter = this._currentDaysFilter();
+      const predefinedFilters = this.columnConfig.getPredefinedFilters('prior-auth');
+      const counts = {};
+      for (const filter of predefinedFilters) {
+        // Apply the same filtering logic as filteredItems but for each specific filter
+        let items = [...allItems];
+        if (filter.filters) {
+          const filters = filter.filters;
+          const excludeFilters = filter.excludeFilters;
+          // Apply workflow status filter
+          if (filters.workflowStatus && filters.workflowStatus.length > 0) {
+            items = items.filter(item => filters.workflowStatus.includes(item.workflowStatus?.status || ''));
+          }
+          // Apply workflow status exclude filter
+          if (excludeFilters?.workflowStatus && excludeFilters.workflowStatus.length > 0) {
+            items = items.filter(item => !excludeFilters.workflowStatus.includes(item.workflowStatus?.status || ''));
+          }
+          // Apply scheduling status filter
+          if (filters.schedulingStatus && filters.schedulingStatus.length > 0) {
+            items = items.filter(item => filters.schedulingStatus.includes(item.schedule?.state || ''));
+          }
+          // Apply scheduling status exclude filter
+          if (excludeFilters?.schedulingStatus && excludeFilters.schedulingStatus.length > 0) {
+            items = items.filter(item => !excludeFilters.schedulingStatus.includes(item.schedule?.state || ''));
+          }
+          // Apply days filter (use filter-specific days or global days filter)
+          const filterDays = filters.daysFilter !== undefined ? filters.daysFilter : daysFilter;
+          if (filterDays !== 'all') {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const futureDate = new Date(today);
+            futureDate.setDate(today.getDate() + filterDays);
+            items = items.filter(item => {
+              if (!item.edosDate) return false;
+              const edosDate = new Date(item.edosDate);
+              edosDate.setHours(0, 0, 0, 0);
+              return edosDate <= futureDate;
+            });
+          }
+        } else {
+          // 'All Items' filter - apply only days filter
+          if (daysFilter !== 'all') {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const futureDate = new Date(today);
+            futureDate.setDate(today.getDate() + daysFilter);
+            items = items.filter(item => {
+              if (!item.edosDate) return false;
+              const edosDate = new Date(item.edosDate);
+              edosDate.setHours(0, 0, 0, 0);
+              return edosDate <= futureDate;
+            });
+          }
+        }
+        counts[filter.id] = items.length;
+      }
+      return counts;
+    });
     // Defer initialization to avoid circular dependency issues
     setTimeout(() => {
       if (this.appStatus.offlineMode()) {
@@ -17392,6 +17686,30 @@ class PriorAuthService {
         this.columnConfig.updateColumnFiltersFromData(this._worklistItems());
       }
     }, 0);
+    // Set up automatic column filter updates when filtered data changes
+    // This effect runs whenever filteredItems() changes and automatically updates column filters
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.effect)(() => {
+      const filteredData = this.filteredItems();
+      const predefinedFilter = this._activePredefinedFilter();
+      // Create a hash of the current data to prevent unnecessary updates
+      const dataHash = JSON.stringify({
+        count: filteredData.length,
+        filterId: predefinedFilter?.id || 'null',
+        firstItemId: filteredData[0]?.compass_worklist_id || 'null'
+      });
+      // Only update column filters if:
+      // 1. We have data and we're not in a loading state
+      // 2. The data has actually changed (prevent infinite loops)
+      if (filteredData.length > 0 && !this._loading() && dataHash !== this._lastColumnFilterUpdate) {
+        console.log('[PriorAuthService] Auto-updating column filters with', filteredData.length, 'filtered items');
+        this._lastColumnFilterUpdate = dataHash;
+        this.columnConfig.updateColumnFiltersFromData(filteredData);
+      } else if (dataHash === this._lastColumnFilterUpdate) {
+        console.log('[PriorAuthService] Skipping column filter update - data unchanged');
+      }
+    }, {
+      allowSignalWrites: true
+    });
   }
   /**
    * Filters items based on the EDOS date within the specified number of days
@@ -17431,20 +17749,25 @@ class PriorAuthService {
     return this._currentDaysFilter();
   }
   /**
-   * Updates the active predefined filter
-   * This automatically triggers recalculation of the filteredItems computed signal
+   * Update the active predefined filter
+   * This will filter the worklist items based on the predefined filter criteria
    */
   updatePredefinedFilter(filter) {
-    // console.log('[PriorAuthService.updatePredefinedFilter] Setting predefined filter:', filter?.id || 'null');
+    console.log('[PriorAuthService.updatePredefinedFilter] Setting predefined filter:', filter?.id || 'null');
     this._activePredefinedFilter.set(filter);
-    // console.log('[PriorAuthService.updatePredefinedFilter] Current predefined filter after set:', this._activePredefinedFilter()?.id || 'null');
+    console.log('[PriorAuthService.updatePredefinedFilter] Current predefined filter after set:', this._activePredefinedFilter()?.id || 'null');
+    // Column filter updates are now handled automatically by the effect() below
+    // No need for setTimeout - the effect will trigger when filteredItems() changes
   }
   /**
    * Clears the active predefined filter
    * This will revert to showing items based only on the days filter
    */
   clearPredefinedFilter() {
+    console.log('[PriorAuthService.clearPredefinedFilter] Clearing predefined filter');
     this._activePredefinedFilter.set(null);
+    // Column filter updates are now handled automatically by the effect() below
+    // No need for setTimeout - the effect will trigger when filteredItems() changes
   }
   /**
    * Update a single prior auth item in the worklist
@@ -17906,7 +18229,7 @@ class PriorAuthService {
         // console.log('[PriorAuthService.getWorklist] About to set worklist items - filter should be preserved');
         this._worklistItems.set(mappedItems);
         // console.log('[PriorAuthService.getWorklist] Items set, current predefined filter after setting items:', this._activePredefinedFilter()?.id || 'null');
-        this.columnConfig.updateColumnFiltersFromData(mappedItems);
+        // this.columnConfig.updateColumnFiltersFromData(mappedItems); // This is now handled by the effect
         // Check if batch mode is enabled in user preferences
         const userData = this.userPreferences.getUserData();
         // console.log('[PriorAuthService.getWorklist] User data for batch mode check:', userData);
@@ -19159,9 +19482,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-07-26T01:29:42.712Z
-const buildVersion = 'v0.0.223-develop';
-const packageVersion = '0.0.223';
+// Generated on: 2025-07-26T03:38:47.343Z
+const buildVersion = 'v0.0.229-develop';
+const packageVersion = '0.0.229';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -19172,7 +19495,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.223","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = JSON.parse('{"name":"cov-compass-org","version":"0.0.229","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","postbuild":"node scripts/deploy.js p0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
