@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkcov_compass_org"] = self["webpackChunkcov_compass_org"] || []).push([["polyfills"],{
 
-/***/ 6657:
+/***/ 4124:
 /*!***********************************************!*\
   !*** ./node_modules/zone.js/fesm2015/zone.js ***!
   \***********************************************/
@@ -49,7 +49,9 @@
   }
   class Zone {
     // tslint:disable-next-line:require-internal-with-underscore
-    static #_ = this.__symbol__ = __symbol__;
+    static {
+      this.__symbol__ = __symbol__;
+    }
     static assertZonePatched() {
       if (global['Promise'] !== patches['ZoneAwarePromise']) {
         throw new Error('Zone.js has detected that ZoneAwarePromise `(window|global).Promise` ' + 'has been overwritten.\n' + 'Most likely cause is that a Promise polyfill has been loaded ' + 'after Zone.js (Polyfilling Promise api is not necessary when zone.js is loaded. ' + 'If you must load one, do so before loading zone.js.)');
@@ -2668,7 +2670,7 @@ Zone.__load_patch('queueMicrotask', (global, Zone, api) => {
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__(6657));
+/******/ var __webpack_exports__ = (__webpack_exec__(4124));
 /******/ }
 ]);
 //# sourceMappingURL=polyfills.js.map
