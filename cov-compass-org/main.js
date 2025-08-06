@@ -12314,6 +12314,8 @@ class UserAssignmentComponent {
   }
   /**
    * Saves the selected user assignment
+   * Updates both the local item and the service's signal-based data store
+   * to ensure table filtering reflects the change immediately
    */
   saveAssignment() {
     if (!this.selectedUser) return;
@@ -12322,6 +12324,9 @@ class UserAssignmentComponent {
       next: () => {
         this.messagingService.success(`Successfully assigned to ${this.selectedUser}`);
         this.item.assignedTo = this.selectedUser; // Update UI immediately
+        // Update the service's signal-based data store to trigger table filter updates
+        // This ensures items move in/out of assignment filters immediately
+        this.priorAuthService.updatePriorAuthItem(this.item);
         this.isModalLoading = false;
         this.modal.destroy();
       },
@@ -12334,6 +12339,8 @@ class UserAssignmentComponent {
   }
   /**
    * Removes the current user assignment
+   * Updates both the local item and the service's signal-based data store
+   * to ensure table filtering reflects the change immediately
    */
   removeAssignment() {
     this.isModalLoading = true;
@@ -12341,6 +12348,9 @@ class UserAssignmentComponent {
       next: () => {
         this.messagingService.success('Successfully removed assignment.');
         this.item.assignedTo = ''; // Update UI immediately
+        // Update the service's signal-based data store to trigger table filter updates
+        // This ensures items move in/out of assignment filters immediately
+        this.priorAuthService.updatePriorAuthItem(this.item);
         this.isModalLoading = false;
         this.modal.destroy();
       },
@@ -21207,7 +21217,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-08-05T21:37:15.288Z
+// Generated on: 2025-08-06T18:54:44.514Z
 const buildVersion = 'v0.0.257-develop';
 const packageVersion = '0.0.257';
 const gitBranch = 'develop';
