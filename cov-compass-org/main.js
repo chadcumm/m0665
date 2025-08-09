@@ -9488,7 +9488,7 @@ function PriorAuthFilterBarComponent_nz_select_7_Template(rf, ctx) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngModel", ctx_r1.currentLocationValue)("nzDropdownMatchSelectWidth", false);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r1.locationOptions);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r1.locationOptions());
   }
 }
 function PriorAuthFilterBarComponent_nz_segmented_8_Template(rf, ctx) {
@@ -9750,9 +9750,29 @@ class PriorAuthFilterBarComponent {
       label: 'Outgoing',
       value: 'outgoing'
     }];
-    // Current subroute selection (incoming/outgoing)
-    this.currentSubroute = 'incoming';
+    // Current subroute selection (incoming/outgoing) - using signal for reactive updates
+    this._currentSubroute = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.signal)('incoming');
     this.currentSubrouteIndex = 0; // Track the selected index for nz-segmented (0 = incoming, 1 = outgoing)
+    // Predefined filter tabs from centralized configuration - using computed for reactive updates
+    this.predefinedFilters = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.computed)(() => {
+      // Only return filters if configuration has been loaded
+      if (!this.columnConfig.configurationLoaded()) {
+        return [];
+      }
+      const filters = this.columnConfig.getPredefinedFilters('prior-auth', this._currentSubroute());
+      return filters;
+    });
+    // Location dropdown options depend on subroute; expose label/value for UI - using computed for reactive updates
+    this.locationOptions = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.computed)(() => {
+      // Only return options if configuration has been loaded
+      if (!this.columnConfig.configurationLoaded()) {
+        return [];
+      }
+      return this.columnConfig.getLocationOptions('prior-auth', this._currentSubroute()).map(opt => ({
+        label: opt.label,
+        value: opt.value
+      }));
+    });
     // Currently selected location value (config-driven); default to 'all'
     this.currentLocationValue = 'all';
     // Currently selected predefined filter - will be set after configuration loads
@@ -9771,25 +9791,9 @@ class PriorAuthFilterBarComponent {
       }
     });
   }
-  // Predefined filter tabs from centralized configuration
-  get predefinedFilters() {
-    // Only return filters if configuration has been loaded
-    if (!this.columnConfig.configurationLoaded()) {
-      return [];
-    }
-    const filters = this.columnConfig.getPredefinedFilters('prior-auth', this.currentSubroute);
-    return filters;
-  }
-  // Location dropdown options depend on subroute; expose label/value for UI
-  get locationOptions() {
-    // Only return options if configuration has been loaded
-    if (!this.columnConfig.configurationLoaded()) {
-      return [];
-    }
-    return this.columnConfig.getLocationOptions('prior-auth', this.currentSubroute).map(opt => ({
-      label: opt.label,
-      value: opt.value
-    }));
+  // Readonly accessor for current subroute
+  get currentSubroute() {
+    return this._currentSubroute();
   }
   get selectedTabIndex() {
     return this._selectedTabIndex;
@@ -9811,7 +9815,7 @@ class PriorAuthFilterBarComponent {
     const defaultFilter = this.columnConfig.getDefaultPredefinedFilter('prior-auth', this.currentSubroute);
     if (defaultFilter) {
       this.selectedPredefinedFilter = defaultFilter;
-      this._selectedTabIndex = this.predefinedFilters.findIndex(f => f.id === defaultFilter.id);
+      this._selectedTabIndex = this.predefinedFilters().findIndex(f => f.id === defaultFilter.id);
       // Emit the initial filter selection
       this.emitCombinedSelection(defaultFilter);
     }
@@ -9824,7 +9828,8 @@ class PriorAuthFilterBarComponent {
     this.currentSubrouteIndex = index;
     const selectedOption = this.subrouteOptions[index];
     if (selectedOption) {
-      this.currentSubroute = selectedOption.value;
+      // Update the subroute signal - this will trigger reactive updates
+      this._currentSubroute.set(selectedOption.value);
       // Reset location selection when switching subroutes
       this.currentLocationValue = 'all';
       // Only set default filter if configuration is loaded
@@ -9833,9 +9838,25 @@ class PriorAuthFilterBarComponent {
         const defaultFilter = this.columnConfig.getDefaultPredefinedFilter('prior-auth', this.currentSubroute);
         if (defaultFilter) {
           this.selectedPredefinedFilter = defaultFilter;
-          this._selectedTabIndex = this.predefinedFilters.findIndex(f => f.id === defaultFilter.id);
-          // Emit the new filter selection
+          this._selectedTabIndex = this.predefinedFilters().findIndex(f => f.id === defaultFilter.id);
+          // Emit the new filter selection with 'all' location filter
           this.emitCombinedSelection(defaultFilter);
+        } else if (this.selectedPredefinedFilter) {
+          // If no default filter but we have a current filter, re-emit it with 'all' location
+          // Find the equivalent filter in the new subroute's predefined filters
+          const availableFilters = this.predefinedFilters();
+          const matchingFilter = availableFilters.find(f => f.id === this.selectedPredefinedFilter.id);
+          if (matchingFilter) {
+            this.selectedPredefinedFilter = matchingFilter;
+            this._selectedTabIndex = availableFilters.findIndex(f => f.id === matchingFilter.id);
+            this.emitCombinedSelection(matchingFilter);
+          } else if (availableFilters.length > 0) {
+            // Fall back to first available filter if current one doesn't exist in new subroute
+            const firstFilter = availableFilters[0];
+            this.selectedPredefinedFilter = firstFilter;
+            this._selectedTabIndex = 0;
+            this.emitCombinedSelection(firstFilter);
+          }
         }
       }
     }
@@ -9881,7 +9902,7 @@ class PriorAuthFilterBarComponent {
     const previousFilter = this.selectedPredefinedFilter;
     // Update the selected filter
     this.selectedPredefinedFilter = filter;
-    this._selectedTabIndex = this.predefinedFilters.findIndex(f => f.id === filter.id);
+    this._selectedTabIndex = this.predefinedFilters().findIndex(f => f.id === filter.id);
     // Clear column filters when switching between predefined filter tabs
     // This ensures users see the expected predefined filter results
     if (previousFilter && previousFilter.id !== filter.id) {
@@ -9976,7 +9997,7 @@ class PriorAuthFilterBarComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzSelectedIndex", ctx.selectedTabIndex);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx.predefinedFilters);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx.predefinedFilters());
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](18);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.showTestOrderButton);
         }
@@ -17471,11 +17492,29 @@ class ColumnConfigService {
     });
     // Sort predefined filters by order
     predefinedFilters.sort((a, b) => (a.order || 0) - (b.order || 0));
-    // Sort location options by sortOrder from original filterSet
+    // Add 'All Locations' option to each subroute if it doesn't already exist, and sort location options by sortOrder from original filterSet
     Object.keys(locationOptions).forEach(route => {
       Object.keys(locationOptions[route]).forEach(subroute => {
+        // Check if 'All Locations' option already exists
+        const hasAllOption = locationOptions[route][subroute].some(opt => opt.value === 'all' || opt.label === 'All Locations');
+        // Add 'All Locations' option at the beginning if it doesn't exist
+        if (!hasAllOption) {
+          locationOptions[route][subroute].unshift({
+            label: 'All Locations',
+            value: 'all',
+            filters: {} // Empty filters means no additional location filtering
+          });
+        }
+        // Sort location options by sortOrder from original filterSet, keeping any 'all' options at the top
         locationOptions[route][subroute].sort((a, b) => {
-          // Find original filterSet to get sortOrder
+          // Keep 'all' options at the top
+          if ((a.value === 'all' || a.label === 'All Locations') && !(b.value === 'all' || b.label === 'All Locations')) {
+            return -1;
+          }
+          if (!(a.value === 'all' || a.label === 'All Locations') && (b.value === 'all' || b.label === 'All Locations')) {
+            return 1;
+          }
+          // For non-'all' options, sort by original filterSet sortOrder
           const aFilterSet = config.workflows.flatMap(w => w.filterSets).find(fs => fs.type === 'LocationOption' && fs.id === a.value && fs.route === route && fs.subroute === subroute);
           const bFilterSet = config.workflows.flatMap(w => w.filterSets).find(fs => fs.type === 'LocationOption' && fs.id === b.value && fs.route === route && fs.subroute === subroute);
           return (aFilterSet?.sortOrder || 0) - (bFilterSet?.sortOrder || 0);
@@ -22094,9 +22133,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-08-09T01:26:48.247Z
-const buildVersion = 'v0.0.266-develop';
-const packageVersion = '0.0.266';
+// Generated on: 2025-08-09T02:02:43.392Z
+const buildVersion = 'v0.0.270-develop';
+const packageVersion = '0.0.270';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -22107,7 +22146,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.266","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.270","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
