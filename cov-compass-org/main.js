@@ -3985,29 +3985,37 @@ class DefaultComponent {
     this.destroy$.complete();
   }
   checkTabAccess() {
+    console.log('[DefaultComponent] checkTabAccess called');
     const userData = this.userPreferences.getUserData();
+    console.log('[DefaultComponent] User data:', userData);
     if (userData?.preferences?.displaySettings) {
       const displaySettings = userData.preferences.displaySettings;
       const enabledTabs = displaySettings['enabledTabs'] || [];
+      console.log('[DefaultComponent] Enabled tabs:', enabledTabs);
       // If user has enabled tabs, redirect to the appropriate tab
       if (enabledTabs.length > 0) {
         // First check if there's a default tab specified
         if (displaySettings['defaultTab']) {
           const defaultTab = displaySettings['defaultTab'];
+          console.log('[DefaultComponent] Default tab:', defaultTab);
           // Verify the default tab is in enabledTabs
           if (enabledTabs.includes(defaultTab)) {
+            console.log('[DefaultComponent] Navigating to default tab:', '/' + defaultTab);
             this.router.navigate(['/' + defaultTab]);
             return;
           }
         }
         // If no default tab or default tab not enabled, use first enabled tab
+        console.log('[DefaultComponent] Navigating to first enabled tab:', '/' + enabledTabs[0]);
         this.router.navigate(['/' + enabledTabs[0]]);
         return;
       }
       // If no tabs are enabled, show access request
+      console.log('[DefaultComponent] No enabled tabs, showing access request');
       this.showAccessRequest = true;
     } else {
       // If no display settings, show access request
+      console.log('[DefaultComponent] No display settings, showing access request');
       this.showAccessRequest = true;
     }
   }
@@ -15988,28 +15996,38 @@ class HeaderContentComponent {
     this.selectedIndex = 0;
     // Use field initializer for effect - this runs in injection context
     this.tabChangeEffect = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.effect)(() => {
-      const tabs = this.userPreferences.availableTabs();
+      // Compute selected index based on VISIBLE tabs only to keep indices aligned
+      const visibleTabs = this.getVisibleTabs();
       const currentRoute = this.router.url;
-      const index = tabs.findIndex(tab => tab.routerLink === currentRoute);
+      const index = visibleTabs.findIndex(tab => tab.routerLink === currentRoute);
       if (index !== -1) {
         this.selectedIndex = index;
+      } else if (visibleTabs.length > 0) {
+        this.selectedIndex = 0;
       }
     });
   }
   ngOnInit() {
     // Initial check for selected tab
-    const tabs = this.userPreferences.availableTabs();
+    const visibleTabs = this.getVisibleTabs();
     const currentRoute = this.router.url;
-    const index = tabs.findIndex(tab => tab.routerLink === currentRoute);
+    const index = visibleTabs.findIndex(tab => tab.routerLink === currentRoute);
     if (index !== -1) {
       this.selectedIndex = index;
+    } else if (visibleTabs.length > 0) {
+      this.selectedIndex = 0;
     }
   }
   onTabChange(index) {
-    const tabs = this.userPreferences.getTabs();
-    if (tabs[index]) {
-      this.router.navigate([tabs[index].routerLink]);
+    // Navigate using the visible tabs list so index aligns with the rendered tabs
+    const visibleTabs = this.getVisibleTabs();
+    if (visibleTabs[index]) {
+      this.router.navigate([visibleTabs[index].routerLink]);
     }
+  }
+  // Helper: only tabs that are actually rendered (not hidden)
+  getVisibleTabs() {
+    return this.userPreferences.availableTabs().filter(tab => !tab.hidden);
   }
   /**
    * Open feedback modal for general feedback
@@ -17648,6 +17666,64 @@ class ColumnConfigService {
       filterable: true,
       display: true,
       order: 6
+    },
+    // Oral Chemotherapy worklist columns
+    {
+      name: 'Patient Name',
+      meaning: 'ORAL_CHEMO_PATIENT',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => (a.patientName || '').localeCompare(b.patientName || ''),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.patientName || 'Unknown'),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 1
+    }, {
+      name: 'Order Description',
+      meaning: 'ORAL_CHEMO_ORDER_DESC',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => (a.orderDescription || '').localeCompare(b.orderDescription || ''),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.orderDescription || 'Unknown'),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 2
+    }, {
+      name: 'Status',
+      meaning: 'ORAL_CHEMO_STATUS',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => (a.status || '').localeCompare(b.status || ''),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.status || 'Unknown'),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 3
+    }, {
+      name: 'Date',
+      meaning: 'ORAL_CHEMO_DATE',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => {
+        const dateA = a.date ? new Date(a.date).getTime() : 0;
+        const dateB = b.date ? new Date(b.date).getTime() : 0;
+        return dateA - dateB;
+      },
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.date || 'Unknown'),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: false,
+      display: true,
+      order: 4
     }]);
     /**
      * Signal containing predefined filter configurations for different routes
@@ -18193,6 +18269,8 @@ class ColumnConfigService {
   getColumnsForCurrentRoute(url) {
     if (url.includes('prior-auth')) {
       return this.getColumns('prior-auth');
+    } else if (url.includes('oral-chemotherapy')) {
+      return this.getColumns('oral-chemotherapy');
     } else if (url.includes('feedback')) {
       return this.getColumns('feedback');
     } else if (url.includes('future')) {
@@ -22132,22 +22210,36 @@ class UserPreferencesService {
      */
     this.defaultRoute = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.computed)(() => {
       const userData = this._userData();
-      if (!userData) return '/default';
+      console.log('[UserPreferencesService] defaultRoute computed - userData:', userData);
+      if (!userData) {
+        console.log('[UserPreferencesService] defaultRoute computed - no userData, returning /default');
+        return '/default';
+      }
       const displaySettings = userData.preferences?.displaySettings;
-      if (!displaySettings) return '/default';
+      if (!displaySettings) {
+        console.log('[UserPreferencesService] defaultRoute computed - no displaySettings, returning /default');
+        return '/default';
+      }
       const enabledTabs = displaySettings['enabledTabs'] || [];
       const enabledRoutes = enabledTabs.map(tab => '/' + tab);
       const defaultTab = displaySettings['defaultTab'];
       const defaultTabRoute = defaultTab ? '/' + defaultTab : undefined;
+      console.log('[UserPreferencesService] defaultRoute computed - enabledTabs:', enabledTabs);
+      console.log('[UserPreferencesService] defaultRoute computed - enabledRoutes:', enabledRoutes);
+      console.log('[UserPreferencesService] defaultRoute computed - defaultTab:', defaultTab);
+      console.log('[UserPreferencesService] defaultRoute computed - defaultTabRoute:', defaultTabRoute);
       // If there's a default tab and it's enabled, use it
       if (defaultTabRoute && enabledRoutes.includes(defaultTabRoute)) {
+        console.log('[UserPreferencesService] defaultRoute computed - returning defaultTabRoute:', defaultTabRoute);
         return defaultTabRoute;
       }
       // If there are enabled tabs, use the first one
       if (enabledRoutes.length > 0) {
+        console.log('[UserPreferencesService] defaultRoute computed - returning first enabled route:', enabledRoutes[0]);
         return enabledRoutes[0];
       }
       // If no tabs are enabled, use default route
+      console.log('[UserPreferencesService] defaultRoute computed - no enabled tabs, returning /default');
       return '/default';
     });
     // Default tab configuration
@@ -22194,6 +22286,10 @@ class UserPreferencesService {
       hidden: true,
       disabled: true
     }];
+    // Debug router events to track navigation
+    this.router.events.subscribe(event => {
+      console.log('[UserPreferencesService] Router event:', event.constructor.name, event);
+    });
   }
   /**
    * Get current user data using signals
@@ -22208,12 +22304,14 @@ class UserPreferencesService {
    * Triggers automatic updates to all computed signals
    */
   setUserData(userData) {
+    console.log('[UserPreferencesService] setUserData called with:', userData);
     // Update the primary signal - this will trigger all computed signals to recalculate
     this._userData.set(userData);
     // Apply user column preferences for all routes
     this.applyUserColumnPreferences();
-    // Navigate to default tab if we're on the default route
-    this.navigateToDefaultTabIfNeeded();
+    // Note: Navigation is handled by DefaultComponent.checkTabAccess() via effect
+    // No need to navigate here to avoid conflicts
+    console.log('[UserPreferencesService] User data set, navigation will be handled by DefaultComponent');
   }
   /**
    * Navigate to the default tab if we're currently on the default route
@@ -22221,11 +22319,22 @@ class UserPreferencesService {
    */
   navigateToDefaultTabIfNeeded() {
     const currentRoute = this.router.url;
+    console.log('[UserPreferencesService] Current route:', currentRoute);
     if (currentRoute === '/default') {
+      const userData = this._userData();
       const targetRoute = this.defaultRoute();
+      console.log('[UserPreferencesService] User data:', userData);
+      console.log('[UserPreferencesService] Enabled tabs:', userData?.preferences?.displaySettings?.['enabledTabs']);
+      console.log('[UserPreferencesService] Default tab:', userData?.preferences?.displaySettings?.['defaultTab']);
+      console.log('[UserPreferencesService] Target route:', targetRoute);
       if (targetRoute !== '/default') {
-        this.router.navigate([targetRoute]);
+        console.log('[UserPreferencesService] Navigating to:', targetRoute);
+        this.router.navigate([targetRoute]).then(success => console.log('[UserPreferencesService] Navigation success:', success, 'Current URL:', this.router.url), error => console.log('[UserPreferencesService] Navigation error:', error));
+      } else {
+        console.log('[UserPreferencesService] Not navigating - target route is /default');
       }
+    } else {
+      console.log('[UserPreferencesService] Not on /default route, skipping navigation');
     }
   }
   /**
@@ -22512,9 +22621,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-08-12T19:02:43.996Z
-const buildVersion = 'v0.0.275-develop';
-const packageVersion = '0.0.275';
+// Generated on: 2025-08-12T19:58:43.738Z
+const buildVersion = 'v0.0.276-develop';
+const packageVersion = '0.0.276';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -22525,7 +22634,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.275","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.276","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
