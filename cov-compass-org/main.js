@@ -13075,43 +13075,82 @@ class UserAssignmentComponent {
   }
   /**
    * Handle user assignment button click
-   * Opens a modal to select a user
+   * If no user is assigned and current user is available, directly assign them
+   * Otherwise, opens a modal to select a user
    */
   onUserAssignmentClick(modalContent) {
     this.loadAssignableUsers().then(() => {
-      // If a user is already assigned, pre-select them.
-      if (this.item.assignedTo) {
-        this.selectedUser = this.item.assignedTo;
-      } else {
-        // Otherwise, try to pre-select the current user if they are in the list.
-        const currentUser = this.userPreferencesService.getUserData();
-        if (currentUser && this.assignableUsers.some(u => u.username.toUpperCase() === currentUser.username.toUpperCase())) {
-          this.selectedUser = currentUser.username;
-        } else {
-          this.selectedUser = null;
-        }
+      // Check if current user is available for assignment
+      const currentUser = this.userPreferencesService.getUserData();
+      const isCurrentUserAvailable = currentUser && this.assignableUsers.some(u => u.username.toUpperCase() === currentUser.username.toUpperCase());
+      // If no user is assigned and current user is available, directly assign them
+      if (!this.item.assignedTo && isCurrentUserAvailable) {
+        this.directlyAssignCurrentUser();
+        return;
       }
-      this.modal = this.modalService.create({
-        nzTitle: 'Assign User',
-        nzContent: modalContent,
-        nzFooter: [{
-          label: 'Cancel',
-          onClick: () => this.modal.destroy()
-        }, {
-          label: 'Remove Assignment',
-          type: 'default',
-          danger: true,
-          show: !!this.item.assignedTo,
-          onClick: () => this.removeAssignment()
-        }, {
-          label: 'Save',
-          type: 'primary',
-          loading: () => this.isModalLoading,
-          disabled: () => !this.selectedUser,
-          onClick: () => this.saveAssignment()
-        }],
-        nzClosable: true
-      });
+      // Otherwise, show the modal as before
+      this.showAssignmentModal(modalContent);
+    });
+  }
+  /**
+   * Directly assigns the current user to the worklist item without showing modal
+   */
+  directlyAssignCurrentUser() {
+    const currentUser = this.userPreferencesService.getUserData();
+    if (!currentUser) return;
+    this.isModalLoading = true;
+    this.priorAuthService.assignUserToWorklistItem(this.item.compass_worklist_id, currentUser.username).subscribe({
+      next: () => {
+        this.messagingService.success(`Successfully assigned to ${currentUser.username}`);
+        this.item.assignedTo = currentUser.username; // Update UI immediately
+        // Update the service's signal-based data store to trigger table filter updates
+        // This ensures items move in/out of assignment filters immediately
+        this.priorAuthService.updatePriorAuthItem(this.item);
+        this.isModalLoading = false;
+      },
+      error: err => {
+        this.messagingService.error('Failed to assign user.');
+        // console.error(err);
+        this.isModalLoading = false;
+      }
+    });
+  }
+  /**
+   * Shows the assignment modal with the existing logic
+   */
+  showAssignmentModal(modalContent) {
+    // If a user is already assigned, pre-select them.
+    if (this.item.assignedTo) {
+      this.selectedUser = this.item.assignedTo;
+    } else {
+      // Otherwise, try to pre-select the current user if they are in the list.
+      const currentUser = this.userPreferencesService.getUserData();
+      if (currentUser && this.assignableUsers.some(u => u.username.toUpperCase() === currentUser.username.toUpperCase())) {
+        this.selectedUser = currentUser.username;
+      } else {
+        this.selectedUser = null;
+      }
+    }
+    this.modal = this.modalService.create({
+      nzTitle: 'Assign User',
+      nzContent: modalContent,
+      nzFooter: [{
+        label: 'Cancel',
+        onClick: () => this.modal.destroy()
+      }, {
+        label: 'Remove Assignment',
+        type: 'default',
+        danger: true,
+        show: !!this.item.assignedTo,
+        onClick: () => this.removeAssignment()
+      }, {
+        label: 'Save',
+        type: 'primary',
+        loading: () => this.isModalLoading,
+        disabled: () => !this.selectedUser,
+        onClick: () => this.saveAssignment()
+      }],
+      nzClosable: true
     });
   }
   /**
@@ -22621,9 +22660,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-08-12T19:58:43.738Z
-const buildVersion = 'v0.0.276-develop';
-const packageVersion = '0.0.276';
+// Generated on: 2025-08-13T22:09:57.283Z
+const buildVersion = 'v0.0.278-develop';
+const packageVersion = '0.0.278';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -22634,7 +22673,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.276","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.278","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
