@@ -141,7 +141,7 @@ class AppComponent {
     this.mPage.assignFromConfigFile();
     // Perform MPage Initialization
     setTimeout(e => {
-      this.mPage.setMaxInstances(6, true, 'ORG', false);
+      this.mPage.setMaxInstances(10, true, 'ORG', false);
       // Check MPage environment and user identification status
       // inMpage indicates if running within Cerner PowerChart
       // prsnlId contains the current user's personnel identifier
@@ -23543,10 +23543,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-08-25T14:52:15.924Z
-const buildVersion = 'v0.0.280-develop';
+// Generated on: 2025-08-27T03:14:54.425Z
+const buildVersion = 'v0.0.280-master';
 const packageVersion = '0.0.280';
-const gitBranch = 'develop';
+const gitBranch = 'master';
 
 /***/ }),
 
