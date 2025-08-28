@@ -130,8 +130,6 @@ class AppComponent {
     this.loading = true;
   }
   ngOnInit() {
-    // Always start with /default route to show app structure immediately
-    this.router.navigate(['/default']);
     // Grab any parameters in the URL (Used in Cerner Components)
     this.activatedRoute.queryParams.subscribe(params => {
       this.mPage.personId = params['personId'] ? parseInt(params['personId']) : this.mPage.personId;
@@ -216,108 +214,112 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CUSTOM_DATE_FORMATS: () => (/* binding */ CUSTOM_DATE_FORMATS),
 /* harmony export */   configFactory: () => (/* binding */ configFactory)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @angular/core */ 37580);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! @angular/platform-browser */ 80436);
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! @angular/platform-browser/animations */ 43835);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! @angular/forms */ 34456);
-/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! @angular/cdk/drag-drop */ 50854);
-/* harmony import */ var _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! @clinicaloffice/clinical-office-mpage-core */ 62447);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! @angular/core */ 37580);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! @angular/platform-browser */ 80436);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! @angular/platform-browser/animations */ 43835);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! @angular/forms */ 34456);
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! @angular/cdk/drag-drop */ 50854);
+/* harmony import */ var _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @clinicaloffice/clinical-office-mpage-core */ 62447);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 94114);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 20092);
-/* harmony import */ var _angular_material_luxon_adapter__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @angular/material-luxon-adapter */ 35396);
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! @angular/material/core */ 74646);
+/* harmony import */ var _angular_material_luxon_adapter__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! @angular/material-luxon-adapter */ 35396);
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! @angular/material/core */ 74646);
 /* harmony import */ var _footer_content_component_version_component_version_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footer-content/component-version/component-version.component */ 68122);
-/* harmony import */ var ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ng-zorro-antd/i18n */ 29840);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! @angular/common/http */ 46443);
-/* harmony import */ var ng_zorro_antd_typography__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ng-zorro-antd/typography */ 3623);
-/* harmony import */ var ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ng-zorro-antd/input */ 87084);
-/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ng-zorro-antd/icon */ 42715);
-/* harmony import */ var ng_zorro_antd_layout__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ng-zorro-antd/layout */ 15730);
+/* harmony import */ var ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ng-zorro-antd/i18n */ 29840);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! @angular/common/http */ 46443);
+/* harmony import */ var ng_zorro_antd_typography__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ng-zorro-antd/typography */ 3623);
+/* harmony import */ var ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ng-zorro-antd/input */ 87084);
+/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ng-zorro-antd/icon */ 42715);
+/* harmony import */ var ng_zorro_antd_layout__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ng-zorro-antd/layout */ 15730);
 /* harmony import */ var _header_content_header_content_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header-content/header-content.component */ 5768);
 /* harmony import */ var _footer_content_footer_content_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer-content/footer-content.component */ 60964);
 /* harmony import */ var _compass_content_compass_content_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./compass-content/compass-content.component */ 26616);
-/* harmony import */ var ng_zorro_antd_skeleton__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ng-zorro-antd/skeleton */ 64197);
-/* harmony import */ var ng_zorro_antd_menu__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ng-zorro-antd/menu */ 66993);
-/* harmony import */ var ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ng-zorro-antd/grid */ 50904);
+/* harmony import */ var ng_zorro_antd_skeleton__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ng-zorro-antd/skeleton */ 64197);
+/* harmony import */ var ng_zorro_antd_menu__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ng-zorro-antd/menu */ 66993);
+/* harmony import */ var ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ng-zorro-antd/grid */ 50904);
 /* harmony import */ var _compass_content_prior_auth_prior_auth_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./compass-content/prior-auth/prior-auth.component */ 76719);
 /* harmony import */ var _compass_content_oral_chemotherapy_oral_chemotherapy_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./compass-content/oral-chemotherapy/oral-chemotherapy.component */ 32163);
-/* harmony import */ var _compass_content_future_item_future_item_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./compass-content/future-item/future-item.component */ 23207);
-/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ng-zorro-antd/table */ 68636);
-/* harmony import */ var _compass_content_test_data_test_data_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./compass-content/test-data/test-data.component */ 4431);
-/* harmony import */ var _compass_content_test_data_test_person_demographics_test_person_demographics_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./compass-content/test-data/test-person-demographics/test-person-demographics.component */ 85891);
-/* harmony import */ var ng_zorro_antd_image__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ng-zorro-antd/image */ 4595);
-/* harmony import */ var ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ng-zorro-antd/tabs */ 43740);
-/* harmony import */ var ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ng-zorro-antd/button */ 56104);
-/* harmony import */ var ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ng-zorro-antd/select */ 14328);
-/* harmony import */ var ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ng-zorro-antd/tag */ 44376);
-/* harmony import */ var ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ng-zorro-antd/drawer */ 31791);
-/* harmony import */ var ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ng-zorro-antd/descriptions */ 5457);
-/* harmony import */ var ng_zorro_antd_timeline__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ng-zorro-antd/timeline */ 33773);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_worklist_table_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/worklist-table.component */ 32879);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_milestone_details_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/milestone-details.component */ 73133);
-/* harmony import */ var ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ng-zorro-antd/spin */ 66568);
-/* harmony import */ var ng_zorro_antd_steps__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ng-zorro-antd/steps */ 61709);
-/* harmony import */ var ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ng-zorro-antd/progress */ 48393);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_workflow_cell_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-workflow-cell.component */ 4214);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_earliest_date_milestone_earliest_date_milestone_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/earliest-date-milestone/earliest-date-milestone.component */ 46458);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_medical_necessity_milestone_medical_necessity_milestone_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/medical-necessity-milestone/medical-necessity-milestone.component */ 22346);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_milestone_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-process-milestone/glidian-process-milestone.component */ 74490);
-/* harmony import */ var ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ng-zorro-antd/card */ 23958);
-/* harmony import */ var ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ng-zorro-antd/date-picker */ 44535);
-/* harmony import */ var ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ng-zorro-antd/switch */ 78792);
-/* harmony import */ var ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ng-zorro-antd/space */ 13378);
-/* harmony import */ var _compass_content_prior_auth_prior_auth_filter_bar_prior_auth_filter_bar_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./compass-content/prior-auth/prior-auth-filter-bar/prior-auth-filter-bar.component */ 10701);
-/* harmony import */ var ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ng-zorro-antd/collapse */ 32817);
-/* harmony import */ var ng_zorro_antd_alert__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ng-zorro-antd/alert */ 93454);
-/* harmony import */ var ng_zorro_antd_list__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ng-zorro-antd/list */ 58372);
-/* harmony import */ var ng_zorro_antd_dropdown__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ng-zorro-antd/dropdown */ 98967);
-/* harmony import */ var ng_zorro_antd_checkbox__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ng-zorro-antd/checkbox */ 66443);
-/* harmony import */ var _compass_content_prior_auth_prior_auth_sider_prior_auth_sider_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./compass-content/prior-auth/prior-auth-sider/prior-auth-sider.component */ 54621);
-/* harmony import */ var ng_zorro_antd_slider__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ng-zorro-antd/slider */ 43179);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_patient_info_patient_info_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/patient-info/patient-info.component */ 71416);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_item_info_item_info_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/item-info/item-info.component */ 78614);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_scheduling_info_milestone_scheduling_info_milestone_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/scheduling-info-milestone/scheduling-info-milestone.component */ 10686);
-/* harmony import */ var ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ng-zorro-antd/segmented */ 46000);
-/* harmony import */ var ng_zorro_antd_page_header__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ng-zorro-antd/page-header */ 65853);
-/* harmony import */ var ng_zorro_antd_affix__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ng-zorro-antd/affix */ 48494);
-/* harmony import */ var ng_zorro_antd_pagination__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ng-zorro-antd/pagination */ 83968);
-/* harmony import */ var ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ng-zorro-antd/modal */ 51663);
-/* harmony import */ var ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ng-zorro-antd/form */ 41034);
-/* harmony import */ var ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ng-zorro-antd/tooltip */ 28573);
-/* harmony import */ var ng_zorro_antd_message__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ng-zorro-antd/message */ 59917);
-/* harmony import */ var _directives_resizable_column_directive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./directives/resizable-column.directive */ 97300);
-/* harmony import */ var _compass_content_default_default_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./compass-content/default/default.component */ 63771);
-/* harmony import */ var _compass_content_default_access_request_access_request_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./compass-content/default/access-request/access-request.component */ 88719);
-/* harmony import */ var _compass_content_default_loading_timeline_loading_timeline_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./compass-content/default/loading-timeline/loading-timeline.component */ 11091);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_item_codes_item_codes_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/item-codes/item-codes.component */ 10684);
-/* harmony import */ var _compass_content_feedback_form_feedback_form_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./compass-content/feedback-form/feedback-form.component */ 36239);
-/* harmony import */ var _compass_content_admin_admin_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./compass-content/admin/admin.component */ 78847);
-/* harmony import */ var _compass_content_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./compass-content/feedback/feedback.component */ 53615);
-/* harmony import */ var _compass_content_reporting_reporting_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./compass-content/reporting/reporting.component */ 77163);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_user_assignment_user_assignment_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/user-assignment/user-assignment.component */ 96846);
-/* harmony import */ var _header_content_notification_bell_notification_bell_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./header-content/notification-bell/notification-bell.component */ 62600);
-/* harmony import */ var _header_content_notification_modal_notification_modal_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./header-content/notification-modal/notification-modal.component */ 62752);
-/* harmony import */ var _compass_content_feedback_feedback_worklist_table_feedback_worklist_table_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./compass-content/feedback/feedback-worklist-table/feedback-worklist-table.component */ 62923);
-/* harmony import */ var _compass_content_feedback_feedback_worklist_table_feedback_workflow_cell_feedback_workflow_cell_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./compass-content/feedback/feedback-worklist-table/feedback-workflow-cell/feedback-workflow-cell.component */ 96248);
-/* harmony import */ var _compass_content_feedback_feedback_milestone_details_feedback_milestone_details_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./compass-content/feedback/feedback-milestone-details/feedback-milestone-details.component */ 99607);
-/* harmony import */ var ng_zorro_antd_badge__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ng-zorro-antd/badge */ 5677);
-/* harmony import */ var ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ng-zorro-antd/empty */ 42643);
-/* harmony import */ var ng_zorro_antd_avatar__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ng-zorro-antd/avatar */ 87719);
-/* harmony import */ var ng_zorro_antd_statistic__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ng-zorro-antd/statistic */ 24938);
-/* harmony import */ var ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ng-zorro-antd/divider */ 83987);
-/* harmony import */ var ng_zorro_antd_input_number__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ng-zorro-antd/input-number */ 15346);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_view_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-process-milestone/glidian-process-view.component */ 65265);
-/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_document_selection_document_selection_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-process-milestone/document-selection/document-selection.component */ 2862);
-/* harmony import */ var _compass_content_admin_corepoint_integration_corepoint_integration_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./compass-content/admin/corepoint-integration/corepoint-integration.component */ 64839);
-/* harmony import */ var _compass_content_admin_system_configuration_system_configuration_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./compass-content/admin/system-configuration/system-configuration.component */ 27201);
-/* harmony import */ var _compass_content_admin_admin_user_assignment_admin_user_assignment_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./compass-content/admin/admin-user-assignment/admin-user-assignment.component */ 20359);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_patient_information_patient_information_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/patient-information/patient-information.component */ 2507);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_comments_comments_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/comments/comments.component */ 8657);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_item_details_item_details_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/item-details/item-details.component */ 55637);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_codes_codes_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/codes/codes.component */ 58103);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_workflow_status_workflow_status_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/workflow-status/workflow-status.component */ 14627);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_payors_payors_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/payors/payors.component */ 94953);
-/* harmony import */ var _compass_content_prior_auth_milestone_details_milestone_timeline_milestone_timeline_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/milestone-timeline/milestone-timeline.component */ 58977);
+/* harmony import */ var _compass_content_oral_chemotherapy_oral_chemo_filter_bar_oral_chemo_filter_bar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./compass-content/oral-chemotherapy/oral-chemo-filter-bar/oral-chemo-filter-bar.component */ 82496);
+/* harmony import */ var _compass_content_oral_chemotherapy_oral_chemo_worklist_oral_chemo_worklist_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./compass-content/oral-chemotherapy/oral-chemo-worklist/oral-chemo-worklist.component */ 13920);
+/* harmony import */ var _compass_content_future_item_future_item_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./compass-content/future-item/future-item.component */ 23207);
+/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ng-zorro-antd/table */ 68636);
+/* harmony import */ var _compass_content_test_data_test_data_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./compass-content/test-data/test-data.component */ 4431);
+/* harmony import */ var _compass_content_test_data_test_person_demographics_test_person_demographics_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./compass-content/test-data/test-person-demographics/test-person-demographics.component */ 85891);
+/* harmony import */ var ng_zorro_antd_image__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ng-zorro-antd/image */ 4595);
+/* harmony import */ var ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ng-zorro-antd/tabs */ 43740);
+/* harmony import */ var ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ng-zorro-antd/button */ 56104);
+/* harmony import */ var ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ng-zorro-antd/select */ 14328);
+/* harmony import */ var ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ng-zorro-antd/tag */ 44376);
+/* harmony import */ var ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ng-zorro-antd/drawer */ 31791);
+/* harmony import */ var ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ng-zorro-antd/descriptions */ 5457);
+/* harmony import */ var ng_zorro_antd_timeline__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ng-zorro-antd/timeline */ 33773);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_worklist_table_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/worklist-table.component */ 32879);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_milestone_details_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/milestone-details.component */ 73133);
+/* harmony import */ var ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ng-zorro-antd/spin */ 66568);
+/* harmony import */ var ng_zorro_antd_steps__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ng-zorro-antd/steps */ 61709);
+/* harmony import */ var ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ng-zorro-antd/progress */ 48393);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_workflow_cell_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-workflow-cell.component */ 4214);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_earliest_date_milestone_earliest_date_milestone_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/earliest-date-milestone/earliest-date-milestone.component */ 46458);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_medical_necessity_milestone_medical_necessity_milestone_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/medical-necessity-milestone/medical-necessity-milestone.component */ 22346);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_milestone_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-process-milestone/glidian-process-milestone.component */ 74490);
+/* harmony import */ var ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ng-zorro-antd/card */ 23958);
+/* harmony import */ var ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ng-zorro-antd/date-picker */ 44535);
+/* harmony import */ var ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ng-zorro-antd/switch */ 78792);
+/* harmony import */ var ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ng-zorro-antd/space */ 13378);
+/* harmony import */ var _compass_content_prior_auth_prior_auth_filter_bar_prior_auth_filter_bar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./compass-content/prior-auth/prior-auth-filter-bar/prior-auth-filter-bar.component */ 10701);
+/* harmony import */ var ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ng-zorro-antd/collapse */ 32817);
+/* harmony import */ var ng_zorro_antd_alert__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ng-zorro-antd/alert */ 93454);
+/* harmony import */ var ng_zorro_antd_list__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ng-zorro-antd/list */ 58372);
+/* harmony import */ var ng_zorro_antd_dropdown__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ng-zorro-antd/dropdown */ 98967);
+/* harmony import */ var ng_zorro_antd_checkbox__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ng-zorro-antd/checkbox */ 66443);
+/* harmony import */ var _compass_content_prior_auth_prior_auth_sider_prior_auth_sider_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./compass-content/prior-auth/prior-auth-sider/prior-auth-sider.component */ 54621);
+/* harmony import */ var ng_zorro_antd_slider__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ng-zorro-antd/slider */ 43179);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_patient_info_patient_info_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/patient-info/patient-info.component */ 71416);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_item_info_item_info_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/item-info/item-info.component */ 78614);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_scheduling_info_milestone_scheduling_info_milestone_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/scheduling-info-milestone/scheduling-info-milestone.component */ 10686);
+/* harmony import */ var ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ng-zorro-antd/segmented */ 46000);
+/* harmony import */ var ng_zorro_antd_page_header__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ng-zorro-antd/page-header */ 65853);
+/* harmony import */ var ng_zorro_antd_affix__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ng-zorro-antd/affix */ 48494);
+/* harmony import */ var ng_zorro_antd_pagination__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ng-zorro-antd/pagination */ 83968);
+/* harmony import */ var ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ng-zorro-antd/modal */ 51663);
+/* harmony import */ var ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ng-zorro-antd/form */ 41034);
+/* harmony import */ var ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ng-zorro-antd/tooltip */ 28573);
+/* harmony import */ var ng_zorro_antd_message__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ng-zorro-antd/message */ 59917);
+/* harmony import */ var _directives_resizable_column_directive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./directives/resizable-column.directive */ 97300);
+/* harmony import */ var _compass_content_default_default_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./compass-content/default/default.component */ 63771);
+/* harmony import */ var _compass_content_default_access_request_access_request_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./compass-content/default/access-request/access-request.component */ 88719);
+/* harmony import */ var _compass_content_default_loading_timeline_loading_timeline_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./compass-content/default/loading-timeline/loading-timeline.component */ 11091);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_item_codes_item_codes_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/item-codes/item-codes.component */ 10684);
+/* harmony import */ var _compass_content_feedback_form_feedback_form_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./compass-content/feedback-form/feedback-form.component */ 36239);
+/* harmony import */ var _compass_content_admin_admin_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./compass-content/admin/admin.component */ 78847);
+/* harmony import */ var _compass_content_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./compass-content/feedback/feedback.component */ 53615);
+/* harmony import */ var _compass_content_reporting_reporting_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./compass-content/reporting/reporting.component */ 77163);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_user_assignment_user_assignment_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/user-assignment/user-assignment.component */ 96846);
+/* harmony import */ var _header_content_notification_bell_notification_bell_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./header-content/notification-bell/notification-bell.component */ 62600);
+/* harmony import */ var _header_content_notification_modal_notification_modal_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./header-content/notification-modal/notification-modal.component */ 62752);
+/* harmony import */ var _compass_content_feedback_feedback_worklist_table_feedback_worklist_table_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./compass-content/feedback/feedback-worklist-table/feedback-worklist-table.component */ 62923);
+/* harmony import */ var _compass_content_feedback_feedback_worklist_table_feedback_workflow_cell_feedback_workflow_cell_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./compass-content/feedback/feedback-worklist-table/feedback-workflow-cell/feedback-workflow-cell.component */ 96248);
+/* harmony import */ var _compass_content_feedback_feedback_milestone_details_feedback_milestone_details_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./compass-content/feedback/feedback-milestone-details/feedback-milestone-details.component */ 99607);
+/* harmony import */ var ng_zorro_antd_badge__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ng-zorro-antd/badge */ 5677);
+/* harmony import */ var ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ng-zorro-antd/empty */ 42643);
+/* harmony import */ var ng_zorro_antd_avatar__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ng-zorro-antd/avatar */ 87719);
+/* harmony import */ var ng_zorro_antd_statistic__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ng-zorro-antd/statistic */ 24938);
+/* harmony import */ var ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ng-zorro-antd/divider */ 83987);
+/* harmony import */ var ng_zorro_antd_input_number__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ng-zorro-antd/input-number */ 15346);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_view_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-process-milestone/glidian-process-view.component */ 65265);
+/* harmony import */ var _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_document_selection_document_selection_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./compass-content/prior-auth/worklist-table/glidian-workflow-cell/glidian-process-milestone/document-selection/document-selection.component */ 2862);
+/* harmony import */ var _compass_content_admin_corepoint_integration_corepoint_integration_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./compass-content/admin/corepoint-integration/corepoint-integration.component */ 64839);
+/* harmony import */ var _compass_content_admin_system_configuration_system_configuration_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./compass-content/admin/system-configuration/system-configuration.component */ 27201);
+/* harmony import */ var _compass_content_admin_admin_user_assignment_admin_user_assignment_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./compass-content/admin/admin-user-assignment/admin-user-assignment.component */ 20359);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_patient_information_patient_information_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/patient-information/patient-information.component */ 2507);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_comments_comments_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/comments/comments.component */ 8657);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_item_details_item_details_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/item-details/item-details.component */ 55637);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_codes_codes_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/codes/codes.component */ 58103);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_workflow_status_workflow_status_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/workflow-status/workflow-status.component */ 14627);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_payors_payors_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/payors/payors.component */ 94953);
+/* harmony import */ var _compass_content_prior_auth_milestone_details_milestone_timeline_milestone_timeline_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./compass-content/prior-auth/milestone-details/milestone-timeline/milestone-timeline.component */ 58977);
+
+
 
 
 
@@ -445,43 +447,43 @@ class AppModule {
     };
   }
   static {
-    this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_49__["ɵɵdefineNgModule"]({
+    this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_51__["ɵɵdefineNgModule"]({
       type: AppModule,
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent]
     });
   }
   static {
-    this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_49__["ɵɵdefineInjector"]({
+    this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_51__["ɵɵdefineInjector"]({
       providers: [{
-        provide: _angular_core__WEBPACK_IMPORTED_MODULE_49__.APP_INITIALIZER,
+        provide: _angular_core__WEBPACK_IMPORTED_MODULE_51__.APP_INITIALIZER,
         useFactory: configFactory,
-        deps: [_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_50__.ConfigService],
+        deps: [_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_52__.ConfigService],
         multi: true
       }, {
-        provide: _angular_core__WEBPACK_IMPORTED_MODULE_49__.ErrorHandler,
-        useClass: _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_50__.ErrorHandlerService
+        provide: _angular_core__WEBPACK_IMPORTED_MODULE_51__.ErrorHandler,
+        useClass: _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_52__.ErrorHandlerService
       }, {
-        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_51__.DateAdapter,
-        useClass: _angular_material_luxon_adapter__WEBPACK_IMPORTED_MODULE_52__.LuxonDateAdapter,
-        deps: [_angular_material_core__WEBPACK_IMPORTED_MODULE_51__.MAT_DATE_LOCALE]
+        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_53__.DateAdapter,
+        useClass: _angular_material_luxon_adapter__WEBPACK_IMPORTED_MODULE_54__.LuxonDateAdapter,
+        deps: [_angular_material_core__WEBPACK_IMPORTED_MODULE_53__.MAT_DATE_LOCALE]
       },
       //    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } },
       {
-        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_51__.MAT_DATE_FORMATS,
+        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_53__.MAT_DATE_FORMATS,
         useValue: CUSTOM_DATE_FORMATS
       }, {
-        provide: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_53__.NZ_I18N,
-        useValue: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_53__.en_US
+        provide: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_55__.NZ_I18N,
+        useValue: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_55__.en_US
       }],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_54__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_55__.BrowserAnimationsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_56__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_56__.ReactiveFormsModule, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_57__.DragDropModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_50__.ClinicalOfficeMpageModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_50__.MaterialModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_common_http__WEBPACK_IMPORTED_MODULE_58__.HttpClientModule, ng_zorro_antd_typography__WEBPACK_IMPORTED_MODULE_59__.NzTypographyModule, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_60__.NzInputModule, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_61__.NzIconModule, ng_zorro_antd_layout__WEBPACK_IMPORTED_MODULE_62__.NzLayoutModule, ng_zorro_antd_skeleton__WEBPACK_IMPORTED_MODULE_63__.NzSkeletonModule, ng_zorro_antd_menu__WEBPACK_IMPORTED_MODULE_64__.NzMenuModule, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_65__.NzGridModule, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_66__.NzTableModule, ng_zorro_antd_image__WEBPACK_IMPORTED_MODULE_67__.NzImageModule, ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_68__.NzTabsModule, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_69__.NzButtonModule, ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_70__.NzSelectModule, ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_71__.NzTagModule, ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_72__.NzDrawerModule, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_73__.NzDescriptionsModule, ng_zorro_antd_timeline__WEBPACK_IMPORTED_MODULE_74__.NzTimelineModule, ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_75__.NzSpinModule, ng_zorro_antd_steps__WEBPACK_IMPORTED_MODULE_76__.NzStepsModule, ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_77__.NzProgressModule, ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_78__.NzCardModule, ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_79__.NzDatePickerModule, ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_80__.NzSwitchModule, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_81__.NzSpaceModule, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_82__.NzCollapseModule, ng_zorro_antd_alert__WEBPACK_IMPORTED_MODULE_83__.NzAlertModule, ng_zorro_antd_list__WEBPACK_IMPORTED_MODULE_84__.NzListModule, ng_zorro_antd_dropdown__WEBPACK_IMPORTED_MODULE_85__.NzDropDownModule, ng_zorro_antd_checkbox__WEBPACK_IMPORTED_MODULE_86__.NzCheckboxModule, ng_zorro_antd_slider__WEBPACK_IMPORTED_MODULE_87__.NzSliderModule, ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_88__.NzSegmentedModule, ng_zorro_antd_page_header__WEBPACK_IMPORTED_MODULE_89__.NzPageHeaderModule, ng_zorro_antd_affix__WEBPACK_IMPORTED_MODULE_90__.NzAffixModule, ng_zorro_antd_pagination__WEBPACK_IMPORTED_MODULE_91__.NzPaginationModule, ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_92__.NzModalModule, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_93__.NzFormModule, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_94__.NzToolTipModule, ng_zorro_antd_message__WEBPACK_IMPORTED_MODULE_95__.NzMessageModule, ng_zorro_antd_badge__WEBPACK_IMPORTED_MODULE_96__.NzBadgeModule, ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_97__.NzEmptyModule, ng_zorro_antd_avatar__WEBPACK_IMPORTED_MODULE_98__.NzAvatarModule, ng_zorro_antd_statistic__WEBPACK_IMPORTED_MODULE_99__.NzStatisticModule, ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_100__.NzDividerModule, ng_zorro_antd_input_number__WEBPACK_IMPORTED_MODULE_101__.NzInputNumberModule]
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_56__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_57__.BrowserAnimationsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_58__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_58__.ReactiveFormsModule, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_59__.DragDropModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_52__.ClinicalOfficeMpageModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_52__.MaterialModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_common_http__WEBPACK_IMPORTED_MODULE_60__.HttpClientModule, ng_zorro_antd_typography__WEBPACK_IMPORTED_MODULE_61__.NzTypographyModule, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_62__.NzInputModule, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_63__.NzIconModule, ng_zorro_antd_layout__WEBPACK_IMPORTED_MODULE_64__.NzLayoutModule, ng_zorro_antd_skeleton__WEBPACK_IMPORTED_MODULE_65__.NzSkeletonModule, ng_zorro_antd_menu__WEBPACK_IMPORTED_MODULE_66__.NzMenuModule, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_67__.NzGridModule, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_68__.NzTableModule, ng_zorro_antd_image__WEBPACK_IMPORTED_MODULE_69__.NzImageModule, ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_70__.NzTabsModule, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_71__.NzButtonModule, ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_72__.NzSelectModule, ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_73__.NzTagModule, ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_74__.NzDrawerModule, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_75__.NzDescriptionsModule, ng_zorro_antd_timeline__WEBPACK_IMPORTED_MODULE_76__.NzTimelineModule, ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_77__.NzSpinModule, ng_zorro_antd_steps__WEBPACK_IMPORTED_MODULE_78__.NzStepsModule, ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_79__.NzProgressModule, ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_80__.NzCardModule, ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_81__.NzDatePickerModule, ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_82__.NzSwitchModule, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_83__.NzSpaceModule, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_84__.NzCollapseModule, ng_zorro_antd_alert__WEBPACK_IMPORTED_MODULE_85__.NzAlertModule, ng_zorro_antd_list__WEBPACK_IMPORTED_MODULE_86__.NzListModule, ng_zorro_antd_dropdown__WEBPACK_IMPORTED_MODULE_87__.NzDropDownModule, ng_zorro_antd_checkbox__WEBPACK_IMPORTED_MODULE_88__.NzCheckboxModule, ng_zorro_antd_slider__WEBPACK_IMPORTED_MODULE_89__.NzSliderModule, ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_90__.NzSegmentedModule, ng_zorro_antd_page_header__WEBPACK_IMPORTED_MODULE_91__.NzPageHeaderModule, ng_zorro_antd_affix__WEBPACK_IMPORTED_MODULE_92__.NzAffixModule, ng_zorro_antd_pagination__WEBPACK_IMPORTED_MODULE_93__.NzPaginationModule, ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_94__.NzModalModule, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_95__.NzFormModule, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_96__.NzToolTipModule, ng_zorro_antd_message__WEBPACK_IMPORTED_MODULE_97__.NzMessageModule, ng_zorro_antd_badge__WEBPACK_IMPORTED_MODULE_98__.NzBadgeModule, ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_99__.NzEmptyModule, ng_zorro_antd_avatar__WEBPACK_IMPORTED_MODULE_100__.NzAvatarModule, ng_zorro_antd_statistic__WEBPACK_IMPORTED_MODULE_101__.NzStatisticModule, ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_102__.NzDividerModule, ng_zorro_antd_input_number__WEBPACK_IMPORTED_MODULE_103__.NzInputNumberModule]
     });
   }
 }
 
 (function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_49__["ɵɵsetNgModuleScope"](AppModule, {
-    declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent, _footer_content_component_version_component_version_component__WEBPACK_IMPORTED_MODULE_2__.ComponentVersionComponent, _header_content_header_content_component__WEBPACK_IMPORTED_MODULE_3__.HeaderContentComponent, _footer_content_footer_content_component__WEBPACK_IMPORTED_MODULE_4__.FooterContentComponent, _compass_content_compass_content_component__WEBPACK_IMPORTED_MODULE_5__.CompassContentComponent, _compass_content_prior_auth_prior_auth_component__WEBPACK_IMPORTED_MODULE_6__.PriorAuthComponent, _compass_content_oral_chemotherapy_oral_chemotherapy_component__WEBPACK_IMPORTED_MODULE_7__.OralChemotherapyComponent, _compass_content_future_item_future_item_component__WEBPACK_IMPORTED_MODULE_8__.FutureItemComponent, _compass_content_test_data_test_data_component__WEBPACK_IMPORTED_MODULE_9__.TestDataComponent, _compass_content_test_data_test_person_demographics_test_person_demographics_component__WEBPACK_IMPORTED_MODULE_10__.TestPersonDemographicsComponent, _compass_content_prior_auth_worklist_table_worklist_table_component__WEBPACK_IMPORTED_MODULE_11__.WorklistTableComponent, _compass_content_prior_auth_milestone_details_milestone_details_component__WEBPACK_IMPORTED_MODULE_12__.MilestoneDetailsComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_workflow_cell_component__WEBPACK_IMPORTED_MODULE_13__.GlidianWorkflowCellComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_earliest_date_milestone_earliest_date_milestone_component__WEBPACK_IMPORTED_MODULE_14__.EarliestDateMilestoneComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_medical_necessity_milestone_medical_necessity_milestone_component__WEBPACK_IMPORTED_MODULE_15__.MedicalNecessityMilestoneComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_milestone_component__WEBPACK_IMPORTED_MODULE_16__.GlidianProcessMilestoneComponent, _compass_content_prior_auth_prior_auth_filter_bar_prior_auth_filter_bar_component__WEBPACK_IMPORTED_MODULE_17__.PriorAuthFilterBarComponent, _compass_content_prior_auth_prior_auth_sider_prior_auth_sider_component__WEBPACK_IMPORTED_MODULE_18__.PriorAuthSiderComponent, _compass_content_prior_auth_worklist_table_patient_info_patient_info_component__WEBPACK_IMPORTED_MODULE_19__.PatientInfoComponent, _compass_content_prior_auth_worklist_table_item_info_item_info_component__WEBPACK_IMPORTED_MODULE_20__.ItemInfoComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_scheduling_info_milestone_scheduling_info_milestone_component__WEBPACK_IMPORTED_MODULE_21__.SchedulingInfoMilestoneComponent, _directives_resizable_column_directive__WEBPACK_IMPORTED_MODULE_22__.ResizableColumnDirective, _compass_content_default_default_component__WEBPACK_IMPORTED_MODULE_23__.DefaultComponent, _compass_content_default_access_request_access_request_component__WEBPACK_IMPORTED_MODULE_24__.AccessRequestComponent, _compass_content_default_loading_timeline_loading_timeline_component__WEBPACK_IMPORTED_MODULE_25__.LoadingTimelineComponent, _compass_content_prior_auth_worklist_table_item_codes_item_codes_component__WEBPACK_IMPORTED_MODULE_26__.ItemCodesComponent, _compass_content_feedback_form_feedback_form_component__WEBPACK_IMPORTED_MODULE_27__.FeedbackFormComponent, _compass_content_admin_admin_component__WEBPACK_IMPORTED_MODULE_28__.AdminComponent, _compass_content_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_29__.FeedbackComponent, _compass_content_reporting_reporting_component__WEBPACK_IMPORTED_MODULE_30__.ReportingComponent, _compass_content_prior_auth_worklist_table_user_assignment_user_assignment_component__WEBPACK_IMPORTED_MODULE_31__.UserAssignmentComponent, _header_content_notification_bell_notification_bell_component__WEBPACK_IMPORTED_MODULE_32__.NotificationBellComponent, _header_content_notification_modal_notification_modal_component__WEBPACK_IMPORTED_MODULE_33__.NotificationModalComponent, _compass_content_feedback_feedback_worklist_table_feedback_worklist_table_component__WEBPACK_IMPORTED_MODULE_34__.FeedbackWorklistTableComponent, _compass_content_feedback_feedback_worklist_table_feedback_workflow_cell_feedback_workflow_cell_component__WEBPACK_IMPORTED_MODULE_35__.FeedbackWorkflowCellComponent, _compass_content_feedback_feedback_milestone_details_feedback_milestone_details_component__WEBPACK_IMPORTED_MODULE_36__.FeedbackMilestoneDetailsComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_view_component__WEBPACK_IMPORTED_MODULE_37__.GlidianProcessViewComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_document_selection_document_selection_component__WEBPACK_IMPORTED_MODULE_38__.DocumentSelectionComponent, _compass_content_admin_corepoint_integration_corepoint_integration_component__WEBPACK_IMPORTED_MODULE_39__.CorepointIntegrationComponent, _compass_content_admin_system_configuration_system_configuration_component__WEBPACK_IMPORTED_MODULE_40__.SystemConfigurationComponent, _compass_content_prior_auth_milestone_details_patient_information_patient_information_component__WEBPACK_IMPORTED_MODULE_42__.PatientInformationComponent, _compass_content_prior_auth_milestone_details_comments_comments_component__WEBPACK_IMPORTED_MODULE_43__.CommentsComponent, _compass_content_prior_auth_milestone_details_item_details_item_details_component__WEBPACK_IMPORTED_MODULE_44__.ItemDetailsComponent, _compass_content_prior_auth_milestone_details_codes_codes_component__WEBPACK_IMPORTED_MODULE_45__.CodesComponent, _compass_content_prior_auth_milestone_details_workflow_status_workflow_status_component__WEBPACK_IMPORTED_MODULE_46__.WorkflowStatusComponent, _compass_content_prior_auth_milestone_details_payors_payors_component__WEBPACK_IMPORTED_MODULE_47__.PayorsComponent, _compass_content_prior_auth_milestone_details_milestone_timeline_milestone_timeline_component__WEBPACK_IMPORTED_MODULE_48__.MilestoneTimelineComponent, _compass_content_admin_admin_user_assignment_admin_user_assignment_component__WEBPACK_IMPORTED_MODULE_41__.AdminUserAssignmentComponent],
-    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_54__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_55__.BrowserAnimationsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_56__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_56__.ReactiveFormsModule, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_57__.DragDropModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_50__.ClinicalOfficeMpageModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_50__.MaterialModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_common_http__WEBPACK_IMPORTED_MODULE_58__.HttpClientModule, ng_zorro_antd_typography__WEBPACK_IMPORTED_MODULE_59__.NzTypographyModule, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_60__.NzInputModule, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_61__.NzIconModule, ng_zorro_antd_layout__WEBPACK_IMPORTED_MODULE_62__.NzLayoutModule, ng_zorro_antd_skeleton__WEBPACK_IMPORTED_MODULE_63__.NzSkeletonModule, ng_zorro_antd_menu__WEBPACK_IMPORTED_MODULE_64__.NzMenuModule, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_65__.NzGridModule, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_66__.NzTableModule, ng_zorro_antd_image__WEBPACK_IMPORTED_MODULE_67__.NzImageModule, ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_68__.NzTabsModule, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_69__.NzButtonModule, ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_70__.NzSelectModule, ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_71__.NzTagModule, ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_72__.NzDrawerModule, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_73__.NzDescriptionsModule, ng_zorro_antd_timeline__WEBPACK_IMPORTED_MODULE_74__.NzTimelineModule, ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_75__.NzSpinModule, ng_zorro_antd_steps__WEBPACK_IMPORTED_MODULE_76__.NzStepsModule, ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_77__.NzProgressModule, ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_78__.NzCardModule, ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_79__.NzDatePickerModule, ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_80__.NzSwitchModule, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_81__.NzSpaceModule, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_82__.NzCollapseModule, ng_zorro_antd_alert__WEBPACK_IMPORTED_MODULE_83__.NzAlertModule, ng_zorro_antd_list__WEBPACK_IMPORTED_MODULE_84__.NzListModule, ng_zorro_antd_dropdown__WEBPACK_IMPORTED_MODULE_85__.NzDropDownModule, ng_zorro_antd_checkbox__WEBPACK_IMPORTED_MODULE_86__.NzCheckboxModule, ng_zorro_antd_slider__WEBPACK_IMPORTED_MODULE_87__.NzSliderModule, ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_88__.NzSegmentedModule, ng_zorro_antd_page_header__WEBPACK_IMPORTED_MODULE_89__.NzPageHeaderModule, ng_zorro_antd_affix__WEBPACK_IMPORTED_MODULE_90__.NzAffixModule, ng_zorro_antd_pagination__WEBPACK_IMPORTED_MODULE_91__.NzPaginationModule, ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_92__.NzModalModule, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_93__.NzFormModule, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_94__.NzToolTipModule, ng_zorro_antd_message__WEBPACK_IMPORTED_MODULE_95__.NzMessageModule, ng_zorro_antd_badge__WEBPACK_IMPORTED_MODULE_96__.NzBadgeModule, ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_97__.NzEmptyModule, ng_zorro_antd_avatar__WEBPACK_IMPORTED_MODULE_98__.NzAvatarModule, ng_zorro_antd_statistic__WEBPACK_IMPORTED_MODULE_99__.NzStatisticModule, ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_100__.NzDividerModule, ng_zorro_antd_input_number__WEBPACK_IMPORTED_MODULE_101__.NzInputNumberModule]
+  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_51__["ɵɵsetNgModuleScope"](AppModule, {
+    declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent, _footer_content_component_version_component_version_component__WEBPACK_IMPORTED_MODULE_2__.ComponentVersionComponent, _header_content_header_content_component__WEBPACK_IMPORTED_MODULE_3__.HeaderContentComponent, _footer_content_footer_content_component__WEBPACK_IMPORTED_MODULE_4__.FooterContentComponent, _compass_content_compass_content_component__WEBPACK_IMPORTED_MODULE_5__.CompassContentComponent, _compass_content_prior_auth_prior_auth_component__WEBPACK_IMPORTED_MODULE_6__.PriorAuthComponent, _compass_content_oral_chemotherapy_oral_chemotherapy_component__WEBPACK_IMPORTED_MODULE_7__.OralChemotherapyComponent, _compass_content_oral_chemotherapy_oral_chemo_filter_bar_oral_chemo_filter_bar_component__WEBPACK_IMPORTED_MODULE_8__.OralChemoFilterBarComponent, _compass_content_oral_chemotherapy_oral_chemo_worklist_oral_chemo_worklist_component__WEBPACK_IMPORTED_MODULE_9__.OralChemoWorklistComponent, _compass_content_future_item_future_item_component__WEBPACK_IMPORTED_MODULE_10__.FutureItemComponent, _compass_content_test_data_test_data_component__WEBPACK_IMPORTED_MODULE_11__.TestDataComponent, _compass_content_test_data_test_person_demographics_test_person_demographics_component__WEBPACK_IMPORTED_MODULE_12__.TestPersonDemographicsComponent, _compass_content_prior_auth_worklist_table_worklist_table_component__WEBPACK_IMPORTED_MODULE_13__.WorklistTableComponent, _compass_content_prior_auth_milestone_details_milestone_details_component__WEBPACK_IMPORTED_MODULE_14__.MilestoneDetailsComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_workflow_cell_component__WEBPACK_IMPORTED_MODULE_15__.GlidianWorkflowCellComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_earliest_date_milestone_earliest_date_milestone_component__WEBPACK_IMPORTED_MODULE_16__.EarliestDateMilestoneComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_medical_necessity_milestone_medical_necessity_milestone_component__WEBPACK_IMPORTED_MODULE_17__.MedicalNecessityMilestoneComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_milestone_component__WEBPACK_IMPORTED_MODULE_18__.GlidianProcessMilestoneComponent, _compass_content_prior_auth_prior_auth_filter_bar_prior_auth_filter_bar_component__WEBPACK_IMPORTED_MODULE_19__.PriorAuthFilterBarComponent, _compass_content_prior_auth_prior_auth_sider_prior_auth_sider_component__WEBPACK_IMPORTED_MODULE_20__.PriorAuthSiderComponent, _compass_content_prior_auth_worklist_table_patient_info_patient_info_component__WEBPACK_IMPORTED_MODULE_21__.PatientInfoComponent, _compass_content_prior_auth_worklist_table_item_info_item_info_component__WEBPACK_IMPORTED_MODULE_22__.ItemInfoComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_scheduling_info_milestone_scheduling_info_milestone_component__WEBPACK_IMPORTED_MODULE_23__.SchedulingInfoMilestoneComponent, _directives_resizable_column_directive__WEBPACK_IMPORTED_MODULE_24__.ResizableColumnDirective, _compass_content_default_default_component__WEBPACK_IMPORTED_MODULE_25__.DefaultComponent, _compass_content_default_access_request_access_request_component__WEBPACK_IMPORTED_MODULE_26__.AccessRequestComponent, _compass_content_default_loading_timeline_loading_timeline_component__WEBPACK_IMPORTED_MODULE_27__.LoadingTimelineComponent, _compass_content_prior_auth_worklist_table_item_codes_item_codes_component__WEBPACK_IMPORTED_MODULE_28__.ItemCodesComponent, _compass_content_feedback_form_feedback_form_component__WEBPACK_IMPORTED_MODULE_29__.FeedbackFormComponent, _compass_content_admin_admin_component__WEBPACK_IMPORTED_MODULE_30__.AdminComponent, _compass_content_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_31__.FeedbackComponent, _compass_content_reporting_reporting_component__WEBPACK_IMPORTED_MODULE_32__.ReportingComponent, _compass_content_prior_auth_worklist_table_user_assignment_user_assignment_component__WEBPACK_IMPORTED_MODULE_33__.UserAssignmentComponent, _header_content_notification_bell_notification_bell_component__WEBPACK_IMPORTED_MODULE_34__.NotificationBellComponent, _header_content_notification_modal_notification_modal_component__WEBPACK_IMPORTED_MODULE_35__.NotificationModalComponent, _compass_content_feedback_feedback_worklist_table_feedback_worklist_table_component__WEBPACK_IMPORTED_MODULE_36__.FeedbackWorklistTableComponent, _compass_content_feedback_feedback_worklist_table_feedback_workflow_cell_feedback_workflow_cell_component__WEBPACK_IMPORTED_MODULE_37__.FeedbackWorkflowCellComponent, _compass_content_feedback_feedback_milestone_details_feedback_milestone_details_component__WEBPACK_IMPORTED_MODULE_38__.FeedbackMilestoneDetailsComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_glidian_process_view_component__WEBPACK_IMPORTED_MODULE_39__.GlidianProcessViewComponent, _compass_content_prior_auth_worklist_table_glidian_workflow_cell_glidian_process_milestone_document_selection_document_selection_component__WEBPACK_IMPORTED_MODULE_40__.DocumentSelectionComponent, _compass_content_admin_corepoint_integration_corepoint_integration_component__WEBPACK_IMPORTED_MODULE_41__.CorepointIntegrationComponent, _compass_content_admin_system_configuration_system_configuration_component__WEBPACK_IMPORTED_MODULE_42__.SystemConfigurationComponent, _compass_content_prior_auth_milestone_details_patient_information_patient_information_component__WEBPACK_IMPORTED_MODULE_44__.PatientInformationComponent, _compass_content_prior_auth_milestone_details_comments_comments_component__WEBPACK_IMPORTED_MODULE_45__.CommentsComponent, _compass_content_prior_auth_milestone_details_item_details_item_details_component__WEBPACK_IMPORTED_MODULE_46__.ItemDetailsComponent, _compass_content_prior_auth_milestone_details_codes_codes_component__WEBPACK_IMPORTED_MODULE_47__.CodesComponent, _compass_content_prior_auth_milestone_details_workflow_status_workflow_status_component__WEBPACK_IMPORTED_MODULE_48__.WorkflowStatusComponent, _compass_content_prior_auth_milestone_details_payors_payors_component__WEBPACK_IMPORTED_MODULE_49__.PayorsComponent, _compass_content_prior_auth_milestone_details_milestone_timeline_milestone_timeline_component__WEBPACK_IMPORTED_MODULE_50__.MilestoneTimelineComponent, _compass_content_admin_admin_user_assignment_admin_user_assignment_component__WEBPACK_IMPORTED_MODULE_43__.AdminUserAssignmentComponent],
+    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_56__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_57__.BrowserAnimationsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_58__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_58__.ReactiveFormsModule, _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_59__.DragDropModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_52__.ClinicalOfficeMpageModule, _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_52__.MaterialModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_common_http__WEBPACK_IMPORTED_MODULE_60__.HttpClientModule, ng_zorro_antd_typography__WEBPACK_IMPORTED_MODULE_61__.NzTypographyModule, ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_62__.NzInputModule, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_63__.NzIconModule, ng_zorro_antd_layout__WEBPACK_IMPORTED_MODULE_64__.NzLayoutModule, ng_zorro_antd_skeleton__WEBPACK_IMPORTED_MODULE_65__.NzSkeletonModule, ng_zorro_antd_menu__WEBPACK_IMPORTED_MODULE_66__.NzMenuModule, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_67__.NzGridModule, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_68__.NzTableModule, ng_zorro_antd_image__WEBPACK_IMPORTED_MODULE_69__.NzImageModule, ng_zorro_antd_tabs__WEBPACK_IMPORTED_MODULE_70__.NzTabsModule, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_71__.NzButtonModule, ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_72__.NzSelectModule, ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_73__.NzTagModule, ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_74__.NzDrawerModule, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_75__.NzDescriptionsModule, ng_zorro_antd_timeline__WEBPACK_IMPORTED_MODULE_76__.NzTimelineModule, ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_77__.NzSpinModule, ng_zorro_antd_steps__WEBPACK_IMPORTED_MODULE_78__.NzStepsModule, ng_zorro_antd_progress__WEBPACK_IMPORTED_MODULE_79__.NzProgressModule, ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_80__.NzCardModule, ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_81__.NzDatePickerModule, ng_zorro_antd_switch__WEBPACK_IMPORTED_MODULE_82__.NzSwitchModule, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_83__.NzSpaceModule, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_84__.NzCollapseModule, ng_zorro_antd_alert__WEBPACK_IMPORTED_MODULE_85__.NzAlertModule, ng_zorro_antd_list__WEBPACK_IMPORTED_MODULE_86__.NzListModule, ng_zorro_antd_dropdown__WEBPACK_IMPORTED_MODULE_87__.NzDropDownModule, ng_zorro_antd_checkbox__WEBPACK_IMPORTED_MODULE_88__.NzCheckboxModule, ng_zorro_antd_slider__WEBPACK_IMPORTED_MODULE_89__.NzSliderModule, ng_zorro_antd_segmented__WEBPACK_IMPORTED_MODULE_90__.NzSegmentedModule, ng_zorro_antd_page_header__WEBPACK_IMPORTED_MODULE_91__.NzPageHeaderModule, ng_zorro_antd_affix__WEBPACK_IMPORTED_MODULE_92__.NzAffixModule, ng_zorro_antd_pagination__WEBPACK_IMPORTED_MODULE_93__.NzPaginationModule, ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_94__.NzModalModule, ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_95__.NzFormModule, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_96__.NzToolTipModule, ng_zorro_antd_message__WEBPACK_IMPORTED_MODULE_97__.NzMessageModule, ng_zorro_antd_badge__WEBPACK_IMPORTED_MODULE_98__.NzBadgeModule, ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_99__.NzEmptyModule, ng_zorro_antd_avatar__WEBPACK_IMPORTED_MODULE_100__.NzAvatarModule, ng_zorro_antd_statistic__WEBPACK_IMPORTED_MODULE_101__.NzStatisticModule, ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_102__.NzDividerModule, ng_zorro_antd_input_number__WEBPACK_IMPORTED_MODULE_103__.NzInputNumberModule]
   });
 })();
 
@@ -3971,15 +3973,21 @@ class DefaultComponent {
     // Use field initializer for effect - this runs in injection context
     this.preferencesEffect = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.effect)(() => {
       const loaded = this.userPreferences.preferencesLoaded();
+      const userData = this.userPreferences.userData();
+      console.log('[DefaultComponent] Effect triggered - loaded:', loaded, 'userData:', userData);
       if (loaded) {
         this.checkTabAccess();
       }
     });
   }
   ngOnInit() {
+    console.log('[DefaultComponent] ngOnInit called');
     // Initial check in case preferences are already loaded
     if (this.userPreferences.preferencesLoaded()) {
+      console.log('[DefaultComponent] Preferences already loaded, checking tab access');
       this.checkTabAccess();
+    } else {
+      console.log('[DefaultComponent] Preferences not loaded yet, waiting for effect');
     }
   }
   ngOnDestroy() {
@@ -6692,6 +6700,994 @@ class FutureItemComponent {
 
 /***/ }),
 
+/***/ 82496:
+/*!************************************************************************************************************!*\
+  !*** ./src/app/compass-content/oral-chemotherapy/oral-chemo-filter-bar/oral-chemo-filter-bar.component.ts ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   OralChemoFilterBarComponent: () => (/* binding */ OralChemoFilterBarComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 37580);
+
+
+/**
+ * OralChemoFilterBarComponent - Filter Bar for Oral Chemotherapy Worklist
+ *
+ * This component provides filtering capabilities for the oral chemotherapy worklist.
+ * It will contain various filter controls such as predefined filters, search functionality,
+ * and other filtering options specific to oral chemotherapy orders.
+ *
+ * COMPONENT RESPONSIBILITIES:
+ * - Display predefined filter tabs for different worklist views
+ * - Provide global search functionality across worklist items
+ * - Handle days-based filtering (e.g., last 7 days, 30 days, all)
+ * - Manage assignment-based filtering (my assignments vs all)
+ * - Provide refresh and reset functionality
+ * - Emit filter change events to parent component
+ *
+ * ARCHITECTURE INTEGRATION:
+ * - Receives predefined filters from parent component
+ * - Communicates filter changes via event emitters
+ * - Uses signals for reactive state management
+ * - Integrates with ColumnConfigService for filter configuration
+ *
+ * DATA FLOW:
+ * 1. Receives predefined filters and current state from parent
+ * 2. Displays filter controls in the UI
+ * 3. Captures user interactions and filter changes
+ * 4. Emits events to parent component for data filtering
+ * 5. Maintains local state for UI interactions
+ *
+ * SIGNAL INTEGRATION:
+ * - Uses signals for reactive filter state management
+ * - Automatic UI updates when filter state changes
+ * - Efficient change detection with minimal performance overhead
+ *
+ * USER WORKFLOW:
+ * - Users can select predefined filter tabs to change worklist view
+ * - Global search allows filtering across all visible items
+ * - Days filter helps focus on recent or specific time periods
+ * - Assignment toggle shows personal vs all assignments
+ * - Refresh button reloads data from the service
+ *
+ * FUTURE ENHANCEMENTS:
+ * - Additional filter controls will be added as requirements evolve
+ * - Advanced filtering options for specific oral chemotherapy criteria
+ * - Saved filter presets for common user workflows
+ * - Integration with user preferences for default filter settings
+ */
+class OralChemoFilterBarComponent {
+  constructor() {
+    /**
+     * Array of predefined filters available for this worklist
+     */
+    this.predefinedFilters = [];
+    /**
+     * The currently active predefined filter
+     */
+    this.activePredefinedFilter = null;
+    /**
+     * Current days filter value
+     */
+    this.currentDaysFilter = 'all';
+    /**
+     * Whether to show only current user's assignments
+     */
+    this.showMyAssignmentsOnly = false;
+    /**
+     * Loading state for refresh operations
+     */
+    this.isLoading = false;
+    /**
+     * Event emitted when a predefined filter is selected
+     */
+    this.predefinedFilterSelect = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+    /**
+     * Event emitted when the global search term changes
+     */
+    this.globalSearch = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+    /**
+     * Event emitted when the days filter changes
+     */
+    this.daysFilterChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+    /**
+     * Event emitted when the assignment filter toggle changes
+     */
+    this.assignmentToggle = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+    /**
+     * Event emitted when refresh data is requested
+     */
+    this.refreshData = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+    /**
+     * Event emitted when column widths should be reset
+     */
+    this.columnWidthsReset = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+    /**
+     * Current global search term
+     */
+    this.globalSearchTerm = '';
+  }
+  /**
+   * Handles predefined filter selection
+   * @param filter - The selected predefined filter or null for "All"
+   */
+  onPredefinedFilterSelect(filter) {
+    this.activePredefinedFilter = filter;
+    this.predefinedFilterSelect.emit(filter);
+  }
+  /**
+   * Handles global search input changes
+   * @param searchTerm - The search term entered by the user
+   */
+  onGlobalSearch(searchTerm) {
+    this.globalSearchTerm = searchTerm;
+    this.globalSearch.emit(searchTerm);
+  }
+  /**
+   * Handles days filter selection
+   * @param days - The selected days filter value
+   */
+  onDaysFilterChange(days) {
+    this.currentDaysFilter = days;
+    this.daysFilterChange.emit(days);
+  }
+  /**
+   * Handles assignment filter toggle
+   * @param showMyAssignmentsOnly - Whether to show only current user's assignments
+   */
+  onAssignmentToggle(showMyAssignmentsOnly) {
+    this.showMyAssignmentsOnly = showMyAssignmentsOnly;
+    this.assignmentToggle.emit(showMyAssignmentsOnly);
+  }
+  /**
+   * Handles refresh data request
+   */
+  onRefreshData() {
+    this.refreshData.emit();
+  }
+  /**
+   * Handles column widths reset request
+   */
+  onColumnWidthsReset() {
+    this.columnWidthsReset.emit();
+  }
+  /**
+   * Clears the global search input
+   */
+  clearGlobalSearch() {
+    this.globalSearchTerm = '';
+    this.globalSearch.emit('');
+  }
+  static {
+    this.ɵfac = function OralChemoFilterBarComponent_Factory(t) {
+      return new (t || OralChemoFilterBarComponent)();
+    };
+  }
+  static {
+    this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: OralChemoFilterBarComponent,
+      selectors: [["app-oral-chemo-filter-bar"]],
+      inputs: {
+        predefinedFilters: "predefinedFilters",
+        activePredefinedFilter: "activePredefinedFilter",
+        currentDaysFilter: "currentDaysFilter",
+        showMyAssignmentsOnly: "showMyAssignmentsOnly",
+        isLoading: "isLoading"
+      },
+      outputs: {
+        predefinedFilterSelect: "predefinedFilterSelect",
+        globalSearch: "globalSearch",
+        daysFilterChange: "daysFilterChange",
+        assignmentToggle: "assignmentToggle",
+        refreshData: "refreshData",
+        columnWidthsReset: "columnWidthsReset"
+      },
+      decls: 4,
+      vars: 0,
+      consts: [[1, "oral-chemo-filter-bar"], [1, "filter-bar-content"]],
+      template: function OralChemoFilterBarComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "p");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Oral Chemotherapy Filter Bar - Filter options will be implemented here");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        }
+      },
+      styles: ["\n\n.oral-chemo-filter-bar[_ngcontent-%COMP%] {\n  width: 100%;\n  background-color: #fafafa;\n  border-bottom: 1px solid #d9d9d9;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.oral-chemo-filter-bar[_ngcontent-%COMP%]   .filter-bar-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 16px;\n}\n.oral-chemo-filter-bar[_ngcontent-%COMP%]   .filter-bar-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0;\n  color: #666;\n  font-style: italic;\n}\n\n\n\n@media (max-width: 768px) {\n  .oral-chemo-filter-bar[_ngcontent-%COMP%] {\n    padding: 12px;\n  }\n  .oral-chemo-filter-bar[_ngcontent-%COMP%]   .filter-bar-content[_ngcontent-%COMP%] {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 12px;\n  }\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L29yYWwtY2hlbW90aGVyYXB5L29yYWwtY2hlbW8tZmlsdGVyLWJhci9vcmFsLWNoZW1vLWZpbHRlci1iYXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsa0RBQUE7QUFFQTtFQUNFLFdBQUE7RUFDQSx5QkFBQTtFQUNBLGdDQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0FBQUY7QUFFRTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDhCQUFBO0VBQ0EsZUFBQTtFQUNBLFNBQUE7QUFBSjtBQUVJO0VBQ0UsU0FBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtBQUFOOztBQUtBLDBDQUFBO0FBQ0E7RUFDRTtJQUNFLGFBQUE7RUFGRjtFQUlFO0lBQ0Usc0JBQUE7SUFDQSx1QkFBQTtJQUNBLFNBQUE7RUFGSjtBQUNGIiwic291cmNlc0NvbnRlbnQiOlsiLyogT3JhbCBDaGVtb3RoZXJhcHkgRmlsdGVyIEJhciBDb21wb25lbnQgU3R5bGVzICovXG5cbi5vcmFsLWNoZW1vLWZpbHRlci1iYXIge1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZhZmFmYTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNkOWQ5ZDk7XG4gIHBhZGRpbmc6IDE2cHg7XG4gIG1hcmdpbi1ib3R0b206IDE2cHg7XG5cbiAgLmZpbHRlci1iYXItY29udGVudCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgZ2FwOiAxNnB4O1xuXG4gICAgcCB7XG4gICAgICBtYXJnaW46IDA7XG4gICAgICBjb2xvcjogIzY2NjtcbiAgICAgIGZvbnQtc3R5bGU6IGl0YWxpYztcbiAgICB9XG4gIH1cbn1cblxuLyogUmVzcG9uc2l2ZSBkZXNpZ24gZm9yIHNtYWxsZXIgc2NyZWVucyAqL1xuQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gIC5vcmFsLWNoZW1vLWZpbHRlci1iYXIge1xuICAgIHBhZGRpbmc6IDEycHg7XG4gICAgXG4gICAgLmZpbHRlci1iYXItY29udGVudCB7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG4gICAgICBnYXA6IDEycHg7XG4gICAgfVxuICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
+    });
+  }
+}
+
+
+/***/ }),
+
+/***/ 13920:
+/*!********************************************************************************************************!*\
+  !*** ./src/app/compass-content/oral-chemotherapy/oral-chemo-worklist/oral-chemo-worklist.component.ts ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   OralChemoWorklistComponent: () => (/* binding */ OralChemoWorklistComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 37580);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ 10819);
+/* harmony import */ var _services_column_config_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../services/column-config.service */ 97477);
+/* harmony import */ var _services_item_highlighting_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/item-highlighting.service */ 9872);
+/* harmony import */ var _services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/user-preferences.service */ 70290);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 60316);
+/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/icon */ 42715);
+/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/table */ 68636);
+/* harmony import */ var ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/button */ 56104);
+/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 76902);
+/* harmony import */ var ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng-zorro-antd/core/wave */ 69741);
+/* harmony import */ var ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ng-zorro-antd/tag */ 44376);
+/* harmony import */ var ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ng-zorro-antd/space */ 13378);
+/* harmony import */ var _directives_resizable_column_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../directives/resizable-column.directive */ 97300);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const _c0 = ["worklistTable"];
+function OralChemoWorklistComponent_ng_container_4_th_1_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "th", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("columnResize", function OralChemoWorklistComponent_ng_container_4_th_1_Template_th_columnResize_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r7);
+      const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r6.onColumnResize($event));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const column_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstyleProp"]("width", column_r3.width, "px");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzSortOrder", column_r3.sortOrder)("nzSortFn", column_r3.sortFn)("nzSortDirections", column_r3.sortDirections)("nzFilterMultiple", column_r3.filterMultiple)("columnKey", column_r3.meaning)("minWidth", 100)("maxWidth", 500);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", column_r3.name, " ");
+  }
+}
+function OralChemoWorklistComponent_ng_container_4_th_2_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "th", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("nzFilterChange", function OralChemoWorklistComponent_ng_container_4_th_2_Template_th_nzFilterChange_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r11);
+      const column_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+      const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r9.onColumnFilterChange(column_r3.meaning, $event));
+    })("columnResize", function OralChemoWorklistComponent_ng_container_4_th_2_Template_th_columnResize_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r11);
+      const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r12.onColumnResize($event));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const column_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstyleProp"]("width", column_r3.width, "px");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzColumnKey", column_r3.meaning)("nzSortOrder", column_r3.sortOrder)("nzSortFn", column_r3.sortFn)("nzSortDirections", column_r3.sortDirections)("nzFilterMultiple", column_r3.filterMultiple)("nzFilters", column_r3.listOfFilter)("nzFilterFn", column_r3.filterFn)("columnKey", column_r3.meaning)("minWidth", 100)("maxWidth", 500);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", column_r3.name, " ");
+  }
+}
+function OralChemoWorklistComponent_ng_container_4_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, OralChemoWorklistComponent_ng_container_4_th_1_Template, 2, 10, "th", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, OralChemoWorklistComponent_ng_container_4_th_2_Template, 2, 13, "th", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerEnd"]();
+  }
+  if (rf & 2) {
+    const column_r3 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", column_r3.display && !column_r3.filterable);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", column_r3.display && column_r3.filterable);
+  }
+}
+function OralChemoWorklistComponent_tr_10_ng_container_1_td_1_ng_container_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "div", 16)(2, "div", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerEnd"]();
+  }
+  if (rf & 2) {
+    const item_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](3).$implicit;
+    const ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx_r19.getCellValue(item_r14, "Patient Name"));
+  }
+}
+function OralChemoWorklistComponent_tr_10_ng_container_1_td_1_ng_template_2_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](0);
+  }
+  if (rf & 2) {
+    const column_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2).$implicit;
+    const item_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+    const ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", ctx_r21.getCellValue(item_r14, column_r17.name), " ");
+  }
+}
+function OralChemoWorklistComponent_tr_10_ng_container_1_td_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, OralChemoWorklistComponent_tr_10_ng_container_1_td_1_ng_container_1_Template, 4, 1, "ng-container", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](2, OralChemoWorklistComponent_tr_10_ng_container_1_td_1_ng_template_2_Template, 1, 1, "ng-template", null, 15, _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵreference"](3);
+    const column_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", column_r17.meaning === "ORAL_CHEMO_PATIENT")("ngIfElse", _r20);
+  }
+}
+function OralChemoWorklistComponent_tr_10_ng_container_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, OralChemoWorklistComponent_tr_10_ng_container_1_td_1_Template, 4, 2, "td", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerEnd"]();
+  }
+  if (rf & 2) {
+    const column_r17 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", column_r17.display);
+  }
+}
+function OralChemoWorklistComponent_tr_10_button_8_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function OralChemoWorklistComponent_tr_10_button_8_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r28);
+      const item_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+      const ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r26.refreshWorklistItem(item_r14));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const item_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+    const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("disabled", ctx_r16.isItemLoading()(item_r14.id || item_r14.compass_worklist_id));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzSpin", ctx_r16.isItemLoading()(item_r14.id || item_r14.compass_worklist_id));
+  }
+}
+function OralChemoWorklistComponent_tr_10_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, OralChemoWorklistComponent_tr_10_ng_container_1_Template, 2, 1, "ng-container", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "td")(3, "div", 10)(4, "nz-tag", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](6, "td")(7, "nz-space");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](8, OralChemoWorklistComponent_tr_10_button_8_Template, 2, 2, "button", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
+  }
+  if (rf & 2) {
+    const item_r14 = ctx.$implicit;
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassMap"](ctx_r2.getRowHighlightClasses(item_r14));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("loading", ctx_r2.isItemLoading()(item_r14.id || item_r14.compass_worklist_id));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx_r2.listOfColumns());
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzColor", ctx_r2.getStatusClass(ctx_r2.getCellValue(item_r14, "Workflow Status")));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", ctx_r2.getCellValue(item_r14, "Workflow Status"), " ");
+  }
+}
+/**
+ * OralChemoWorklistComponent - Oral Chemotherapy Worklist Data Table
+ *
+ * This component displays the main data table for oral chemotherapy worklist items,
+ * providing a comprehensive view of all pending oral chemotherapy orders with interactive
+ * features for item management, filtering, and detailed tracking.
+ *
+ * COMPONENT ARCHITECTURE:
+ * - Uses Angular Signals for reactive state management
+ * - Implements OnPush change detection strategy for optimal performance
+ * - Integrates with NG-Zorro Ant Design table component for rich UI features
+ * - Supports expandable rows for additional item details
+ * - Features resizable columns and advanced filtering
+ *
+ * SIGNAL-BASED STATE MANAGEMENT:
+ * - _expandedIds: Tracks which table rows are expanded
+ * - _loadingItems: Manages loading states for individual items
+ * - Computed signals provide derived state for template consumption
+ *
+ * KEY FEATURES:
+ * - Real-time data updates via signal reactivity
+ * - Interactive status updates and item management
+ * - Expandable row details with patient and order information
+ * - Dynamic column configuration and sorting
+ * - Integrated feedback system for user input
+ * - Responsive design for various screen sizes
+ *
+ * DATA FLOW:
+ * 1. Receives filtered worklist items from parent component
+ * 2. Displays items in sortable, filterable table format
+ * 3. Handles user interactions (expand, select, status updates)
+ * 4. Triggers item updates and refreshes data as needed
+ * 5. Provides feedback collection for continuous improvement
+ *
+ * PERFORMANCE OPTIMIZATIONS:
+ * - OnPush change detection reduces unnecessary re-renders
+ * - Signals provide fine-grained reactivity without full component updates
+ * - Optimized row expansion tracking using Set data structure
+ *
+ * INTEGRATION POINTS:
+ * - ColumnConfigService: Dynamic column configuration for oral-chemotherapy
+ * - ItemHighlightingService: Row highlighting based on configuration rules
+ * - UserPreferencesService: Filter state persistence
+ * - Various cell components: Specialized rendering for different data types
+ */
+class OralChemoWorklistComponent {
+  /**
+   * Get CSS classes for highlighting a worklist item row based on configuration rules
+   *
+   * This method leverages the ItemHighlightingService to determine which CSS classes
+   * should be applied to a table row based on the compass configuration's itemHighlight
+   * rules. The highlighting system supports various criteria matching (text, number, date)
+   * and generates CSS class names by combining the highlight type and class.
+   *
+   * @param item The worklist item to get highlight classes for
+   * @returns String of space-separated CSS classes to apply to the row
+   */
+  getRowHighlightClasses(item) {
+    return this.itemHighlighting.getRowHighlightClasses(item);
+  }
+  constructor(columnConfig, itemHighlighting, userPreferences, cdr) {
+    this.columnConfig = columnConfig;
+    this.itemHighlighting = itemHighlighting;
+    this.userPreferences = userPreferences;
+    this.cdr = cdr;
+    /**
+     * The currently active predefined filter from parent component
+     */
+    this.activePredefinedFilter = null;
+    /**
+     * The worklist items to display, provided by the parent component
+     */
+    this.worklistItems = [];
+    /**
+     * Loading state for the entire table, provided by the parent component
+     */
+    this.loading = false;
+    // === SIGNALS IMPLEMENTATION ===
+    /**
+     * Signal tracking which rows are expanded in the table
+     * Provides better performance than traditional Set operations
+     */
+    this._expandedIds = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.signal)(new Set());
+    /**
+     * Signal tracking which items are currently loading
+     * Used to show loading indicators on individual rows
+     */
+    this._loadingItems = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.signal)(new Set());
+    /**
+     * Flag to prevent filter restoration when switching predefined filters
+     */
+    this._preventingFilterRestoration = false;
+    /**
+     * Flag to track if we're in the middle of a data refresh operation
+     */
+    this._isDataRefreshing = false;
+    /**
+     * Local storage for filter selections to persist across data updates
+     */
+    this.filterSelections = {};
+    // === PRIVATE SIGNALS FOR STATE MANAGEMENT ===
+    /**
+     * Signal to track when column filters have been updated and are ready for visual application
+     */
+    this._columnFiltersReady = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.signal)(false);
+    /**
+     * Signal to track when predefined filter application is in progress
+     */
+    this._applyingPredefinedFilter = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.signal)(false);
+    this._lastAppliedFilterId = null;
+    this._lastAppliedFilterTime = 0;
+    // === READ-ONLY SIGNALS FOR EXTERNAL ACCESS ===
+    /**
+     * Read-only access to expanded row IDs
+     */
+    this.expandedIds = this._expandedIds.asReadonly();
+    /**
+     * Read-only access to loading items set
+     */
+    this.loadingItems = this._loadingItems.asReadonly();
+    /**
+     * Read-only access to column filters ready state
+     */
+    this.columnFiltersReady = this._columnFiltersReady.asReadonly();
+    /**
+     * Read-only access to predefined filter application state
+     */
+    this.applyingPredefinedFilter = this._applyingPredefinedFilter.asReadonly();
+    // === COMPUTED SIGNALS FOR DERIVED STATE ===
+    /**
+     * Computed signal that returns the current column configuration for oral-chemotherapy
+     * Automatically updates when column configuration changes
+     */
+    this.listOfColumns = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.computed)(() => this.columnConfig.getColumns('oral-chemotherapy'));
+    /**
+     * Computed helper functions for template use
+     */
+    this.isItemExpanded = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.computed)(() => id => this._expandedIds().has(id));
+    this.isItemLoading = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.computed)(() => id => this._loadingItems().has(id));
+    // === LIFECYCLE AND CLEANUP ===
+    /**
+     * Subject for handling component destruction and subscription cleanup
+     */
+    this.destroy$ = new rxjs__WEBPACK_IMPORTED_MODULE_5__.Subject();
+    // Add a local columns array for the table
+    this.columns = [];
+    // Set up reactive effect to automatically apply visual filters when column filters are ready
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.effect)(() => {
+      const filtersReady = this._columnFiltersReady();
+      const applyingFilter = this._applyingPredefinedFilter();
+      const activeFilter = this.activePredefinedFilter;
+      // Only apply visual filters if:
+      // 1. Column filters are ready
+      // 2. We're not currently applying a filter (to prevent race conditions)
+      // 3. We have an active predefined filter
+      // 4. We haven't applied this same filter recently (within 2 seconds)
+      const now = Date.now();
+      const sameFilterRecently = this._lastAppliedFilterId === activeFilter?.id && now - this._lastAppliedFilterTime < 2000;
+      if (filtersReady && !applyingFilter && activeFilter && !sameFilterRecently) {
+        this._applyingPredefinedFilter.set(true);
+        this._lastAppliedFilterId = activeFilter.id;
+        this._lastAppliedFilterTime = now;
+        // Apply visual filters immediately since column filters are ready
+        this.applyVisualFilters(activeFilter);
+        // Reset the applying flag after a longer delay to prevent rapid re-triggering
+        setTimeout(() => {
+          this._applyingPredefinedFilter.set(false);
+        }, 1000);
+      }
+    }, {
+      allowSignalWrites: true
+    });
+  }
+  ngOnInit() {
+    // Load saved column widths
+    this.columnConfig.loadColumnWidths();
+    // Initialize columns on component init
+    this.columns = this.columnConfig.getColumns('oral-chemotherapy');
+  }
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+  ngOnChanges(changes) {
+    // Apply predefined filters when they change
+    if (changes['activePredefinedFilter']) {
+      // Set prevention flag when switching predefined filters
+      this._preventingFilterRestoration = true;
+      this._isDataRefreshing = true;
+      // Clear existing filter selections immediately
+      this.clearPredefinedFilterSelections();
+      // Mark that we're waiting for column filters to be ready
+      this._columnFiltersReady.set(false);
+      // Reset the flags after a brief delay to allow data processing
+      setTimeout(() => {
+        this._preventingFilterRestoration = false;
+        this._isDataRefreshing = false;
+        // Signal that column filters should now be ready
+        this._columnFiltersReady.set(true);
+      }, 300);
+    }
+    if (changes['worklistItems'] && !changes['worklistItems'].firstChange) {
+      // Only restore filters if we're not preventing restoration
+      if (!this._preventingFilterRestoration && !this._isDataRefreshing) {
+        setTimeout(() => {
+          if (!this._preventingFilterRestoration && !this._isDataRefreshing) {
+            this.restoreTableFilters();
+          }
+        }, 300);
+      }
+    }
+  }
+  /**
+   * Handle row expansion/collapse events for detailed item views
+   *
+   * @param id - The unique identifier of the worklist item
+   * @param checked - True to expand the row, false to collapse it
+   */
+  onExpandChange(id, checked) {
+    const currentExpanded = new Set(this._expandedIds());
+    if (checked) {
+      currentExpanded.add(id);
+    } else {
+      currentExpanded.delete(id);
+    }
+    this._expandedIds.set(currentExpanded);
+  }
+  /**
+   * Update the workflow status of an oral chemotherapy item
+   *
+   * @param item - The oral chemotherapy item to update
+   * @param status - The new workflow status to assign
+   */
+  updateStatus(item, status) {
+    // Placeholder for future service integration
+    // This will be implemented when the oral chemotherapy service is created
+  }
+  /**
+   * Update the priority level of an oral chemotherapy item
+   *
+   * @param item - The oral chemotherapy item to update
+   * @param priority - The new priority level
+   */
+  updatePriority(item, priority) {
+    // Placeholder for future service integration
+  }
+  /**
+   * Get the appropriate CSS class for status display
+   *
+   * @param status - The status to map to a CSS class
+   * @returns The CSS class name corresponding to the status
+   */
+  getStatusClass(status) {
+    switch (status) {
+      case 'Complete':
+        return 'status-complete';
+      case 'In Progress':
+        return 'status-in-progress';
+      case 'Pending':
+        return 'status-pending';
+      case 'Ordered':
+        return 'status-ordered';
+      default:
+        return '';
+    }
+  }
+  /**
+   * Refresh a specific worklist item from the server
+   * Uses signals to track loading state and update item data
+   */
+  refreshWorklistItem(item) {
+    this.refreshWorklistItemById(item.id || item.compass_worklist_id);
+  }
+  /**
+   * Refresh a specific worklist item by ID with loading state
+   */
+  refreshWorklistItemById(itemId) {
+    // Add item to loading set using signals
+    const currentLoading = new Set(this._loadingItems());
+    currentLoading.add(itemId);
+    this._loadingItems.set(currentLoading);
+    // Placeholder for future service integration
+    // This will be implemented when the oral chemotherapy service is created
+    setTimeout(() => {
+      // Remove item from loading set
+      const newLoading = new Set(this._loadingItems());
+      newLoading.delete(itemId);
+      this._loadingItems.set(newLoading);
+    }, 1000);
+  }
+  /**
+   * Get cell value for display in table
+   *
+   * @param item - The worklist item
+   * @param columnName - The column name
+   * @returns The value to display in the cell
+   */
+  getCellValue(item, columnName) {
+    switch (columnName) {
+      case 'Patient Name':
+        return item.patientName || item.patient?.name || 'N/A';
+      case 'Order Description':
+        return item.orderDescription || item.itemDescription || 'N/A';
+      case 'Workflow Status':
+        return item.workflowStatus?.status || item.status || 'N/A';
+      case 'Ordering Location':
+        return item.orderingLocation || 'N/A';
+      case 'Ordering Provider':
+        return item.orderingProvider || 'N/A';
+      case 'Scheduling Location':
+        return item.schedulingLocation || 'N/A';
+      case 'Schedule Status':
+        return item.schedule?.state || item.scheduleStatus || 'N/A';
+      case 'Order Status':
+        return item.subStatus?.subStatus || item.orderStatus || 'N/A';
+      case 'Priority':
+        return item.priority || 'Normal';
+      case 'Order Date':
+        if (item.origOrderDtTm || item.orderDate) {
+          const date = new Date(item.origOrderDtTm || item.orderDate);
+          const day = date.getDate().toString().padStart(2, '0');
+          const month = date.toLocaleString('en-US', {
+            month: 'short'
+          });
+          const year = date.getFullYear();
+          return `${day}-${month}-${year}`;
+        }
+        return '';
+      case 'EDOS Date':
+        if (item.edosDate) {
+          const date = new Date(item.edosDate);
+          const day = date.getDate().toString().padStart(2, '0');
+          const month = date.toLocaleString('en-US', {
+            month: 'short'
+          });
+          const year = date.getFullYear();
+          return `${day}-${month}-${year}`;
+        }
+        return '';
+      default:
+        return '';
+    }
+  }
+  /**
+   * Handle column resize events
+   */
+  onColumnResize(event) {
+    if (event.columnKey === 'workflow' || event.columnKey === 'actions') {
+      // Handle special columns that are not in the column configuration
+      localStorage.setItem(`compass_oral_chemo_${event.columnKey}_width`, event.width.toString());
+    } else {
+      // Update column width in the configuration service
+      this.columnConfig.updateColumnWidth('oral-chemotherapy', event.columnKey, event.width);
+    }
+  }
+  /**
+   * Get saved width for workflow and actions columns
+   */
+  getFixedColumnWidth(columnKey) {
+    const saved = localStorage.getItem(`compass_oral_chemo_${columnKey}_width`);
+    return saved ? parseInt(saved) : undefined;
+  }
+  /**
+   * Reset column widths to default
+   */
+  resetColumnWidths() {
+    this.columnConfig.resetColumnWidths('oral-chemotherapy');
+    this.columnConfig.loadColumnWidths();
+  }
+  /**
+   * Handler for individual column filter changes
+   */
+  onColumnFilterChange(columnKey, selectedValues) {
+    if (selectedValues && selectedValues.length > 0) {
+      this.filterSelections[columnKey] = selectedValues;
+    } else {
+      delete this.filterSelections[columnKey];
+    }
+  }
+  /**
+   * Handler for NG-Zorro table filter changes
+   */
+  onTableFilterChange(filters) {
+    // Handle different filter payload formats
+    if (Array.isArray(filters)) {
+      filters.forEach(f => {
+        if (f.key && Array.isArray(f.value)) {
+          this.filterSelections[f.key] = f.value;
+        }
+      });
+    } else if (filters && typeof filters === 'object') {
+      if (filters.detail && Array.isArray(filters.detail)) {
+        filters.detail.forEach(f => {
+          if (f.key && Array.isArray(f.value)) {
+            this.filterSelections[f.key] = f.value;
+          }
+        });
+      } else if (!filters.detail && !filters.type) {
+        Object.keys(filters).forEach(key => {
+          if (Array.isArray(filters[key])) {
+            this.filterSelections[key] = filters[key];
+          }
+        });
+      }
+    }
+    // Sync the current filter state with the UserPreferencesService
+    this.userPreferences.setCurrentFilterState('oral-chemotherapy', this.filterSelections);
+  }
+  /**
+   * Public method to clear all column filters
+   */
+  clearAllColumnFilters() {
+    this._preventingFilterRestoration = true;
+    this._isDataRefreshing = true;
+    this.filterSelections = {};
+    // Clear all column filter selections
+    const columns = this.columnConfig.getColumns('oral-chemotherapy');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = false;
+        }
+      }
+    }
+    this.columnConfig.triggerUpdate();
+    this.cdr.detectChanges();
+    setTimeout(() => {
+      this._preventingFilterRestoration = false;
+      this._isDataRefreshing = false;
+    }, 2000);
+  }
+  /**
+   * Clear filter selections that were set by predefined filters
+   */
+  clearPredefinedFilterSelections() {
+    this.filterSelections = {};
+    const columns = this.columnConfig.getColumns('oral-chemotherapy');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = false;
+        }
+      }
+    }
+    this.columnConfig.updateColumnsSilently();
+    this.cdr.detectChanges();
+  }
+  /**
+   * Programmatically restore table filters using NG-ZORRO's table API
+   */
+  restoreTableFilters() {
+    const hasFilters = Object.keys(this.filterSelections).some(key => this.filterSelections[key] && this.filterSelections[key].length > 0);
+    if (!hasFilters) {
+      return;
+    }
+    const columns = this.columnConfig.getColumns('oral-chemotherapy');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        const selected = this.filterSelections[col.meaning] || [];
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = false;
+        }
+        if (selected.length > 0) {
+          for (const opt of col.listOfFilter) {
+            if (selected.includes(opt.value)) {
+              opt.byDefault = true;
+            }
+          }
+        }
+      }
+    }
+    this.columnConfig.updateColumnsSilently();
+    this.cdr.detectChanges();
+  }
+  /**
+   * Apply visual filters to the table columns
+   */
+  applyVisualFilters(filter) {
+    const filters = filter.filters;
+    if (!filters) return;
+    this.filterSelections = {};
+    const columns = this.columnConfig.getColumns('oral-chemotherapy');
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        for (const opt of col.listOfFilter) {
+          opt.byDefault = false;
+        }
+      }
+    }
+    this.columnConfig.updateColumnsSilently();
+    this.cdr.detectChanges();
+    for (const col of columns) {
+      if (col.filterable && col.listOfFilter) {
+        if (col.meaning === 'ORAL_CHEMO_WORKFLOW_STATUS' && filters.workflowStatus) {
+          for (const opt of col.listOfFilter) {
+            if (filters.workflowStatus.includes(opt.value)) {
+              opt.byDefault = true;
+            }
+          }
+        }
+        if (col.meaning === 'ORAL_CHEMO_SCHEDULE_STATUS' && filters.schedulingStatus) {
+          for (const opt of col.listOfFilter) {
+            if (filters.schedulingStatus.includes(opt.value)) {
+              opt.byDefault = true;
+            }
+          }
+        }
+      }
+    }
+    this.columnConfig.updateColumnsSilently();
+    this.cdr.detectChanges();
+  }
+  static {
+    this.ɵfac = function OralChemoWorklistComponent_Factory(t) {
+      return new (t || OralChemoWorklistComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_0__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_services_item_highlighting_service__WEBPACK_IMPORTED_MODULE_1__.ItemHighlightingService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__.ChangeDetectorRef));
+    };
+  }
+  static {
+    this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
+      type: OralChemoWorklistComponent,
+      selectors: [["app-oral-chemo-worklist"]],
+      viewQuery: function OralChemoWorklistComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c0, 5);
+        }
+        if (rf & 2) {
+          let _t;
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx.worklistTable = _t.first);
+        }
+      },
+      inputs: {
+        activePredefinedFilter: "activePredefinedFilter",
+        worklistItems: "worklistItems",
+        loading: "loading"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵNgOnChangesFeature"]],
+      decls: 11,
+      vars: 15,
+      consts: [[3, "nzData", "nzBordered", "nzPageSize", "nzShowPagination", "nzLoading", "nzFilterChange"], ["worklistTable", "nzTable"], [4, "ngFor", "ngForOf"], ["appResizableColumn", "", "columnKey", "workflow", 3, "minWidth", "maxWidth", "columnResize"], ["appResizableColumn", "", "columnKey", "actions", 3, "minWidth", "maxWidth", "columnResize"], [3, "loading", "class", 4, "ngFor", "ngForOf"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "width", "columnKey", "minWidth", "maxWidth", "columnResize", 4, "ngIf"], ["appResizableColumn", "", 3, "nzColumnKey", "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "nzFilters", "nzFilterFn", "width", "columnKey", "minWidth", "maxWidth", "nzFilterChange", "columnResize", 4, "ngIf"], ["appResizableColumn", "", 3, "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "columnKey", "minWidth", "maxWidth", "columnResize"], ["appResizableColumn", "", 3, "nzColumnKey", "nzSortOrder", "nzSortFn", "nzSortDirections", "nzFilterMultiple", "nzFilters", "nzFilterFn", "columnKey", "minWidth", "maxWidth", "nzFilterChange", "columnResize"], [1, "workflow-cell"], [3, "nzColor"], ["nz-button", "", "nzType", "default", "style", "cursor: pointer;", 3, "disabled", "click", 4, "nzSpaceItem"], [4, "ngIf"], [4, "ngIf", "ngIfElse"], ["defaultCell", ""], [1, "patient-info"], [1, "patient-name"], ["nz-button", "", "nzType", "default", 2, "cursor", "pointer", 3, "disabled", "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"]],
+      template: function OralChemoWorklistComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "nz-table", 0, 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("nzFilterChange", function OralChemoWorklistComponent_Template_nz_table_nzFilterChange_0_listener($event) {
+            return ctx.onTableFilterChange($event);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "thead")(3, "tr");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](4, OralChemoWorklistComponent_ng_container_4_Template, 3, 2, "ng-container", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](5, "th", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("columnResize", function OralChemoWorklistComponent_Template_th_columnResize_5_listener($event) {
+            return ctx.onColumnResize($event);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](6, " Workflow ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](7, "th", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("columnResize", function OralChemoWorklistComponent_Template_th_columnResize_7_listener($event) {
+            return ctx.onColumnResize($event);
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](8, " Actions ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](9, "tbody");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](10, OralChemoWorklistComponent_tr_10_Template, 9, 7, "tr", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
+        }
+        if (rf & 2) {
+          const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵreference"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzData", ctx.worklistItems)("nzBordered", true)("nzPageSize", 8)("nzShowPagination", true)("nzLoading", ctx.loading);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx.listOfColumns());
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstyleProp"]("width", ctx.getFixedColumnWidth("workflow"), "px");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("minWidth", 150)("maxWidth", 300);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵstyleProp"]("width", ctx.getFixedColumnWidth("actions"), "px");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("minWidth", 120)("maxWidth", 200);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", _r0.data);
+        }
+      },
+      dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_6__.NgIf, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_7__.NzIconDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTableComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzThAddOnComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTableCellDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzThMeasureDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTheadComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTbodyComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTrDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_9__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_10__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_11__.NzWaveDirective, ng_zorro_antd_tag__WEBPACK_IMPORTED_MODULE_12__.NzTagComponent, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_13__.NzSpaceComponent, ng_zorro_antd_space__WEBPACK_IMPORTED_MODULE_13__.NzSpaceItemDirective, _directives_resizable_column_directive__WEBPACK_IMPORTED_MODULE_3__.ResizableColumnDirective],
+      styles: ["\n\n.status-complete[_ngcontent-%COMP%] {\n  background-color: #52c41a;\n  color: white;\n}\n\n.status-in-progress[_ngcontent-%COMP%] {\n  background-color: #1890ff;\n  color: white;\n}\n\n.status-pending[_ngcontent-%COMP%] {\n  background-color: #d9d9d9;\n  color: rgba(0, 0, 0, 0.85);\n}\n\n.status-ordered[_ngcontent-%COMP%] {\n  background-color: #fa8c16;\n  color: white;\n}\n\n.patient-info[_ngcontent-%COMP%]   .patient-name[_ngcontent-%COMP%] {\n  font-weight: 500;\n  color: #1890ff;\n}\n\n.workflow-cell[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.empty-state[_ngcontent-%COMP%] {\n  padding: 40px;\n  text-align: center;\n}\n\n.ant-table-thead[_ngcontent-%COMP%]    > tr[_ngcontent-%COMP%]    > th[_ngcontent-%COMP%], .ant-table-tbody[_ngcontent-%COMP%]    > tr[_ngcontent-%COMP%]    > td[_ngcontent-%COMP%], .ant-table[_ngcontent-%COMP%]   tfoot[_ngcontent-%COMP%]    > tr[_ngcontent-%COMP%]    > th[_ngcontent-%COMP%], .ant-table[_ngcontent-%COMP%]   tfoot[_ngcontent-%COMP%]    > tr[_ngcontent-%COMP%]    > td[_ngcontent-%COMP%] {\n  padding: 0px 0px 0px 5px;\n}\n\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.loading[_ngcontent-%COMP%] {\n  opacity: 0.7;\n}\n\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-yellow[_ngcontent-%COMP%] {\n  background-color: #fffbe6 !important;\n  border-left: 4px solid #fadb14 !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-yellow[_ngcontent-%COMP%]:hover {\n  background-color: #fff7db !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-red[_ngcontent-%COMP%] {\n  background-color: #fff2f0 !important;\n  border-left: 4px solid #ff4d4f !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-red[_ngcontent-%COMP%]:hover {\n  background-color: #ffebe9 !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-green[_ngcontent-%COMP%] {\n  background-color: #f6ffed !important;\n  border-left: 4px solid #52c41a !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-green[_ngcontent-%COMP%]:hover {\n  background-color: #eef9e6 !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-blue[_ngcontent-%COMP%] {\n  background-color: #f0f9ff !important;\n  border-left: 4px solid #1890ff !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-blue[_ngcontent-%COMP%]:hover {\n  background-color: #e6f4ff !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-orange[_ngcontent-%COMP%] {\n  background-color: #fff7e6 !important;\n  border-left: 4px solid #fa8c16 !important;\n}\n.ant-table-tbody[_ngcontent-%COMP%]    > tr.worklistitem-row-highlight-orange[_ngcontent-%COMP%]:hover {\n  background-color: #ffefd6 !important;\n}\n\n  .column-resizer:hover {\n  background-color: #1890ff !important;\n  opacity: 0.6;\n}\n  .column-resizer:active {\n  background-color: #1890ff !important;\n  opacity: 0.8;\n}\n\n  th:hover .column-resizer {\n  background-color: #f0f0f0 !important;\n  opacity: 0.8;\n}\n\n  .resizing {\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n}\n\n  .ant-table-thead > tr > th {\n  border-right: 1px solid #f0f0f0;\n}\n  .ant-table-thead > tr > th:last-child {\n  border-right: none;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L29yYWwtY2hlbW90aGVyYXB5L29yYWwtY2hlbW8td29ya2xpc3Qvb3JhbC1jaGVtby13b3JrbGlzdC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnREFBQTtBQUVBO0VBQ0UseUJBQUE7RUFDQSxZQUFBO0FBQUY7O0FBR0E7RUFDRSx5QkFBQTtFQUNBLFlBQUE7QUFBRjs7QUFHQTtFQUNFLHlCQUFBO0VBQ0EsMEJBQUE7QUFBRjs7QUFHQTtFQUNFLHlCQUFBO0VBQ0EsWUFBQTtBQUFGOztBQUlFO0VBQ0UsZ0JBQUE7RUFDQSxjQUFBO0FBREo7O0FBS0E7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxRQUFBO0FBRkY7O0FBS0E7RUFDRSxhQUFBO0VBQ0Esa0JBQUE7QUFGRjs7QUFLQTs7OztFQUlFLHdCQUFBO0FBRkY7O0FBT0U7RUFDRSxZQUFBO0FBSko7O0FBd0JFO0VBQ0Usb0NBQUE7RUFDQSx5Q0FBQTtBQXJCSjtBQXVCSTtFQUNFLG9DQUFBO0FBckJOO0FBMEJFO0VBQ0Usb0NBQUE7RUFDQSx5Q0FBQTtBQXhCSjtBQTBCSTtFQUNFLG9DQUFBO0FBeEJOO0FBNkJFO0VBQ0Usb0NBQUE7RUFDQSx5Q0FBQTtBQTNCSjtBQTZCSTtFQUNFLG9DQUFBO0FBM0JOO0FBZ0NFO0VBQ0Usb0NBQUE7RUFDQSx5Q0FBQTtBQTlCSjtBQWdDSTtFQUNFLG9DQUFBO0FBOUJOO0FBbUNFO0VBQ0Usb0NBQUE7RUFDQSx5Q0FBQTtBQWpDSjtBQW1DSTtFQUNFLG9DQUFBO0FBakNOOztBQXdDRTtFQUNFLG9DQUFBO0VBQ0EsWUFBQTtBQXJDSjtBQXdDRTtFQUNFLG9DQUFBO0VBQ0EsWUFBQTtBQXRDSjs7QUEyQ0E7RUFDRSxvQ0FBQTtFQUNBLFlBQUE7QUF4Q0Y7O0FBNENBO0VBQ0UsaUJBQUE7RUFDQSx5QkFBQTtFQUNBLHNCQUFBO0VBQ0EscUJBQUE7QUF6Q0Y7O0FBNkNBO0VBQ0UsK0JBQUE7QUExQ0Y7QUE0Q0U7RUFDRSxrQkFBQTtBQTFDSiIsInNvdXJjZXNDb250ZW50IjpbIi8qIE9yYWwgQ2hlbW90aGVyYXB5IFdvcmtsaXN0IENvbXBvbmVudCBTdHlsZXMgKi9cblxuLnN0YXR1cy1jb21wbGV0ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM1MmM0MWE7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnN0YXR1cy1pbi1wcm9ncmVzcyB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxODkwZmY7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnN0YXR1cy1wZW5kaW5nIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Q5ZDlkOTtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44NSk7XG59XG5cbi5zdGF0dXMtb3JkZXJlZCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmYThjMTY7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnBhdGllbnQtaW5mbyB7XG4gIC5wYXRpZW50LW5hbWUge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gICAgY29sb3I6ICMxODkwZmY7XG4gIH1cbn1cblxuLndvcmtmbG93LWNlbGwge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBnYXA6IDhweDtcbn1cblxuLmVtcHR5LXN0YXRlIHtcbiAgcGFkZGluZzogNDBweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uYW50LXRhYmxlLXRoZWFkID4gdHIgPiB0aCxcbi5hbnQtdGFibGUtdGJvZHkgPiB0ciA+IHRkLFxuLmFudC10YWJsZSB0Zm9vdCA+IHRyID4gdGgsXG4uYW50LXRhYmxlIHRmb290ID4gdHIgPiB0ZCB7XG4gIHBhZGRpbmc6IDBweCAwcHggMHB4IDVweDtcbn1cblxuLy8gTG9hZGluZyBzdGF0ZSBzdHlsaW5nXG4uYW50LXRhYmxlLXRib2R5ID4gdHIge1xuICAmLmxvYWRpbmcge1xuICAgIG9wYWNpdHk6IDAuNztcbiAgfVxufVxuXG4vLyBXb3JrbGlzdCBpdGVtIGhpZ2hsaWdodGluZyBzdHlsZXNcbi8vIFRoZXNlIGNsYXNzZXMgYXJlIGFwcGxpZWQgYmFzZWQgb24gY29tcGFzcyBjb25maWd1cmF0aW9uIHJ1bGVzIGRlZmluZWQgaW4gdGhlIGl0ZW1IaWdobGlnaHQgYXJyYXlcbi8vIEVhY2ggY2xhc3MgZm9sbG93cyB0aGUgcGF0dGVybjoge3R5cGV9LXtjbGFzc30gKGUuZy4sIHdvcmtsaXN0aXRlbS1yb3ctaGlnaGxpZ2h0LXllbGxvdylcbi8vIFRoZSBoaWdobGlnaHRpbmcgc3lzdGVtIHByb3ZpZGVzIHZpc3VhbCBlbXBoYXNpcyBmb3Igcm93cyB0aGF0IG1hdGNoIHNwZWNpZmljIGNyaXRlcmlhXG4vL1xuLy8gQ09ORklHVVJBVElPTiBFWEFNUExFOlxuLy8ge1xuLy8gICBcInR5cGVcIjogXCJ3b3JrbGlzdGl0ZW0tcm93XCIsXG4vLyAgIFwicmVmZXJlbmNlXCI6IFwic2NoZWR1bGluZ0xvY2F0aW9uXCIsXG4vLyAgIFwiY2xhc3NcIjogXCJoaWdobGlnaHQteWVsbG93XCIsIFxuLy8gICBcImNyaXRlcmlhXCI6IFt7XCJ2YWx1ZVRleHRcIjogXCJPdXRzaWRlIExvY2F0aW9uXCIsIFwidmFsdWVOdW1iZXJcIjogMCwgXCJ2YWx1ZURhdGVcIjogXCJcIn1dXG4vLyB9XG4vLyBUaGlzIGdlbmVyYXRlcyBjbGFzcyBcIndvcmtsaXN0aXRlbS1yb3ctaGlnaGxpZ2h0LXllbGxvd1wiIGZvciBtYXRjaGluZyByb3dzXG4vL1xuLmFudC10YWJsZS10Ym9keSA+IHRyIHtcbiAgLy8gWWVsbG93IGhpZ2hsaWdodGluZyBmb3Igd29ya2xpc3RpdGVtLXJvdyB3aXRoIGhpZ2hsaWdodC15ZWxsb3cgY2xhc3NcbiAgJi53b3JrbGlzdGl0ZW0tcm93LWhpZ2hsaWdodC15ZWxsb3cge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmZiZTYgIWltcG9ydGFudDsgLy8gTGlnaHQgeWVsbG93IGJhY2tncm91bmRcbiAgICBib3JkZXItbGVmdDogNHB4IHNvbGlkICNmYWRiMTQgIWltcG9ydGFudDsgLy8gWWVsbG93IGxlZnQgYm9yZGVyIGZvciBlbXBoYXNpc1xuICAgIFxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjdkYiAhaW1wb3J0YW50OyAvLyBTbGlnaHRseSBkYXJrZXIgb24gaG92ZXJcbiAgICB9XG4gIH1cbiAgXG4gIC8vIFJlZCBoaWdobGlnaHRpbmcgZm9yIHdvcmtsaXN0aXRlbS1yb3cgd2l0aCBoaWdobGlnaHQtcmVkIGNsYXNzXG4gICYud29ya2xpc3RpdGVtLXJvdy1oaWdobGlnaHQtcmVkIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmMmYwICFpbXBvcnRhbnQ7IC8vIExpZ2h0IHJlZCBiYWNrZ3JvdW5kXG4gICAgYm9yZGVyLWxlZnQ6IDRweCBzb2xpZCAjZmY0ZDRmICFpbXBvcnRhbnQ7IC8vIFJlZCBsZWZ0IGJvcmRlciBmb3IgZW1waGFzaXNcbiAgICBcbiAgICAmOmhvdmVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmViZTkgIWltcG9ydGFudDsgLy8gU2xpZ2h0bHkgZGFya2VyIG9uIGhvdmVyXG4gICAgfVxuICB9XG4gIFxuICAvLyBHcmVlbiBoaWdobGlnaHRpbmcgZm9yIHdvcmtsaXN0aXRlbS1yb3cgd2l0aCBoaWdobGlnaHQtZ3JlZW4gY2xhc3NcbiAgJi53b3JrbGlzdGl0ZW0tcm93LWhpZ2hsaWdodC1ncmVlbiB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y2ZmZlZCAhaW1wb3J0YW50OyAvLyBMaWdodCBncmVlbiBiYWNrZ3JvdW5kXG4gICAgYm9yZGVyLWxlZnQ6IDRweCBzb2xpZCAjNTJjNDFhICFpbXBvcnRhbnQ7IC8vIEdyZWVuIGxlZnQgYm9yZGVyIGZvciBlbXBoYXNpc1xuICAgIFxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2VlZjllNiAhaW1wb3J0YW50OyAvLyBTbGlnaHRseSBkYXJrZXIgb24gaG92ZXJcbiAgICB9XG4gIH1cbiAgXG4gIC8vIEJsdWUgaGlnaGxpZ2h0aW5nIGZvciB3b3JrbGlzdGl0ZW0tcm93IHdpdGggaGlnaGxpZ2h0LWJsdWUgY2xhc3NcbiAgJi53b3JrbGlzdGl0ZW0tcm93LWhpZ2hsaWdodC1ibHVlIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmOWZmICFpbXBvcnRhbnQ7IC8vIExpZ2h0IGJsdWUgYmFja2dyb3VuZFxuICAgIGJvcmRlci1sZWZ0OiA0cHggc29saWQgIzE4OTBmZiAhaW1wb3J0YW50OyAvLyBCbHVlIGxlZnQgYm9yZGVyIGZvciBlbXBoYXNpc1xuICAgIFxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2U2ZjRmZiAhaW1wb3J0YW50OyAvLyBTbGlnaHRseSBkYXJrZXIgb24gaG92ZXJcbiAgICB9XG4gIH1cbiAgXG4gIC8vIE9yYW5nZSBoaWdobGlnaHRpbmcgZm9yIHdvcmtsaXN0aXRlbS1yb3cgd2l0aCBoaWdobGlnaHQtb3JhbmdlIGNsYXNzXG4gICYud29ya2xpc3RpdGVtLXJvdy1oaWdobGlnaHQtb3JhbmdlIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmN2U2ICFpbXBvcnRhbnQ7IC8vIExpZ2h0IG9yYW5nZSBiYWNrZ3JvdW5kXG4gICAgYm9yZGVyLWxlZnQ6IDRweCBzb2xpZCAjZmE4YzE2ICFpbXBvcnRhbnQ7IC8vIE9yYW5nZSBsZWZ0IGJvcmRlciBmb3IgZW1waGFzaXNcbiAgICBcbiAgICAmOmhvdmVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmVmZDYgIWltcG9ydGFudDsgLy8gU2xpZ2h0bHkgZGFya2VyIG9uIGhvdmVyXG4gICAgfVxuICB9XG59XG5cbi8vIFJlc2l6YWJsZSBjb2x1bW4gc3R5bGVzXG46Om5nLWRlZXAgLmNvbHVtbi1yZXNpemVyIHtcbiAgJjpob3ZlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzE4OTBmZiAhaW1wb3J0YW50O1xuICAgIG9wYWNpdHk6IDAuNjtcbiAgfVxuICBcbiAgJjphY3RpdmUge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMxODkwZmYgIWltcG9ydGFudDtcbiAgICBvcGFjaXR5OiAwLjg7XG4gIH1cbn1cblxuLy8gQWRkIHZpc3VhbCBpbmRpY2F0b3Igd2hlbiByZXNpemluZ1xuOjpuZy1kZWVwIHRoOmhvdmVyIC5jb2x1bW4tcmVzaXplciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmMGYwZjAgIWltcG9ydGFudDtcbiAgb3BhY2l0eTogMC44O1xufVxuXG4vLyBQcmV2ZW50IHRleHQgc2VsZWN0aW9uIGR1cmluZyByZXNpemVcbjo6bmctZGVlcCAucmVzaXppbmcge1xuICB1c2VyLXNlbGVjdDogbm9uZTtcbiAgLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTtcbiAgLW1vei11c2VyLXNlbGVjdDogbm9uZTtcbiAgLW1zLXVzZXItc2VsZWN0OiBub25lO1xufVxuXG4vLyBUYWJsZSBoZWFkZXIgc3R5bGluZyBmb3IgcmVzaXphYmxlIGNvbHVtbnNcbjo6bmctZGVlcCAuYW50LXRhYmxlLXRoZWFkID4gdHIgPiB0aCB7XG4gIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICNmMGYwZjA7XG4gIFxuICAmOmxhc3QtY2hpbGQge1xuICAgIGJvcmRlci1yaWdodDogbm9uZTtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */"],
+      changeDetection: 0
+    });
+  }
+}
+
+
+/***/ }),
+
 /***/ 32163:
 /*!**********************************************************************************!*\
   !*** ./src/app/compass-content/oral-chemotherapy/oral-chemotherapy.component.ts ***!
@@ -6702,101 +7698,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   OralChemotherapyComponent: () => (/* binding */ OralChemotherapyComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 37580);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 37580);
 /* harmony import */ var _services_column_config_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../services/column-config.service */ 97477);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 60316);
-/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng-zorro-antd/table */ 68636);
-/* harmony import */ var ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ng-zorro-antd/spin */ 66568);
-/* harmony import */ var ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-zorro-antd/empty */ 42643);
+/* harmony import */ var _services_oral_chemotherapy_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/oral-chemotherapy.service */ 29658);
+/* harmony import */ var _oral_chemo_filter_bar_oral_chemo_filter_bar_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./oral-chemo-filter-bar/oral-chemo-filter-bar.component */ 82496);
+/* harmony import */ var _oral_chemo_worklist_oral_chemo_worklist_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./oral-chemo-worklist/oral-chemo-worklist.component */ 13920);
 
 
 
 
 
 
-
-function OralChemotherapyComponent_div_8_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "nz-spin", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Loading oral chemotherapy worklist...");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-  }
-}
-function OralChemotherapyComponent_div_9_tr_14_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr")(1, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-  }
-  if (rf & 2) {
-    const item_r5 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](item_r5.patientName || "N/A");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](item_r5.orderDescription || "N/A");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](item_r5.status || "N/A");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](item_r5.date || "N/A");
-  }
-}
-function OralChemotherapyComponent_div_9_tr_15_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr")(1, "td", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "nz-empty", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-  }
-  if (rf & 2) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("nzNotFoundContent", "No oral chemotherapy items found");
-  }
-}
 const _c0 = function () {
-  return {
-    x: "100%",
-    y: "400px"
-  };
+  return [];
 };
-function OralChemotherapyComponent_div_9_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 9)(1, "nz-table", 10, 11)(3, "thead")(4, "tr")(5, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "Patient Name");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "Order Description");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "Status");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "Date");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, OralChemotherapyComponent_div_9_tr_14_Template, 9, 4, "tr", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, OralChemotherapyComponent_div_9_tr_15_Template, 3, 1, "tr", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
-  }
-  if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("nzData", ctx_r1.filteredWorklistItems())("nzShowPagination", false)("nzScroll", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](5, _c0));
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r1.filteredWorklistItems());
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r1.filteredWorklistItems().length === 0);
-  }
-}
 /**
  * OralChemotherapyComponent - Oral Chemotherapy Worklist Management
  *
@@ -6813,20 +7728,20 @@ function OralChemotherapyComponent_div_9_Template(rf, ctx) {
  * - Provides centralized error handling and user feedback
  *
  * ARCHITECTURE INTEGRATION:
- * - Will consume signals from future OralChemotherapyService for reactive data updates
+ * - Consumes signals from OralChemotherapyService for reactive data updates
  * - Delegates column management to ColumnConfigService
  * - Coordinates with parent components for sidebar state management
  * - Uses child components for specialized functionality (filters, table)
  *
  * DATA FLOW:
- * 1. Initializes worklist data from future service
- * 2. Provides filter controls via future filter bar component
+ * 1. Initializes worklist data from OralChemotherapyService
+ * 2. Provides filter controls via filter bar component
  * 3. Displays filtered results via worklist table component
  * 4. Handles user interactions and data refresh requests
  * 5. Manages loading states and error conditions
  *
  * SIGNAL INTEGRATION:
- * - Uses computed signals from service for filtered data
+ * - Uses computed signals from OralChemotherapyService for filtered data
  * - Reactive updates eliminate manual subscription management
  * - Automatic re-rendering when underlying data changes
  * - Efficient change detection with minimal performance overhead
@@ -6852,10 +7767,11 @@ class OralChemotherapyComponent {
   onGlobalSearch(term) {
     this._globalSearchTerm.set(term);
   }
-  constructor(columnConfig, cdr) {
+  constructor(columnConfig, worklistService, cdr) {
     this.columnConfig = columnConfig;
+    this.worklistService = worklistService;
     this.cdr = cdr;
-    this.sideBarToggle = new _angular_core__WEBPACK_IMPORTED_MODULE_1__.EventEmitter();
+    this.sideBarToggle = new _angular_core__WEBPACK_IMPORTED_MODULE_4__.EventEmitter();
     /**
      * The current days filter value.
      */
@@ -6863,40 +7779,47 @@ class OralChemotherapyComponent {
     /**
      * The current global search term for filtering the worklist - using signal for reactivity
      */
-    this._globalSearchTerm = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.signal)('');
+    this._globalSearchTerm = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.signal)('');
     /**
      * The currently active predefined filter
      */
     this.activePredefinedFilter = null;
     /**
-     * Placeholder for worklist items - will be replaced with service integration
-     */
-    this.worklistItems = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.signal)([]);
-    /**
-     * Loading state signal
-     */
-    this.loading = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.signal)(false);
-    /**
      * Reactive computed signal for filtered worklist items
      * This automatically updates when the service data changes or the global search term changes
      */
-    this.filteredWorklistItems = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.computed)(() => {
-      const items = this.worklistItems();
+    this.filteredWorklistItems = (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.computed)(() => {
+      const items = this.worklistService.filteredItems();
       const search = this._globalSearchTerm().trim().toLowerCase();
       if (!search) return items;
       return items.filter(item => {
-        // Add filtering logic here when data structure is defined
-        return true;
+        // Patient Name
+        const patientName = item.patient?.name?.toLowerCase() || '';
+        // FIN
+        const fin = item.patient?.fin?.toLowerCase() || '';
+        // MRN
+        const mrn = item.patient?.mrn?.toLowerCase() || '';
+        // Order Description
+        const orderDesc = item.itemDescription?.toLowerCase() || '';
+        // Order ID
+        const orderId = item.orderId?.toString().toLowerCase() || '';
+        // Add more fields here as needed
+        return patientName.includes(search) || fin.includes(search) || mrn.includes(search) || orderDesc.includes(search) || orderId.includes(search);
       });
     });
     this.listOfColumns = this.columnConfig.getColumns('oral-chemotherapy');
   }
   ngOnInit() {
     // Component initialization - setup filters and load initial worklist data
+    // Initialize the current filter value from the service
+    this.currentDaysFilter = this.worklistService.getCurrentDaysFilter();
+    // CRITICAL: Set up the predefined filter IMMEDIATELY and SYNCHRONOUSLY
+    // This must happen before any async operations to prevent race conditions
     // Get the default predefined filter from the centralized configuration
     this.activePredefinedFilter = this.columnConfig.getDefaultPredefinedFilter('oral-chemotherapy');
     if (!this.activePredefinedFilter) {
       // Fallback if no default filter is configured
+      // No default predefined filter found, using fallback
       this.activePredefinedFilter = {
         id: 'work-items',
         label: 'Work Items',
@@ -6909,37 +7832,49 @@ class OralChemotherapyComponent {
         order: 0
       };
     }
+    // Apply the predefined filter to the service IMMEDIATELY - this is synchronous
+    this.worklistService.updatePredefinedFilter(this.activePredefinedFilter);
     // Manually trigger change detection to ensure UI updates after filter is set
     this.cdr.detectChanges();
-    // Load worklist data when service is implemented
+    // Now load worklist data - the filter is guaranteed to be set before any async operations
     this.loadWorklistData().catch(error => {
       // Error loading worklist data
     });
+    // Note: No need to subscribe to itemDetailUpdated$ here anymore since filteredWorklistItems 
+    // is now a computed signal that automatically reacts to service signal changes
   }
   /**
    * Load worklist data from the service
    * Returns a Promise that resolves when data loading is complete
    */
   loadWorklistData() {
-    // Placeholder - will be replaced with actual service call
-    return new Promise(resolve => {
-      this.loading.set(true);
-      // Simulate loading delay
-      setTimeout(() => {
-        this.worklistItems.set([]);
-        this.loading.set(false);
-        resolve();
-      }, 100);
+    // Fetch worklist data from the service
+    // The service will handle progressive loading and the component will react automatically
+    return new Promise((resolve, reject) => {
+      this.worklistService.refreshWorklist().subscribe({
+        next: () => {
+          // Data loading completed - the reactive signals will handle updates
+          // Manually trigger change detection after data loads to ensure UI updates
+          this.cdr.detectChanges();
+          resolve();
+        },
+        error: error => {
+          // Handle worklist loading errors - could show user notification
+          // Error loading worklist data
+          reject(error);
+        }
+      });
     });
   }
   /**
    * Handles the days filter change event
    */
   onDaysFilterChange(days) {
+    // Handle user-initiated days filter change
     this.currentDaysFilter = days;
-    // Update service when implemented
+    // Update the service state - this will automatically update the filteredItems signal
+    this.worklistService.updateDaysFilter(days);
   }
-
   onSideBarToggle() {
     this.sideBarToggle.emit();
   }
@@ -6955,44 +7890,59 @@ class OralChemotherapyComponent {
    * Reloads the worklist data from the service.
    */
   onRefreshData() {
+    // Handle user-initiated data refresh request
     this.loadWorklistData().catch(error => {
       // Error refreshing worklist data
     });
+    // Don't call restoreTableFilters here - it will be called by ngOnChanges when data updates
   }
   /**
    * Handles predefined filter selection from the filter bar
    */
   onPredefinedFilterSelect(filter) {
+    // Update the component state
     this.activePredefinedFilter = filter;
-    // Update service when implemented
+    // Update the service with the selected predefined filter
+    if (filter) {
+      this.worklistService.updatePredefinedFilter(filter);
+      // If the filter includes a days filter, update the current days filter
+      if (filter.filters.daysFilter !== undefined) {
+        this.currentDaysFilter = filter.filters.daysFilter;
+      }
+    } else {
+      this.worklistService.clearPredefinedFilter();
+    }
   }
   /**
    * Handles the assignment filter toggle from the filter bar
    * @param showMyAssignmentsOnly - true to show only current user's assignments, false to show all
    */
   onAssignmentToggle(showMyAssignmentsOnly) {
-    // Update service when implemented
+    // Update the service with the assignment filter state
+    this.worklistService.updateAssignmentFilter(showMyAssignmentsOnly);
   }
   /**
    * Handles clearing column filters when switching between predefined filter tabs
+   * This ensures users see the expected predefined filter results without user-applied filters interfering
    */
   onClearColumnFilters() {
-    // Clear column filters in the worklist table component when implemented
+    // Clear column filters in the worklist table component
+    // This will be implemented when the worklist table component is added
   }
   /**
-   * Getter for the loading state
+   * Getter for the loading state from the service
    * Used in template to show loading spinner
    */
   get isLoading() {
-    return this.loading();
+    return this.worklistService.loading();
   }
   static {
     this.ɵfac = function OralChemotherapyComponent_Factory(t) {
-      return new (t || OralChemotherapyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_0__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__.ChangeDetectorRef));
+      return new (t || OralChemotherapyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_0__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_services_oral_chemotherapy_service__WEBPACK_IMPORTED_MODULE_1__.OralChemotherapyService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__.ChangeDetectorRef));
     };
   }
   static {
-    this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+    this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
       type: OralChemotherapyComponent,
       selectors: [["app-oral-chemotherapy"]],
       inputs: {
@@ -7001,37 +7951,37 @@ class OralChemotherapyComponent {
       outputs: {
         sideBarToggle: "sideBarToggle"
       },
-      decls: 10,
-      vars: 4,
-      consts: [[1, "compass-content-container"], [1, "compass-content-main"], [1, "filter-bar-placeholder"], [3, "disabled", "click"], [1, "worklist-table-placeholder"], ["class", "loading-container", 4, "ngIf"], ["class", "table-placeholder", 4, "ngIf"], [1, "loading-container"], ["nzSimple", ""], [1, "table-placeholder"], ["nzSize", "small", 3, "nzData", "nzShowPagination", "nzScroll"], ["basicTable", ""], [4, "ngFor", "ngForOf"], [4, "ngIf"], ["colspan", "4", 2, "text-align", "center", "padding", "40px"], ["nzNotFoundImage", "simple", 3, "nzNotFoundContent"]],
+      decls: 4,
+      vars: 9,
+      consts: [[1, "compass-content-container"], [1, "compass-content-main"], [3, "predefinedFilters", "activePredefinedFilter", "currentDaysFilter", "showMyAssignmentsOnly", "isLoading", "predefinedFilterSelect", "globalSearch", "daysFilterChange", "assignmentToggle", "refreshData", "columnWidthsReset"], [3, "worklistItems", "loading", "activePredefinedFilter"]],
       template: function OralChemotherapyComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "p");
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "Oral Chemotherapy Filter Bar (to be implemented)");
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "button", 3);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function OralChemotherapyComponent_Template_button_click_5_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "app-oral-chemo-filter-bar", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("predefinedFilterSelect", function OralChemotherapyComponent_Template_app_oral_chemo_filter_bar_predefinedFilterSelect_2_listener($event) {
+            return ctx.onPredefinedFilterSelect($event);
+          })("globalSearch", function OralChemotherapyComponent_Template_app_oral_chemo_filter_bar_globalSearch_2_listener($event) {
+            return ctx.onGlobalSearch($event);
+          })("daysFilterChange", function OralChemotherapyComponent_Template_app_oral_chemo_filter_bar_daysFilterChange_2_listener($event) {
+            return ctx.onDaysFilterChange($event);
+          })("assignmentToggle", function OralChemotherapyComponent_Template_app_oral_chemo_filter_bar_assignmentToggle_2_listener($event) {
+            return ctx.onAssignmentToggle($event);
+          })("refreshData", function OralChemotherapyComponent_Template_app_oral_chemo_filter_bar_refreshData_2_listener() {
             return ctx.onRefreshData();
+          })("columnWidthsReset", function OralChemotherapyComponent_Template_app_oral_chemo_filter_bar_columnWidthsReset_2_listener() {
+            return ctx.onColumnWidthsReset();
           });
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 4);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, OralChemotherapyComponent_div_8_Template, 4, 0, "div", 5);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, OralChemotherapyComponent_div_9_Template, 16, 6, "div", 6);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](3, "app-oral-chemo-worklist", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
         }
         if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("disabled", ctx.isLoading);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.isLoading ? "Loading..." : "Refresh Data", " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.isLoading);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.isLoading);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("predefinedFilters", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction0"](8, _c0))("activePredefinedFilter", ctx.activePredefinedFilter)("currentDaysFilter", ctx.currentDaysFilter)("showMyAssignmentsOnly", false)("isLoading", ctx.isLoading);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("worklistItems", ctx.filteredWorklistItems())("loading", ctx.isLoading)("activePredefinedFilter", ctx.activePredefinedFilter);
         }
       },
-      dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_3__.NzTableComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_3__.NzTableCellDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_3__.NzThMeasureDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_3__.NzTheadComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_3__.NzTbodyComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_3__.NzTrDirective, ng_zorro_antd_spin__WEBPACK_IMPORTED_MODULE_4__.NzSpinComponent, ng_zorro_antd_empty__WEBPACK_IMPORTED_MODULE_5__.NzEmptyComponent],
+      dependencies: [_oral_chemo_filter_bar_oral_chemo_filter_bar_component__WEBPACK_IMPORTED_MODULE_2__.OralChemoFilterBarComponent, _oral_chemo_worklist_oral_chemo_worklist_component__WEBPACK_IMPORTED_MODULE_3__.OralChemoWorklistComponent],
       styles: [".compass-content-container[_ngcontent-%COMP%] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 16px;\n}\n\n.compass-content-main[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n\n.filter-bar-placeholder[_ngcontent-%COMP%] {\n  background: #f5f5f5;\n  padding: 16px;\n  border-radius: 6px;\n  border: 1px dashed #d9d9d9;\n  text-align: center;\n}\n.filter-bar-placeholder[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0 0 16px 0;\n  color: #666;\n  font-style: italic;\n}\n.filter-bar-placeholder[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  padding: 6px 16px;\n  background: #1890ff;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n}\n.filter-bar-placeholder[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:disabled {\n  background: #d9d9d9;\n  cursor: not-allowed;\n}\n.filter-bar-placeholder[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover:not(:disabled) {\n  background: #40a9ff;\n}\n\n.worklist-table-placeholder[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.loading-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 40px;\n  gap: 16px;\n}\n.loading-container[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0;\n  color: #666;\n}\n\n.table-placeholder[_ngcontent-%COMP%] {\n  flex: 1;\n}\n\n  .ant-table-thead > tr > th {\n  background: #fafafa;\n  font-weight: 600;\n}\n  .ant-table-tbody > tr:hover > td {\n  background: #e6f7ff;\n}\n  .ant-empty {\n  margin: 0;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L29yYWwtY2hlbW90aGVyYXB5L29yYWwtY2hlbW90aGVyYXB5LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLGFBQUE7QUFDRjs7QUFFQTtFQUNFLE9BQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxTQUFBO0FBQ0Y7O0FBRUE7RUFDRSxtQkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLDBCQUFBO0VBQ0Esa0JBQUE7QUFDRjtBQUNFO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0Esa0JBQUE7QUFDSjtBQUVFO0VBQ0UsaUJBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0FBQUo7QUFFSTtFQUNFLG1CQUFBO0VBQ0EsbUJBQUE7QUFBTjtBQUdJO0VBQ0UsbUJBQUE7QUFETjs7QUFNQTtFQUNFLE9BQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7QUFIRjs7QUFNQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxhQUFBO0VBQ0EsU0FBQTtBQUhGO0FBS0U7RUFDRSxTQUFBO0VBQ0EsV0FBQTtBQUhKOztBQU9BO0VBQ0UsT0FBQTtBQUpGOztBQVNFO0VBQ0UsbUJBQUE7RUFDQSxnQkFBQTtBQU5KO0FBU0U7RUFDRSxtQkFBQTtBQVBKO0FBVUU7RUFDRSxTQUFBO0FBUkoiLCJzb3VyY2VzQ29udGVudCI6WyIuY29tcGFzcy1jb250ZW50LWNvbnRhaW5lciB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBwYWRkaW5nOiAxNnB4O1xyXG59XHJcblxyXG4uY29tcGFzcy1jb250ZW50LW1haW4ge1xyXG4gIGZsZXg6IDE7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGdhcDogMTZweDtcclxufVxyXG5cclxuLmZpbHRlci1iYXItcGxhY2Vob2xkZXIge1xyXG4gIGJhY2tncm91bmQ6ICNmNWY1ZjU7XHJcbiAgcGFkZGluZzogMTZweDtcclxuICBib3JkZXItcmFkaXVzOiA2cHg7XHJcbiAgYm9yZGVyOiAxcHggZGFzaGVkICNkOWQ5ZDk7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIFxyXG4gIHAge1xyXG4gICAgbWFyZ2luOiAwIDAgMTZweCAwO1xyXG4gICAgY29sb3I6ICM2NjY7XHJcbiAgICBmb250LXN0eWxlOiBpdGFsaWM7XHJcbiAgfVxyXG4gIFxyXG4gIGJ1dHRvbiB7XHJcbiAgICBwYWRkaW5nOiA2cHggMTZweDtcclxuICAgIGJhY2tncm91bmQ6ICMxODkwZmY7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBcclxuICAgICY6ZGlzYWJsZWQge1xyXG4gICAgICBiYWNrZ3JvdW5kOiAjZDlkOWQ5O1xyXG4gICAgICBjdXJzb3I6IG5vdC1hbGxvd2VkO1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICAmOmhvdmVyOm5vdCg6ZGlzYWJsZWQpIHtcclxuICAgICAgYmFja2dyb3VuZDogIzQwYTlmZjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbi53b3JrbGlzdC10YWJsZS1wbGFjZWhvbGRlciB7XHJcbiAgZmxleDogMTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbn1cclxuXHJcbi5sb2FkaW5nLWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgcGFkZGluZzogNDBweDtcclxuICBnYXA6IDE2cHg7XHJcbiAgXHJcbiAgcCB7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBjb2xvcjogIzY2NjtcclxuICB9XHJcbn1cclxuXHJcbi50YWJsZS1wbGFjZWhvbGRlciB7XHJcbiAgZmxleDogMTtcclxufVxyXG5cclxuLy8gT3ZlcnJpZGUgTkctWk9SUk8gdGFibGUgc3R5bGVzIGZvciBjb25zaXN0ZW5jeVxyXG46Om5nLWRlZXAge1xyXG4gIC5hbnQtdGFibGUtdGhlYWQgPiB0ciA+IHRoIHtcclxuICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XHJcbiAgICBmb250LXdlaWdodDogNjAwO1xyXG4gIH1cclxuICBcclxuICAuYW50LXRhYmxlLXRib2R5ID4gdHI6aG92ZXIgPiB0ZCB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjZTZmN2ZmO1xyXG4gIH1cclxuICBcclxuICAuYW50LWVtcHR5IHtcclxuICAgIG1hcmdpbjogMDtcclxuICB9XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9 */"]
     });
   }
@@ -11932,23 +12882,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   GlidianProcessViewComponent: () => (/* binding */ GlidianProcessViewComponent)
 /* harmony export */ });
-/* harmony import */ var ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/modal */ 51663);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 10819);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ 33900);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 37580);
+/* harmony import */ var ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng-zorro-antd/modal */ 51663);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 10819);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ 33900);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 37580);
 /* harmony import */ var _services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../services/prior-auth.service */ 38935);
 /* harmony import */ var _services_messaging_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../services/messaging.service */ 66578);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ 60316);
-/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/icon */ 42715);
-/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/table */ 68636);
-/* harmony import */ var ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-zorro-antd/button */ 56104);
-/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 76902);
-/* harmony import */ var ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ng-zorro-antd/core/wave */ 69741);
-/* harmony import */ var ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ng-zorro-antd/descriptions */ 5457);
-/* harmony import */ var ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ng-zorro-antd/collapse */ 32817);
-/* harmony import */ var ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ng-zorro-antd/tooltip */ 28573);
-/* harmony import */ var _document_selection_document_selection_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./document-selection/document-selection.component */ 2862);
-
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 60316);
+/* harmony import */ var ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/icon */ 42715);
+/* harmony import */ var ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/table */ 68636);
+/* harmony import */ var ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/button */ 56104);
+/* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 76902);
+/* harmony import */ var ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng-zorro-antd/core/wave */ 69741);
+/* harmony import */ var ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ng-zorro-antd/descriptions */ 5457);
+/* harmony import */ var ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ng-zorro-antd/collapse */ 32817);
+/* harmony import */ var ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ng-zorro-antd/tooltip */ 28573);
 
 
 
@@ -11967,293 +12915,293 @@ __webpack_require__.r(__webpack_exports__);
 
 function GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template(rf, ctx) {
   if (rf & 1) {
-    const _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "button", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r19);
-      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r18.createGlidianAuth());
+    const _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r19);
+      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r18.createGlidianAuth());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](1, "span", 43);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "span", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("disabled", ctx_r15.isCreatingAuth || ctx_r15.isEdosInFuture())("nzTooltipTitle", ctx_r15.isEdosInFuture() ? "Cannot submit until EDOS date is today or earlier." : "Submit to Glidian");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzSpin", ctx_r15.isCreatingAuth);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx_r15.submitToGlidianLabel, " ");
+    const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", ctx_r15.isCreatingAuth || ctx_r15.isEdosInFuture())("nzTooltipTitle", ctx_r15.isEdosInFuture() ? "Cannot submit until EDOS date is today or earlier." : "Submit to Glidian");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSpin", ctx_r15.isCreatingAuth);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r15.submitToGlidianLabel, " ");
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template(rf, ctx) {
   if (rf & 1) {
-    const _r21 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "button", 44);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r21);
-      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r20.getLatestFromGlidian());
+    const _r21 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r21);
+      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r20.getLatestFromGlidian());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](1, "span", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, " Get Latest from Glidian ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "span", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, " Get Latest from Glidian ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_4_span_4_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "span", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](ctx_r17.glidianActionMessage);
+    const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r17.glidianActionMessage);
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_4_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-descriptions-item", 37)(1, "div", 38);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template, 3, 4, "button", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](3, GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template, 3, 0, "button", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_span_4_Template, 2, 1, "span", 41);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 35)(1, "div", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, GlidianProcessViewComponent_nz_descriptions_item_4_button_2_Template, 3, 4, "button", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, GlidianProcessViewComponent_nz_descriptions_item_4_button_3_Template, 3, 0, "button", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_span_4_Template, 2, 1, "span", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx_r0.submitToGlidianLabel !== "Resubmit to Glidian" && !ctx_r0.hasSubmittedToGlidianThisSession);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx_r0.getGlidianId());
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx_r0.glidianActionMessage);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.submitToGlidianLabel !== "Resubmit to Glidian" && !ctx_r0.hasSubmittedToGlidianThisSession);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.getGlidianId());
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r0.glidianActionMessage);
   }
 }
 function GlidianProcessViewComponent_span_7_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "span", 47);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "(Required)");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "(Required)");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_span_8_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "span", 48);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "(Optional)");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "(Optional)");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_9_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-descriptions-item", 49);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx_r3.getCurrentStep(), " ");
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r3.getCurrentStep(), " ");
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_10_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-descriptions-item", 50);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx_r4.getGlidianId(), " ");
+    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r4.getGlidianId(), " ");
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_11_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-descriptions-item", 51);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx_r5.getGlidianStatus(), " ");
+    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r5.getGlidianStatus(), " ");
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_12_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-descriptions-item", 52);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](2, "date");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](2, "date");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind2"](2, 1, ctx_r6.getGlidianStatusDate(), "short"), " ");
+    const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](2, 1, ctx_r6.getGlidianStatusDate(), "short"), " ");
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_13_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-descriptions-item", 53)(1, "a", 54);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 51)(1, "a", 52);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("href", ctx_r7.getGlidianUrl(), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](ctx_r7.getGlidianUrl());
+    const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("href", ctx_r7.getGlidianUrl(), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r7.getGlidianUrl());
   }
 }
 function GlidianProcessViewComponent_nz_descriptions_item_14_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-descriptions-item", 55);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](2, "date");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-descriptions-item", 53);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](2, "date");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind2"](2, 1, ctx_r8.milestone.completedDate, "short"), " ");
+    const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](2, 1, ctx_r8.milestone.completedDate, "short"), " ");
   }
 }
 function GlidianProcessViewComponent_div_15_li_4_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "li")(1, "strong");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](4, "date");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "li")(1, "strong");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](4, "date");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
     const data_r23 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"]("", data_r23.name, ":");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", data_r23.valueText || _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind2"](4, 2, data_r23.valueDate, "short"), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("", data_r23.name, ":");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", data_r23.valueText || _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](4, 2, data_r23.valueDate, "short"), " ");
   }
 }
 function GlidianProcessViewComponent_div_15_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 15)(1, "h4");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Current Step Data");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "ul");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](4, GlidianProcessViewComponent_div_15_li_4_Template, 5, 5, "li", 56);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 15)(1, "h4");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Current Step Data");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "ul");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_div_15_li_4_Template, 5, 5, "li", 54);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx_r9.milestone.milestoneData);
+    const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r9.milestone.milestoneData);
   }
 }
-function GlidianProcessViewComponent_nz_collapse_panel_22_tr_14_Template(rf, ctx) {
+function GlidianProcessViewComponent_nz_collapse_panel_18_tr_14_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "tr")(1, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](9, "date");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "tr")(1, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](9, "date");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
     const action_r25 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](action_r25.name);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](action_r25.description);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](action_r25.status);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind2"](9, 4, action_r25.actionDtTm, "short"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r25.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r25.description);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](action_r25.status);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](9, 4, action_r25.actionDtTm, "short"));
   }
 }
-function GlidianProcessViewComponent_nz_collapse_panel_22_Template(rf, ctx) {
+function GlidianProcessViewComponent_nz_collapse_panel_18_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "nz-collapse-panel", 57)(1, "div", 58)(2, "table", 59)(3, "thead")(4, "tr")(5, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6, "Action");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8, "Description");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](9, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](10, "Status");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](11, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](12, "Date/Time");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](14, GlidianProcessViewComponent_nz_collapse_panel_22_tr_14_Template, 10, 7, "tr", 56);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "nz-collapse-panel", 55)(1, "div", 56)(2, "table", 57)(3, "thead")(4, "tr")(5, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, "Action");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8, "Description");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](10, "Status");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](12, "Date/Time");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "tbody");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](14, GlidianProcessViewComponent_nz_collapse_panel_18_tr_14_Template, 10, 7, "tr", 54);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
   }
   if (rf & 2) {
-    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzActive", false);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx_r10.milestoneActions);
+    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzActive", false);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r10.milestoneActions);
   }
 }
-function GlidianProcessViewComponent_div_48_div_1_Template(rf, ctx) {
+function GlidianProcessViewComponent_div_44_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 61);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 59);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
     const action_r27 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate2"](" ", action_r27.actionId, " (", action_r27.name, ") ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate2"](" ", action_r27.actionId, " (", action_r27.name, ") ");
   }
 }
-function GlidianProcessViewComponent_div_48_Template(rf, ctx) {
+function GlidianProcessViewComponent_div_44_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](1, GlidianProcessViewComponent_div_48_div_1_Template, 2, 2, "div", 60);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GlidianProcessViewComponent_div_44_div_1_Template, 2, 2, "div", 58);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx_r11.milestoneActions);
+    const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r11.milestoneActions);
   }
 }
-function GlidianProcessViewComponent_ng_template_49_Template(rf, ctx) {
+function GlidianProcessViewComponent_ng_template_45_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "span", 62);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "No actions");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span", 60);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "No actions");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
-function GlidianProcessViewComponent_div_54_Template(rf, ctx) {
+function GlidianProcessViewComponent_div_50_Template(rf, ctx) {
   if (rf & 1) {
-    const _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div")(1, "button", 63);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function GlidianProcessViewComponent_div_54_Template_button_click_1_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r29);
-      const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r28.refreshCurrentItem());
+    const _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div")(1, "button", 61);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GlidianProcessViewComponent_div_50_Template_button_click_1_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r29);
+      const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r28.refreshCurrentItem());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](2, "span", 64);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3, " Refresh Glidian Information ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "span", 62);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " Refresh Glidian Information ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzLoading", ctx_r14.isRefreshing);
+    const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzLoading", ctx_r14.isRefreshing);
   }
 }
 class GlidianProcessViewComponent {
@@ -12272,7 +13220,7 @@ class GlidianProcessViewComponent {
      */
     this.isRefreshing = false;
     this.hasSubmittedToGlidianThisSession = false;
-    this.destroy$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__.Subject();
+    this.destroy$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__.Subject();
     this.milestone = data.milestone;
     this.worklistItem = data.worklistItem;
   }
@@ -12283,7 +13231,7 @@ class GlidianProcessViewComponent {
     // console.log('[GlidianProcessViewComponent] resubmitActions:', resubmitActions);
     // console.log('[GlidianProcessViewComponent] hasSubmittedToGlidianAction:', this.hasSubmittedToGlidianAction());
     // Subscribe to item refresh events to update modal data when worklist item is refreshed
-    this.priorAuthService.itemRefresh$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.takeUntil)(this.destroy$)).subscribe(itemId => {
+    this.priorAuthService.itemRefresh$.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.takeUntil)(this.destroy$)).subscribe(itemId => {
       if (itemId === this.worklistItem.compass_worklist_id) {
         // console.log(`[GlidianProcessViewComponent] Refreshing modal data for item ${itemId}`);
         this.refreshModalData();
@@ -12544,146 +13492,139 @@ class GlidianProcessViewComponent {
   }
   static {
     this.ɵfac = function GlidianProcessViewComponent_Factory(t) {
-      return new (t || GlidianProcessViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_6__.NZ_MODAL_DATA), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService));
+      return new (t || GlidianProcessViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_5__.NZ_MODAL_DATA), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService));
     };
   }
   static {
-    this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+    this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
       type: GlidianProcessViewComponent,
       selectors: [["app-glidian-process-view"]],
-      decls: 55,
-      vars: 34,
-      consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Glidian Actions", 4, "ngIf"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], [2, "margin-top", "16px"], ["nzHeader", "Document Selection", 3, "nzActive"], [3, "worklistItem", "milestone"], ["nzHeader", "Milestone History", 3, "nzActive", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], [4, "nzModalFooter"], ["nzTitle", "Glidian Actions"], [2, "display", "flex", "align-items", "center", "gap", "8px"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", "class", "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click", 4, "ngIf"], ["nz-button", "", "nzType", "default", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Fetch the latest data from Glidian for this record.", "class", "get-latest-glidian-btn", 3, "click", 4, "ngIf"], ["class", "glidian-action-message", "style", "margin-left: 12px;", 4, "ngIf"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", 1, "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], ["nz-button", "", "nzType", "default", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Fetch the latest data from Glidian for this record.", 1, "get-latest-glidian-btn", 3, "click"], ["nz-icon", "", "nzType", "sync", "nzTheme", "outline"], [1, "glidian-action-message", 2, "margin-left", "12px"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [4, "ngFor", "ngForOf"], ["nzHeader", "Milestone History", 3, "nzActive"], [2, "max-height", "240px", "overflow-y", "auto", "margin-top", "16px"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"], ["nz-button", "", "nzType", "default", 3, "nzLoading", "click"], ["nz-icon", "", "nzType", "reload"]],
+      decls: 51,
+      vars: 31,
+      consts: [[1, "glidian-process-view-modal"], [1, "modal-header"], [1, "milestone-details"], ["nzTitle", "Glidian Milestone Details", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Glidian Actions", 4, "ngIf"], ["nzTitle", "Milestone Status"], ["class", "milestone-required", 4, "ngIf"], ["class", "milestone-optional", 4, "ngIf"], ["nzTitle", "Current Step", 4, "ngIf"], ["nzTitle", "Glidian ID", 4, "ngIf"], ["nzTitle", "Glidian Status", 4, "ngIf"], ["nzTitle", "Glidian Status Date", 4, "ngIf"], ["nzTitle", "Portal URL", 4, "ngIf"], ["nzTitle", "Completed", 4, "ngIf"], ["style", "margin-top: 16px;", 4, "ngIf"], [2, "margin-top", "16px"], ["nzHeader", "Milestone History", 3, "nzActive", 4, "ngIf"], [1, "support-section", 2, "margin-top", "16px"], ["nzHeader", "Support Information", 3, "nzActive"], ["nzTitle", "Internal IDs for Troubleshooting", "nzBordered", "", 3, "nzColumn"], ["nzTitle", "Compass Worklist ID"], ["nzTitle", "Person ID"], ["nzTitle", "Encounter ID"], ["nzTitle", "Order ID"], ["nzTitle", "Workflow ID"], ["nzTitle", "Milestone ID"], ["nzTitle", "Milestone Meaning"], ["nzTitle", "Schedule Event ID"], ["nzTitle", "Schedule ID"], ["nzTitle", "Schedule Status"], ["nzTitle", "Action IDs"], [4, "ngIf", "ngIfElse"], ["noActions", ""], ["nzTitle", "Data Refresh Date"], [4, "nzModalFooter"], ["nzTitle", "Glidian Actions"], [2, "display", "flex", "align-items", "center", "gap", "8px"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", "class", "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click", 4, "ngIf"], ["nz-button", "", "nzType", "default", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Fetch the latest data from Glidian for this record.", "class", "get-latest-glidian-btn", 3, "click", 4, "ngIf"], ["class", "glidian-action-message", "style", "margin-left: 12px;", 4, "ngIf"], ["nz-button", "", "nzType", "primary", "nzSize", "large", "nz-tooltip", "", 1, "submit-glidian-btn", 3, "disabled", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "cloud-upload", "nzTheme", "outline", 3, "nzSpin"], ["nz-button", "", "nzType", "default", "nzSize", "large", "nz-tooltip", "", "nzTooltipTitle", "Fetch the latest data from Glidian for this record.", 1, "get-latest-glidian-btn", 3, "click"], ["nz-icon", "", "nzType", "sync", "nzTheme", "outline"], [1, "glidian-action-message", 2, "margin-left", "12px"], [1, "milestone-required"], [1, "milestone-optional"], ["nzTitle", "Current Step"], ["nzTitle", "Glidian ID"], ["nzTitle", "Glidian Status"], ["nzTitle", "Glidian Status Date"], ["nzTitle", "Portal URL"], ["target", "_blank", 3, "href"], ["nzTitle", "Completed"], [4, "ngFor", "ngForOf"], ["nzHeader", "Milestone History", 3, "nzActive"], [2, "max-height", "240px", "overflow-y", "auto", "margin-top", "16px"], [1, "history-table"], ["class", "id-list-item", 4, "ngFor", "ngForOf"], [1, "id-list-item"], [1, "no-data"], ["nz-button", "", "nzType", "default", 3, "nzLoading", "click"], ["nz-icon", "", "nzType", "reload"]],
       template: function GlidianProcessViewComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](1, "div", 1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "div", 2)(3, "nz-descriptions", 3);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_Template, 5, 3, "nz-descriptions-item", 4);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "nz-descriptions-item", 5);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](7, GlidianProcessViewComponent_span_7_Template, 2, 0, "span", 6);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](8, GlidianProcessViewComponent_span_8_Template, 2, 0, "span", 7);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](9, GlidianProcessViewComponent_nz_descriptions_item_9_Template, 2, 1, "nz-descriptions-item", 8);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](10, GlidianProcessViewComponent_nz_descriptions_item_10_Template, 2, 1, "nz-descriptions-item", 9);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](11, GlidianProcessViewComponent_nz_descriptions_item_11_Template, 2, 1, "nz-descriptions-item", 10);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](12, GlidianProcessViewComponent_nz_descriptions_item_12_Template, 3, 4, "nz-descriptions-item", 11);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](13, GlidianProcessViewComponent_nz_descriptions_item_13_Template, 3, 2, "nz-descriptions-item", 12);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](14, GlidianProcessViewComponent_nz_descriptions_item_14_Template, 3, 4, "nz-descriptions-item", 13);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](15, GlidianProcessViewComponent_div_15_Template, 5, 1, "div", 14);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](16, "div", 15)(17, "nz-collapse", 15)(18, "nz-collapse-panel", 16);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](19, "app-document-selection", 17);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](20, "div", 15)(21, "nz-collapse");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](22, GlidianProcessViewComponent_nz_collapse_panel_22_Template, 15, 2, "nz-collapse-panel", 18);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](23, "div", 19)(24, "nz-collapse")(25, "nz-collapse-panel", 20)(26, "nz-descriptions", 21)(27, "nz-descriptions-item", 22);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](28);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](29, "nz-descriptions-item", 23);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](30);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](31, "nz-descriptions-item", 24);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](32);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](33, "nz-descriptions-item", 25);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](34);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](35, "nz-descriptions-item", 26);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](36);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](37, "nz-descriptions-item", 27);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](38);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](39, "nz-descriptions-item", 28);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](40);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](41, "nz-descriptions-item", 29);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](42);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](43, "nz-descriptions-item", 30);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](44);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](45, "nz-descriptions-item", 31);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](46);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](47, "nz-descriptions-item", 32);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](48, GlidianProcessViewComponent_div_48_Template, 2, 1, "div", 33);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](49, GlidianProcessViewComponent_ng_template_49_Template, 2, 0, "ng-template", null, 34, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplateRefExtractor"]);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](51, "nz-descriptions-item", 35);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](52);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](53, "date");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()();
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](54, GlidianProcessViewComponent_div_54_Template, 4, 1, "div", 36);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "div", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 2)(3, "nz-descriptions", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GlidianProcessViewComponent_nz_descriptions_item_4_Template, 5, 3, "nz-descriptions-item", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "nz-descriptions-item", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](7, GlidianProcessViewComponent_span_7_Template, 2, 0, "span", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](8, GlidianProcessViewComponent_span_8_Template, 2, 0, "span", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](9, GlidianProcessViewComponent_nz_descriptions_item_9_Template, 2, 1, "nz-descriptions-item", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](10, GlidianProcessViewComponent_nz_descriptions_item_10_Template, 2, 1, "nz-descriptions-item", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](11, GlidianProcessViewComponent_nz_descriptions_item_11_Template, 2, 1, "nz-descriptions-item", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](12, GlidianProcessViewComponent_nz_descriptions_item_12_Template, 3, 4, "nz-descriptions-item", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](13, GlidianProcessViewComponent_nz_descriptions_item_13_Template, 3, 2, "nz-descriptions-item", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](14, GlidianProcessViewComponent_nz_descriptions_item_14_Template, 3, 4, "nz-descriptions-item", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](15, GlidianProcessViewComponent_div_15_Template, 5, 1, "div", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "div", 15)(17, "nz-collapse");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](18, GlidianProcessViewComponent_nz_collapse_panel_18_Template, 15, 2, "nz-collapse-panel", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "div", 17)(20, "nz-collapse")(21, "nz-collapse-panel", 18)(22, "nz-descriptions", 19)(23, "nz-descriptions-item", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](25, "nz-descriptions-item", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](27, "nz-descriptions-item", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](29, "nz-descriptions-item", 23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](31, "nz-descriptions-item", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](33, "nz-descriptions-item", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](35, "nz-descriptions-item", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](36);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](37, "nz-descriptions-item", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](39, "nz-descriptions-item", 28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](40);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](41, "nz-descriptions-item", 29);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](42);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](43, "nz-descriptions-item", 30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](44, GlidianProcessViewComponent_div_44_Template, 2, 1, "div", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](45, GlidianProcessViewComponent_ng_template_45_Template, 2, 0, "ng-template", null, 32, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](47, "nz-descriptions-item", 33);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](48);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](49, "date");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()()();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](50, GlidianProcessViewComponent_div_50_Template, 4, 1, "div", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         }
         if (rf & 2) {
-          const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵreference"](50);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzColumn", 1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.hasGlidianActions());
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.milestone.status, " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.milestone.requiredInd);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", !ctx.milestone.requiredInd);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.getCurrentStep());
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.getGlidianId());
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.getGlidianStatus());
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.getGlidianStatusDate());
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.getGlidianUrl());
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.milestone.completedDate);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.milestone.milestoneData && ctx.milestone.milestoneData.length);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzActive", false);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("worklistItem", ctx.worklistItem)("milestone", ctx.milestone);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.milestoneActions.length);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzActive", false);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzColumn", 2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.compass_worklist_id, " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.personId, " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.encntrId, " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.orderId || "N/A", " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.workflow_id, " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.milestone.milestoneId, " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.milestone.meaning || "N/A", " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", (ctx.worklistItem.schedule == null ? null : ctx.worklistItem.schedule.eventId) || "N/A", " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", (ctx.worklistItem.schedule == null ? null : ctx.worklistItem.schedule.scheduleId) || "N/A", " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", (ctx.worklistItem.schedule == null ? null : ctx.worklistItem.schedule.state) || "N/A", " ");
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.milestoneActions.length > 0)("ngIfElse", _r12);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind2"](53, 31, ctx.worklistItem.dataRefreshDtTm, "short"), " ");
+          const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](46);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzColumn", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.hasGlidianActions());
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.milestone.status, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.milestone.requiredInd);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !ctx.milestone.requiredInd);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.getCurrentStep());
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.getGlidianId());
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.getGlidianStatus());
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.getGlidianStatusDate());
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.getGlidianUrl());
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.milestone.completedDate);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.milestone.milestoneData && ctx.milestone.milestoneData.length);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.milestoneActions.length);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzActive", false);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzColumn", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.compass_worklist_id, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.personId, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.encntrId, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.orderId || "N/A", " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.worklistItem.workflow_id, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.milestone.milestoneId, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx.milestone.meaning || "N/A", " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", (ctx.worklistItem.schedule == null ? null : ctx.worklistItem.schedule.eventId) || "N/A", " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", (ctx.worklistItem.schedule == null ? null : ctx.worklistItem.schedule.scheduleId) || "N/A", " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", (ctx.worklistItem.schedule == null ? null : ctx.worklistItem.schedule.state) || "N/A", " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.milestoneActions.length > 0)("ngIfElse", _r12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](49, 28, ctx.worklistItem.dataRefreshDtTm, "short"), " ");
         }
       },
-      dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_7__.NgIf, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_8__.NzIconDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_9__.NzTableCellDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_9__.NzThMeasureDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_9__.NzTheadComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_9__.NzTbodyComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_9__.NzTrDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_10__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_11__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_12__.NzWaveDirective, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_13__.NzDescriptionsComponent, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_13__.NzDescriptionsItemComponent, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_14__.NzCollapsePanelComponent, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_14__.NzCollapseComponent, ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_6__.NzModalFooterDirective, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_15__.NzTooltipDirective, _document_selection_document_selection_component__WEBPACK_IMPORTED_MODULE_2__.DocumentSelectionComponent, _angular_common__WEBPACK_IMPORTED_MODULE_7__.DatePipe],
+      dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_6__.NgIf, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_7__.NzIconDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTableCellDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzThMeasureDirective, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTheadComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTbodyComponent, ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_8__.NzTrDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_9__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_10__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_11__.NzWaveDirective, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_12__.NzDescriptionsComponent, ng_zorro_antd_descriptions__WEBPACK_IMPORTED_MODULE_12__.NzDescriptionsItemComponent, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_13__.NzCollapsePanelComponent, ng_zorro_antd_collapse__WEBPACK_IMPORTED_MODULE_13__.NzCollapseComponent, ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_5__.NzModalFooterDirective, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_14__.NzTooltipDirective, _angular_common__WEBPACK_IMPORTED_MODULE_6__.DatePipe],
       styles: [".glidian-process-view-modal[_ngcontent-%COMP%] {\n  padding: 16px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .modal-header[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 16px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .modal-header[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin: 0;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 12px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-details[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-details[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0 0 4px 0;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-details[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {\n  margin: 0;\n  padding-left: 18px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-history[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  margin-bottom: 8px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-history[_ngcontent-%COMP%]   .history-table[_ngcontent-%COMP%] {\n  width: 100%;\n  border-collapse: collapse;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-history[_ngcontent-%COMP%]   .history-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%], .glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-history[_ngcontent-%COMP%]   .history-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  border: 1px solid #e8e8e8;\n  padding: 4px 8px;\n  font-size: 13px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .milestone-history[_ngcontent-%COMP%]   .history-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  background: #fafafa;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .support-section[_ngcontent-%COMP%]   .id-list-item[_ngcontent-%COMP%] {\n  margin-bottom: 4px;\n  font-size: 13px;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .support-section[_ngcontent-%COMP%]   .no-data[_ngcontent-%COMP%] {\n  color: #999;\n  font-style: italic;\n}\n.glidian-process-view-modal[_ngcontent-%COMP%]   .submit-glidian-btn[_ngcontent-%COMP%] {\n  font-size: 1.15rem;\n  padding: 0.75rem 2.5rem;\n  min-width: 220px;\n  font-weight: 600;\n  letter-spacing: 0.5px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  line-height: 1.2;\n}\n\n\n\n.history-table[_ngcontent-%COMP%] {\n  width: 100%;\n  border-collapse: collapse;\n}\n\n.history-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%], .history-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  border: 1px solid #d9d9d9;\n  padding: 1px;\n  text-align: left;\n}\n\n\n\n.history-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%]:last-child, .history-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]:last-child {\n  text-align: right;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L3ByaW9yLWF1dGgvd29ya2xpc3QtdGFibGUvZ2xpZGlhbi13b3JrZmxvdy1jZWxsL2dsaWRpYW4tcHJvY2Vzcy1taWxlc3RvbmUvZ2xpZGlhbi1wcm9jZXNzLXZpZXcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0FBQ0Y7QUFDRTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUFDSjtBQUNJO0VBQ0UsU0FBQTtBQUNOO0FBR0U7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7QUFESjtBQUdFO0VBQ0UsbUJBQUE7QUFESjtBQUVJO0VBQ0UsaUJBQUE7QUFBTjtBQUVJO0VBQ0UsU0FBQTtFQUNBLGtCQUFBO0FBQU47QUFJSTtFQUNFLGtCQUFBO0FBRk47QUFJSTtFQUNFLFdBQUE7RUFDQSx5QkFBQTtBQUZOO0FBR007RUFDRSx5QkFBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtBQURSO0FBR007RUFDRSxtQkFBQTtBQURSO0FBUUk7RUFDRSxrQkFBQTtFQUNBLGVBQUE7QUFOTjtBQVFJO0VBQ0UsV0FBQTtFQUNBLGtCQUFBO0FBTk47QUFTRTtFQUNFLGtCQUFBO0VBQ0EsdUJBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EscUJBQUE7RUFDQSx5Q0FBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsZ0JBQUE7QUFQSjs7QUFXQSwyREFBQTtBQUNBO0VBQ0UsV0FBQTtFQUNBLHlCQUFBO0FBUkY7O0FBVUE7O0VBRUUseUJBQUE7RUFDQSxZQUFBO0VBQ0EsZ0JBQUE7QUFQRjs7QUFVQSxpRUFBQTtBQUNBOztFQUVFLGlCQUFBO0FBUEYiLCJzb3VyY2VzQ29udGVudCI6WyIuZ2xpZGlhbi1wcm9jZXNzLXZpZXctbW9kYWwge1xyXG4gIHBhZGRpbmc6IDE2cHg7XHJcbiAgXHJcbiAgLm1vZGFsLWhlYWRlciB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIG1hcmdpbi1ib3R0b206IDE2cHg7XHJcbiAgICBcclxuICAgIGgzIHtcclxuICAgICAgbWFyZ2luOiAwO1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICBoMyB7XHJcbiAgICBtYXJnaW4tdG9wOiAwO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTJweDtcclxuICB9XHJcbiAgLm1pbGVzdG9uZS1kZXRhaWxzIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbiAgICBwIHtcclxuICAgICAgbWFyZ2luOiAwIDAgNHB4IDA7XHJcbiAgICB9XHJcbiAgICB1bCB7XHJcbiAgICAgIG1hcmdpbjogMDtcclxuICAgICAgcGFkZGluZy1sZWZ0OiAxOHB4O1xyXG4gICAgfVxyXG4gIH1cclxuICAubWlsZXN0b25lLWhpc3Rvcnkge1xyXG4gICAgaDQge1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiA4cHg7XHJcbiAgICB9XHJcbiAgICAuaGlzdG9yeS10YWJsZSB7XHJcbiAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG4gICAgICB0aCwgdGQge1xyXG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNlOGU4ZTg7XHJcbiAgICAgICAgcGFkZGluZzogNHB4IDhweDtcclxuICAgICAgICBmb250LXNpemU6IDEzcHg7XHJcbiAgICAgIH1cclxuICAgICAgdGgge1xyXG4gICAgICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcbiAgXHJcbiAgLy8gU3VwcG9ydCBJbmZvcm1hdGlvbiBTZWN0aW9uIFN0eWxlc1xyXG4gIC5zdXBwb3J0LXNlY3Rpb24ge1xyXG4gICAgLmlkLWxpc3QtaXRlbSB7XHJcbiAgICAgIG1hcmdpbi1ib3R0b206IDRweDtcclxuICAgICAgZm9udC1zaXplOiAxM3B4O1xyXG4gICAgfVxyXG4gICAgLm5vLWRhdGEge1xyXG4gICAgICBjb2xvcjogIzk5OTtcclxuICAgICAgZm9udC1zdHlsZTogaXRhbGljO1xyXG4gICAgfVxyXG4gIH1cclxuICAuc3VibWl0LWdsaWRpYW4tYnRuIHtcclxuICAgIGZvbnQtc2l6ZTogMS4xNXJlbTtcclxuICAgIHBhZGRpbmc6IDAuNzVyZW0gMi41cmVtO1xyXG4gICAgbWluLXdpZHRoOiAyMjBweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgICBsZXR0ZXItc3BhY2luZzogMC41cHg7XHJcbiAgICBib3gtc2hhZG93OiAwIDJweCA4cHggcmdiYSgwLDAsMCwwLjA4KTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBsaW5lLWhlaWdodDogMS4yO1xyXG4gIH1cclxufSBcclxuXHJcbi8qIFN0eWxlcyBmb3IgbWlsZXN0b25lIGhpc3RvcnkgdGFibGUgYm9yZGVycyBhbmQgcGFkZGluZyAqL1xyXG4uaGlzdG9yeS10YWJsZSB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxufVxyXG4uaGlzdG9yeS10YWJsZSB0aCxcclxuLmhpc3RvcnktdGFibGUgdGQge1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICNkOWQ5ZDk7XHJcbiAgcGFkZGluZzogMXB4O1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbn0gXHJcblxyXG4vKiBSaWdodC1qdXN0aWZ5IHRoZSB0aW1lIGNvbHVtbiBpbiB0aGUgbWlsZXN0b25lIGhpc3RvcnkgdGFibGUgKi9cclxuLmhpc3RvcnktdGFibGUgdGg6bGFzdC1jaGlsZCxcclxuLmhpc3RvcnktdGFibGUgdGQ6bGFzdC1jaGlsZCB7XHJcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn0gIl0sInNvdXJjZVJvb3QiOiIifQ== */"]
     });
   }
@@ -16628,23 +17569,32 @@ class HeaderContentComponent {
       // Compute selected index based on VISIBLE tabs only to keep indices aligned
       const visibleTabs = this.getVisibleTabs();
       const currentRoute = this.router.url;
+      console.log('[HeaderComponent] Effect triggered - currentRoute:', currentRoute, 'visibleTabs:', visibleTabs);
       const index = visibleTabs.findIndex(tab => tab.routerLink === currentRoute);
+      console.log('[HeaderComponent] Found index:', index);
       if (index !== -1) {
         this.selectedIndex = index;
+        console.log('[HeaderComponent] Set selectedIndex to:', index);
       } else if (visibleTabs.length > 0) {
         this.selectedIndex = 0;
+        console.log('[HeaderComponent] Defaulted selectedIndex to 0 (first tab)');
       }
     });
   }
   ngOnInit() {
+    console.log('[HeaderComponent] ngOnInit called');
     // Initial check for selected tab
     const visibleTabs = this.getVisibleTabs();
     const currentRoute = this.router.url;
+    console.log('[HeaderComponent] Initial - currentRoute:', currentRoute, 'visibleTabs:', visibleTabs);
     const index = visibleTabs.findIndex(tab => tab.routerLink === currentRoute);
+    console.log('[HeaderComponent] Initial - found index:', index);
     if (index !== -1) {
       this.selectedIndex = index;
+      console.log('[HeaderComponent] Initial - set selectedIndex to:', index);
     } else if (visibleTabs.length > 0) {
       this.selectedIndex = 0;
+      console.log('[HeaderComponent] Initial - defaulted selectedIndex to 0 (first tab)');
     }
   }
   onTabChange(index) {
@@ -18302,57 +19252,135 @@ class ColumnConfigService {
       meaning: 'ORAL_CHEMO_PATIENT',
       route: 'oral-chemotherapy',
       sortOrder: null,
-      sortFn: (a, b) => (a.patientName || '').localeCompare(b.patientName || ''),
+      sortFn: (a, b) => a.patient.name.localeCompare(b.patient.name),
       listOfFilter: [],
-      filterFn: (list, item) => list.includes(item.patientName || 'Unknown'),
-      filterMultiple: true,
+      filterFn: (list, item) => list.includes(item.patient.name),
+      filterMultiple: false,
       sortDirections: ['ascend', 'descend', null],
-      filterable: true,
+      filterable: false,
       display: true,
       order: 1
     }, {
-      name: 'Order Description',
-      meaning: 'ORAL_CHEMO_ORDER_DESC',
+      name: 'Workflow Status',
+      meaning: 'ORAL_CHEMO_WORKFLOW_STATUS',
       route: 'oral-chemotherapy',
       sortOrder: null,
-      sortFn: (a, b) => (a.orderDescription || '').localeCompare(b.orderDescription || ''),
+      sortFn: (a, b) => a.workflowStatus.status.localeCompare(b.workflowStatus.status),
       listOfFilter: [],
-      filterFn: (list, item) => list.includes(item.orderDescription || 'Unknown'),
+      filterFn: (list, item) => list.includes(item.workflowStatus.status),
       filterMultiple: true,
       sortDirections: ['ascend', 'descend', null],
       filterable: true,
       display: true,
       order: 2
     }, {
-      name: 'Status',
-      meaning: 'ORAL_CHEMO_STATUS',
+      name: 'Ordering Location',
+      meaning: 'ORAL_CHEMO_ORDERING_LOCATION',
       route: 'oral-chemotherapy',
       sortOrder: null,
-      sortFn: (a, b) => (a.status || '').localeCompare(b.status || ''),
+      sortFn: (a, b) => a.orderingLocation.localeCompare(b.orderingLocation),
       listOfFilter: [],
-      filterFn: (list, item) => list.includes(item.status || 'Unknown'),
+      filterFn: (list, item) => list.includes(item.orderingLocation),
       filterMultiple: true,
       sortDirections: ['ascend', 'descend', null],
       filterable: true,
       display: true,
       order: 3
     }, {
-      name: 'Date',
-      meaning: 'ORAL_CHEMO_DATE',
+      name: 'Ordering Provider',
+      meaning: 'ORAL_CHEMO_ORDERING_PROVIDER',
       route: 'oral-chemotherapy',
       sortOrder: null,
-      sortFn: (a, b) => {
-        const dateA = a.date ? new Date(a.date).getTime() : 0;
-        const dateB = b.date ? new Date(b.date).getTime() : 0;
-        return dateA - dateB;
-      },
+      sortFn: (a, b) => a.orderingProvider.localeCompare(b.orderingProvider),
       listOfFilter: [],
-      filterFn: (list, item) => list.includes(item.date || 'Unknown'),
+      filterFn: (list, item) => list.includes(item.orderingProvider),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 4
+    }, {
+      name: 'Order Status',
+      meaning: 'ORAL_CHEMO_ORDER_STATUS',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => a.subStatus.subStatus.localeCompare(b.subStatus.subStatus),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.subStatus.subStatus),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 5
+    }, {
+      name: 'Order Description',
+      meaning: 'ORAL_CHEMO_ORDER_DESC',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => a.itemDescription.localeCompare(b.itemDescription),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.itemDescription),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 6
+    }, {
+      name: 'Order Sentence',
+      meaning: 'ORAL_CHEMO_ORDER_SENTENCE',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => (a.orderSentence || '').localeCompare(b.orderSentence || ''),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.orderSentence || ''),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 7
+    }, {
+      name: 'Order Date',
+      meaning: 'ORAL_CHEMO_ORDER_DATE',
+      route: 'oral-chemotherapy',
+      sortOrder: 'descend',
+      sortFn: (a, b) => new Date(a.origOrderDtTm).getTime() - new Date(b.origOrderDtTm).getTime(),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.origOrderDtTm),
       filterMultiple: true,
       sortDirections: ['ascend', 'descend', null],
       filterable: false,
       display: true,
-      order: 4
+      order: 8
+    }, {
+      name: 'First Dose',
+      meaning: 'ORAL_CHEMO_FIRST_DOSE',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => {
+        const dateA = a.firstDoseDate ? new Date(a.firstDoseDate).getTime() : 0;
+        const dateB = b.firstDoseDate ? new Date(b.firstDoseDate).getTime() : 0;
+        return dateA - dateB;
+      },
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.firstDoseDate || ''),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: false,
+      display: true,
+      order: 9
+    }, {
+      name: 'Pharmacy Location',
+      meaning: 'ORAL_CHEMO_PHARMACY_LOCATION',
+      route: 'oral-chemotherapy',
+      sortOrder: null,
+      sortFn: (a, b) => (a.pharmacyLocation || '').localeCompare(b.pharmacyLocation || ''),
+      listOfFilter: [],
+      filterFn: (list, item) => list.includes(item.pharmacyLocation || ''),
+      filterMultiple: true,
+      sortDirections: ['ascend', 'descend', null],
+      filterable: true,
+      display: true,
+      order: 10
     }]);
     /**
      * Signal containing predefined filter configurations for different routes
@@ -20801,6 +21829,719 @@ class NotificationsService {
 
 /***/ }),
 
+/***/ 29658:
+/*!*******************************************************!*\
+  !*** ./src/app/services/oral-chemotherapy.service.ts ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   OralChemotherapyService: () => (/* binding */ OralChemotherapyService)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 37580);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 10819);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ 43942);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ 59452);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ 36647);
+/* harmony import */ var _clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @clinicaloffice/clinical-office-mpage-core */ 62447);
+/* harmony import */ var _column_config_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./column-config.service */ 97477);
+/* harmony import */ var _messaging_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./messaging.service */ 66578);
+/* harmony import */ var _user_preferences_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user-preferences.service */ 70290);
+
+
+
+
+
+
+
+
+/**
+ * @class OralChemotherapyService
+ * @description This service manages the state and business logic for the oral chemotherapy worklist.
+ * It uses Angular signals for reactive state management, ensuring that the UI updates automatically
+ * when the underlying data changes. The service is responsible for fetching data from the backend,
+ * applying filters, and handling user interactions.
+ *
+ * Key Responsibilities:
+ * - Fetching and managing the master list of oral chemotherapy items (_worklistItems).
+ * - Providing reactive, derived signals for filtered data (filteredItems) and UI state (loading, processingCount).
+ * - Handling data filtering based on days (currentDaysFilter) and predefined filter sets (activePredefinedFilter).
+ * - Exposing methods to interact with the backend for CRUD operations on worklist items.
+ * - Managing real-time updates and ensuring data consistency across the application.
+ */
+class OralChemotherapyService {
+  constructor(customService, columnConfig, messagingService, userPreferences) {
+    this.customService = customService;
+    this.columnConfig = columnConfig;
+    this.messagingService = messagingService;
+    this.userPreferences = userPreferences;
+    // === SIGNALS IMPLEMENTATION ===
+    /**
+     * Signal containing all oral chemotherapy items loaded from the service
+     * This is the master data source for all worklist operations
+     * Starts empty to avoid showing test data during loading
+     */
+    this._worklistItems = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.signal)([]);
+    /**
+     * Signal tracking the current days filter setting
+     * Controls which items are visible based on their EDOS date
+     */
+    this._currentDaysFilter = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.signal)(30);
+    /**
+     * Signal tracking the loading state of worklist operations
+     * Used to show loading indicators during data fetching
+     */
+    this._loading = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.signal)(false);
+    /**
+     * Signal tracking which items are currently loading their detailed information
+     * Used to show individual loading states for progressive updates
+     */
+    this._loadingDetails = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.signal)(new Set());
+    /**
+     * Signal tracking the count of items being processed for details
+     * Used to show a badge on the refresh button during progressive loading
+     */
+    this._processingCount = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.signal)(0);
+    /**
+     * Subject to emit when an item is being refreshed automatically
+     * Components can subscribe to this to show loading states
+     */
+    this._itemRefreshSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__.Subject();
+    /**
+     * Subject to emit when an item is updated with detailed data during progressive loading
+     * Components can subscribe to this to trigger change detection for table updates
+     */
+    this._itemDetailUpdatedSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__.Subject();
+    /**
+     * Signal tracking the currently active predefined filter
+     * Controls which predefined filter is applied to the worklist
+     */
+    this._activePredefinedFilter = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.signal)(null);
+    /**
+     * Signal tracking whether to show only current user's assignments
+     * Controls if the worklist shows all items or only those assigned to current user
+     */
+    this._showMyAssignmentsOnly = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.signal)(false);
+    // Track last column filter update to prevent infinite loops
+    this._lastColumnFilterUpdate = '';
+    // === READ-ONLY SIGNALS FOR EXTERNAL ACCESS ===
+    /**
+     * Read-only access to the current days filter setting
+     * Components can use this to display the current filter state
+     */
+    this.currentDaysFilter = this._currentDaysFilter.asReadonly();
+    /**
+     * Read-only access to the loading state
+     * Components can use this to show loading indicators
+     */
+    this.loading = this._loading.asReadonly();
+    /**
+     * Read-only access to the loading details state
+     * Components can use this to show individual item loading indicators
+     */
+    this.loadingDetails = this._loadingDetails.asReadonly();
+    /**
+     * Read-only access to the processing count
+     * Components can use this to show a badge on the refresh button
+     */
+    this.processingCount = this._processingCount.asReadonly();
+    /**
+     * Observable that emits when an item is being refreshed automatically
+     * Components can subscribe to this to show loading states
+     */
+    this.itemRefresh$ = this._itemRefreshSubject.asObservable();
+    /**
+     * Observable that emits when an item is updated with detailed data during progressive loading
+     * Components can subscribe to this to trigger change detection for table row updates
+     */
+    this.itemDetailUpdated$ = this._itemDetailUpdatedSubject.asObservable();
+    /**
+     * Read-only access to the active predefined filter
+     * Components can use this to display the current filter state
+     */
+    this.activePredefinedFilter = this._activePredefinedFilter.asReadonly();
+    /**
+     * Read-only access to the assignment filter state
+     * Components can use this to display whether filtering by current user's assignments
+     */
+    this.showMyAssignmentsOnly = this._showMyAssignmentsOnly.asReadonly();
+    /**
+     * Read-only access to all worklist items
+     * Contains the complete unfiltered dataset
+     */
+    this.worklistItems = this._worklistItems.asReadonly();
+    // === COMPUTED SIGNALS FOR DERIVED STATE ===
+    /**
+     * Computed signal that returns filtered worklist items based on days filter, predefined filters, and assignment filter
+     * Automatically recalculates when worklistItems, currentDaysFilter, activePredefinedFilter, or showMyAssignmentsOnly changes
+     * This eliminates the need for manual filtering in components
+     */
+    this.filteredItems = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.computed)(() => {
+      let items = this._worklistItems();
+      const daysFilter = this._currentDaysFilter();
+      const predefinedFilter = this._activePredefinedFilter();
+      const showMyAssignmentsOnly = this._showMyAssignmentsOnly();
+      const isLoading = this._loading();
+      // During loading, if we have a predefined filter but no items, return empty array
+      // This prevents showing filtered results on empty data during the loading process
+      if (isLoading && items.length === 0 && predefinedFilter) {
+        return [];
+      }
+      // Apply predefined filters first
+      if (predefinedFilter && predefinedFilter.filters) {
+        const filters = predefinedFilter.filters;
+        const excludeFilters = predefinedFilter.excludeFilters;
+        // Apply workflow status filter
+        if (filters.workflowStatus && filters.workflowStatus.length > 0) {
+          items = items.filter(item => filters.workflowStatus.includes(item.workflowStatus?.status || ''));
+        }
+        // Apply workflow status exclude filter
+        if (excludeFilters?.workflowStatus && excludeFilters.workflowStatus.length > 0) {
+          items = items.filter(item => !excludeFilters.workflowStatus.includes(item.workflowStatus?.status || ''));
+        }
+        // Apply ordering location filter
+        if (filters.orderingLocation && filters.orderingLocation.length > 0) {
+          items = items.filter(item => filters.orderingLocation.includes(item.orderingLocation || ''));
+        }
+        // Apply ordering provider filter
+        if (filters.orderingProvider && filters.orderingProvider.length > 0) {
+          items = items.filter(item => filters.orderingProvider.includes(item.orderingProvider || ''));
+        }
+        // Apply scheduling location filter
+        if (filters.schedulingLocation && filters.schedulingLocation.length > 0) {
+          items = items.filter(item => filters.schedulingLocation.includes(item.schedulingLocation || ''));
+        }
+        // Apply ordering location exclude filter
+        if (excludeFilters?.orderingLocation && excludeFilters.orderingLocation.length > 0) {
+          items = items.filter(item => !excludeFilters.orderingLocation.includes(item.orderingLocation || ''));
+        }
+        // Apply ordering provider exclude filter
+        if (excludeFilters?.orderingProvider && excludeFilters.orderingProvider.length > 0) {
+          items = items.filter(item => !excludeFilters.orderingProvider.includes(item.orderingProvider || ''));
+        }
+        // Apply scheduling location exclude filter
+        if (excludeFilters?.schedulingLocation && excludeFilters.schedulingLocation.length > 0) {
+          items = items.filter(item => !excludeFilters.schedulingLocation.includes(item.schedulingLocation || ''));
+        }
+        // Override days filter if specified in predefined filter
+        if (filters.daysFilter !== undefined) {
+          const filterDays = filters.daysFilter;
+          if (filterDays !== 'all') {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const futureDate = new Date(today);
+            futureDate.setDate(today.getDate() + filterDays);
+            items = items.filter(item => {
+              if (!item.edosDate) return false;
+              const edosDate = new Date(item.edosDate);
+              edosDate.setHours(0, 0, 0, 0);
+              return edosDate <= futureDate;
+            });
+          }
+          // Apply assignment filter even with predefined days filter
+          if (showMyAssignmentsOnly) {
+            const currentUser = this.userPreferences.getUserData();
+            if (currentUser && currentUser.username) {
+              const currentUsername = currentUser.username.toLowerCase();
+              return items.filter(item => item.assignedTo && item.assignedTo.toLowerCase() === currentUsername);
+            }
+            // If no current user or username, return empty array when filtering by assignments
+            return [];
+          }
+          return items; // Return early if predefined filter has days filter
+        }
+      }
+      // Apply regular days filter if not overridden by predefined filter
+      if (daysFilter === 'all') {
+        // Apply assignment filter even when showing all days
+        if (showMyAssignmentsOnly) {
+          const currentUser = this.userPreferences.getUserData();
+          if (currentUser && currentUser.username) {
+            const currentUsername = currentUser.username.toLowerCase();
+            return items.filter(item => item.assignedTo && item.assignedTo.toLowerCase() === currentUsername);
+          }
+          // If no current user or username, return empty array when filtering by assignments
+          return [];
+        }
+        return items;
+      }
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Set to start of day
+      const futureDate = new Date(today);
+      futureDate.setDate(today.getDate() + daysFilter);
+      const filteredByDays = items.filter(item => {
+        if (!item.edosDate) {
+          return false;
+        }
+        const edosDate = new Date(item.edosDate);
+        edosDate.setHours(0, 0, 0, 0); // Set to start of day
+        // Include items with EDOS dates in the past OR within the specified future range
+        return edosDate <= futureDate;
+      });
+      // Apply assignment filter if enabled
+      if (showMyAssignmentsOnly) {
+        const currentUser = this.userPreferences.getUserData();
+        if (currentUser && currentUser.username) {
+          const currentUsername = currentUser.username.toLowerCase();
+          return filteredByDays.filter(item => item.assignedTo && item.assignedTo.toLowerCase() === currentUsername);
+        }
+        // If no current user or username, return empty array when filtering by assignments
+        return [];
+      }
+      return filteredByDays;
+    });
+    /**
+     * Computed signal that calculates item counts for each predefined filter
+     * Returns a map of filter ID to count for display on filter tabs
+     */
+    this.predefinedFilterCounts = (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.computed)(() => {
+      const allItems = this._worklistItems();
+      const daysFilter = this._currentDaysFilter();
+      const predefinedFilters = this.columnConfig.getPredefinedFilters('oral-chemotherapy');
+      const counts = {};
+      for (const filter of predefinedFilters) {
+        // Apply the same filtering logic as filteredItems but for each specific filter
+        let items = [...allItems];
+        if (filter.filters) {
+          const filters = filter.filters;
+          const excludeFilters = filter.excludeFilters;
+          // Apply workflow status filter
+          if (filters.workflowStatus && filters.workflowStatus.length > 0) {
+            items = items.filter(item => filters.workflowStatus.includes(item.workflowStatus?.status || ''));
+          }
+          // Apply workflow status exclude filter
+          if (excludeFilters?.workflowStatus && excludeFilters.workflowStatus.length > 0) {
+            items = items.filter(item => !excludeFilters.workflowStatus.includes(item.workflowStatus?.status || ''));
+          }
+          // Apply days filter (use filter-specific days or global days filter)
+          const filterDays = filters.daysFilter !== undefined ? filters.daysFilter : daysFilter;
+          if (filterDays !== 'all') {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const futureDate = new Date(today);
+            futureDate.setDate(today.getDate() + filterDays);
+            items = items.filter(item => {
+              if (!item.edosDate) return false;
+              const edosDate = new Date(item.edosDate);
+              edosDate.setHours(0, 0, 0, 0);
+              return edosDate <= futureDate;
+            });
+          }
+        } else {
+          // 'All Items' filter - apply only days filter
+          if (daysFilter !== 'all') {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const futureDate = new Date(today);
+            futureDate.setDate(today.getDate() + daysFilter);
+            items = items.filter(item => {
+              if (!item.edosDate) return false;
+              const edosDate = new Date(item.edosDate);
+              edosDate.setHours(0, 0, 0, 0);
+              return edosDate <= futureDate;
+            });
+          }
+        }
+        counts[filter.id] = items.length;
+      }
+      return counts;
+    });
+    // Set up automatic column filter updates when filtered data changes
+    // This effect runs whenever filteredItems() changes and automatically updates column filters
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.effect)(() => {
+      const filteredData = this.filteredItems();
+      const predefinedFilter = this._activePredefinedFilter();
+      // Create a hash that includes individual item refresh timestamps to detect updates
+      // This ensures that when individual items are updated, the effect re-runs
+      const dataHash = JSON.stringify({
+        count: filteredData.length,
+        filterId: predefinedFilter?.id || 'null',
+        firstItemId: filteredData[0]?.compass_worklist_id || 'null',
+        // Include the latest dataRefreshDtTm to detect individual item updates
+        latestRefresh: filteredData.length > 0 ? Math.max(...filteredData.map(item => item.dataRefreshDtTm?.getTime() || 0)) : 0,
+        // Include a sample of workflow statuses to detect status changes
+        statusSample: filteredData.slice(0, 5).map(item => ({
+          id: item.compass_worklist_id,
+          status: item.workflowStatus?.status,
+          edos: item.edosDate?.getTime()
+        }))
+      });
+      // Only update column filters if:
+      // 1. We have data and we're not in a loading state
+      // 2. The data has actually changed (prevent infinite loops)
+      if (filteredData.length > 0 && !this._loading() && dataHash !== this._lastColumnFilterUpdate) {
+        // Auto-updating column filters with filtered items (detected data changes)
+        this._lastColumnFilterUpdate = dataHash;
+        this.columnConfig.updateColumnFiltersFromData(filteredData);
+      } else if (dataHash === this._lastColumnFilterUpdate) {
+        // Skipping column filter update - data unchanged
+      }
+    }, {
+      allowSignalWrites: true
+    });
+  }
+  /**
+   * Updates the days filter setting
+   * This automatically triggers recalculation of the filteredItems computed signal
+   * No manual filtering or emission needed - signals handle the reactivity
+   */
+  updateDaysFilter(days) {
+    this._currentDaysFilter.set(days);
+  }
+  /**
+   * Get the current days filter value using signals
+   * Returns the current value of the currentDaysFilter signal
+   */
+  getCurrentDaysFilter() {
+    return this._currentDaysFilter();
+  }
+  /**
+   * Updates the assignment filter setting
+   * This automatically triggers recalculation of the filteredItems computed signal
+   * @param showMyAssignmentsOnly - true to show only current user's assignments, false to show all
+   */
+  updateAssignmentFilter(showMyAssignmentsOnly) {
+    this._showMyAssignmentsOnly.set(showMyAssignmentsOnly);
+  }
+  /**
+   * Update the active predefined filter
+   * This will filter the worklist items based on the predefined filter criteria
+   */
+  updatePredefinedFilter(filter) {
+    // Setting predefined filter
+    this._activePredefinedFilter.set(filter);
+    // Column filter updates are now handled automatically by the effect() below
+    // No need for setTimeout - the effect will trigger when filteredItems() changes
+  }
+  /**
+   * Clears the active predefined filter
+   * This will revert to showing items based only on the days filter
+   */
+  clearPredefinedFilter() {
+    // Clearing predefined filter
+    this._activePredefinedFilter.set(null);
+    // Column filter updates are now handled automatically by the effect() below
+    // No need for setTimeout - the effect will trigger when filteredItems() changes
+  }
+  /**
+   * Update a single oral chemotherapy item in the worklist
+   * Updates the signal and triggers automatic recalculation of filtered items
+   * This ensures that individual item updates are reflected across all filter views
+   * Only updates if the new data is more recent than existing data
+   */
+  updateOralChemotherapyItem(item) {
+    // Update the master worklist items signal with the updated item
+    this._worklistItems.update(currentItems => {
+      const itemIndex = currentItems.findIndex(existingItem => existingItem.compass_worklist_id === item.compass_worklist_id);
+      if (itemIndex !== -1) {
+        const existingItem = currentItems[itemIndex];
+        const existingRefreshTime = existingItem.dataRefreshDtTm?.getTime() || 0;
+        const newRefreshTime = item.dataRefreshDtTm?.getTime() || 0;
+        // Only update if the new item is more recent, OR if there's no timestamp data
+        if (newRefreshTime >= existingRefreshTime || !existingRefreshTime && !newRefreshTime) {
+          const updatedItems = [...currentItems];
+          updatedItems[itemIndex] = {
+            ...item,
+            dataRefreshDtTm: new Date()
+          };
+          return updatedItems;
+        } else {
+          return currentItems;
+        }
+      } else {
+        // Item not found - this could happen if the item was added while we weren't watching
+        return [...currentItems, {
+          ...item,
+          dataRefreshDtTm: new Date()
+        }];
+      }
+    });
+  }
+  /**
+   * Returns the worklist items, using Clinical Office CustomService in online mode.
+   * Updates the worklistItems signal with fresh data when called
+   * Components should prefer using the filteredItems computed signal for reactive updates
+   */
+  getWorklist() {
+    // Use Clinical Office CustomService to fetch worklist data
+    // Check if batch mode is enabled in user preferences
+    const userData = this.userPreferences.getUserData();
+    const batchMode = userData?.performanceSettings?.batchMode === 1;
+    // Only clear existing data if no predefined filter is set to avoid race condition
+    if (!this._activePredefinedFilter()) {
+      this._worklistItems.set([]);
+    }
+    return new rxjs__WEBPACK_IMPORTED_MODULE_5__.Observable(observer => {
+      // Execute worklist fetch using Clinical Office CustomService with CCL script
+      // Update loading state
+      this._loading.set(true);
+      this.customService.load({
+        customScript: {
+          script: [{
+            name: 'cov_compass_service',
+            run: 'pre',
+            id: 'oralChemoWorklist',
+            parameters: {
+              requestType: 'getWorklist',
+              worklistType: 'ORALCHEMO',
+              requestMeaning: batchMode ? "BATCH" : "INDIVIDUAL"
+            }
+          }],
+          clearPatientSource: true
+        }
+      }, [{
+        personId: 0,
+        encntrId: 0
+      }], () => {
+        try {
+          const raw = this.customService.get('oralChemoWorklist');
+          // Process raw worklist response from CustomService
+          if (!raw) {
+            // Handle empty response from CustomService - clear sample data and return empty array
+            this._worklistItems.set([]);
+            observer.next([]);
+            observer.complete();
+            // Update loading state
+            this._loading.set(false);
+            return;
+          }
+          // Expecting items in raw.qual array
+          const qualArray = raw && Array.isArray(raw.qual) ? raw.qual : [];
+          // Extract qual array containing worklist items from service response
+          if (qualArray.length) {
+            observer.next(qualArray);
+          } else {
+            // No valid qual array received, clear sample data and return empty array
+            this._worklistItems.set([]);
+            observer.next([]);
+          }
+          observer.complete();
+          // Update loading state
+          this._loading.set(false);
+        } catch (error) {
+          // Handle any errors during CustomService callback processing
+          observer.error(error);
+          // Update loading state
+          this._loading.set(false);
+        }
+      });
+    }).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_6__.switchMap)(worklist => {
+      // Process and transform the raw worklist data into OralChemotherapyItem objects
+      if (!worklist.length) {
+        // Worklist is empty - return empty observable array
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.of)([]);
+      }
+      // Map each item to OralChemotherapyItem using mapToOralChemotherapyItem
+      const mappedItems = worklist.map(item => {
+        try {
+          const mapped = this.mapToOralChemotherapyItem(item);
+          return mapped;
+        } catch (error) {
+          // Skip items that fail to map properly
+          return null;
+        }
+      }).filter(item => item !== null);
+      if (!mappedItems.length) {
+        // No items were successfully mapped - clear sample data and return empty array
+        this._worklistItems.set([]);
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.of)([]);
+      }
+      // First, immediately display the basic worklist items
+      this._worklistItems.set(mappedItems);
+      if (batchMode) {
+        // Batch mode enabled - skip detailed loading for better performance
+        this.messagingService.success(`Oral chemotherapy worklist loaded with ${mappedItems.length} items.`);
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.of)(mappedItems);
+      } else {
+        // Normal mode - load detailed information for each item
+        this.messagingService.success(`Oral chemotherapy worklist loaded with ${mappedItems.length} items. Item details are now being loaded...`);
+        // Track completion of detail loading
+        let completedDetails = 0;
+        const totalDetails = mappedItems.length;
+        // Set initial processing count
+        this._processingCount.set(totalDetails);
+        // Then fetch detailed information for each item individually
+        // This allows the UI to show basic data immediately while details load progressively
+        mappedItems.forEach(item => {
+          const itemId = item.compass_worklist_id;
+          // Mark this item as loading details
+          this._loadingDetails.update(current => new Set(Array.from(current).concat(itemId)));
+          // Use the same pattern as refreshWorklistItem - direct subscribe call
+          this.getOralChemotherapyItemById(itemId).subscribe({
+            next: detailedItem => {
+              // Remove from loading details when complete
+              this._loadingDetails.update(current => {
+                const newSet = new Set(Array.from(current).filter(id => id !== itemId));
+                return newSet;
+              });
+              if (detailedItem) {
+                // Direct update just like refreshWorklistItem - no timing conditions needed for initial load
+                this.updateOralChemotherapyItem(detailedItem);
+                // Emit event to trigger change detection in components so the table row updates
+                this._itemDetailUpdatedSubject.next();
+              }
+              // Track completion and send message when all details are loaded
+              completedDetails++;
+              // Update processing count
+              this._processingCount.update(current => Math.max(0, current - 1));
+              if (completedDetails === totalDetails) {
+                this.messagingService.success(`All ${totalDetails} worklist item details have been loaded successfully.`);
+              }
+            },
+            error: error => {
+              // Remove from loading details on error
+              this._loadingDetails.update(current => {
+                const newSet = new Set(Array.from(current).filter(id => id !== itemId));
+                return newSet;
+              });
+              // Track completion even on error to ensure we don't wait forever
+              completedDetails++;
+              // Update processing count on error as well
+              this._processingCount.update(current => Math.max(0, current - 1));
+              if (completedDetails === totalDetails) {
+                this.messagingService.success(`All ${totalDetails} worklist item details have been processed.`);
+              }
+            }
+          });
+        });
+        // Return the basic items immediately, details will update progressively via direct subscribe calls
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.of)(mappedItems);
+      }
+    }));
+  }
+  /**
+   * Refresh the worklist data by calling getWorklist and updating signals
+   * Returns an observable that emits when the refresh is complete
+   * Components can use this method to manually refresh data
+   */
+  refreshWorklist() {
+    // Trigger a fresh worklist data fetch and signal update
+    // Note: Success messages are now handled within getWorklist() method
+    return this.getWorklist();
+  }
+  /**
+   * Fetch a single OralChemotherapyItem by ID using Clinical Office CustomService.
+   * This will call a custom CCL script and return the result as an Observable<OralChemotherapyItem>.
+   * Creates a unique ID for the custom script call using the method name and the compass worklist ID.
+   */
+  getOralChemotherapyItemById(id) {
+    // Fetch specific oral chemotherapy item by ID using CustomService with unique ID
+    return new rxjs__WEBPACK_IMPORTED_MODULE_5__.Observable(observer => {
+      this.customService.load({
+        customScript: {
+          script: [{
+            name: 'cov_compass_service',
+            run: 'pre',
+            id: `getOralChemoItemById_${id}`,
+            parameters: {
+              requestType: 'getOralChemoItemById',
+              requestId: id
+            }
+          }],
+          clearPatientSource: true
+        }
+      }, [{
+        personId: 0,
+        encntrId: 0
+      }], () => {
+        const raw = this.customService.get(`getOralChemoItemById_${id}`);
+        // Extract the first item from qual array
+        const item = raw && Array.isArray(raw.qual) && raw.qual.length > 0 ? raw.qual[0] : null;
+        if (item) {
+          const mapped = this.mapToOralChemotherapyItem(item);
+          observer.next(mapped);
+        } else {
+          // Return null to indicate no detailed data available
+          observer.next(null);
+        }
+        observer.complete();
+      });
+    });
+  }
+  /**
+   * Map the raw JSON response from customService.get to a valid OralChemotherapyItem.
+   * Implement this function to transform the backend response to your strict model.
+   */
+  mapToOralChemotherapyItem(raw) {
+    // Transform raw service response data to OralChemotherapyItem model structure
+    const mapped = {
+      compass_worklist_id: raw.compassWorklistId || raw.compass_worklist_id || raw.id,
+      workflow_id: raw.workflowId,
+      personId: raw.personId,
+      encntrId: raw.encntrId,
+      orderId: raw.orderId,
+      patient: raw.patient ? {
+        name: raw.patient.name || '',
+        dateOfBirth: raw.patient.dateOfBirth ? new Date(raw.patient.dateOfBirth) : new Date(),
+        fin: raw.patient.fin || '',
+        mrn: raw.patient.mrn || ''
+      } : undefined,
+      itemDescription: raw.itemDescription,
+      orderingLocation: raw.orderingLocation,
+      orderingProvider: raw.orderingProvider,
+      schedulingLocation: raw.schedulingLocation,
+      workflowType: raw.workflowType,
+      workflowUpdateDateTime: new Date(raw.workflowUpdateDateTime),
+      workflowUpdateCount: raw.workflowUpdateCount,
+      workflowStatus: {
+        status: raw.workflowStatus?.status || '',
+        statusDateTime: raw.workflowStatus?.statusDateTime ? new Date(raw.workflowStatus.statusDateTime) : new Date()
+      },
+      subStatus: {
+        subStatus: raw.subStatus?.subStatus || '',
+        subStatusDateTime: raw.subStatus?.subStatusDateTime ? new Date(raw.subStatus.subStatusDateTime) : new Date()
+      },
+      priority: raw.priority || 'Normal',
+      codeList: raw.codeList && Array.isArray(raw.codeList) ? raw.codeList.map(code => ({
+        type: code.type || '',
+        vocabulary: code.vocabulary || '',
+        identifier: code.identifier || '',
+        display: code.display || ''
+      })) : [],
+      edosDate: raw.edosdate ? new Date(raw.edosdate) : undefined,
+      origOrderDtTm: raw.origOrderDtTm ? new Date(raw.origOrderDtTm) : undefined,
+      dataRefreshDtTm: new Date(),
+      financialClass: raw.financialClass || '',
+      reasonForExam: raw.reasonForExam || '',
+      assignedTo: raw.assignedTo || '',
+      assignedName: raw.assignedName || raw.assignedDisplayName || raw.assignedFullName || ''
+    };
+    // Successfully mapped raw data to OralChemotherapyItem with current timestamp
+    return mapped;
+  }
+  /**
+   * Set worklist items directly (useful for testing or offline scenarios)
+   * Updates the signal which triggers automatic recalculation of filtered items
+   */
+  setWorklistItems(items) {
+    this._worklistItems.set(items);
+  }
+  /**
+   * Check if a specific item is currently loading its detailed information
+   * @param itemId - The compass worklist ID of the item to check
+   * @returns true if the item is loading details, false otherwise
+   */
+  isItemLoadingDetails(itemId) {
+    return this._loadingDetails().has(itemId);
+  }
+  static {
+    this.ɵfac = function OralChemotherapyService_Factory(t) {
+      return new (t || OralChemotherapyService)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.CustomService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_column_config_service__WEBPACK_IMPORTED_MODULE_0__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService));
+    };
+  }
+  static {
+    this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
+      token: OralChemotherapyService,
+      factory: OralChemotherapyService.ɵfac,
+      providedIn: 'root'
+    });
+  }
+}
+
+
+/***/ }),
+
 /***/ 38935:
 /*!************************************************!*\
   !*** ./src/app/services/prior-auth.service.ts ***!
@@ -23205,6 +24946,8 @@ class UserPreferencesService {
           performanceSettings: raw.performanceSettings,
           runDtTm: raw.runDtTm ? new Date(raw.runDtTm) : new Date()
         };
+        console.log('[UserPreferencesService] Raw preferences from server:', raw.preferences);
+        console.log('[UserPreferencesService] Mapped userData:', userData);
         this.setUserData(userData);
       } else {
         // If no preferences found, set default preferences with all tabs enabled
@@ -23228,7 +24971,7 @@ class UserPreferencesService {
         },
         displaySettings: {
           enabledTabs: ['prior-auth', 'oral-chemotherapy', 'future', 'test-data'],
-          defaultTab: 'prior-auth'
+          defaultTab: 'oral-chemotherapy'
         }
       },
       performanceSettings: {
@@ -23543,10 +25286,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-08-27T03:14:54.425Z
-const buildVersion = 'v0.0.280-master';
-const packageVersion = '0.0.280';
-const gitBranch = 'master';
+// Generated on: 2025-08-28T13:54:10.449Z
+const buildVersion = 'v0.0.281-feature/oral-chemotherapy';
+const packageVersion = '0.0.281';
+const gitBranch = 'feature/oral-chemotherapy';
 
 /***/ }),
 
@@ -23556,7 +25299,7 @@ const gitBranch = 'master';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.280","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.281","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
