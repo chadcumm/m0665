@@ -31,5 +31,23 @@
         "encntrId": 144003729,
         "personId": 24479434
       }
-    ]
+    ],
+    "udsOrderQual": [
+      {
+        "catalogCd": 2559790207,
+        "orderMnemonic": "Drug Screen Class List A POC Lab 80305"
+      },
+      {
+        "catalogCd": 2714080225,
+        "orderMnemonic": "ToxASSURE Comprehensive Profile"
+      },
+      {
+        "catalogCd": 3249720933,
+        "orderMnemonic": "ToxASSURE Select (LabCorp MedWatch)"
+      }
+    ],
+    "returnToClinic": {
+      "catalogCd": 272124601,
+      "orderMnemonic": "Return to Clinic"
+    }
   }
