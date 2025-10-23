@@ -16768,6 +16768,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-zorro-antd/core/transition-patch */ 76902);
 /* harmony import */ var ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-zorro-antd/core/wave */ 69741);
 /* harmony import */ var ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng-zorro-antd/date-picker */ 44535);
+/* harmony import */ var ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ng-zorro-antd/tooltip */ 28573);
+
 
 
 
@@ -16782,10 +16784,11 @@ __webpack_require__.r(__webpack_exports__);
 const _c0 = function () {
   return [2, 2];
 };
-const _c1 = function (a0, a1) {
+const _c1 = function (a0, a1, a2) {
   return {
     "check-button-saved": a0,
-    "check-button-undo": a1
+    "check-button-undo": a1,
+    "check-button-disabled": a2
   };
 };
 class EarliestDateMilestoneComponent {
@@ -16830,6 +16833,11 @@ class EarliestDateMilestoneComponent {
     }
   }
   onDateChange(date) {
+    // Prevent date changes if scheduled
+    if (this.isScheduled()) {
+      this.messagingService.warning('EDOS date cannot be modified when the item is scheduled');
+      return;
+    }
     this.selectedDate = date;
     // Compare the selected date with the current EDOS value date (from worklistItem.edosDate) to determine if it's changed
     const currentEDOSDate = this.getEDOSValueDate();
@@ -16864,6 +16872,11 @@ class EarliestDateMilestoneComponent {
     }
   }
   onEODCheckClick() {
+    // Prevent action if scheduled
+    if (this.isScheduled()) {
+      this.messagingService.warning('EDOS cannot be modified when the item is scheduled');
+      return;
+    }
     // If milestone is already complete and we're hovering (showing X), handle undo
     if (this.isButtonChecked && this.isHovering) {
       this.undoMilestone();
@@ -16918,6 +16931,11 @@ class EarliestDateMilestoneComponent {
   }
   // Handle undo functionality to set milestone back to Open status
   undoMilestone() {
+    // Prevent undo if scheduled
+    if (this.isScheduled()) {
+      this.messagingService.warning('EDOS cannot be modified when the item is scheduled');
+      return;
+    }
     // Prepare the request data for milestone undo
     const requestData = {
       compassMilestoneId: this.milestone.milestoneId,
@@ -16973,6 +16991,38 @@ class EarliestDateMilestoneComponent {
       return isNaN(dateValue.getTime()) ? null : dateValue;
     }
   }
+  /**
+   * Returns true if the scheduling status is "Scheduled"
+   * Used to disable EDOS functionality when item is already scheduled
+   */
+  isScheduled() {
+    return this.worklistItem?.schedule?.state === 'Scheduled';
+  }
+  /**
+   * Returns true if the EDOS components should be disabled
+   * Combines scheduling status and existing error conditions
+   */
+  isEdosDisabled() {
+    return this.isScheduled() || this.isDateError;
+  }
+  /**
+   * Get user-friendly message for disabled state
+   */
+  getDisabledMessage() {
+    if (this.isScheduled()) {
+      return 'EDOS functionality is disabled when the item is scheduled';
+    }
+    if (this.isDateError) {
+      return 'Please select a valid date';
+    }
+    return '';
+  }
+  /**
+   * Check if undo functionality should be available
+   */
+  canUndoMilestone() {
+    return this.isButtonChecked && this.isHovering && !this.isScheduled();
+  }
   static {
     this.ɵfac = function EarliestDateMilestoneComponent_Factory(t) {
       return new (t || EarliestDateMilestoneComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectorRef));
@@ -16987,8 +17037,8 @@ class EarliestDateMilestoneComponent {
         worklistItem: "worklistItem"
       },
       decls: 6,
-      vars: 11,
-      consts: [["nzJustify", "start", "nzAlign", "middle", 3, "nzGutter"], ["nzFlex", "auto", 1, "date-section"], [3, "nzSize", "ngModel", "nzStatus", "ngModelChange"], ["nz-button", "", "nzType", "default", "nzSize", "small", 3, "ngClass", "disabled", "click", "mouseenter", "mouseleave"], ["nz-icon", "", 3, "nzType"]],
+      vars: 15,
+      consts: [["nzJustify", "start", "nzAlign", "middle", 3, "nzGutter"], ["nzFlex", "auto", 1, "date-section"], ["nz-tooltip", "", 3, "nzSize", "ngModel", "nzStatus", "nzDisabled", "nzTooltipTitle", "ngModelChange"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nz-tooltip", "", 3, "ngClass", "disabled", "nzTooltipTitle", "click", "mouseenter", "mouseleave"], ["nz-icon", "", 3, "nzType"]],
       template: function EarliestDateMilestoneComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div")(1, "nz-row", 0)(2, "nz-col", 1)(3, "nz-date-picker", 2);
@@ -17009,17 +17059,17 @@ class EarliestDateMilestoneComponent {
         }
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzGutter", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction0"](7, _c0));
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzGutter", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction0"](10, _c0));
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSize", "small")("ngModel", ctx.selectedDate)("nzStatus", !ctx.selectedDate ? "error" : "");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzSize", "small")("ngModel", ctx.selectedDate)("nzStatus", !ctx.selectedDate ? "error" : "")("nzDisabled", ctx.isScheduled())("nzTooltipTitle", ctx.isScheduled() ? "EDOS cannot be modified when item is scheduled" : "");
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction2"](8, _c1, ctx.isButtonChecked && !ctx.isHovering, ctx.isButtonChecked && ctx.isHovering))("disabled", ctx.isDateError);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction3"](11, _c1, ctx.isButtonChecked && !ctx.isHovering, ctx.isButtonChecked && ctx.isHovering, ctx.isScheduled()))("disabled", ctx.isEdosDisabled())("nzTooltipTitle", ctx.isScheduled() ? "EDOS cannot be confirmed when item is scheduled" : "");
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("nzType", ctx.isButtonChecked && ctx.isHovering ? "close" : "check");
         }
       },
-      dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.NgClass, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgModel, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_5__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_6__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_6__.NzRowDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_7__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_8__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_9__.NzWaveDirective, ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_10__.NzDatePickerComponent],
-      styles: [".date-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 3px;\n}\n.date-section[_ngcontent-%COMP%]     .ant-picker {\n  height: 24px !important;\n  min-height: 24px !important;\n  line-height: 24px !important;\n  padding: 0 8px !important;\n  font-size: 14px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n}\n.date-section[_ngcontent-%COMP%]   button[nz-button][_ngcontent-%COMP%] {\n  height: 24px;\n  min-width: 24px;\n  padding: 0 8px;\n  font-size: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-sizing: border-box;\n}\n\n.check-button-saved[_ngcontent-%COMP%] {\n  background-color: #52c41a !important;\n  border-color: #52c41a !important;\n  color: #fff !important;\n}\n.check-button-saved[_ngcontent-%COMP%]:hover, .check-button-saved[_ngcontent-%COMP%]:focus {\n  background-color: #389e0d !important;\n  border-color: #389e0d !important;\n  color: #fff !important;\n}\n\n.check-button-undo[_ngcontent-%COMP%] {\n  background-color: #ff4d4f !important;\n  border-color: #ff4d4f !important;\n  color: #fff !important;\n}\n.check-button-undo[_ngcontent-%COMP%]:hover, .check-button-undo[_ngcontent-%COMP%]:focus {\n  background-color: #cf1322 !important;\n  border-color: #cf1322 !important;\n  color: #fff !important;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L3ByaW9yLWF1dGgvd29ya2xpc3QtdGFibGUvZ2xpZGlhbi13b3JrZmxvdy1jZWxsL2VhcmxpZXN0LWRhdGUtbWlsZXN0b25lL2VhcmxpZXN0LWRhdGUtbWlsZXN0b25lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsUUFBQTtBQUNGO0FBRUU7RUFDRSx1QkFBQTtFQUNBLDJCQUFBO0VBQ0EsNEJBQUE7RUFDQSx5QkFBQTtFQUNBLGVBQUE7RUFDQSxzQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBQUFKO0FBR0U7RUFDRSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7RUFDQSxlQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxzQkFBQTtBQURKOztBQUtBO0VBQ0Usb0NBQUE7RUFDQSxnQ0FBQTtFQUNBLHNCQUFBO0FBRkY7QUFJRTtFQUVFLG9DQUFBO0VBQ0EsZ0NBQUE7RUFDQSxzQkFBQTtBQUhKOztBQU9BO0VBQ0Usb0NBQUE7RUFDQSxnQ0FBQTtFQUNBLHNCQUFBO0FBSkY7QUFNRTtFQUVFLG9DQUFBO0VBQ0EsZ0NBQUE7RUFDQSxzQkFBQTtBQUxKIiwic291cmNlc0NvbnRlbnQiOlsiLmRhdGUtc2VjdGlvbiB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGdhcDogM3B4O1xyXG5cclxuICAvLyBUYXJnZXQgdGhlIGlucHV0IGluc2lkZSB0aGUgZGF0ZSBwaWNrZXJcclxuICA6Om5nLWRlZXAgLmFudC1waWNrZXIge1xyXG4gICAgaGVpZ2h0OiAyNHB4ICFpbXBvcnRhbnQ7XHJcbiAgICBtaW4taGVpZ2h0OiAyNHB4ICFpbXBvcnRhbnQ7XHJcbiAgICBsaW5lLWhlaWdodDogMjRweCAhaW1wb3J0YW50O1xyXG4gICAgcGFkZGluZzogMCA4cHggIWltcG9ydGFudDtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICB9XHJcblxyXG4gIGJ1dHRvbltuei1idXR0b25dIHtcclxuICAgIGhlaWdodDogMjRweDtcclxuICAgIG1pbi13aWR0aDogMjRweDtcclxuICAgIHBhZGRpbmc6IDAgOHB4O1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgfVxyXG59XHJcblxyXG4uY2hlY2stYnV0dG9uLXNhdmVkIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNTJjNDFhICFpbXBvcnRhbnQ7ICAgLy8gTkctWk9SUk8gc3VjY2VzcyBncmVlblxyXG4gIGJvcmRlci1jb2xvcjogIzUyYzQxYSAhaW1wb3J0YW50O1xyXG4gIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XHJcblxyXG4gICY6aG92ZXIsXHJcbiAgJjpmb2N1cyB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzg5ZTBkICFpbXBvcnRhbnQ7IC8vIERhcmtlciBncmVlbiBvbiBob3Zlci9mb2N1c1xyXG4gICAgYm9yZGVyLWNvbG9yOiAjMzg5ZTBkICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xyXG4gIH1cclxufVxyXG5cclxuLmNoZWNrLWJ1dHRvbi11bmRvIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmY0ZDRmICFpbXBvcnRhbnQ7ICAgLy8gTkctWk9SUk8gZXJyb3IgcmVkXHJcbiAgYm9yZGVyLWNvbG9yOiAjZmY0ZDRmICFpbXBvcnRhbnQ7XHJcbiAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcclxuXHJcbiAgJjpob3ZlcixcclxuICAmOmZvY3VzIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNjZjEzMjIgIWltcG9ydGFudDsgLy8gRGFya2VyIHJlZCBvbiBob3Zlci9mb2N1c1xyXG4gICAgYm9yZGVyLWNvbG9yOiAjY2YxMzIyICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xyXG4gIH1cclxufVxyXG5cclxuXHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
+      dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.NgClass, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.NgModel, ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_5__.NzIconDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_6__.NzColDirective, ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_6__.NzRowDirective, ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_7__.NzButtonComponent, ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_8__["ɵNzTransitionPatchDirective"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_9__.NzWaveDirective, ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_10__.NzDatePickerComponent, ng_zorro_antd_tooltip__WEBPACK_IMPORTED_MODULE_11__.NzTooltipDirective],
+      styles: [".date-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 3px;\n}\n.date-section[_ngcontent-%COMP%]     .ant-picker {\n  height: 24px !important;\n  min-height: 24px !important;\n  line-height: 24px !important;\n  padding: 0 8px !important;\n  font-size: 14px;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n}\n.date-section[_ngcontent-%COMP%]   button[nz-button][_ngcontent-%COMP%] {\n  height: 24px;\n  min-width: 24px;\n  padding: 0 8px;\n  font-size: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-sizing: border-box;\n}\n\n.check-button-saved[_ngcontent-%COMP%] {\n  background-color: #52c41a !important;\n  border-color: #52c41a !important;\n  color: #fff !important;\n}\n.check-button-saved[_ngcontent-%COMP%]:hover, .check-button-saved[_ngcontent-%COMP%]:focus {\n  background-color: #389e0d !important;\n  border-color: #389e0d !important;\n  color: #fff !important;\n}\n\n.check-button-undo[_ngcontent-%COMP%] {\n  background-color: #ff4d4f !important;\n  border-color: #ff4d4f !important;\n  color: #fff !important;\n}\n.check-button-undo[_ngcontent-%COMP%]:hover, .check-button-undo[_ngcontent-%COMP%]:focus {\n  background-color: #cf1322 !important;\n  border-color: #cf1322 !important;\n  color: #fff !important;\n}\n\n.check-button-disabled[_ngcontent-%COMP%] {\n  opacity: 0.6;\n  cursor: not-allowed;\n}\n.check-button-disabled[_ngcontent-%COMP%]:hover {\n  background-color: #f5f5f5 !important;\n  border-color: #d9d9d9 !important;\n  color: rgba(0, 0, 0, 0.25) !important;\n}\n.check-button-disabled[_ngcontent-%COMP%]:focus {\n  background-color: #f5f5f5 !important;\n  border-color: #d9d9d9 !important;\n  color: rgba(0, 0, 0, 0.25) !important;\n}\n\n  .ant-picker-disabled {\n  opacity: 0.6;\n  cursor: not-allowed;\n  background-color: #f5f5f5;\n  border-color: #d9d9d9;\n  color: rgba(0, 0, 0, 0.25);\n}\n  .ant-picker-disabled .ant-picker-input {\n  cursor: not-allowed;\n  color: rgba(0, 0, 0, 0.25);\n}\n  .ant-picker-disabled .ant-picker-suffix {\n  color: rgba(0, 0, 0, 0.25);\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY29tcGFzcy1jb250ZW50L3ByaW9yLWF1dGgvd29ya2xpc3QtdGFibGUvZ2xpZGlhbi13b3JrZmxvdy1jZWxsL2VhcmxpZXN0LWRhdGUtbWlsZXN0b25lL2VhcmxpZXN0LWRhdGUtbWlsZXN0b25lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsUUFBQTtBQUNGO0FBRUU7RUFDRSx1QkFBQTtFQUNBLDJCQUFBO0VBQ0EsNEJBQUE7RUFDQSx5QkFBQTtFQUNBLGVBQUE7RUFDQSxzQkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBQUFKO0FBR0U7RUFDRSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7RUFDQSxlQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxzQkFBQTtBQURKOztBQUtBO0VBQ0Usb0NBQUE7RUFDQSxnQ0FBQTtFQUNBLHNCQUFBO0FBRkY7QUFJRTtFQUVFLG9DQUFBO0VBQ0EsZ0NBQUE7RUFDQSxzQkFBQTtBQUhKOztBQU9BO0VBQ0Usb0NBQUE7RUFDQSxnQ0FBQTtFQUNBLHNCQUFBO0FBSkY7QUFNRTtFQUVFLG9DQUFBO0VBQ0EsZ0NBQUE7RUFDQSxzQkFBQTtBQUxKOztBQVNBO0VBQ0UsWUFBQTtFQUNBLG1CQUFBO0FBTkY7QUFRRTtFQUNFLG9DQUFBO0VBQ0EsZ0NBQUE7RUFDQSxxQ0FBQTtBQU5KO0FBU0U7RUFDRSxvQ0FBQTtFQUNBLGdDQUFBO0VBQ0EscUNBQUE7QUFQSjs7QUFZQTtFQUNFLFlBQUE7RUFDQSxtQkFBQTtFQUNBLHlCQUFBO0VBQ0EscUJBQUE7RUFDQSwwQkFBQTtBQVRGO0FBV0U7RUFDRSxtQkFBQTtFQUNBLDBCQUFBO0FBVEo7QUFZRTtFQUNFLDBCQUFBO0FBVkoiLCJzb3VyY2VzQ29udGVudCI6WyIuZGF0ZS1zZWN0aW9uIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgZ2FwOiAzcHg7XHJcblxyXG4gIC8vIFRhcmdldCB0aGUgaW5wdXQgaW5zaWRlIHRoZSBkYXRlIHBpY2tlclxyXG4gIDo6bmctZGVlcCAuYW50LXBpY2tlciB7XHJcbiAgICBoZWlnaHQ6IDI0cHggIWltcG9ydGFudDtcclxuICAgIG1pbi1oZWlnaHQ6IDI0cHggIWltcG9ydGFudDtcclxuICAgIGxpbmUtaGVpZ2h0OiAyNHB4ICFpbXBvcnRhbnQ7XHJcbiAgICBwYWRkaW5nOiAwIDhweCAhaW1wb3J0YW50O1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIH1cclxuXHJcbiAgYnV0dG9uW256LWJ1dHRvbl0ge1xyXG4gICAgaGVpZ2h0OiAyNHB4O1xyXG4gICAgbWluLXdpZHRoOiAyNHB4O1xyXG4gICAgcGFkZGluZzogMCA4cHg7XHJcbiAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICB9XHJcbn1cclxuXHJcbi5jaGVjay1idXR0b24tc2F2ZWQge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICM1MmM0MWEgIWltcG9ydGFudDsgICAvLyBORy1aT1JSTyBzdWNjZXNzIGdyZWVuXHJcbiAgYm9yZGVyLWNvbG9yOiAjNTJjNDFhICFpbXBvcnRhbnQ7XHJcbiAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcclxuXHJcbiAgJjpob3ZlcixcclxuICAmOmZvY3VzIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzODllMGQgIWltcG9ydGFudDsgLy8gRGFya2VyIGdyZWVuIG9uIGhvdmVyL2ZvY3VzXHJcbiAgICBib3JkZXItY29sb3I6ICMzODllMGQgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG59XHJcblxyXG4uY2hlY2stYnV0dG9uLXVuZG8ge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmZjRkNGYgIWltcG9ydGFudDsgICAvLyBORy1aT1JSTyBlcnJvciByZWRcclxuICBib3JkZXItY29sb3I6ICNmZjRkNGYgIWltcG9ydGFudDtcclxuICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xyXG5cclxuICAmOmhvdmVyLFxyXG4gICY6Zm9jdXMge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2NmMTMyMiAhaW1wb3J0YW50OyAvLyBEYXJrZXIgcmVkIG9uIGhvdmVyL2ZvY3VzXHJcbiAgICBib3JkZXItY29sb3I6ICNjZjEzMjIgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG59XHJcblxyXG4uY2hlY2stYnV0dG9uLWRpc2FibGVkIHtcclxuICBvcGFjaXR5OiAwLjY7XHJcbiAgY3Vyc29yOiBub3QtYWxsb3dlZDtcclxuICBcclxuICAmOmhvdmVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmNWY1ZjUgIWltcG9ydGFudDtcclxuICAgIGJvcmRlci1jb2xvcjogI2Q5ZDlkOSAhaW1wb3J0YW50O1xyXG4gICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4yNSkgIWltcG9ydGFudDtcclxuICB9XHJcblxyXG4gICY6Zm9jdXMge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y1ZjVmNSAhaW1wb3J0YW50O1xyXG4gICAgYm9yZGVyLWNvbG9yOiAjZDlkOWQ5ICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjI1KSAhaW1wb3J0YW50O1xyXG4gIH1cclxufVxyXG5cclxuLy8gRGlzYWJsZWQgZGF0ZSBwaWNrZXIgc3R5bGluZ1xyXG46Om5nLWRlZXAgLmFudC1waWNrZXItZGlzYWJsZWQge1xyXG4gIG9wYWNpdHk6IDAuNjtcclxuICBjdXJzb3I6IG5vdC1hbGxvd2VkO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7XHJcbiAgYm9yZGVyLWNvbG9yOiAjZDlkOWQ5O1xyXG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuMjUpO1xyXG5cclxuICAuYW50LXBpY2tlci1pbnB1dCB7XHJcbiAgICBjdXJzb3I6IG5vdC1hbGxvd2VkO1xyXG4gICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4yNSk7XHJcbiAgfVxyXG5cclxuICAuYW50LXBpY2tlci1zdWZmaXgge1xyXG4gICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4yNSk7XHJcbiAgfVxyXG59XHJcblxyXG5cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */"]
     });
   }
 }
@@ -18570,12 +18620,24 @@ class DocumentSelectionComponent {
     return this.highlightedRowId === doc.eventId;
   }
   /**
+   * Check if an event ID is valid for viewing in Cerner
+   * @param eventId - The event ID to check
+   * @returns true if the event ID is valid
+   */
+  isValidEventId(eventId) {
+    return !(!eventId || eventId === 0 || eventId === '0' || eventId === 0.0 || eventId === '0.0');
+  }
+  /**
    * Check if a document can be viewed in Cerner Document Viewer
    * @param doc - The document to check
    * @returns true if the document can be viewed in Cerner Document Viewer
    */
   canViewInCerner(doc) {
     if (!doc.eventType) {
+      return false;
+    }
+    // Don't show view buttons for invalid event IDs
+    if (!this.isValidEventId(doc.eventId)) {
       return false;
     }
     // Check if eventType matches supported types for Cerner Document Viewer
@@ -18589,6 +18651,10 @@ class DocumentSelectionComponent {
    */
   canViewInCernerProcedure(doc) {
     if (!doc.eventType) {
+      return false;
+    }
+    // Don't show view buttons for invalid event IDs
+    if (!this.isValidEventId(doc.eventId)) {
       return false;
     }
     // Check if eventType matches supported types for Cerner Procedure Viewer
@@ -34239,9 +34305,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-10-23T20:23:07.766Z
-const buildVersion = 'v0.0.299-new-document-viewer';
-const packageVersion = '0.0.299';
+// Generated on: 2025-10-23T21:15:02.113Z
+const buildVersion = 'v0.0.300-new-document-viewer';
+const packageVersion = '0.0.300';
 const gitBranch = 'new-document-viewer';
 
 /***/ }),
@@ -34252,7 +34318,7 @@ const gitBranch = 'new-document-viewer';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.299","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.300","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
