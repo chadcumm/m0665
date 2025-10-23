@@ -17242,10 +17242,14 @@ class DocumentPreviewDrawerComponent {
     if (this.document) {
       this.loadDocumentPreview();
     }
+    // Listen for messages from iframe buttons
+    window.addEventListener('message', this.handleIframeMessage.bind(this));
   }
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+    // Clean up message listener
+    window.removeEventListener('message', this.handleIframeMessage.bind(this));
   }
   ngOnChanges() {
     if (this.document && this.visible) {
@@ -17284,7 +17288,15 @@ class DocumentPreviewDrawerComponent {
           this.cdr.detectChanges();
         } else if (response.success === false) {
           const errorMessage = response.message || 'Unable to load document preview';
-          const errorHtml = `
+          // Check if this is the specific "No document content found" error
+          const isNoContentError = errorMessage.includes('No document content found for this event ID');
+          let displayMessage = errorMessage;
+          let displayTitle = 'Error Loading Document';
+          if (isNoContentError) {
+            displayTitle = 'Document Cannot Be Rendered';
+            displayMessage = 'This document can\'t be rendered in this view.';
+          }
+          let errorHtml = `
               <!DOCTYPE html>
               <html>
               <head>
@@ -17293,11 +17305,46 @@ class DocumentPreviewDrawerComponent {
                 <style>
                   body { font-family: Arial, sans-serif; padding: 20px; color: #d32f2f; }
                   h3 { color: #d32f2f; }
+                  .button-container { margin-top: 20px; }
+                  .view-button { 
+                    display: inline-block; 
+                    margin: 5px 10px 5px 0; 
+                    padding: 8px 16px; 
+                    background-color: #1890ff; 
+                    color: white; 
+                    text-decoration: none; 
+                    border-radius: 4px; 
+                    border: none; 
+                    cursor: pointer;
+                    font-size: 14px;
+                  }
+                  .view-button:hover { background-color: #40a9ff; }
+                  .view-button:disabled { 
+                    background-color: #d9d9d9; 
+                    color: #999; 
+                    cursor: not-allowed; 
+                  }
                 </style>
               </head>
               <body>
-                <h3>Error Loading Document</h3>
-                <p>${errorMessage}</p>
+                <h3>${displayTitle}</h3>
+                <p>${displayMessage}</p>
+            `;
+          if (isNoContentError) {
+            errorHtml += `
+                <div class="button-container">
+                  <button class="view-button" onclick="parent.postMessage({action: 'viewInCerner'}, '*')" 
+                          ${!this.document || !this.canViewInCerner(this.document) ? 'disabled' : ''}>
+                    📄 View Document
+                  </button>
+                  <button class="view-button" onclick="parent.postMessage({action: 'viewInCernerProcedure'}, '*')" 
+                          ${!this.document || !this.canViewInCernerProcedure(this.document) ? 'disabled' : ''}>
+                    🏥 View Procedure
+                  </button>
+                </div>
+              `;
+          }
+          errorHtml += `
               </body>
               </html>
             `;
@@ -17562,6 +17609,21 @@ class DocumentPreviewDrawerComponent {
       this.viewInCernerProcedure();
     } else {
       this.messagingService.warning('This document type cannot be viewed in any Cerner viewer');
+    }
+  }
+  /**
+   * Handle messages from iframe buttons
+   */
+  handleIframeMessage(event) {
+    if (event.data && event.data.action) {
+      switch (event.data.action) {
+        case 'viewInCerner':
+          this.viewInCerner();
+          break;
+        case 'viewInCernerProcedure':
+          this.viewInCernerProcedure();
+          break;
+      }
     }
   }
   static {
@@ -34197,9 +34259,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-10-23T17:23:26.041Z
-const buildVersion = 'v0.0.297-new-document-viewer';
-const packageVersion = '0.0.297';
+// Generated on: 2025-10-23T17:53:41.615Z
+const buildVersion = 'v0.0.298-new-document-viewer';
+const packageVersion = '0.0.298';
 const gitBranch = 'new-document-viewer';
 
 /***/ }),
@@ -34210,7 +34272,7 @@ const gitBranch = 'new-document-viewer';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.297","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.298","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
