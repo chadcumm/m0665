@@ -17066,16 +17066,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function DocumentPreviewDrawerComponent_div_0_span_14_Template(rf, ctx) {
+function DocumentPreviewDrawerComponent_div_0_span_17_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "span", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "span", 18);
   }
 }
-function DocumentPreviewDrawerComponent_div_0_div_19_Template(rf, ctx) {
+function DocumentPreviewDrawerComponent_div_0_div_22_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](1, "nz-spin", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "p", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](1, "nz-spin", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "p", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3, "Loading document preview...");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
   }
@@ -17084,15 +17084,15 @@ function DocumentPreviewDrawerComponent_div_0_div_19_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("nzSize", "large");
   }
 }
-function DocumentPreviewDrawerComponent_div_0_div_20_Template(rf, ctx) {
+function DocumentPreviewDrawerComponent_div_0_div_23_Template(rf, ctx) {
   if (rf & 1) {
     const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 21)(1, "iframe", 22);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("load", function DocumentPreviewDrawerComponent_div_0_div_20_Template_iframe_load_1_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 22)(1, "iframe", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("load", function DocumentPreviewDrawerComponent_div_0_div_23_Template_iframe_load_1_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r6);
       const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r5.onIframeLoad());
-    })("error", function DocumentPreviewDrawerComponent_div_0_div_20_Template_iframe_error_1_listener() {
+    })("error", function DocumentPreviewDrawerComponent_div_0_div_23_Template_iframe_error_1_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r6);
       const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r7.onIframeError());
@@ -17105,9 +17105,9 @@ function DocumentPreviewDrawerComponent_div_0_div_20_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("src", ctx_r3.previewDocumentUrl, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeResourceUrl"]);
   }
 }
-function DocumentPreviewDrawerComponent_div_0_div_21_Template(rf, ctx) {
+function DocumentPreviewDrawerComponent_div_0_div_24_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 23)(1, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 24)(1, "h3");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "No Content Available");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "p");
@@ -17135,38 +17135,47 @@ function DocumentPreviewDrawerComponent_div_0_Template(rf, ctx) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r10.viewInCerner());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](8, "span", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9, " View in Cerner ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9, " View Doc ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "button", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function DocumentPreviewDrawerComponent_div_0_Template_button_click_10_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r9);
       const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r11.selectDocument());
+      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r11.viewInCernerProcedure());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](11, "span", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](12, " Select ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](12, " View Proc ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "button", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "button", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function DocumentPreviewDrawerComponent_div_0_Template_button_click_13_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r9);
       const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r12.saveAsAttachment());
+      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r12.selectDocument());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](14, DocumentPreviewDrawerComponent_div_0_span_14_Template, 1, 0, "span", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](14, "span", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](15, " Select ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](16, "button", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](16, "button", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function DocumentPreviewDrawerComponent_div_0_Template_button_click_16_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r9);
       const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r13.closeDrawer());
+      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r13.saveAsAttachment());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](17, "span", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](18, " Close ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](17, DocumentPreviewDrawerComponent_div_0_span_17_Template, 1, 0, "span", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](19, "button", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function DocumentPreviewDrawerComponent_div_0_Template_button_click_19_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r9);
+      const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r14.closeDrawer());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](20, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](21, " Close ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](19, DocumentPreviewDrawerComponent_div_0_div_19_Template, 4, 1, "div", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](20, DocumentPreviewDrawerComponent_div_0_div_20_Template, 2, 1, "div", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](21, DocumentPreviewDrawerComponent_div_0_div_21_Template, 5, 0, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](22, DocumentPreviewDrawerComponent_div_0_div_22_Template, 4, 1, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](23, DocumentPreviewDrawerComponent_div_0_div_23_Template, 2, 1, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](24, DocumentPreviewDrawerComponent_div_0_div_24_Template, 5, 0, "div", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -17175,6 +17184,8 @@ function DocumentPreviewDrawerComponent_div_0_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"]("Document Preview: ", ctx_r0.previewDocumentTitle, "");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("disabled", !ctx_r0.document || !ctx_r0.canViewInCerner(ctx_r0.document))("nzTooltipTitle", ctx_r0.document && ctx_r0.canViewInCerner(ctx_r0.document) ? "View this document in Cerner Document Viewer" : "This document type cannot be viewed in Cerner Document Viewer");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("disabled", !ctx_r0.document || !ctx_r0.canViewInCernerProcedure(ctx_r0.document))("nzTooltipTitle", ctx_r0.document && ctx_r0.canViewInCernerProcedure(ctx_r0.document) ? "View this procedure in Cerner Procedure Viewer" : "This document type cannot be viewed in Cerner Procedure Viewer");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("disabled", !ctx_r0.canSelectDocument())("nzTooltipTitle", ctx_r0.canSelectDocument() ? "Select this document in the document list" : "Document not available for selection");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
@@ -17464,6 +17475,26 @@ class DocumentPreviewDrawerComponent {
     return supportedEventTypes.includes(doc.eventType);
   }
   /**
+   * Check if a document can be viewed in Cerner Procedure Viewer
+   * @param doc - The document to check
+   * @returns true if the document can be viewed in Cerner Procedure Viewer
+   */
+  canViewInCernerProcedure(doc) {
+    if (!doc.eventType) {
+      return false;
+    }
+    // Check if eventType matches supported types for Cerner Procedure Viewer
+    return doc.eventType === 'PROCEDURE';
+  }
+  /**
+   * Check if a document can be viewed in any Cerner viewer (Document or Procedure)
+   * @param doc - The document to check
+   * @returns true if the document can be viewed in any Cerner viewer
+   */
+  canViewInCernerAny(doc) {
+    return this.canViewInCerner(doc) || this.canViewInCernerProcedure(doc);
+  }
+  /**
    * View document in Cerner Document Viewer
    */
   viewInCerner() {
@@ -17492,6 +17523,47 @@ class DocumentPreviewDrawerComponent {
       console.error('Cerner Document Viewer error:', error);
     });
   }
+  /**
+   * View procedure in Cerner Procedure Viewer
+   */
+  viewInCernerProcedure() {
+    if (!this.document || !this.worklistItem?.personId) {
+      this.messagingService.error('No document or person ID available for procedure viewing');
+      return;
+    }
+    if (!this.canViewInCernerProcedure(this.document)) {
+      this.messagingService.warning('This document type cannot be viewed in Cerner Procedure Viewer');
+      return;
+    }
+    // Check if this is a fallback ID
+    if (typeof this.document.eventId === 'string' && this.document.eventId.startsWith('temp_')) {
+      this.messagingService.warning('Cannot view procedures with temporary IDs in Cerner Procedure Viewer');
+      return;
+    }
+    const eventId = typeof this.document.eventId === 'string' ? parseInt(this.document.eventId, 10) : this.document.eventId;
+    // Call the Cerner Procedure Viewer action
+    this.cernerActionService.CernerAction('PROC_VIEWER', {
+      personId: this.worklistItem.personId,
+      eventId: eventId
+    }).then(() => {
+      this.messagingService.success(`Opening "${this.document?.title}" in Cerner Procedure Viewer`);
+    }).catch(error => {
+      this.messagingService.error('Failed to open procedure in Cerner Procedure Viewer');
+      console.error('Cerner Procedure Viewer error:', error);
+    });
+  }
+  /**
+   * View document/procedure in the appropriate Cerner viewer
+   */
+  viewInCernerAppropriate() {
+    if (this.canViewInCerner(this.document)) {
+      this.viewInCerner();
+    } else if (this.canViewInCernerProcedure(this.document)) {
+      this.viewInCernerProcedure();
+    } else {
+      this.messagingService.warning('This document type cannot be viewed in any Cerner viewer');
+    }
+  }
   static {
     this.ɵfac = function DocumentPreviewDrawerComponent_Factory(t) {
       return new (t || DocumentPreviewDrawerComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_0__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_messaging_service__WEBPACK_IMPORTED_MODULE_1__.MessagingService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_cerner_action_service__WEBPACK_IMPORTED_MODULE_2__.CernerActionService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__.DomSanitizer), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__.ChangeDetectorRef));
@@ -17516,10 +17588,10 @@ class DocumentPreviewDrawerComponent {
       features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]],
       decls: 1,
       vars: 1,
-      consts: [["style", "position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 2000; display: flex;", 4, "ngIf"], [2, "position", "fixed", "top", "0", "left", "0", "width", "100%", "height", "100vh", "z-index", "2000", "display", "flex"], [2, "flex", "1", "background", "rgba(0, 0, 0, 0.45)", 3, "click"], [2, "width", "60%", "height", "100vh", "background", "white", "border-left", "1px solid #ddd", "padding", "20px", "overflow-y", "auto"], [2, "display", "flex", "justify-content", "space-between", "align-items", "center", "margin-bottom", "20px", "border-bottom", "1px solid #f0f0f0", "padding-bottom", "16px"], [2, "margin", "0", "font-size", "18px", "font-weight", "600", "color", "#262626"], [2, "display", "flex", "gap", "8px"], ["nz-button", "", "nzType", "default", "nzSize", "default", "nz-tooltip", "", 3, "disabled", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "eye"], ["nz-icon", "", "nzType", "check"], ["nz-button", "", "nzType", "primary", "nzSize", "default", "nz-tooltip", "", 3, "disabled", "nzLoading", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "save", 4, "ngIf"], ["nz-button", "", "nzType", "default", "nzSize", "default", 3, "click"], ["nz-icon", "", "nzType", "close"], ["style", "text-align: center; padding: 50px;", 4, "ngIf"], ["class", "document-preview-container", "style", "background: #fff; min-height: 400px; padding: 0;", 4, "ngIf"], ["style", "padding: 20px; text-align: center; color: #666;", 4, "ngIf"], ["nz-icon", "", "nzType", "save"], [2, "text-align", "center", "padding", "50px"], ["nzSimple", "", 3, "nzSize"], [2, "margin-top", "16px", "color", "#595959"], [1, "document-preview-container", 2, "background", "#fff", "min-height", "400px", "padding", "0"], ["title", "Document Preview", 2, "width", "100%", "height", "calc(100vh - 200px)", "border", "none", 3, "src", "load", "error"], [2, "padding", "20px", "text-align", "center", "color", "#666"]],
+      consts: [["style", "position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 2000; display: flex;", 4, "ngIf"], [2, "position", "fixed", "top", "0", "left", "0", "width", "100%", "height", "100vh", "z-index", "2000", "display", "flex"], [2, "flex", "1", "background", "rgba(0, 0, 0, 0.45)", 3, "click"], [2, "width", "60%", "height", "100vh", "background", "white", "border-left", "1px solid #ddd", "padding", "20px", "overflow-y", "auto"], [2, "display", "flex", "justify-content", "space-between", "align-items", "center", "margin-bottom", "20px", "border-bottom", "1px solid #f0f0f0", "padding-bottom", "16px"], [2, "margin", "0", "font-size", "18px", "font-weight", "600", "color", "#262626"], [2, "display", "flex", "gap", "8px"], ["nz-button", "", "nzType", "default", "nzSize", "default", "nz-tooltip", "", 3, "disabled", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "file-text"], ["nz-icon", "", "nzType", "medicine-box"], ["nz-icon", "", "nzType", "check"], ["nz-button", "", "nzType", "primary", "nzSize", "default", "nz-tooltip", "", 3, "disabled", "nzLoading", "nzTooltipTitle", "click"], ["nz-icon", "", "nzType", "save", 4, "ngIf"], ["nz-button", "", "nzType", "default", "nzSize", "default", 3, "click"], ["nz-icon", "", "nzType", "close"], ["style", "text-align: center; padding: 50px;", 4, "ngIf"], ["class", "document-preview-container", "style", "background: #fff; min-height: 400px; padding: 0;", 4, "ngIf"], ["style", "padding: 20px; text-align: center; color: #666;", 4, "ngIf"], ["nz-icon", "", "nzType", "save"], [2, "text-align", "center", "padding", "50px"], ["nzSimple", "", 3, "nzSize"], [2, "margin-top", "16px", "color", "#595959"], [1, "document-preview-container", 2, "background", "#fff", "min-height", "400px", "padding", "0"], ["title", "Document Preview", 2, "width", "100%", "height", "calc(100vh - 200px)", "border", "none", 3, "src", "load", "error"], [2, "padding", "20px", "text-align", "center", "color", "#666"]],
       template: function DocumentPreviewDrawerComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, DocumentPreviewDrawerComponent_div_0_Template, 22, 13, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, DocumentPreviewDrawerComponent_div_0_Template, 25, 15, "div", 0);
         }
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx.visible);
@@ -17587,8 +17659,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function DocumentSelectionComponent_div_1_div_3_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](3, "Warning:");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
@@ -17598,39 +17670,54 @@ function DocumentSelectionComponent_div_1_div_3_Template(rf, ctx) {
 }
 function DocumentSelectionComponent_div_1_tr_23_button_15_Template(rf, ctx) {
   if (rf & 1) {
-    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 42);
+    const _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_div_1_tr_23_button_15_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r12);
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r13);
       const doc_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
-      const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r10.viewInCerner(doc_r8));
+      const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r11.viewInCerner(doc_r8));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2, " View ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2, " Doc ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+}
+function DocumentSelectionComponent_div_1_tr_23_button_16_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_div_1_tr_23_button_16_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r16);
+      const doc_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+      const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r14.viewInCernerProcedure(doc_r8));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2, " Proc ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
 }
 function DocumentSelectionComponent_div_1_tr_23_Template(rf, ctx) {
   if (rf & 1) {
-    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "tr", 38);
+    const _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "tr", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_div_1_tr_23_Template_tr_click_0_listener() {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r14);
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r18);
       const doc_r8 = restoredCtx.$implicit;
-      const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r13.previewDocument(doc_r8));
+      const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r17.previewDocument(doc_r8));
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "td", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "td", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_div_1_tr_23_Template_td_click_1_listener($event) {
       return $event.stopPropagation();
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "label", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "label", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("ngModelChange", function DocumentSelectionComponent_div_1_tr_23_Template_label_ngModelChange_2_listener($event) {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r14);
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r18);
       const doc_r8 = restoredCtx.$implicit;
-      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r16.toggleDocumentSelection(doc_r8, $event));
+      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r20.toggleDocumentSelection(doc_r8, $event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "td");
@@ -17649,11 +17736,12 @@ function DocumentSelectionComponent_div_1_tr_23_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](12, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](13);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "td", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "td", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_div_1_tr_23_Template_td_click_14_listener($event) {
       return $event.stopPropagation();
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](15, DocumentSelectionComponent_div_1_tr_23_button_15_Template, 3, 0, "button", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](15, DocumentSelectionComponent_div_1_tr_23_button_15_Template, 3, 0, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](16, DocumentSelectionComponent_div_1_tr_23_button_16_Template, 3, 0, "button", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
@@ -17663,7 +17751,7 @@ function DocumentSelectionComponent_div_1_tr_23_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngModel", ctx_r7.selectedDocuments.has(doc_r8.eventId))("nzDisabled", false);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind2"](5, 10, doc_r8.effectiveDate, "short"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind2"](5, 11, doc_r8.effectiveDate, "short"));
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r8.type);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
@@ -17674,6 +17762,8 @@ function DocumentSelectionComponent_div_1_tr_23_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r8.source);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r7.canViewInCerner(doc_r8));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r7.canViewInCernerProcedure(doc_r8));
   }
 }
 const _c0 = function () {
@@ -17683,42 +17773,42 @@ const _c0 = function () {
 };
 function DocumentSelectionComponent_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r19 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 23)(1, "h4");
+    const _r23 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 24)(1, "h4");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, DocumentSelectionComponent_div_1_div_3_Template, 5, 0, "div", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](4, "nz-table", 25, 26)(6, "thead")(7, "tr")(8, "th", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, DocumentSelectionComponent_div_1_div_3_Template, 5, 0, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](4, "nz-table", 26, 27)(6, "thead")(7, "tr")(8, "th", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](9, "Select");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](10, "th", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](10, "th", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](11, "Date");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](12, "th", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](12, "th", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](13, "Type");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "th", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "th", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](15, "Title");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](16, "th", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](16, "th", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](17, "Author");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](18, "th", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](18, "th", 32);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](19, "Source");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](20, "th", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](20, "th", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](21, "Actions");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](22, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](23, DocumentSelectionComponent_div_1_tr_23_Template, 16, 13, "tr", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](23, DocumentSelectionComponent_div_1_tr_23_Template, 17, 14, "tr", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](24, "div", 33)(25, "button", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](24, "div", 34)(25, "button", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_div_1_Template_button_click_25_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r19);
-      const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r18.removeSelectedAttachments());
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r23);
+      const ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r22.removeSelectedAttachments());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](26, "span", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](26, "span", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](27);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
   }
@@ -17741,13 +17831,13 @@ function DocumentSelectionComponent_div_1_Template(rf, ctx) {
 }
 function DocumentSelectionComponent_ng_template_17_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](0, "span", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](0, "span", 46);
   }
 }
 function DocumentSelectionComponent_div_22_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 44);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "nz-spin", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "nz-spin", 48);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -17757,39 +17847,54 @@ function DocumentSelectionComponent_div_22_Template(rf, ctx) {
 }
 function DocumentSelectionComponent_nz_table_23_tr_19_button_15_Template(rf, ctx) {
   if (rf & 1) {
-    const _r26 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 42);
+    const _r31 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_nz_table_23_tr_19_button_15_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r26);
-      const doc_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
-      const ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r24.viewInCerner(doc_r22));
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r31);
+      const doc_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+      const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r29.viewInCerner(doc_r26));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2, " View ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2, " Doc ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+  }
+}
+function DocumentSelectionComponent_nz_table_23_tr_19_button_16_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r34 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "button", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_nz_table_23_tr_19_button_16_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r34);
+      const doc_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
+      const ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r32.viewInCernerProcedure(doc_r26));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "span", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2, " Proc ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
   }
 }
 function DocumentSelectionComponent_nz_table_23_tr_19_Template(rf, ctx) {
   if (rf & 1) {
-    const _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "tr", 38);
+    const _r36 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "tr", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_nz_table_23_tr_19_Template_tr_click_0_listener() {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r28);
-      const doc_r22 = restoredCtx.$implicit;
-      const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r27.previewDocument(doc_r22));
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r36);
+      const doc_r26 = restoredCtx.$implicit;
+      const ctx_r35 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r35.previewDocument(doc_r26));
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "td", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "td", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_nz_table_23_tr_19_Template_td_click_1_listener($event) {
       return $event.stopPropagation();
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "label", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "label", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("ngModelChange", function DocumentSelectionComponent_nz_table_23_tr_19_Template_label_ngModelChange_2_listener($event) {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r28);
-      const doc_r22 = restoredCtx.$implicit;
-      const ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r30.toggleDocumentSelection(doc_r22, $event));
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r36);
+      const doc_r26 = restoredCtx.$implicit;
+      const ctx_r38 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵresetView"](ctx_r38.toggleDocumentSelection(doc_r26, $event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](3, "td");
@@ -17808,31 +17913,34 @@ function DocumentSelectionComponent_nz_table_23_tr_19_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](12, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](13);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "td", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "td", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_nz_table_23_tr_19_Template_td_click_14_listener($event) {
       return $event.stopPropagation();
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](15, DocumentSelectionComponent_nz_table_23_tr_19_button_15_Template, 3, 0, "button", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](15, DocumentSelectionComponent_nz_table_23_tr_19_button_15_Template, 3, 0, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](16, DocumentSelectionComponent_nz_table_23_tr_19_button_16_Template, 3, 0, "button", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const doc_r22 = ctx.$implicit;
-    const ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("highlighted-row", ctx_r21.isRowHighlighted(doc_r22));
+    const doc_r26 = ctx.$implicit;
+    const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵclassProp"]("highlighted-row", ctx_r25.isRowHighlighted(doc_r26));
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngModel", ctx_r21.selectedDocuments.has(doc_r22.eventId))("nzDisabled", doc_r22.isAttached);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngModel", ctx_r25.selectedDocuments.has(doc_r26.eventId))("nzDisabled", doc_r26.isAttached);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind2"](5, 10, doc_r22.effectiveDate, "short"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind2"](5, 11, doc_r26.effectiveDate, "short"));
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r22.type);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r26.type);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r22.title);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r26.title);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r22.author);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r26.author);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r22.source);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](doc_r26.source);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r21.canViewInCerner(doc_r22));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r25.canViewInCerner(doc_r26));
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx_r25.canViewInCernerProcedure(doc_r26));
   }
 }
 const _c1 = function () {
@@ -17845,33 +17953,33 @@ const _c2 = function () {
 };
 function DocumentSelectionComponent_nz_table_23_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "nz-table", 46, 47)(2, "thead")(3, "tr")(4, "th", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "nz-table", 49, 50)(2, "thead")(3, "tr")(4, "th", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](5, "Select");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](6, "th", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](6, "th", 51);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](7, " Date ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](8, "th", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](8, "th", 52);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](9, " Type ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](10, "th", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](10, "th", 53);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](11, " Title ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](12, "th", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](12, "th", 52);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](13, " Author ");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "th", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](14, "th", 32);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](15, "Source");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](16, "th", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](16, "th", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](17, "Actions");
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()()();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](18, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](19, DocumentSelectionComponent_nz_table_23_tr_19_Template, 16, 13, "tr", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](19, DocumentSelectionComponent_nz_table_23_tr_19_Template, 17, 14, "tr", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵreference"](1);
+    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵreference"](1);
     const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzData", ctx_r4.filteredDocuments)("nzSize", "small")("nzLoading", ctx_r4.isLoadingDocuments)("nzScroll", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction0"](14, _c1))("nzPageSize", 50);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](6);
@@ -17883,7 +17991,7 @@ function DocumentSelectionComponent_nz_table_23_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzSortFn", ctx_r4.sortByAuthor)("nzSortDirections", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction0"](18, _c2));
     _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", _r20.data);
+    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", _r24.data);
   }
 }
 const _c3 = function () {
@@ -18463,6 +18571,26 @@ class DocumentSelectionComponent {
     return supportedEventTypes.includes(doc.eventType);
   }
   /**
+   * Check if a document can be viewed in Cerner Procedure Viewer
+   * @param doc - The document to check
+   * @returns true if the document can be viewed in Cerner Procedure Viewer
+   */
+  canViewInCernerProcedure(doc) {
+    if (!doc.eventType) {
+      return false;
+    }
+    // Check if eventType matches supported types for Cerner Procedure Viewer
+    return doc.eventType === 'PROCEDURE';
+  }
+  /**
+   * Check if a document can be viewed in any Cerner viewer (Document or Procedure)
+   * @param doc - The document to check
+   * @returns true if the document can be viewed in any Cerner viewer
+   */
+  canViewInCernerAny(doc) {
+    return this.canViewInCerner(doc) || this.canViewInCernerProcedure(doc);
+  }
+  /**
    * View document in Cerner Document Viewer
    * @param doc - The document to view
    */
@@ -18493,6 +18621,49 @@ class DocumentSelectionComponent {
     });
   }
   /**
+   * View procedure in Cerner Procedure Viewer
+   * @param doc - The procedure to view
+   */
+  viewInCernerProcedure(doc) {
+    if (!this.worklistItem?.personId) {
+      this.messagingService.error('No person ID available for procedure viewing');
+      return;
+    }
+    if (!this.canViewInCernerProcedure(doc)) {
+      this.messagingService.warning('This document type cannot be viewed in Cerner Procedure Viewer');
+      return;
+    }
+    // Check if this is a fallback ID
+    if (typeof doc.eventId === 'string' && doc.eventId.startsWith('temp_')) {
+      this.messagingService.warning('Cannot view procedures with temporary IDs in Cerner Procedure Viewer');
+      return;
+    }
+    const eventId = typeof doc.eventId === 'string' ? parseInt(doc.eventId, 10) : doc.eventId;
+    // Call the Cerner Procedure Viewer action
+    this.cernerActionService.CernerAction('PROC_VIEWER', {
+      personId: this.worklistItem.personId,
+      eventId: eventId
+    }).then(() => {
+      this.messagingService.success(`Opening "${doc.title}" in Cerner Procedure Viewer`);
+    }).catch(error => {
+      this.messagingService.error('Failed to open procedure in Cerner Procedure Viewer');
+      console.error('Cerner Procedure Viewer error:', error);
+    });
+  }
+  /**
+   * View document/procedure in the appropriate Cerner viewer
+   * @param doc - The document/procedure to view
+   */
+  viewInCernerAppropriate(doc) {
+    if (this.canViewInCerner(doc)) {
+      this.viewInCerner(doc);
+    } else if (this.canViewInCernerProcedure(doc)) {
+      this.viewInCernerProcedure(doc);
+    } else {
+      this.messagingService.warning('This document type cannot be viewed in any Cerner viewer');
+    }
+  }
+  /**
    * View multiple documents in Cerner Document Viewer
    * @param documents - Array of documents to view
    */
@@ -18501,7 +18672,7 @@ class DocumentSelectionComponent {
       this.messagingService.error('No person ID available for document viewing');
       return;
     }
-    // Filter documents that can be viewed in Cerner
+    // Filter documents that can be viewed in Cerner Document Viewer
     const viewableDocs = documents.filter(doc => this.canViewInCerner(doc));
     if (viewableDocs.length === 0) {
       this.messagingService.warning('No documents can be viewed in Cerner Document Viewer');
@@ -18528,6 +18699,68 @@ class DocumentSelectionComponent {
     });
   }
   /**
+   * View multiple procedures in Cerner Procedure Viewer
+   * @param documents - Array of procedures to view
+   */
+  viewMultipleInCernerProcedure(documents) {
+    if (!this.worklistItem?.personId) {
+      this.messagingService.error('No person ID available for procedure viewing');
+      return;
+    }
+    // Filter documents that can be viewed in Cerner Procedure Viewer
+    const viewableDocs = documents.filter(doc => this.canViewInCernerProcedure(doc));
+    if (viewableDocs.length === 0) {
+      this.messagingService.warning('No procedures can be viewed in Cerner Procedure Viewer');
+      return;
+    }
+    if (viewableDocs.length !== documents.length) {
+      this.messagingService.warning(`${documents.length - viewableDocs.length} document(s) cannot be viewed in Cerner Procedure Viewer and will be skipped`);
+    }
+    // Extract event IDs, filtering out fallback IDs
+    const eventIds = viewableDocs.filter(doc => !(typeof doc.eventId === 'string' && doc.eventId.startsWith('temp_'))).map(doc => typeof doc.eventId === 'string' ? parseInt(doc.eventId, 10) : doc.eventId);
+    if (eventIds.length === 0) {
+      this.messagingService.warning('No valid procedures to view in Cerner Procedure Viewer');
+      return;
+    }
+    // Call the Cerner Procedure Viewer action with multiple procedures
+    this.cernerActionService.CernerAction('PROC_VIEWER', {
+      personId: this.worklistItem.personId,
+      eventIds: eventIds
+    }).then(() => {
+      this.messagingService.success(`Opening ${eventIds.length} procedure(s) in Cerner Procedure Viewer`);
+    }).catch(error => {
+      this.messagingService.error('Failed to open procedures in Cerner Procedure Viewer');
+      console.error('Cerner Procedure Viewer error:', error);
+    });
+  }
+  /**
+   * View multiple documents/procedures in appropriate Cerner viewers
+   * @param documents - Array of documents/procedures to view
+   */
+  viewMultipleInCernerAppropriate(documents) {
+    if (!this.worklistItem?.personId) {
+      this.messagingService.error('No person ID available for viewing');
+      return;
+    }
+    // Separate documents and procedures
+    const documentsToView = documents.filter(doc => this.canViewInCerner(doc));
+    const proceduresToView = documents.filter(doc => this.canViewInCernerProcedure(doc));
+    if (documentsToView.length === 0 && proceduresToView.length === 0) {
+      this.messagingService.warning('No documents or procedures can be viewed in Cerner viewers');
+      return;
+    }
+    // View documents if any
+    if (documentsToView.length > 0) {
+      this.viewMultipleInCerner(documentsToView);
+    }
+    // View procedures if any (with a small delay to avoid conflicts)
+    if (proceduresToView.length > 0) {
+      setTimeout(() => {
+        this.viewMultipleInCernerProcedure(proceduresToView);
+      }, 500);
+    }
+  }
+  /**
    * View selected documents in Cerner Document Viewer
    */
   viewSelectedInCerner() {
@@ -18538,6 +18771,30 @@ class DocumentSelectionComponent {
     // Get selected documents from both available and attached lists
     const selectedDocs = [...this.availableDocuments.filter(doc => this.selectedDocuments.has(doc.eventId)), ...this.attachedDocuments.filter(doc => this.selectedDocuments.has(doc.eventId))];
     this.viewMultipleInCerner(selectedDocs);
+  }
+  /**
+   * View selected procedures in Cerner Procedure Viewer
+   */
+  viewSelectedInCernerProcedure() {
+    if (this.selectedDocuments.size === 0) {
+      this.messagingService.info('No procedures selected for viewing');
+      return;
+    }
+    // Get selected documents from both available and attached lists
+    const selectedDocs = [...this.availableDocuments.filter(doc => this.selectedDocuments.has(doc.eventId)), ...this.attachedDocuments.filter(doc => this.selectedDocuments.has(doc.eventId))];
+    this.viewMultipleInCernerProcedure(selectedDocs);
+  }
+  /**
+   * View selected documents/procedures in appropriate Cerner viewers
+   */
+  viewSelectedInCernerAppropriate() {
+    if (this.selectedDocuments.size === 0) {
+      this.messagingService.info('No documents selected for viewing');
+      return;
+    }
+    // Get selected documents from both available and attached lists
+    const selectedDocs = [...this.availableDocuments.filter(doc => this.selectedDocuments.has(doc.eventId)), ...this.attachedDocuments.filter(doc => this.selectedDocuments.has(doc.eventId))];
+    this.viewMultipleInCernerAppropriate(selectedDocs);
   }
   static {
     this.ɵfac = function DocumentSelectionComponent_Factory(t) {
@@ -18556,9 +18813,9 @@ class DocumentSelectionComponent {
         documentsUpdated: "documentsUpdated",
         documentsRefreshed: "documentsRefreshed"
       },
-      decls: 32,
-      vars: 22,
-      consts: [[1, "document-selection-container"], ["class", "attached-section", 4, "ngIf"], [1, "available-documents-controls", 2, "margin-top", "16px"], [1, "document-actions"], [1, "left-actions"], ["nzClearText", "Clear", 2, "width", "200px", "margin-right", "8px", 3, "nzPlaceHolder", "ngModel", "nzAllowClear", "ngModelChange", "nzOnCalendarChange"], ["nz-button", "", "nzType", "default", 2, "margin-right", "8px", 3, "disabled", "click"], ["nz-button", "", "nz-tooltip", "", "nzTooltipTitle", "Set date range to cover all possible dates (1900-2100)", 2, "margin-right", "8px", 3, "nzType", "click"], ["nz-icon", "", "nzType", "calendar"], ["nz-button", "", "nzType", "default", 3, "nzLoading", "click"], ["nz-icon", "", "nzType", "reload"], [1, "right-actions"], [2, "width", "200px", "margin-right", "8px", 3, "nzPrefix"], ["nz-input", "", "type", "text", "placeholder", "Search documents...", 3, "ngModel", "ngModelChange"], ["searchIcon", ""], [1, "available-section", 2, "margin-top", "16px"], ["style", "text-align: center; padding: 20px;", 4, "ngIf"], [3, "nzData", "nzSize", "nzLoading", "nzScroll", "nzPageSize", 4, "ngIf"], [1, "save-actions", 2, "margin-top", "16px", "text-align", "right"], ["nz-icon", "", "nzType", "eye"], ["nz-button", "", "nzType", "primary", 3, "disabled", "nzLoading", "click"], ["nz-icon", "", "nzType", "save"], [3, "visible", "document", "worklistItem", "availableDocuments", "attachedDocuments", "close", "documentAttached", "documentSelected"], [1, "attached-section"], ["class", "fallback-id-warning", "style", "background-color: #fff2e8; border: 1px solid #ffbb96; padding: 8px; margin-bottom: 8px; border-radius: 4px;", 4, "ngIf"], [3, "nzData", "nzSize", "nzShowPagination", "nzScroll"], ["attachedTable", ""], ["nzWidth", "50px"], ["nzWidth", "100px"], ["nzWidth", "120px"], ["nzWidth", "150px"], ["nzWidth", "80px"], ["style", "cursor: pointer;", 3, "highlighted-row", "click", 4, "ngFor", "ngForOf"], [2, "margin-top", "8px"], ["nz-button", "", "nzType", "default", "nzDanger", "", 3, "disabled", "nzLoading", "click"], ["nz-icon", "", "nzType", "delete"], [1, "fallback-id-warning", 2, "background-color", "#fff2e8", "border", "1px solid #ffbb96", "padding", "8px", "margin-bottom", "8px", "border-radius", "4px"], ["nz-icon", "", "nzType", "warning", "nzTheme", "outline", 2, "color", "#fa8c16", "margin-right", "8px"], [2, "cursor", "pointer", 3, "click"], [3, "click"], ["nz-checkbox", "", 3, "ngModel", "nzDisabled", "ngModelChange"], ["nz-button", "", "nzType", "link", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "View in Cerner Document Viewer", 3, "click", 4, "ngIf"], ["nz-button", "", "nzType", "link", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "View in Cerner Document Viewer", 3, "click"], ["nz-icon", "", "nzType", "search"], [2, "text-align", "center", "padding", "20px"], ["nzSimple", "", 3, "nzSize"], [3, "nzData", "nzSize", "nzLoading", "nzScroll", "nzPageSize"], ["documentsTable", ""], ["nzWidth", "100px", "nzSortOrder", "null", 3, "nzSortFn", "nzSortDirections"], ["nzWidth", "120px", "nzSortOrder", "null", 3, "nzSortFn", "nzSortDirections"], ["nzWidth", "150px", "nzSortOrder", "null", 3, "nzSortFn", "nzSortDirections"]],
+      decls: 35,
+      vars: 23,
+      consts: [[1, "document-selection-container"], ["class", "attached-section", 4, "ngIf"], [1, "available-documents-controls", 2, "margin-top", "16px"], [1, "document-actions"], [1, "left-actions"], ["nzClearText", "Clear", 2, "width", "200px", "margin-right", "8px", 3, "nzPlaceHolder", "ngModel", "nzAllowClear", "ngModelChange", "nzOnCalendarChange"], ["nz-button", "", "nzType", "default", 2, "margin-right", "8px", 3, "disabled", "click"], ["nz-button", "", "nz-tooltip", "", "nzTooltipTitle", "Set date range to cover all possible dates (1900-2100)", 2, "margin-right", "8px", 3, "nzType", "click"], ["nz-icon", "", "nzType", "calendar"], ["nz-button", "", "nzType", "default", 3, "nzLoading", "click"], ["nz-icon", "", "nzType", "reload"], [1, "right-actions"], [2, "width", "200px", "margin-right", "8px", 3, "nzPrefix"], ["nz-input", "", "type", "text", "placeholder", "Search documents...", 3, "ngModel", "ngModelChange"], ["searchIcon", ""], [1, "available-section", 2, "margin-top", "16px"], ["style", "text-align: center; padding: 20px;", 4, "ngIf"], [3, "nzData", "nzSize", "nzLoading", "nzScroll", "nzPageSize", 4, "ngIf"], [1, "save-actions", 2, "margin-top", "16px", "text-align", "right"], ["nz-icon", "", "nzType", "file-text"], ["nz-icon", "", "nzType", "medicine-box"], ["nz-button", "", "nzType", "primary", 3, "disabled", "nzLoading", "click"], ["nz-icon", "", "nzType", "save"], [3, "visible", "document", "worklistItem", "availableDocuments", "attachedDocuments", "close", "documentAttached", "documentSelected"], [1, "attached-section"], ["class", "fallback-id-warning", "style", "background-color: #fff2e8; border: 1px solid #ffbb96; padding: 8px; margin-bottom: 8px; border-radius: 4px;", 4, "ngIf"], [3, "nzData", "nzSize", "nzShowPagination", "nzScroll"], ["attachedTable", ""], ["nzWidth", "50px"], ["nzWidth", "100px"], ["nzWidth", "120px"], ["nzWidth", "150px"], ["nzWidth", "80px"], ["style", "cursor: pointer;", 3, "highlighted-row", "click", 4, "ngFor", "ngForOf"], [2, "margin-top", "8px"], ["nz-button", "", "nzType", "default", "nzDanger", "", 3, "disabled", "nzLoading", "click"], ["nz-icon", "", "nzType", "delete"], [1, "fallback-id-warning", 2, "background-color", "#fff2e8", "border", "1px solid #ffbb96", "padding", "8px", "margin-bottom", "8px", "border-radius", "4px"], ["nz-icon", "", "nzType", "warning", "nzTheme", "outline", 2, "color", "#fa8c16", "margin-right", "8px"], [2, "cursor", "pointer", 3, "click"], [3, "click"], ["nz-checkbox", "", 3, "ngModel", "nzDisabled", "ngModelChange"], ["nz-button", "", "nzType", "link", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "View in Cerner Document Viewer", 3, "click", 4, "ngIf"], ["nz-button", "", "nzType", "link", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "View in Cerner Procedure Viewer", "style", "margin-left: 4px;", 3, "click", 4, "ngIf"], ["nz-button", "", "nzType", "link", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "View in Cerner Document Viewer", 3, "click"], ["nz-button", "", "nzType", "link", "nzSize", "small", "nz-tooltip", "", "nzTooltipTitle", "View in Cerner Procedure Viewer", 2, "margin-left", "4px", 3, "click"], ["nz-icon", "", "nzType", "search"], [2, "text-align", "center", "padding", "20px"], ["nzSimple", "", 3, "nzSize"], [3, "nzData", "nzSize", "nzLoading", "nzScroll", "nzPageSize"], ["documentsTable", ""], ["nzWidth", "100px", "nzSortOrder", "null", 3, "nzSortFn", "nzSortDirections"], ["nzWidth", "120px", "nzSortOrder", "null", 3, "nzSortFn", "nzSortDirections"], ["nzWidth", "150px", "nzSortOrder", "null", 3, "nzSortFn", "nzSortDirections"]],
       template: function DocumentSelectionComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
@@ -18610,21 +18867,28 @@ class DocumentSelectionComponent {
             return ctx.viewSelectedInCerner();
           });
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](26, "span", 19);
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](27, " View Selected in Cerner ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](27, " View Docs in Cerner ");
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](28, "button", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](28, "button", 6);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_Template_button_click_28_listener() {
+            return ctx.viewSelectedInCernerProcedure();
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](29, "span", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](30, " View Procs in Cerner ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](31, "button", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function DocumentSelectionComponent_Template_button_click_31_listener() {
             return ctx.saveAttachments();
           });
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](29, "span", 21);
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](32, "span", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](33);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](31, "app-document-preview-drawer", 22);
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("close", function DocumentSelectionComponent_Template_app_document_preview_drawer_close_31_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](34, "app-document-preview-drawer", 23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("close", function DocumentSelectionComponent_Template_app_document_preview_drawer_close_34_listener() {
             return ctx.closePreviewModal();
-          })("documentAttached", function DocumentSelectionComponent_Template_app_document_preview_drawer_documentAttached_31_listener() {
+          })("documentAttached", function DocumentSelectionComponent_Template_app_document_preview_drawer_documentAttached_34_listener() {
             return ctx.onDocumentAttached();
-          })("documentSelected", function DocumentSelectionComponent_Template_app_document_preview_drawer_documentSelected_31_listener($event) {
+          })("documentSelected", function DocumentSelectionComponent_Template_app_document_preview_drawer_documentSelected_34_listener($event) {
             return ctx.onDocumentSelected($event);
           });
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
@@ -18634,7 +18898,7 @@ class DocumentSelectionComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.attachedDocuments.length > 0);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzPlaceHolder", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction0"](21, _c3))("ngModel", ctx.dateRange)("nzAllowClear", true);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("nzPlaceHolder", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction0"](22, _c3))("ngModel", ctx.dateRange)("nzAllowClear", true);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("disabled", !ctx.beginDate && !ctx.endDate);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
@@ -18652,6 +18916,8 @@ class DocumentSelectionComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", !ctx.isLoadingDocuments);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("disabled", !ctx.hasSelectedDocuments());
+          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("disabled", !ctx.hasSelectedDocuments());
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
           _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("disabled", !ctx.hasSelectedAvailableDocuments())("nzLoading", ctx.isSavingAttachments);
@@ -26253,7 +26519,7 @@ class CernerActionService {
     this.mPage = mPage;
   }
   /**
-   * Handles Cerner actions such as OPENCHART, VIEWORDER, APPT_VIEW, APPT_HX_VIEW, and DOC_VIEWER.
+   * Handles Cerner actions such as OPENCHART, VIEWORDER, APPT_VIEW, APPT_HX_VIEW, DOC_VIEWER, and PROC_VIEWER.
    * Now supports async/await for actions that require DiscernObjectFactory.
    * @param action The Cerner action to perform
    * @param data The data required for the action
@@ -26330,6 +26596,13 @@ class CernerActionService {
               yield _this.viewDocumentAsync(data);
             } catch (error) {
               _this.mPage.putLog('DOC_VIEWER error: ' + error);
+            }
+            break;
+          case 'PROC_VIEWER':
+            try {
+              yield _this.viewProcedureAsync(data);
+            } catch (error) {
+              _this.mPage.putLog('PROC_VIEWER error: ' + error);
             }
             break;
           default:
@@ -26631,6 +26904,48 @@ class CernerActionService {
         _this7.mPage.putLog('DOC_VIEWER: Document viewer launched successfully for personId=' + data.personId);
       } catch (error) {
         _this7.mPage.putLog('DOC_VIEWER failed: ' + error);
+        // Log failure details for troubleshooting
+        throw error;
+      }
+    })();
+  }
+  /**
+   * Opens the Procedure Viewer for one or more procedures using DiscernObjectFactory
+   * Supports displaying procedures with event class code "PROCEDURE"
+   * @param data Object containing personId and eventId(s) for the procedure(s) to view
+   */
+  viewProcedureAsync(data) {
+    var _this8 = this;
+    return (0,C_github_chadcumm_cov_compass_org_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      try {
+        // Validate required data
+        if (!data.personId) {
+          throw new Error('personId is required for PROC_VIEWER action');
+        }
+        if (!data.eventId && !data.eventIds) {
+          throw new Error('eventId or eventIds is required for PROC_VIEWER action');
+        }
+        // Create Procedure Viewer object using DiscernObjectFactory
+        const procViewer = yield window.external.DiscernObjectFactory("PVVIEWERMPAGE");
+        // Initialize the procedure viewer with the person ID
+        procViewer.CreateProcViewer(data.personId);
+        // Handle single event ID
+        if (data.eventId) {
+          procViewer.AppendProcEvent(data.eventId);
+          _this8.mPage.putLog('PROC_VIEWER: Added single procedure eventId=' + data.eventId);
+        }
+        // Handle multiple event IDs
+        if (data.eventIds && Array.isArray(data.eventIds)) {
+          for (const eventId of data.eventIds) {
+            procViewer.AppendProcEvent(eventId);
+            _this8.mPage.putLog('PROC_VIEWER: Added procedure eventId=' + eventId);
+          }
+        }
+        // Launch the procedure viewer
+        procViewer.LaunchProcViewer();
+        _this8.mPage.putLog('PROC_VIEWER: Procedure viewer launched successfully for personId=' + data.personId);
+      } catch (error) {
+        _this8.mPage.putLog('PROC_VIEWER failed: ' + error);
         // Log failure details for troubleshooting
         throw error;
       }
@@ -33882,9 +34197,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-10-23T16:29:36.749Z
-const buildVersion = 'v0.0.296-new-document-viewer';
-const packageVersion = '0.0.296';
+// Generated on: 2025-10-23T17:23:26.041Z
+const buildVersion = 'v0.0.297-new-document-viewer';
+const packageVersion = '0.0.297';
 const gitBranch = 'new-document-viewer';
 
 /***/ }),
@@ -33895,7 +34210,7 @@ const gitBranch = 'new-document-viewer';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.296","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"0.0.297","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
