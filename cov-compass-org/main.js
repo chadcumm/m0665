@@ -18850,15 +18850,28 @@ class PriorAuthFilterBarComponent {
           _this.selectedPatient = result;
           _this.selectedPatientName = 'Loading...';
           // Load person data using Clinical Office PersonService
+          // load() initiates async data loading but doesn't return a promise
           _this.personService.load({}, [{
             personId: result.personId,
             encntrId: result.encounterId
           }]);
-          // Get the person data and extract the name
-          const personData = _this.personService.get(result.personId);
+          // Poll for the person data until it's available (up to 2 seconds)
+          let personData = null;
+          const maxAttempts = 20;
+          let attempts = 0;
+          while (!personData && attempts < maxAttempts) {
+            personData = _this.personService.get(result.personId);
+            if (personData && personData.nameFullFormatted) {
+              break;
+            }
+            yield new Promise(resolve => setTimeout(resolve, 100));
+            attempts++;
+          }
+          // Set the patient name from the loaded data
           if (personData && personData.nameFullFormatted) {
             _this.selectedPatientName = personData.nameFullFormatted;
           } else {
+            // Fallback to person ID if name not available
             _this.selectedPatientName = `Person ID: ${result.personId}`;
           }
           // Don't emit patientSelected here - wait for execute button
@@ -30985,17 +30998,12 @@ class CernerActionService {
     var _this9 = this;
     return (0,C_github_chadcumm_cov_compass_org_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       try {
-        _this9.mPage.putLog('PATIENT_SEARCH: Starting patient search...');
         // Create patient search object using DiscernObjectFactory
         const patientSearch = yield window.external.DiscernObjectFactory("PVPATIENTSEARCHMPAGE");
-        _this9.mPage.putLog('PATIENT_SEARCH: Patient search object created successfully');
         // Launch the patient search dialog and get the result
         // Based on working sample: PersonId and EncounterId properties are promises that need to be awaited
         // Example: await patientSearchObj.PersonId and await patientSearchObj.EncounterId
-        _this9.mPage.putLog('PATIENT_SEARCH: Calling SearchForPatientAndEncounter()...');
         const patientSearchObj = yield patientSearch.SearchForPatientAndEncounter();
-        _this9.mPage.putLog('PATIENT_SEARCH: SearchForPatientAndEncounter() completed');
-        _this9.mPage.putLog('PATIENT_SEARCH: patientSearchObj type: ' + typeof patientSearchObj);
         // Extract PersonId and EncounterId - they are promises that need to be awaited
         // As per working example: console.log(await patientSearchObj.EncounterId)
         let personId;
@@ -31003,48 +31011,33 @@ class CernerActionService {
         try {
           // PersonId and EncounterId are properties that are promises
           if (patientSearchObj && patientSearchObj.PersonId !== undefined) {
-            _this9.mPage.putLog('PATIENT_SEARCH: Found PersonId property, awaiting...');
             personId = yield patientSearchObj.PersonId;
-            _this9.mPage.putLog('PATIENT_SEARCH: PersonId resolved to: ' + personId + ' (type: ' + typeof personId + ')');
           } else if (patientSearchObj && patientSearchObj.personId !== undefined) {
             // Try lowercase variant
-            _this9.mPage.putLog('PATIENT_SEARCH: Found personId property (lowercase), awaiting...');
             personId = yield patientSearchObj.personId;
-            _this9.mPage.putLog('PATIENT_SEARCH: personId resolved to: ' + personId + ' (type: ' + typeof personId + ')');
-          } else {
-            _this9.mPage.putLog('PATIENT_SEARCH: PersonId property not found on patientSearchObj');
           }
           if (patientSearchObj && patientSearchObj.EncounterId !== undefined) {
-            _this9.mPage.putLog('PATIENT_SEARCH: Found EncounterId property, awaiting...');
             encounterId = yield patientSearchObj.EncounterId;
-            _this9.mPage.putLog('PATIENT_SEARCH: EncounterId resolved to: ' + encounterId + ' (type: ' + typeof encounterId + ')');
           } else if (patientSearchObj && patientSearchObj.encounterId !== undefined) {
             // Try lowercase variant
-            _this9.mPage.putLog('PATIENT_SEARCH: Found encounterId property (lowercase), awaiting...');
             encounterId = yield patientSearchObj.encounterId;
-            _this9.mPage.putLog('PATIENT_SEARCH: encounterId resolved to: ' + encounterId + ' (type: ' + typeof encounterId + ')');
-          } else {
-            _this9.mPage.putLog('PATIENT_SEARCH: EncounterId property not found on patientSearchObj');
           }
         } catch (error) {
           _this9.mPage.putLog('PATIENT_SEARCH: Error extracting PersonId/EncounterId: ' + error);
-          _this9.mPage.putLog('PATIENT_SEARCH: Error details: ' + JSON.stringify(error));
+          throw error;
         }
         // Check if a valid patient was selected
         if (personId !== undefined && personId > 0) {
-          _this9.mPage.putLog('PATIENT_SEARCH: Patient selected - personId=' + personId + ', encounterId=' + (encounterId || 0));
           return {
             personId: personId,
             encounterId: encounterId || 0
           };
         } else {
           // Search was cancelled or no patient selected
-          _this9.mPage.putLog('PATIENT_SEARCH: Search cancelled or no patient selected (personId: ' + personId + ', patientSearchObj type: ' + typeof patientSearchObj + ')');
           return null;
         }
       } catch (error) {
         _this9.mPage.putLog('PATIENT_SEARCH failed: ' + error);
-        _this9.mPage.putLog('PATIENT_SEARCH error details: ' + JSON.stringify(error));
         // Log failure details for troubleshooting
         throw error;
       }
@@ -38761,9 +38754,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-11-14T18:55:43.010Z
-const buildVersion = 'v1.0.10-feature/patient-search';
-const packageVersion = '1.0.10';
+// Generated on: 2025-11-14T19:08:49.429Z
+const buildVersion = 'v1.0.11-feature/patient-search';
+const packageVersion = '1.0.11';
 const gitBranch = 'feature/patient-search';
 
 /***/ }),
@@ -38774,7 +38767,7 @@ const gitBranch = 'feature/patient-search';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.10","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.11","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
