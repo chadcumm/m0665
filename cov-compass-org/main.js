@@ -30985,25 +30985,70 @@ class CernerActionService {
     var _this9 = this;
     return (0,C_github_chadcumm_cov_compass_org_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       try {
+        _this9.mPage.putLog('PATIENT_SEARCH: Starting patient search...');
         // Create patient search object using DiscernObjectFactory
         const patientSearch = yield window.external.DiscernObjectFactory("PVPATIENTSEARCHMPAGE");
+        _this9.mPage.putLog('PATIENT_SEARCH: Patient search object created successfully');
         // Launch the patient search dialog and get the result
         // SearchForPatientAndEncounter returns a promise that resolves when user completes or cancels
+        _this9.mPage.putLog('PATIENT_SEARCH: Calling SearchForPatientAndEncounter()...');
         const searchResult = yield patientSearch.SearchForPatientAndEncounter();
+        _this9.mPage.putLog('PATIENT_SEARCH: SearchForPatientAndEncounter() completed');
+        // Log detailed information about the search result
+        if (searchResult === null || searchResult === undefined) {
+          _this9.mPage.putLog('PATIENT_SEARCH: searchResult is null or undefined');
+        } else {
+          _this9.mPage.putLog('PATIENT_SEARCH: searchResult type: ' + typeof searchResult);
+          _this9.mPage.putLog('PATIENT_SEARCH: searchResult is array: ' + Array.isArray(searchResult));
+          // Try to stringify the result to see its structure
+          try {
+            const resultString = JSON.stringify(searchResult);
+            _this9.mPage.putLog('PATIENT_SEARCH: searchResult JSON: ' + resultString);
+          } catch (e) {
+            _this9.mPage.putLog('PATIENT_SEARCH: Could not stringify searchResult: ' + e);
+          }
+          // Log all properties of searchResult
+          if (typeof searchResult === 'object') {
+            const keys = Object.keys(searchResult);
+            _this9.mPage.putLog('PATIENT_SEARCH: searchResult keys: ' + keys.join(', '));
+            // Check for common property names (case variations)
+            if (searchResult.PersonId !== undefined) {
+              _this9.mPage.putLog('PATIENT_SEARCH: searchResult.PersonId = ' + searchResult.PersonId + ' (type: ' + typeof searchResult.PersonId + ')');
+            }
+            if (searchResult.personId !== undefined) {
+              _this9.mPage.putLog('PATIENT_SEARCH: searchResult.personId = ' + searchResult.personId + ' (type: ' + typeof searchResult.personId + ')');
+            }
+            if (searchResult.EncounterId !== undefined) {
+              _this9.mPage.putLog('PATIENT_SEARCH: searchResult.EncounterId = ' + searchResult.EncounterId + ' (type: ' + typeof searchResult.EncounterId + ')');
+            }
+            if (searchResult.encounterId !== undefined) {
+              _this9.mPage.putLog('PATIENT_SEARCH: searchResult.encounterId = ' + searchResult.encounterId + ' (type: ' + typeof searchResult.encounterId + ')');
+            }
+            // Check PersonId value comparison
+            const personId = searchResult.PersonId || searchResult.personId;
+            if (personId !== undefined) {
+              _this9.mPage.putLog('PATIENT_SEARCH: personId value: ' + personId + ', personId > 0: ' + (personId > 0) + ', personId == 0: ' + (personId == 0));
+            }
+          }
+        }
         // Check if a valid patient was selected
-        if (searchResult && searchResult.PersonId > 0) {
-          _this9.mPage.putLog('PATIENT_SEARCH: Patient selected - personId=' + searchResult.PersonId + ', encounterId=' + searchResult.EncounterId);
+        // Try both PersonId and personId (case variations)
+        const personId = searchResult?.PersonId ?? searchResult?.personId;
+        const encounterId = searchResult?.EncounterId ?? searchResult?.encounterId;
+        if (searchResult && personId > 0) {
+          _this9.mPage.putLog('PATIENT_SEARCH: Patient selected - personId=' + personId + ', encounterId=' + encounterId);
           return {
-            personId: searchResult.PersonId,
-            encounterId: searchResult.EncounterId
+            personId: personId,
+            encounterId: encounterId || 0
           };
         } else {
           // Search was cancelled or no patient selected
-          _this9.mPage.putLog('PATIENT_SEARCH: Search cancelled or no patient selected');
+          _this9.mPage.putLog('PATIENT_SEARCH: Search cancelled or no patient selected (personId: ' + personId + ')');
           return null;
         }
       } catch (error) {
         _this9.mPage.putLog('PATIENT_SEARCH failed: ' + error);
+        _this9.mPage.putLog('PATIENT_SEARCH error details: ' + JSON.stringify(error));
         // Log failure details for troubleshooting
         throw error;
       }
@@ -38720,9 +38765,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-11-14T18:26:00.377Z
-const buildVersion = 'v1.0.8-feature/patient-search';
-const packageVersion = '1.0.8';
+// Generated on: 2025-11-14T18:36:46.153Z
+const buildVersion = 'v1.0.9-feature/patient-search';
+const packageVersion = '1.0.9';
 const gitBranch = 'feature/patient-search';
 
 /***/ }),
@@ -38733,7 +38778,7 @@ const gitBranch = 'feature/patient-search';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.8","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.9","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
