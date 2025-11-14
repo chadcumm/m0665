@@ -18342,7 +18342,7 @@ class PriorAuthFilterBarComponent {
       }
     });
   }
-  constructor(sidebarState, userPreferences, columnConfig, priorAuthService, customWorklistService, cernerActionService, personService, ngZone) {
+  constructor(sidebarState, userPreferences, columnConfig, priorAuthService, customWorklistService, cernerActionService, personService, ngZone, cdr) {
     this.sidebarState = sidebarState;
     this.userPreferences = userPreferences;
     this.columnConfig = columnConfig;
@@ -18351,6 +18351,7 @@ class PriorAuthFilterBarComponent {
     this.cernerActionService = cernerActionService;
     this.personService = personService;
     this.ngZone = ngZone;
+    this.cdr = cdr;
     this.columnWidthsReset = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
     this.daysFilterChange = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
     this.refreshData = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
@@ -18503,49 +18504,66 @@ class PriorAuthFilterBarComponent {
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.effect)(() => {
       const personId = this._selectedPersonId();
       if (!personId) {
-        this.selectedPatientName.set('');
+        this.ngZone.run(() => {
+          this.selectedPatientName.set('');
+          this.cdr.markForCheck();
+        });
         return;
       }
       // Set loading state immediately when person ID is selected
-      // Use NgZone.run to ensure change detection is triggered
       this.ngZone.run(() => {
         this.selectedPatientName.set('Loading...');
+        this.cdr.markForCheck();
       });
       // Poll for person data until it becomes available
-      // This will check every 50ms up to 40 times (2 seconds total)
+      // Check more frequently initially, then slow down
       let attempts = 0;
-      const maxAttempts = 40;
+      const maxAttempts = 100; // Increased to 5 seconds total (100 * 50ms)
       const checkForPersonData = () => {
-        // Run inside Angular zone to ensure change detection is triggered
+        // Always run inside Angular zone to ensure change detection
         this.ngZone.run(() => {
           // Check if person ID changed (user selected different patient)
           if (this._selectedPersonId() !== personId) {
             return; // Stop checking if person ID changed
           }
-
+          // Check if person data is available
           const personData = this.personService.get(personId);
           if (personData && personData.nameFullFormatted) {
-            // Person data is loaded - update the name signal
+            // Person data is loaded - update the name signal and trigger change detection
             this.selectedPatientName.set(personData.nameFullFormatted);
+            this.cdr.detectChanges(); // Force immediate change detection
           } else if (attempts < maxAttempts) {
-            // Data not yet available - check again after a short delay
+            // Data not yet available - check again after a delay
             attempts++;
-            // Use NgZone.runOutsideAngular for setTimeout, then run back inside zone
+            // Calculate delay - check more frequently initially
+            const delay = attempts < 10 ? 25 : 50; // First 10 checks at 25ms, then 50ms
+            // Schedule next check
             this.ngZone.runOutsideAngular(() => {
               setTimeout(() => {
                 this.ngZone.run(() => {
                   checkForPersonData();
+                  this.cdr.markForCheck(); // Mark for check on each poll attempt
                 });
-              }, 50);
+              }, delay);
             });
           } else {
-            // Timeout reached - show fallback
-            this.selectedPatientName.set(`Person ID: ${personId}`);
+            // Timeout reached - check one more time before showing fallback
+            const finalCheck = this.personService.get(personId);
+            if (finalCheck && finalCheck.nameFullFormatted) {
+              this.selectedPatientName.set(finalCheck.nameFullFormatted);
+            } else {
+              // Only show Person ID if we truly can't find the data
+              this.selectedPatientName.set(`Person ID: ${personId}`);
+            }
+            this.cdr.detectChanges(); // Force change detection
           }
         });
       };
-      // Start checking for person data
-      checkForPersonData();
+      // Start checking immediately, then continue polling
+      // Do first check synchronously, then continue with async polling
+      this.ngZone.run(() => {
+        checkForPersonData();
+      });
     });
     /**
      * Initialize the segmented control with the current service-managed days filter value.
@@ -18901,25 +18919,38 @@ class PriorAuthFilterBarComponent {
         if (result && result.personId > 0) {
           // Patient selected - store the selection
           _this.selectedPatient = result;
-          // Set the person ID signal - this will trigger the effect to watch for data
-          _this._selectedPersonId.set(result.personId);
           // Load person data using Clinical Office PersonService
           // load() initiates async data loading but doesn't return a promise
-          // The effect will reactively update selectedPatientName when data becomes available
           _this.personService.load({}, [{
             personId: result.personId,
             encntrId: result.encounterId
           }]);
+          // Give the service a moment to start loading before we begin polling
+          // Set the person ID signal after a small delay to trigger the effect
+          _this.ngZone.runOutsideAngular(() => {
+            setTimeout(() => {
+              _this.ngZone.run(() => {
+                _this._selectedPersonId.set(result.personId);
+                _this.cdr.markForCheck();
+              });
+            }, 100); // Small delay to let load() initiate
+          });
           // Don't emit patientSelected here - wait for execute button
         } else {
           // Search was cancelled - clear the person ID signal
-          _this._selectedPersonId.set(null);
+          _this.ngZone.run(() => {
+            _this._selectedPersonId.set(null);
+            _this.cdr.markForCheck();
+          });
         }
         // If result is null, search was cancelled - do nothing
       } catch (error) {
         // Error handled in CernerActionService
-        _this._selectedPersonId.set(null);
-        _this.selectedPatientName.set('Error loading patient');
+        _this.ngZone.run(() => {
+          _this._selectedPersonId.set(null);
+          _this.selectedPatientName.set('Error loading patient');
+          _this.cdr.markForCheck();
+        });
       }
     })();
   }
@@ -18949,7 +18980,7 @@ class PriorAuthFilterBarComponent {
   }
   static {
     this.ɵfac = function PriorAuthFilterBarComponent_Factory(t) {
-      return new (t || PriorAuthFilterBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_sidebar_state_service__WEBPACK_IMPORTED_MODULE_1__.SidebarStateService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_3__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_4__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_custom_worklist_service__WEBPACK_IMPORTED_MODULE_5__.CustomWorklistService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_cerner_action_service__WEBPACK_IMPORTED_MODULE_6__.CernerActionService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.PersonService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.NgZone));
+      return new (t || PriorAuthFilterBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_sidebar_state_service__WEBPACK_IMPORTED_MODULE_1__.SidebarStateService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_3__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_4__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_custom_worklist_service__WEBPACK_IMPORTED_MODULE_5__.CustomWorklistService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_cerner_action_service__WEBPACK_IMPORTED_MODULE_6__.CernerActionService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.PersonService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.NgZone), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.ChangeDetectorRef));
     };
   }
   static {
@@ -38798,9 +38829,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-11-14T19:31:21.743Z
-const buildVersion = 'v1.0.12-feature/patient-search';
-const packageVersion = '1.0.12';
+// Generated on: 2025-11-14T19:39:33.585Z
+const buildVersion = 'v1.0.13-feature/patient-search';
+const packageVersion = '1.0.13';
 const gitBranch = 'feature/patient-search';
 
 /***/ }),
@@ -38811,7 +38842,7 @@ const gitBranch = 'feature/patient-search';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.12","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.13","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
