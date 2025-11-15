@@ -18319,7 +18319,7 @@ class PriorAuthFilterBarComponent {
       }
     });
   }
-  constructor(sidebarState, userPreferences, columnConfig, priorAuthService, customWorklistService, cernerActionService, personService, ngZone, cdr, mPage) {
+  constructor(sidebarState, userPreferences, columnConfig, priorAuthService, customWorklistService, cernerActionService, personService, ngZone, cdr) {
     this.sidebarState = sidebarState;
     this.userPreferences = userPreferences;
     this.columnConfig = columnConfig;
@@ -18329,7 +18329,6 @@ class PriorAuthFilterBarComponent {
     this.personService = personService;
     this.ngZone = ngZone;
     this.cdr = cdr;
-    this.mPage = mPage;
     this.columnWidthsReset = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
     this.daysFilterChange = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
     this.refreshData = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
@@ -18487,13 +18486,11 @@ class PriorAuthFilterBarComponent {
     // Allow signal writes since we need to update selectedPatientName signal
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.effect)(() => {
       const personId = this._selectedPersonId();
-      this.mPage.putLog(`[PatientSearch] Effect triggered with personId: ${personId}`);
       if (!personId) {
         this.ngZone.run(() => {
           this.selectedPatientName.set('');
           this.cdr.markForCheck();
         });
-        this.mPage.putLog('[PatientSearch] No personId, clearing patient name');
         return;
       }
       // Set loading state immediately when person ID is selected
@@ -18501,7 +18498,6 @@ class PriorAuthFilterBarComponent {
         this.selectedPatientName.set('Loading...');
         this.cdr.markForCheck();
       });
-      this.mPage.putLog(`[PatientSearch] PersonId ${personId} selected, starting to poll for person data`);
       // Poll for person data until it becomes available
       // Check more frequently initially, then slow down
       let attempts = 0;
@@ -18515,27 +18511,19 @@ class PriorAuthFilterBarComponent {
           }
           // Check if person data is available
           const personData = this.personService.get(personId);
-          this.mPage.putLog(`[PatientSearch] Poll attempt ${attempts + 1}: personData=${personData ? 'found' : 'not found'}, nameFullFormatted=${personData?.nameFullFormatted || 'N/A'}`);
           if (personData && personData.nameFullFormatted) {
             // Person data is loaded - update the name signal and trigger change detection
             this.selectedPatientName.set(personData.nameFullFormatted);
             this.cdr.detectChanges(); // Force immediate change detection
-            this.mPage.putLog(`[PatientSearch] Patient name found: ${personData.nameFullFormatted}`);
             // Auto-execute the prior auth worklist retrieval if we haven't already for this person ID
             // Check both the flag and that selectedPatient exists and matches the personId
-            const shouldExecute = this._autoExecutedForPersonId !== personId && this.selectedPatient && this.selectedPatient.personId === personId;
-            this.mPage.putLog(`[PatientSearch] Auto-execute check: shouldExecute=${shouldExecute}, _autoExecutedForPersonId=${this._autoExecutedForPersonId}, selectedPatient=${this.selectedPatient ? 'exists' : 'null'}, selectedPatient.personId=${this.selectedPatient?.personId}`);
-            if (shouldExecute) {
+            if (this._autoExecutedForPersonId !== personId && this.selectedPatient && this.selectedPatient.personId === personId) {
               this._autoExecutedForPersonId = personId;
-              this.mPage.putLog(`[PatientSearch] Auto-executing worklist retrieval for personId ${personId}`);
               // Execute the worklist retrieval automatically
               // Use setTimeout to ensure it runs after the current execution context
               setTimeout(() => {
-                this.mPage.putLog(`[PatientSearch] Calling executePatientSearchInternal for personId ${personId}`);
                 this.executePatientSearchInternal();
               }, 0);
-            } else {
-              this.mPage.putLog(`[PatientSearch] Skipping auto-execute: already executed or conditions not met`);
             }
           } else if (attempts < maxAttempts) {
             // Data not yet available - check again after a delay
@@ -18556,25 +18544,19 @@ class PriorAuthFilterBarComponent {
             const finalCheck = this.personService.get(personId);
             if (finalCheck && finalCheck.nameFullFormatted) {
               this.selectedPatientName.set(finalCheck.nameFullFormatted);
-              this.mPage.putLog(`[PatientSearch] Final check: Patient name found: ${finalCheck.nameFullFormatted}`);
               // Auto-execute the prior auth worklist retrieval if we haven't already for this person ID
               // Check both the flag and that selectedPatient exists and matches the personId
-              const shouldExecute = this._autoExecutedForPersonId !== personId && this.selectedPatient && this.selectedPatient.personId === personId;
-              this.mPage.putLog(`[PatientSearch] Final check auto-execute: shouldExecute=${shouldExecute}, _autoExecutedForPersonId=${this._autoExecutedForPersonId}, selectedPatient=${this.selectedPatient ? 'exists' : 'null'}`);
-              if (shouldExecute) {
+              if (this._autoExecutedForPersonId !== personId && this.selectedPatient && this.selectedPatient.personId === personId) {
                 this._autoExecutedForPersonId = personId;
-                this.mPage.putLog(`[PatientSearch] Final check: Auto-executing worklist retrieval for personId ${personId}`);
                 // Execute the worklist retrieval automatically
                 // Use setTimeout to ensure it runs after the current execution context
                 setTimeout(() => {
-                  this.mPage.putLog(`[PatientSearch] Final check: Calling executePatientSearchInternal for personId ${personId}`);
                   this.executePatientSearchInternal();
                 }, 0);
               }
             } else {
               // Only show Person ID if we truly can't find the data
               this.selectedPatientName.set(`Person ID: ${personId}`);
-              this.mPage.putLog(`[PatientSearch] Timeout: Could not find patient data for personId ${personId}`);
             }
             this.cdr.detectChanges(); // Force change detection
           }
@@ -18937,29 +18919,23 @@ class PriorAuthFilterBarComponent {
   onPatientSearch() {
     var _this = this;
     return (0,C_github_chadcumm_cov_compass_org_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      _this.mPage.putLog('[PatientSearch] onPatientSearch called');
       try {
         const result = yield _this.cernerActionService.searchForPatientAndEncounter();
-        _this.mPage.putLog(`[PatientSearch] Patient search result: ${result ? `personId=${result.personId}, encounterId=${result.encounterId}` : 'null'}`);
         if (result && result.personId > 0) {
           // Patient selected - store the selection FIRST before setting signal
           _this.selectedPatient = result;
-          _this.mPage.putLog(`[PatientSearch] Patient selected: personId=${result.personId}, encounterId=${result.encounterId}`);
           // Reset auto-execution flag for new patient selection
           _this._autoExecutedForPersonId = null;
-          _this.mPage.putLog('[PatientSearch] Reset auto-execution flag');
           // Load person data using Clinical Office PersonService
           // load() initiates async data loading but doesn't return a promise
           _this.personService.load({}, [{
             personId: result.personId,
             encntrId: result.encounterId
           }]);
-          _this.mPage.putLog(`[PatientSearch] PersonService.load called for personId=${result.personId}`);
           // Set the person ID signal immediately to trigger the effect
           // The effect will poll for person data and auto-execute when found
           _this._selectedPersonId.set(result.personId);
           _this.cdr.markForCheck();
-          _this.mPage.putLog(`[PatientSearch] Person ID signal set to ${result.personId}, effect should trigger`);
           // Auto-execution will happen in the effect when person data is found
         } else {
           // Search was cancelled - clear the person ID signal
@@ -18984,20 +18960,14 @@ class PriorAuthFilterBarComponent {
    * This is called automatically when patient data is found, or can be called manually
    */
   executePatientSearchInternal() {
-    this.mPage.putLog(`[PatientSearch] executePatientSearchInternal called, selectedPatient=${this.selectedPatient ? `personId=${this.selectedPatient.personId}` : 'null'}`);
     if (this.selectedPatient) {
       // Clear the custom worklist dropdown before running the service
       this.selectedCustomWorklist = null;
       this.selectedPredefinedFilter = null;
-      this.mPage.putLog('[PatientSearch] Cleared custom worklist and predefined filter');
       // Update the patient filter in the service
       this.priorAuthService.updatePatientFilter(this.selectedPatient.personId);
-      this.mPage.putLog(`[PatientSearch] Updated patient filter in service for personId=${this.selectedPatient.personId}`);
       // Emit to parent to trigger worklist refresh
       this.patientSelected.emit(this.selectedPatient);
-      this.mPage.putLog(`[PatientSearch] Emitted patientSelected event for personId=${this.selectedPatient.personId}`);
-    } else {
-      this.mPage.putLog('[PatientSearch] ERROR: executePatientSearchInternal called but selectedPatient is null!');
     }
   }
   /**
@@ -19021,7 +18991,7 @@ class PriorAuthFilterBarComponent {
   }
   static {
     this.ɵfac = function PriorAuthFilterBarComponent_Factory(t) {
-      return new (t || PriorAuthFilterBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_sidebar_state_service__WEBPACK_IMPORTED_MODULE_1__.SidebarStateService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_3__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_4__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_custom_worklist_service__WEBPACK_IMPORTED_MODULE_5__.CustomWorklistService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_cerner_action_service__WEBPACK_IMPORTED_MODULE_6__.CernerActionService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.PersonService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.NgZone), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.ChangeDetectorRef), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.mPageService));
+      return new (t || PriorAuthFilterBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_sidebar_state_service__WEBPACK_IMPORTED_MODULE_1__.SidebarStateService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_3__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_4__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_custom_worklist_service__WEBPACK_IMPORTED_MODULE_5__.CustomWorklistService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_cerner_action_service__WEBPACK_IMPORTED_MODULE_6__.CernerActionService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.PersonService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.NgZone), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.ChangeDetectorRef));
     };
   }
   static {
@@ -38869,9 +38839,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-11-15T15:05:17.896Z
-const buildVersion = 'v1.0.20-develop';
-const packageVersion = '1.0.20';
+// Generated on: 2025-11-15T15:15:35.885Z
+const buildVersion = 'v1.0.21-develop';
+const packageVersion = '1.0.21';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -38882,7 +38852,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.20","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.21","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
