@@ -17781,18 +17781,18 @@ function PriorAuthFilterBarComponent_nz_space_3_nz_select_1_nz_option_1_Template
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "nz-option", 24);
   }
   if (rf & 2) {
-    const worklist_r22 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzLabel", worklist_r22.name)("nzValue", worklist_r22.id);
+    const worklist_r21 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzLabel", worklist_r21.name)("nzValue", worklist_r21.id);
   }
 }
 function PriorAuthFilterBarComponent_nz_space_3_nz_select_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    const _r23 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-select", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("ngModelChange", function PriorAuthFilterBarComponent_nz_space_3_nz_select_1_Template_nz_select_ngModelChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r24);
-      const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r23.onCustomWorklistSelect($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r23);
+      const ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r22.onCustomWorklistSelect($event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_3_nz_select_1_nz_option_1_Template, 1, 2, "nz-option", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
@@ -17806,12 +17806,12 @@ function PriorAuthFilterBarComponent_nz_space_3_nz_select_1_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_nz_space_3_button_2_Template(rf, ctx) {
   if (rf & 1) {
-    const _r26 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    const _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_nz_space_3_button_2_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r26);
-      const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r25.openCreateWorklistWizard());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r25);
+      const ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r24.openCreateWorklistWizard());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
@@ -17823,19 +17823,19 @@ function PriorAuthFilterBarComponent_nz_space_3_button_2_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_nz_space_3_ng_container_3_button_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    const _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_nz_space_3_ng_container_3_button_1_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r29);
-      const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r28.openEditWorklistWizard(ctx_r28.selectedCustomWorklist));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r28);
+      const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r27.openEditWorklistWizard(ctx_r27.selectedCustomWorklist));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("disabled", !ctx_r27.userPreferences.useNewVersion());
+    const ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("disabled", !ctx_r26.userPreferences.useNewVersion());
   }
 }
 function PriorAuthFilterBarComponent_nz_space_3_ng_container_3_Template(rf, ctx) {
@@ -17847,19 +17847,19 @@ function PriorAuthFilterBarComponent_nz_space_3_ng_container_3_Template(rf, ctx)
 }
 function PriorAuthFilterBarComponent_nz_space_3_ng_container_4_button_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r32 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    const _r31 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("nzOnConfirm", function PriorAuthFilterBarComponent_nz_space_3_ng_container_4_button_1_Template_button_nzOnConfirm_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r32);
-      const ctx_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r31.deleteCustomWorklist(ctx_r31.selectedCustomWorklist));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r31);
+      const ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r30.deleteCustomWorklist(ctx_r30.selectedCustomWorklist));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 32);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("disabled", !ctx_r30.userPreferences.useNewVersion());
+    const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("disabled", !ctx_r29.userPreferences.useNewVersion());
   }
 }
 function PriorAuthFilterBarComponent_nz_space_3_ng_container_4_Template(rf, ctx) {
@@ -17871,12 +17871,12 @@ function PriorAuthFilterBarComponent_nz_space_3_ng_container_4_Template(rf, ctx)
 }
 function PriorAuthFilterBarComponent_nz_space_3_button_5_Template(rf, ctx) {
   if (rf & 1) {
-    const _r34 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    const _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_nz_space_3_button_5_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r34);
-      const ctx_r33 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r33.onPatientSearch());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r33);
+      const ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r32.onPatientSearch());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 34);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
@@ -17889,10 +17889,10 @@ function PriorAuthFilterBarComponent_nz_space_3_ng_container_6_nz_tag_1_Template
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r35 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
+    const ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzColor", "blue");
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate1"](" ", ctx_r35.selectedPatientName() || "Loading...", " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate1"](" ", ctx_r34.selectedPatientName() || "Loading...", " ");
   }
 }
 function PriorAuthFilterBarComponent_nz_space_3_ng_container_6_Template(rf, ctx) {
@@ -17904,14 +17904,14 @@ function PriorAuthFilterBarComponent_nz_space_3_ng_container_6_Template(rf, ctx)
 }
 function PriorAuthFilterBarComponent_nz_space_3_ng_container_7_button_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r38 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    const _r37 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_nz_space_3_ng_container_7_button_1_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r38);
-      const ctx_r37 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r37.onExecutePatientSearch());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r37);
+      const ctx_r36 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r36.onClearPatientFilter());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](1, " Execute ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
@@ -17919,26 +17919,6 @@ function PriorAuthFilterBarComponent_nz_space_3_ng_container_7_Template(rf, ctx)
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerStart"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_3_ng_container_7_button_1_Template, 2, 0, "button", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerEnd"]();
-  }
-}
-function PriorAuthFilterBarComponent_nz_space_3_ng_container_8_button_1_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r41 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_nz_space_3_ng_container_8_button_1_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r41);
-      const ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](3);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r40.onClearPatientFilter());
-    });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 41);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
-  }
-}
-function PriorAuthFilterBarComponent_nz_space_3_ng_container_8_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_3_ng_container_8_button_1_Template, 2, 0, "button", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerEnd"]();
   }
 }
@@ -17952,7 +17932,6 @@ function PriorAuthFilterBarComponent_nz_space_3_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](5, PriorAuthFilterBarComponent_nz_space_3_button_5_Template, 2, 0, "button", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](6, PriorAuthFilterBarComponent_nz_space_3_ng_container_6_Template, 2, 0, "ng-container", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](7, PriorAuthFilterBarComponent_nz_space_3_ng_container_7_Template, 2, 0, "ng-container", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](8, PriorAuthFilterBarComponent_nz_space_3_ng_container_8_Template, 2, 0, "ng-container", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -17965,41 +17944,39 @@ function PriorAuthFilterBarComponent_nz_space_3_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngIf", ctx_r0.selectedPatient);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngIf", ctx_r0.selectedPatient);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngIf", ctx_r0.selectedPatient);
   }
 }
 function PriorAuthFilterBarComponent_nz_space_4_ng_container_1_nz_tag_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-tag", 45)(1, "span", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-tag", 43)(1, "span", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](3, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](3, "span", 45);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const filter_r43 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]().$implicit;
-    const ctx_r44 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵclassProp"]("zero-count", ctx_r44.getFilterCount(filter_r43.id) === 0);
+    const filter_r39 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]().$implicit;
+    const ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵclassProp"]("zero-count", ctx_r40.getFilterCount(filter_r39.id) === 0);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzColor", "default");
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate1"]("", filter_r43.label, ":");
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate1"]("", filter_r39.label, ":");
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate"](ctx_r44.getFilterCount(filter_r43.id));
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate"](ctx_r40.getFilterCount(filter_r39.id));
   }
 }
 function PriorAuthFilterBarComponent_nz_space_4_ng_container_1_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_4_ng_container_1_nz_tag_1_Template, 5, 5, "nz-tag", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_4_ng_container_1_nz_tag_1_Template, 5, 5, "nz-tag", 42);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_nz_space_4_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-space", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_4_ng_container_1_Template, 2, 0, "ng-container", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-space", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_4_ng_container_1_Template, 2, 0, "ng-container", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -18010,70 +17987,70 @@ function PriorAuthFilterBarComponent_nz_space_4_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_nz_space_5_span_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "span", 52);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "span", 50);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](1, "Use New Version:");
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_nz_space_5_nz_switch_2_Template(rf, ctx) {
   if (rf & 1) {
-    const _r53 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-switch", 53);
+    const _r49 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-switch", 51);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("ngModelChange", function PriorAuthFilterBarComponent_nz_space_5_nz_switch_2_Template_nz_switch_ngModelChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r53);
-      const ctx_r52 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r52.onVersionToggle($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r49);
+      const ctx_r48 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r48.onVersionToggle($event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-    const _r48 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵreference"](4);
-    const _r50 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵreference"](6);
-    const ctx_r47 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngModel", ctx_r47.userPreferences.useNewVersion())("nzCheckedChildren", _r48)("nzUnCheckedChildren", _r50);
+    const _r44 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵreference"](4);
+    const _r46 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵreference"](6);
+    const ctx_r43 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngModel", ctx_r43.userPreferences.useNewVersion())("nzCheckedChildren", _r44)("nzUnCheckedChildren", _r46);
   }
 }
 function PriorAuthFilterBarComponent_nz_space_5_ng_template_3_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "span", 54);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "span", 52);
   }
 }
 function PriorAuthFilterBarComponent_nz_space_5_ng_template_5_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "span", 55);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "span", 53);
   }
 }
 function PriorAuthFilterBarComponent_nz_space_5_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-space", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_5_span_1_Template, 2, 0, "span", 48);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](2, PriorAuthFilterBarComponent_nz_space_5_nz_switch_2_Template, 1, 3, "nz-switch", 49);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](3, PriorAuthFilterBarComponent_nz_space_5_ng_template_3_Template, 1, 0, "ng-template", null, 50, _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplateRefExtractor"]);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](5, PriorAuthFilterBarComponent_nz_space_5_ng_template_5_Template, 1, 0, "ng-template", null, 51, _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_nz_space_5_span_1_Template, 2, 0, "span", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](2, PriorAuthFilterBarComponent_nz_space_5_nz_switch_2_Template, 1, 3, "nz-switch", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](3, PriorAuthFilterBarComponent_nz_space_5_ng_template_3_Template, 1, 0, "ng-template", null, 48, _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](5, PriorAuthFilterBarComponent_nz_space_5_ng_template_5_Template, 1, 0, "ng-template", null, 49, _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplateRefExtractor"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_div_6_nz_tab_3_Template(rf, ctx) {
   if (rf & 1) {
-    const _r60 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-tab", 64);
+    const _r56 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-tab", 62);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("nzClick", function PriorAuthFilterBarComponent_div_6_nz_tab_3_Template_nz_tab_nzClick_0_listener() {
-      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r60);
-      const filter_r57 = restoredCtx.$implicit;
-      const ctx_r59 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r59.onPredefinedFilterSelect(filter_r57));
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r56);
+      const filter_r53 = restoredCtx.$implicit;
+      const ctx_r55 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r55.onPredefinedFilterSelect(filter_r53));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](1, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()();
   }
   if (rf & 2) {
-    const filter_r57 = ctx.$implicit;
-    const ctx_r54 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzTitle", ctx_r54.getTabTitle(filter_r57));
+    const filter_r53 = ctx.$implicit;
+    const ctx_r50 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzTitle", ctx_r50.getTabTitle(filter_r53));
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate1"]("Content for ", filter_r57.label, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate1"]("Content for ", filter_r53.label, "");
   }
 }
 function PriorAuthFilterBarComponent_div_6_nz_select_6_nz_option_1_Template(rf, ctx) {
@@ -18081,63 +18058,63 @@ function PriorAuthFilterBarComponent_div_6_nz_select_6_nz_option_1_Template(rf, 
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "nz-option", 24);
   }
   if (rf & 2) {
-    const opt_r62 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzLabel", opt_r62.label)("nzValue", opt_r62.value);
+    const opt_r58 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzLabel", opt_r58.label)("nzValue", opt_r58.value);
   }
 }
 function PriorAuthFilterBarComponent_div_6_nz_select_6_Template(rf, ctx) {
   if (rf & 1) {
-    const _r64 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-select", 65);
+    const _r60 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-select", 63);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("ngModelChange", function PriorAuthFilterBarComponent_div_6_nz_select_6_Template_nz_select_ngModelChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r64);
-      const ctx_r63 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r63.onLocationChange($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r60);
+      const ctx_r59 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r59.onLocationChange($event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_div_6_nz_select_6_nz_option_1_Template, 1, 2, "nz-option", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r55 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngModel", ctx_r55.currentLocationValue)("nzDropdownMatchSelectWidth", false);
+    const ctx_r51 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngModel", ctx_r51.currentLocationValue)("nzDropdownMatchSelectWidth", false);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngForOf", ctx_r55.locationOptions());
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngForOf", ctx_r51.locationOptions());
   }
 }
 function PriorAuthFilterBarComponent_div_6_nz_segmented_7_Template(rf, ctx) {
   if (rf & 1) {
-    const _r66 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-segmented", 66);
+    const _r62 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-segmented", 64);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("ngModelChange", function PriorAuthFilterBarComponent_div_6_nz_segmented_7_Template_nz_segmented_ngModelChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r66);
-      const ctx_r65 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r65.selectedSubrouteValue = $event);
-    })("ngModelChange", function PriorAuthFilterBarComponent_div_6_nz_segmented_7_Template_nz_segmented_ngModelChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r66);
-      const ctx_r67 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r67.onSubrouteChange($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r62);
+      const ctx_r61 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r61.selectedSubrouteValue = $event);
+    })("nzValueChange", function PriorAuthFilterBarComponent_div_6_nz_segmented_7_Template_nz_segmented_nzValueChange_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r62);
+      const ctx_r63 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r63.onSubrouteChange($event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r56 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzOptions", ctx_r56.subrouteOptions)("ngModel", ctx_r56.selectedSubrouteValue);
+    const ctx_r52 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("nzOptions", ctx_r52.subrouteOptions)("ngModel", ctx_r52.selectedSubrouteValue);
   }
 }
 function PriorAuthFilterBarComponent_div_6_Template(rf, ctx) {
   if (rf & 1) {
-    const _r69 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "div", 56)(1, "div", 57)(2, "nz-tabset", 58);
+    const _r65 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "div", 54)(1, "div", 55)(2, "nz-tabset", 56);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("nzSelectedIndexChange", function PriorAuthFilterBarComponent_div_6_Template_nz_tabset_nzSelectedIndexChange_2_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r69);
-      const ctx_r68 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r68.selectedTabIndex = $event);
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r65);
+      const ctx_r64 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r64.selectedTabIndex = $event);
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](3, PriorAuthFilterBarComponent_div_6_nz_tab_3_Template, 3, 2, "nz-tab", 59);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](3, PriorAuthFilterBarComponent_div_6_nz_tab_3_Template, 3, 2, "nz-tab", 57);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](4, "div", 60)(5, "nz-space", 61);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](6, PriorAuthFilterBarComponent_div_6_nz_select_6_Template, 2, 3, "nz-select", 62);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](7, PriorAuthFilterBarComponent_div_6_nz_segmented_7_Template, 1, 2, "nz-segmented", 63);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](4, "div", 58)(5, "nz-space", 59);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](6, PriorAuthFilterBarComponent_div_6_nz_select_6_Template, 2, 3, "nz-select", 60);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](7, PriorAuthFilterBarComponent_div_6_nz_segmented_7_Template, 1, 2, "nz-segmented", 61);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()()();
   }
   if (rf & 2) {
@@ -18150,53 +18127,53 @@ function PriorAuthFilterBarComponent_div_6_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_button_11_Template(rf, ctx) {
   if (rf & 1) {
-    const _r71 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 67);
+    const _r67 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 65);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_11_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r71);
-      const ctx_r70 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r70.sidebarState.toggle());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r67);
+      const ctx_r66 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r66.sidebarState.toggle());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 68);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 66);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_button_12_Template(rf, ctx) {
   if (rf & 1) {
-    const _r73 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 69);
+    const _r69 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 67);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_12_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r73);
-      const ctx_r72 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r72.userPreferences.saveUserPreferences());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r69);
+      const ctx_r68 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r68.userPreferences.saveUserPreferences());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 70);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 68);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_button_13_Template(rf, ctx) {
   if (rf & 1) {
-    const _r75 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 71);
+    const _r71 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 69);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_13_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r75);
-      const ctx_r74 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r74.resetColumnWidths());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r71);
+      const ctx_r70 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r70.resetColumnWidths());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 72);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 70);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_button_16_Template(rf, ctx) {
   if (rf & 1) {
-    const _r77 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 73);
+    const _r73 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 71);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_16_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r77);
-      const ctx_r76 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r76.onAssignmentToggle());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r73);
+      const ctx_r72 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r72.onAssignmentToggle());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 74);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 72);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
@@ -18209,12 +18186,12 @@ function PriorAuthFilterBarComponent_button_16_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_nz_segmented_17_Template(rf, ctx) {
   if (rf & 1) {
-    const _r79 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-segmented", 75);
+    const _r75 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "nz-segmented", 73);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("nzValueChange", function PriorAuthFilterBarComponent_nz_segmented_17_Template_nz_segmented_nzValueChange_0_listener($event) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r79);
-      const ctx_r78 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r78.onDaysFilterChange($event));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r75);
+      const ctx_r74 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r74.onDaysFilterChange($event));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
@@ -18225,40 +18202,40 @@ function PriorAuthFilterBarComponent_nz_segmented_17_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_input_18_Template(rf, ctx) {
   if (rf & 1) {
-    const _r82 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "input", 76, 77);
+    const _r78 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "input", 74, 75);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("input", function PriorAuthFilterBarComponent_input_18_Template_input_input_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r82);
-      const _r80 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵreference"](1);
-      const ctx_r81 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r81.onGlobalSearch(_r80.value));
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r78);
+      const _r76 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵreference"](1);
+      const ctx_r77 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r77.onGlobalSearch(_r76.value));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_button_19_span_2_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "span", 81);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "span", 79);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r83 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+    const ctx_r79 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate"](ctx_r83.processingCount);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate"](ctx_r79.processingCount);
   }
 }
 function PriorAuthFilterBarComponent_button_19_Template(rf, ctx) {
   if (rf & 1) {
-    const _r85 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 78);
+    const _r81 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 76);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_button_19_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r85);
-      const ctx_r84 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r84.onRefreshData());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r81);
+      const ctx_r80 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r80.onRefreshData());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 79);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](2, PriorAuthFilterBarComponent_button_19_span_2_Template, 2, 1, "span", 80);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 77);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](2, PriorAuthFilterBarComponent_button_19_span_2_Template, 2, 1, "span", 78);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -18271,21 +18248,21 @@ function PriorAuthFilterBarComponent_button_19_Template(rf, ctx) {
 }
 function PriorAuthFilterBarComponent_ng_container_20_button_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r88 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 83);
+    const _r84 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 81);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function PriorAuthFilterBarComponent_ng_container_20_button_1_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r88);
-      const ctx_r87 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r87.onCreateTestOrders());
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵrestoreView"](_r84);
+      const ctx_r83 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵresetView"](ctx_r83.onCreateTestOrders());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 84);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "span", 82);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
   }
 }
 function PriorAuthFilterBarComponent_ng_container_20_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_ng_container_20_button_1_Template, 2, 0, "button", 82);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, PriorAuthFilterBarComponent_ng_container_20_button_1_Template, 2, 0, "button", 80);
     _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementContainerEnd"]();
   }
 }
@@ -18342,7 +18319,7 @@ class PriorAuthFilterBarComponent {
       }
     });
   }
-  constructor(sidebarState, userPreferences, columnConfig, priorAuthService, customWorklistService, cernerActionService, personService, ngZone, cdr) {
+  constructor(sidebarState, userPreferences, columnConfig, priorAuthService, customWorklistService, cernerActionService, personService, ngZone, cdr, mPage) {
     this.sidebarState = sidebarState;
     this.userPreferences = userPreferences;
     this.columnConfig = columnConfig;
@@ -18352,6 +18329,7 @@ class PriorAuthFilterBarComponent {
     this.personService = personService;
     this.ngZone = ngZone;
     this.cdr = cdr;
+    this.mPage = mPage;
     this.columnWidthsReset = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
     this.daysFilterChange = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
     this.refreshData = new _angular_core__WEBPACK_IMPORTED_MODULE_7__.EventEmitter();
@@ -18396,6 +18374,11 @@ class PriorAuthFilterBarComponent {
      * Signal for selected patient name that updates reactively when PersonService loads data
      */
     this.selectedPatientName = (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.signal)('');
+    /**
+     * Track if we've already auto-executed the worklist retrieval for the current person ID
+     * This prevents multiple executions when the effect runs multiple times
+     */
+    this._autoExecutedForPersonId = null;
     // Days filter options for the segmented control
     this.daysOptions = [{
       label: '30',
@@ -18504,11 +18487,13 @@ class PriorAuthFilterBarComponent {
     // Allow signal writes since we need to update selectedPatientName signal
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_7__.effect)(() => {
       const personId = this._selectedPersonId();
+      this.mPage.putLog(`[PatientSearch] Effect triggered with personId: ${personId}`);
       if (!personId) {
         this.ngZone.run(() => {
           this.selectedPatientName.set('');
           this.cdr.markForCheck();
         });
+        this.mPage.putLog('[PatientSearch] No personId, clearing patient name');
         return;
       }
       // Set loading state immediately when person ID is selected
@@ -18516,6 +18501,7 @@ class PriorAuthFilterBarComponent {
         this.selectedPatientName.set('Loading...');
         this.cdr.markForCheck();
       });
+      this.mPage.putLog(`[PatientSearch] PersonId ${personId} selected, starting to poll for person data`);
       // Poll for person data until it becomes available
       // Check more frequently initially, then slow down
       let attempts = 0;
@@ -18529,10 +18515,28 @@ class PriorAuthFilterBarComponent {
           }
           // Check if person data is available
           const personData = this.personService.get(personId);
+          this.mPage.putLog(`[PatientSearch] Poll attempt ${attempts + 1}: personData=${personData ? 'found' : 'not found'}, nameFullFormatted=${personData?.nameFullFormatted || 'N/A'}`);
           if (personData && personData.nameFullFormatted) {
             // Person data is loaded - update the name signal and trigger change detection
             this.selectedPatientName.set(personData.nameFullFormatted);
             this.cdr.detectChanges(); // Force immediate change detection
+            this.mPage.putLog(`[PatientSearch] Patient name found: ${personData.nameFullFormatted}`);
+            // Auto-execute the prior auth worklist retrieval if we haven't already for this person ID
+            // Check both the flag and that selectedPatient exists and matches the personId
+            const shouldExecute = this._autoExecutedForPersonId !== personId && this.selectedPatient && this.selectedPatient.personId === personId;
+            this.mPage.putLog(`[PatientSearch] Auto-execute check: shouldExecute=${shouldExecute}, _autoExecutedForPersonId=${this._autoExecutedForPersonId}, selectedPatient=${this.selectedPatient ? 'exists' : 'null'}, selectedPatient.personId=${this.selectedPatient?.personId}`);
+            if (shouldExecute) {
+              this._autoExecutedForPersonId = personId;
+              this.mPage.putLog(`[PatientSearch] Auto-executing worklist retrieval for personId ${personId}`);
+              // Execute the worklist retrieval automatically
+              // Use setTimeout to ensure it runs after the current execution context
+              setTimeout(() => {
+                this.mPage.putLog(`[PatientSearch] Calling executePatientSearchInternal for personId ${personId}`);
+                this.executePatientSearchInternal();
+              }, 0);
+            } else {
+              this.mPage.putLog(`[PatientSearch] Skipping auto-execute: already executed or conditions not met`);
+            }
           } else if (attempts < maxAttempts) {
             // Data not yet available - check again after a delay
             attempts++;
@@ -18552,9 +18556,25 @@ class PriorAuthFilterBarComponent {
             const finalCheck = this.personService.get(personId);
             if (finalCheck && finalCheck.nameFullFormatted) {
               this.selectedPatientName.set(finalCheck.nameFullFormatted);
+              this.mPage.putLog(`[PatientSearch] Final check: Patient name found: ${finalCheck.nameFullFormatted}`);
+              // Auto-execute the prior auth worklist retrieval if we haven't already for this person ID
+              // Check both the flag and that selectedPatient exists and matches the personId
+              const shouldExecute = this._autoExecutedForPersonId !== personId && this.selectedPatient && this.selectedPatient.personId === personId;
+              this.mPage.putLog(`[PatientSearch] Final check auto-execute: shouldExecute=${shouldExecute}, _autoExecutedForPersonId=${this._autoExecutedForPersonId}, selectedPatient=${this.selectedPatient ? 'exists' : 'null'}`);
+              if (shouldExecute) {
+                this._autoExecutedForPersonId = personId;
+                this.mPage.putLog(`[PatientSearch] Final check: Auto-executing worklist retrieval for personId ${personId}`);
+                // Execute the worklist retrieval automatically
+                // Use setTimeout to ensure it runs after the current execution context
+                setTimeout(() => {
+                  this.mPage.putLog(`[PatientSearch] Final check: Calling executePatientSearchInternal for personId ${personId}`);
+                  this.executePatientSearchInternal();
+                }, 0);
+              }
             } else {
               // Only show Person ID if we truly can't find the data
               this.selectedPatientName.set(`Person ID: ${personId}`);
+              this.mPage.putLog(`[PatientSearch] Timeout: Could not find patient data for personId ${personId}`);
             }
             this.cdr.detectChanges(); // Force change detection
           }
@@ -18917,28 +18937,30 @@ class PriorAuthFilterBarComponent {
   onPatientSearch() {
     var _this = this;
     return (0,C_github_chadcumm_cov_compass_org_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      _this.mPage.putLog('[PatientSearch] onPatientSearch called');
       try {
         const result = yield _this.cernerActionService.searchForPatientAndEncounter();
+        _this.mPage.putLog(`[PatientSearch] Patient search result: ${result ? `personId=${result.personId}, encounterId=${result.encounterId}` : 'null'}`);
         if (result && result.personId > 0) {
-          // Patient selected - store the selection
+          // Patient selected - store the selection FIRST before setting signal
           _this.selectedPatient = result;
+          _this.mPage.putLog(`[PatientSearch] Patient selected: personId=${result.personId}, encounterId=${result.encounterId}`);
+          // Reset auto-execution flag for new patient selection
+          _this._autoExecutedForPersonId = null;
+          _this.mPage.putLog('[PatientSearch] Reset auto-execution flag');
           // Load person data using Clinical Office PersonService
           // load() initiates async data loading but doesn't return a promise
           _this.personService.load({}, [{
             personId: result.personId,
             encntrId: result.encounterId
           }]);
-          // Give the service a moment to start loading before we begin polling
-          // Set the person ID signal after a small delay to trigger the effect
-          _this.ngZone.runOutsideAngular(() => {
-            setTimeout(() => {
-              _this.ngZone.run(() => {
-                _this._selectedPersonId.set(result.personId);
-                _this.cdr.markForCheck();
-              });
-            }, 100); // Small delay to let load() initiate
-          });
-          // Don't emit patientSelected here - wait for execute button
+          _this.mPage.putLog(`[PatientSearch] PersonService.load called for personId=${result.personId}`);
+          // Set the person ID signal immediately to trigger the effect
+          // The effect will poll for person data and auto-execute when found
+          _this._selectedPersonId.set(result.personId);
+          _this.cdr.markForCheck();
+          _this.mPage.putLog(`[PatientSearch] Person ID signal set to ${result.personId}, effect should trigger`);
+          // Auto-execution will happen in the effect when person data is found
         } else {
           // Search was cancelled - clear the person ID signal
           _this.ngZone.run(() => {
@@ -18958,18 +18980,33 @@ class PriorAuthFilterBarComponent {
     })();
   }
   /**
-   * Execute patient search - apply filter and refresh worklist
+   * Internal method to execute patient search - apply filter and refresh worklist
+   * This is called automatically when patient data is found, or can be called manually
    */
-  onExecutePatientSearch() {
+  executePatientSearchInternal() {
+    this.mPage.putLog(`[PatientSearch] executePatientSearchInternal called, selectedPatient=${this.selectedPatient ? `personId=${this.selectedPatient.personId}` : 'null'}`);
     if (this.selectedPatient) {
       // Clear the custom worklist dropdown before running the service
       this.selectedCustomWorklist = null;
       this.selectedPredefinedFilter = null;
+      this.mPage.putLog('[PatientSearch] Cleared custom worklist and predefined filter');
       // Update the patient filter in the service
       this.priorAuthService.updatePatientFilter(this.selectedPatient.personId);
+      this.mPage.putLog(`[PatientSearch] Updated patient filter in service for personId=${this.selectedPatient.personId}`);
       // Emit to parent to trigger worklist refresh
       this.patientSelected.emit(this.selectedPatient);
+      this.mPage.putLog(`[PatientSearch] Emitted patientSelected event for personId=${this.selectedPatient.personId}`);
+    } else {
+      this.mPage.putLog('[PatientSearch] ERROR: executePatientSearchInternal called but selectedPatient is null!');
     }
+  }
+  /**
+   * Execute patient search - apply filter and refresh worklist
+   * @deprecated This method is kept for backward compatibility but is no longer used
+   * Auto-execution now happens automatically when patient data is found
+   */
+  onExecutePatientSearch() {
+    this.executePatientSearchInternal();
   }
   /**
    * Clear the patient filter
@@ -18978,12 +19015,13 @@ class PriorAuthFilterBarComponent {
     this.selectedPatient = null;
     this._selectedPersonId.set(null);
     this.selectedPatientName.set('');
+    this._autoExecutedForPersonId = null; // Reset auto-execution flag
     this.priorAuthService.clearPatientFilter();
     this.clearPatientFilter.emit();
   }
   static {
     this.ɵfac = function PriorAuthFilterBarComponent_Factory(t) {
-      return new (t || PriorAuthFilterBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_sidebar_state_service__WEBPACK_IMPORTED_MODULE_1__.SidebarStateService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_3__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_4__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_custom_worklist_service__WEBPACK_IMPORTED_MODULE_5__.CustomWorklistService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_cerner_action_service__WEBPACK_IMPORTED_MODULE_6__.CernerActionService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.PersonService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.NgZone), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.ChangeDetectorRef));
+      return new (t || PriorAuthFilterBarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_sidebar_state_service__WEBPACK_IMPORTED_MODULE_1__.SidebarStateService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_user_preferences_service__WEBPACK_IMPORTED_MODULE_2__.UserPreferencesService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_column_config_service__WEBPACK_IMPORTED_MODULE_3__.ColumnConfigService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_prior_auth_service__WEBPACK_IMPORTED_MODULE_4__.PriorAuthService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_custom_worklist_service__WEBPACK_IMPORTED_MODULE_5__.CustomWorklistService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_services_cerner_action_service__WEBPACK_IMPORTED_MODULE_6__.CernerActionService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.PersonService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.NgZone), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_7__.ChangeDetectorRef), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_clinicaloffice_clinical_office_mpage_core__WEBPACK_IMPORTED_MODULE_8__.mPageService));
     };
   }
   static {
@@ -19005,11 +19043,11 @@ class PriorAuthFilterBarComponent {
       },
       decls: 21,
       vars: 2,
-      consts: [[1, "custom-worklist-controls", 2, "background", "#f8f9fa", "padding", "12px", "margin-bottom", "10px", "border", "1px solid #e9ecef", "border-radius", "6px"], ["direction", "horizontal", "size", "small", "nzAlign", "center", 2, "width", "100%", "justify-content", "space-between"], ["direction", "horizontal", "size", "small", "nzAlign", "center", 4, "nzSpaceItem"], ["direction", "horizontal", "size", "small", "nzAlign", "center", "style", "flex: 1; justify-content: center;", 4, "nzSpaceItem"], ["nz-row", "", "nzAlign", "middle", "nzJustify", "space-between", "class", "predefined-filters-row", 4, "ngIf"], ["nz-row", "", "nzAlign", "middle", "nzJustify", "end", "nzGutter", "[0,0]", 1, "filter-controls-row"], ["nz-col", "", "nzFlex", "75px"], ["userPreferenceButtons", ""], ["direction", "horizontal", "size", "small"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click", 4, "nzSpaceItem"], ["nz-col", "", "nzFlex", "auto", 1, "fill-rest-col"], ["nz-button", "", "nzShape", "round", "size", "small", "class", "assignment-toggle-button", 3, "nzType", "click", 4, "nzSpaceItem"], [3, "nzOptions", "nzValueChange", 4, "nzSpaceItem"], ["nz-input", "", "placeholder", "Global Search", "style", "width: 220px;", 3, "input", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", "class", "refresh-button", 3, "click", 4, "nzSpaceItem"], [4, "ngIf"], ["direction", "horizontal", "size", "small", "nzAlign", "center"], ["nzSize", "small", "class", "custom-worklist-select", "nzPlaceHolder", "Select a worklist", "nzAllowClear", "", "style", "min-width: 200px;", 3, "ngModel", "nzDropdownMatchSelectWidth", "nzShowSearch", "nzDisabled", "ngModelChange", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "primary", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Create New Worklist", "style", "background-color: #1890ff; border-color: #1890ff; min-width: 32px; min-height: 32px;", 3, "disabled", "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Search for Patient", 3, "click", 4, "nzSpaceItem"], ["nzSize", "small", "nzPlaceHolder", "Select a worklist", "nzAllowClear", "", 1, "custom-worklist-select", 2, "min-width", "200px", 3, "ngModel", "nzDropdownMatchSelectWidth", "nzShowSearch", "nzDisabled", "ngModelChange"], [3, "nzLabel", "nzValue", 4, "ngFor", "ngForOf"], [3, "nzLabel", "nzValue"], ["nz-button", "", "nzType", "primary", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Create New Worklist", 2, "background-color", "#1890ff", "border-color", "#1890ff", "min-width", "32px", "min-height", "32px", 3, "disabled", "click"], ["nz-icon", "", "nzType", "plus", "nzTheme", "outline", 2, "color", "white", "font-size", "16px"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Edit Worklist", 3, "disabled", "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Edit Worklist", 3, "disabled", "click"], ["nz-icon", "", "nzType", "edit", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzDanger", "", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Delete Worklist", "nz-popconfirm", "", "nzPopconfirmTitle", "Are you sure you want to delete this worklist?", 3, "disabled", "nzOnConfirm", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzDanger", "", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Delete Worklist", "nz-popconfirm", "", "nzPopconfirmTitle", "Are you sure you want to delete this worklist?", 3, "disabled", "nzOnConfirm"], ["nz-icon", "", "nzType", "delete", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Search for Patient", 3, "click"], ["nz-icon", "", "nzType", "search", "nzTheme", "outline"], ["style", "margin: 0; padding: 4px 8px; font-size: 12px;", 3, "nzColor", 4, "nzSpaceItem"], [2, "margin", "0", "padding", "4px 8px", "font-size", "12px", 3, "nzColor"], ["nz-button", "", "nzType", "primary", "nzSize", "small", "nzShape", "round", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "primary", "nzSize", "small", "nzShape", "round", 3, "click"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Clear Patient Filter", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Clear Patient Filter", 3, "click"], ["nz-icon", "", "nzType", "close", "nzTheme", "outline"], ["direction", "horizontal", "size", "small", "nzAlign", "center", 2, "flex", "1", "justify-content", "center"], [4, "ngFor", "ngForOf"], ["class", "filter-count-tag", "style", "margin: 0 2px; padding: 4px 8px; font-size: 12px; border-radius: 4px; cursor: default;", 3, "zero-count", "nzColor", 4, "nzSpaceItem"], [1, "filter-count-tag", 2, "margin", "0 2px", "padding", "4px 8px", "font-size", "12px", "border-radius", "4px", "cursor", "default", 3, "nzColor"], [2, "font-weight", "500"], [2, "font-weight", "700", "margin-left", "4px", "color", "#1890ff"], ["style", "font-size: 13px; color: #595959; font-weight: 500;", 4, "nzSpaceItem"], ["nzSize", "small", 3, "ngModel", "nzCheckedChildren", "nzUnCheckedChildren", "ngModelChange", 4, "nzSpaceItem"], ["checkedTemplate", ""], ["uncheckedTemplate", ""], [2, "font-size", "13px", "color", "#595959", "font-weight", "500"], ["nzSize", "small", 3, "ngModel", "nzCheckedChildren", "nzUnCheckedChildren", "ngModelChange"], ["nz-icon", "", "nzType", "check"], ["nz-icon", "", "nzType", "close"], ["nz-row", "", "nzAlign", "middle", "nzJustify", "space-between", 1, "predefined-filters-row"], ["nz-col", "", "nzFlex", "auto"], ["nzType", "card", "nzSize", "small", 1, "predefined-filter-tabs", 3, "nzSelectedIndex", "nzSelectedIndexChange"], [3, "nzTitle", "nzClick", 4, "ngFor", "ngForOf"], ["nz-col", "", "nzFlex", "none", 1, "subroute-selection-col"], ["direction", "horizontal", "size", "small", "align", "center"], ["nzSize", "small", "class", "location-select", "nzPlaceHolder", "Location", 3, "ngModel", "nzDropdownMatchSelectWidth", "ngModelChange", 4, "nzSpaceItem"], ["class", "subroute-segmented", 3, "nzOptions", "ngModel", "ngModelChange", 4, "nzSpaceItem"], [3, "nzTitle", "nzClick"], ["nzSize", "small", "nzPlaceHolder", "Location", 1, "location-select", 3, "ngModel", "nzDropdownMatchSelectWidth", "ngModelChange"], [1, "subroute-segmented", 3, "nzOptions", "ngModel", "ngModelChange"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click"], ["nz-icon", "", "nzType", "appstore", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click"], ["nz-icon", "", "nzType", "save", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click"], ["nz-icon", "", "nzType", "undo", "nzTheme", "outline"], ["nz-button", "", "nzShape", "round", "size", "small", 1, "assignment-toggle-button", 3, "nzType", "click"], ["nz-icon", "", "nzType", "user", "nzTheme", "outline"], [3, "nzOptions", "nzValueChange"], ["nz-input", "", "placeholder", "Global Search", 2, "width", "220px", 3, "input"], ["globalSearchInput", ""], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", 1, "refresh-button", 3, "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"], ["class", "processing-badge", 4, "ngIf"], [1, "processing-badge"], ["nz-button", "", "nzType", "primary", "nzShape", "circle", "aria-label", "Create Test Orders", "class", "test-order-button", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "primary", "nzShape", "circle", "aria-label", "Create Test Orders", 1, "test-order-button", 3, "click"], ["nz-icon", "", "nzType", "plus", "nzTheme", "outline"]],
+      consts: [[1, "custom-worklist-controls", 2, "background", "#f8f9fa", "padding", "12px", "margin-bottom", "10px", "border", "1px solid #e9ecef", "border-radius", "6px"], ["direction", "horizontal", "size", "small", "nzAlign", "center", 2, "width", "100%", "justify-content", "space-between"], ["direction", "horizontal", "size", "small", "nzAlign", "center", 4, "nzSpaceItem"], ["direction", "horizontal", "size", "small", "nzAlign", "center", "style", "flex: 1; justify-content: center;", 4, "nzSpaceItem"], ["nz-row", "", "nzAlign", "middle", "nzJustify", "space-between", "class", "predefined-filters-row", 4, "ngIf"], ["nz-row", "", "nzAlign", "middle", "nzJustify", "end", "nzGutter", "[0,0]", 1, "filter-controls-row"], ["nz-col", "", "nzFlex", "75px"], ["userPreferenceButtons", ""], ["direction", "horizontal", "size", "small"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click", 4, "nzSpaceItem"], ["nz-col", "", "nzFlex", "auto", 1, "fill-rest-col"], ["nz-button", "", "nzShape", "round", "size", "small", "class", "assignment-toggle-button", 3, "nzType", "click", 4, "nzSpaceItem"], [3, "nzOptions", "nzValueChange", 4, "nzSpaceItem"], ["nz-input", "", "placeholder", "Global Search", "style", "width: 220px;", 3, "input", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", "class", "refresh-button", 3, "click", 4, "nzSpaceItem"], [4, "ngIf"], ["direction", "horizontal", "size", "small", "nzAlign", "center"], ["nzSize", "small", "class", "custom-worklist-select", "nzPlaceHolder", "Select a worklist", "nzAllowClear", "", "style", "min-width: 200px;", 3, "ngModel", "nzDropdownMatchSelectWidth", "nzShowSearch", "nzDisabled", "ngModelChange", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "primary", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Create New Worklist", "style", "background-color: #1890ff; border-color: #1890ff; min-width: 32px; min-height: 32px;", 3, "disabled", "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Search for Patient", 3, "click", 4, "nzSpaceItem"], ["nzSize", "small", "nzPlaceHolder", "Select a worklist", "nzAllowClear", "", 1, "custom-worklist-select", 2, "min-width", "200px", 3, "ngModel", "nzDropdownMatchSelectWidth", "nzShowSearch", "nzDisabled", "ngModelChange"], [3, "nzLabel", "nzValue", 4, "ngFor", "ngForOf"], [3, "nzLabel", "nzValue"], ["nz-button", "", "nzType", "primary", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Create New Worklist", 2, "background-color", "#1890ff", "border-color", "#1890ff", "min-width", "32px", "min-height", "32px", 3, "disabled", "click"], ["nz-icon", "", "nzType", "plus", "nzTheme", "outline", 2, "color", "white", "font-size", "16px"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Edit Worklist", 3, "disabled", "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Edit Worklist", 3, "disabled", "click"], ["nz-icon", "", "nzType", "edit", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzDanger", "", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Delete Worklist", "nz-popconfirm", "", "nzPopconfirmTitle", "Are you sure you want to delete this worklist?", 3, "disabled", "nzOnConfirm", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzDanger", "", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Delete Worklist", "nz-popconfirm", "", "nzPopconfirmTitle", "Are you sure you want to delete this worklist?", 3, "disabled", "nzOnConfirm"], ["nz-icon", "", "nzType", "delete", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Search for Patient", 3, "click"], ["nz-icon", "", "nzType", "search", "nzTheme", "outline"], ["style", "margin: 0; padding: 4px 8px; font-size: 12px;", 3, "nzColor", 4, "nzSpaceItem"], [2, "margin", "0", "padding", "4px 8px", "font-size", "12px", 3, "nzColor"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Clear Patient Filter", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "default", "nzSize", "small", "nzShape", "circle", "nz-tooltip", "Clear Patient Filter", 3, "click"], ["nz-icon", "", "nzType", "close", "nzTheme", "outline"], ["direction", "horizontal", "size", "small", "nzAlign", "center", 2, "flex", "1", "justify-content", "center"], [4, "ngFor", "ngForOf"], ["class", "filter-count-tag", "style", "margin: 0 2px; padding: 4px 8px; font-size: 12px; border-radius: 4px; cursor: default;", 3, "zero-count", "nzColor", 4, "nzSpaceItem"], [1, "filter-count-tag", 2, "margin", "0 2px", "padding", "4px 8px", "font-size", "12px", "border-radius", "4px", "cursor", "default", 3, "nzColor"], [2, "font-weight", "500"], [2, "font-weight", "700", "margin-left", "4px", "color", "#1890ff"], ["style", "font-size: 13px; color: #595959; font-weight: 500;", 4, "nzSpaceItem"], ["nzSize", "small", 3, "ngModel", "nzCheckedChildren", "nzUnCheckedChildren", "ngModelChange", 4, "nzSpaceItem"], ["checkedTemplate", ""], ["uncheckedTemplate", ""], [2, "font-size", "13px", "color", "#595959", "font-weight", "500"], ["nzSize", "small", 3, "ngModel", "nzCheckedChildren", "nzUnCheckedChildren", "ngModelChange"], ["nz-icon", "", "nzType", "check"], ["nz-icon", "", "nzType", "close"], ["nz-row", "", "nzAlign", "middle", "nzJustify", "space-between", 1, "predefined-filters-row"], ["nz-col", "", "nzFlex", "auto"], ["nzType", "card", "nzSize", "small", 1, "predefined-filter-tabs", 3, "nzSelectedIndex", "nzSelectedIndexChange"], [3, "nzTitle", "nzClick", 4, "ngFor", "ngForOf"], ["nz-col", "", "nzFlex", "none", 1, "subroute-selection-col"], ["direction", "horizontal", "size", "small", "align", "center"], ["nzSize", "small", "class", "location-select", "nzPlaceHolder", "Location", 3, "ngModel", "nzDropdownMatchSelectWidth", "ngModelChange", 4, "nzSpaceItem"], ["class", "subroute-segmented", 3, "nzOptions", "ngModel", "ngModelChange", "nzValueChange", 4, "nzSpaceItem"], [3, "nzTitle", "nzClick"], ["nzSize", "small", "nzPlaceHolder", "Location", 1, "location-select", 3, "ngModel", "nzDropdownMatchSelectWidth", "ngModelChange"], [1, "subroute-segmented", 3, "nzOptions", "ngModel", "ngModelChange", "nzValueChange"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "nzIcon", "filter", 3, "click"], ["nz-icon", "", "nzType", "appstore", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Save Preferences", 3, "click"], ["nz-icon", "", "nzType", "save", "nzTheme", "outline"], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Reset Column Widths", 3, "click"], ["nz-icon", "", "nzType", "undo", "nzTheme", "outline"], ["nz-button", "", "nzShape", "round", "size", "small", 1, "assignment-toggle-button", 3, "nzType", "click"], ["nz-icon", "", "nzType", "user", "nzTheme", "outline"], [3, "nzOptions", "nzValueChange"], ["nz-input", "", "placeholder", "Global Search", 2, "width", "220px", 3, "input"], ["globalSearchInput", ""], ["nz-button", "", "nzType", "default", "nzShape", "circle", "aria-label", "Refresh Data", 1, "refresh-button", 3, "click"], ["nz-icon", "", "nzType", "reload", "nzTheme", "outline", 3, "nzSpin"], ["class", "processing-badge", 4, "ngIf"], [1, "processing-badge"], ["nz-button", "", "nzType", "primary", "nzShape", "circle", "aria-label", "Create Test Orders", "class", "test-order-button", 3, "click", 4, "nzSpaceItem"], ["nz-button", "", "nzType", "primary", "nzShape", "circle", "aria-label", "Create Test Orders", 1, "test-order-button", 3, "click"], ["nz-icon", "", "nzType", "plus", "nzTheme", "outline"]],
       template: function PriorAuthFilterBarComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "div")(1, "div", 0)(2, "nz-space", 1);
-          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](3, PriorAuthFilterBarComponent_nz_space_3_Template, 9, 5, "nz-space", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](3, PriorAuthFilterBarComponent_nz_space_3_Template, 8, 4, "nz-space", 2);
           _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](4, PriorAuthFilterBarComponent_nz_space_4_Template, 2, 1, "nz-space", 3);
           _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](5, PriorAuthFilterBarComponent_nz_space_5_Template, 7, 0, "nz-space", 2);
           _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]()();
@@ -38831,9 +38869,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2025-11-15T14:32:46.483Z
-const buildVersion = 'v1.0.19-develop';
-const packageVersion = '1.0.19';
+// Generated on: 2025-11-15T15:05:17.896Z
+const buildVersion = 'v1.0.20-develop';
+const packageVersion = '1.0.20';
 const gitBranch = 'develop';
 
 /***/ }),
@@ -38844,7 +38882,7 @@ const gitBranch = 'develop';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.19","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.20","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
