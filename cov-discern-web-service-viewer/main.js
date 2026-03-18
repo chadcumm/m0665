@@ -5968,11 +5968,11 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-ZRUKVMVP.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-4Q5H3DTC.js").then((m) => m.Executor)
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-4QSPIE3I.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-ETEB7C35.js").then((m) => m.ServiceManager)
   }
 ];
 
@@ -6006,8 +6006,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.9-develop";
-var packageVersion = "0.0.9";
+var buildVersion = "v0.0.10-develop";
+var packageVersion = "0.0.10";
 var gitBranch = "develop";
 
 // src/app/app-version/app-version.ts
