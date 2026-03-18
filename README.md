@@ -1,18 +1,19 @@
-# cov-mpage-template-co5
+# cov-discern-web-service-viewer
 
 ## Current Deployment
 
 **Environment:** M0665
-**Version:** v0.0.8
-**Branch:** master
-**Last Deployed:** 11/07/2025, 13:48:49
+**Version:** v0.0.2
+**Branch:** develop
+**Last Deployed:** 03/18/2026, 00:27:06
 
 ## About
 
-This directory contains the deployed build artifacts for the cov-mpage-template-co5 MPage application.
+This directory contains the deployed build artifacts for the cov-discern-web-service-viewer MPage application.
 
 ## Deployment History
 
+- **v0.0.2** | Branch: `develop` | Deployed: 03/18/2026, 00:27:06
 - **v0.0.8** | Branch: `master` | Deployed: 11/07/2025, 13:48:49
 
 ---
