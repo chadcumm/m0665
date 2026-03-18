@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["src/app/app-version/app-version.scss"],
-  "sourcesContent": [".app-version {\n  display: inline-block;\n  padding: 4px 8px;\n  font-size: 0.75rem;\n  color: #666;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  font-family: monospace;\n\n  .version-text {\n    font-weight: 500;\n  }\n}\n"],
-  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,WAAA,IAAA;AACA,aAAA;AACA,SAAA;AACA,oBAAA;AACA,iBAAA;AACA,eAAA;;AAEA,CATF,YASE,CAAA;AACE,eAAA;;",
+  "sourcesContent": [".app-version {\n  display: inline-block;\n  padding: 3px 8px;\n  font-size: 11px;\n  color: var(--ink-muted);\n  background: var(--stone-100);\n  border: 1px solid var(--border-subtle);\n  border-radius: var(--radius-sm);\n  font-family: var(--font-mono);\n  letter-spacing: 0.02em;\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,WAAA,IAAA;AACA,aAAA;AACA,SAAA,IAAA;AACA,cAAA,IAAA;AACA,UAAA,IAAA,MAAA,IAAA;AACA,iBAAA,IAAA;AACA,eAAA,IAAA;AACA,kBAAA;;",
   "names": []
 }

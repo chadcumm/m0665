@@ -1,101 +1,123 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
-@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap";
 
 /* src/styles.scss */
 :root {
-  --text-color: black;
-  --text-color-alternate: grey;
-  --font-family: "Roboto Condensed";
+  --stone-50: #fafaf9;
+  --stone-100: #f5f3f0;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+  --ember: #ea580c;
+  --ember-hover: #c2410c;
+  --ember-subtle: rgba(234, 88, 12, 0.08);
+  --success: #16a34a;
+  --success-subtle: rgba(22, 163, 74, 0.08);
+  --error: #dc2626;
+  --error-subtle: rgba(220, 38, 38, 0.08);
+  --canvas: var(--stone-100);
+  --surface: #fff;
+  --surface-raised: var(--stone-50);
+  --surface-inset: #edeae7;
+  --ink-primary: var(--stone-900);
+  --ink-secondary: var(--stone-600);
+  --ink-tertiary: var(--stone-500);
+  --ink-muted: var(--stone-400);
+  --border: rgba(28, 25, 23, 0.10);
+  --border-subtle: rgba(28, 25, 23, 0.06);
+  --border-emphasis: rgba(28, 25, 23, 0.16);
+  --border-focus: var(--ember);
+  --control-bg: var(--surface);
+  --control-border: var(--stone-300);
+  --control-focus-ring: rgba(234, 88, 12, 0.2);
+  --font-family: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-size: 13px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --text-color: var(--ink-primary);
+  --text-color-alternate: var(--ink-secondary);
   --font-generic-name: sans-serif;
-  --font-size: medium;
-  --context-background-color: white;
-  --context-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-  --context-dialog-border: 1px solid grey;
-  --context-dialog-border-radius: 0;
-  --context-hover: grey;
-  --default-color: white;
-  --default-color-content: black;
-  --default-color-alternate: grey;
-  --primary-color: #5783db;
+  --primary-color: var(--ember);
   --primary-color-content: white;
-  --primary-color-alternate: darkblue;
-  --accent-color: #55c2da;
-  --accent-color-content: darkblue;
-  --accent-color-alternate: #46697a;
-  --warn-color: #ed0800;
+  --primary-color-alternate: var(--ember-hover);
+  --accent-color: var(--ember);
+  --accent-color-content: white;
+  --accent-color-alternate: var(--ember-hover);
+  --warn-color: var(--error);
   --warn-color-content: white;
-  --warn-color-alternate: darkred;
-  --field-min-height: 3em;
-  --field-background-color: ghostwhite;
-  --field-border: unset;
-  --field-border-radius: 0;
+  --warn-color-alternate: #b91c1c;
+  --context-background-color: var(--surface);
+  --context-shadow: 0 4px 12px rgba(28, 25, 23, 0.12);
+  --context-dialog-border: 1px solid var(--border);
+  --context-dialog-border-radius: var(--radius-md);
+  --context-hover: var(--stone-200);
+  --default-color: var(--surface);
+  --default-color-content: var(--ink-primary);
+  --default-color-alternate: var(--stone-200);
+  --field-min-height: 2.5em;
+  --field-background-color: var(--surface-inset);
+  --field-border: 1px solid var(--control-border);
+  --field-border-radius: var(--radius-sm);
   --field-box-shadow: unset;
-  --field-required-background-color: rgb(242, 242, 140);
-  --field-required-border: unset;
-  --field-required-border-radius: 0;
-  --notification-padding: 0.5em;
-  --notification-font-weight: bold;
-  --notification-border: unset;
-  --notification-border-radius: 0;
-  --notification-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-  --select-search-border: 1px solid black;
-  --select-field-max-height: 30vh;
-  --co-tree-indent-margin: 15px;
-  --co-tree-no-expand-margin: 40px;
-  --tree-search-found-background: inherit;
-  --tree-search-found-color: green;
-  --button-min-height: 3em;
-  --button-padding: 0 1em;
+  --field-required-background-color: rgba(234, 88, 12, 0.06);
+  --field-required-border: 1px solid rgba(234, 88, 12, 0.3);
+  --field-required-border-radius: var(--radius-sm);
+  --button-min-height: 2.5em;
+  --button-padding: 0 var(--space-4);
   --button-border: none;
-  --button-border-radius: 0;
-  --button-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  --button-shadow-alternate: 0 0 8px rgba(0, 0, 0, 0.3);
-  --button-stroke: 2px solid black;
-  --button-stroke-alternate: 2px solid black;
-  --mpage-scrollbar-track: white;
-  --mpage-scrollbar-color: grey;
-  --mpage-scrollbar-border: 1px solid grey;
-  --mpage-scrollbar-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  --mpage-table-container-border: 1px solid lightgrey;
-  --mpage-table-font-size: inherit;
-  --mpage-table-header-height: 40px;
-  --mpage-table-header-background-color: rgb(124, 179, 198);
-  --mpage-table-row-height: 36px;
-  --mpage-table-background-color: white;
-  --mpage-table-cell-border: 1px solid lightgrey;
-  --mpage-table-sort-arrow-color: grey;
-  --mpage-table-filter-background-color: whitesmoke;
+  --button-border-radius: var(--radius-sm);
+  --button-shadow: none;
+  --button-shadow-alternate: none;
+  --notification-padding: var(--space-2);
+  --notification-font-weight: 500;
+  --notification-border: 1px solid var(--border);
+  --notification-border-radius: var(--radius-sm);
+  --notification-box-shadow: 0 4px 12px rgba(28, 25, 23, 0.08);
+  --mpage-table-container-border: 1px solid var(--border);
+  --mpage-table-font-size: var(--font-size);
+  --mpage-table-header-height: 36px;
+  --mpage-table-header-background-color: var(--stone-200);
+  --mpage-table-row-height: 32px;
+  --mpage-table-background-color: var(--surface);
+  --mpage-table-cell-border: 1px solid var(--border-subtle);
+  --mpage-table-sort-arrow-color: var(--ink-tertiary);
+  --mpage-table-filter-background-color: var(--surface-raised);
   --mpage-table-toolbar-box-height: fit-content;
-  --mpage-table-toolbar-background-color: lightblue;
-  --mpage-table-toolbar-border-radius: 0;
-  --mpage-table-toolbar-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  --mpage-table-toolbar-icon-color: black;
-  --mpage-table-toolbar-padding: 8px;
-  --mpage-table-toolbar-drag-background: lightgrey;
-  --mpage-table-toolbar-drag-padding: 8px;
-  --mpage-table-toolbar-drag-border: unset;
-  --mpage-table-toolbar-drag-border-alternate: 2px solid;
-  --mpage-table-toolbar-drag-border-radius: 0;
-  --mpage-table-empty-space-background:
-    repeating-linear-gradient(
-      -30deg,
-      rgba(0, 0, 0, 0.04),
-      rgba(0, 0, 0, 0.04) 4px,
-      rgba(0, 0, 0, 0.08) 6px,
-      rgba(0, 0, 0, 0.08) 10px);
-  --dialog-padding: 1em;
-  --dialog-content-padding: 1em 0;
+  --mpage-table-toolbar-background-color: var(--stone-200);
+  --mpage-table-toolbar-border-radius: var(--radius-sm);
+  --mpage-table-toolbar-box-shadow: none;
+  --mpage-table-toolbar-icon-color: var(--ink-secondary);
+  --mpage-table-toolbar-padding: var(--space-2);
+  --mpage-scrollbar-track: var(--stone-100);
+  --mpage-scrollbar-color: var(--stone-300);
+  --mpage-scrollbar-border: none;
+  --mpage-scrollbar-shadow: none;
+  --dialog-padding: var(--space-5);
+  --dialog-content-padding: var(--space-4) 0;
   --dialog-content-background: inherit;
-  --tabbed-menu-border: unset;
-  --tabbed-menu-background: inherit;
-  --tabbed-menu-margin: unset;
-  --tabbed-menu-padding: unset;
+  --select-search-border: 1px solid var(--control-border);
+  --select-field-max-height: 30vh;
   box-sizing: border-box;
-  font-family: var(--font-family), var(--font-generic-name);
+  font-family: var(--font-family);
   font-size: var(--font-size);
-  color: var(--text-color);
+  color: var(--ink-primary);
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 :root *,
 :root *::before,
@@ -110,47 +132,85 @@ html,
 body {
   height: 100%;
   overflow: hidden;
+  background: var(--canvas);
 }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 3px;
-  font-size: 0.9rem;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
   font-weight: 500;
   cursor: pointer;
-  font-family: inherit;
-  transition: background-color 0.15s;
+  transition: all 0.15s ease;
+  background: var(--surface);
+  color: var(--ink-primary);
+  line-height: 1.4;
 }
 .btn .material-icons {
-  font-size: 18px;
+  font-size: 16px;
+}
+.btn:hover:not(:disabled) {
+  background: var(--stone-200);
+  border-color: var(--border-emphasis);
 }
 .btn:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 .btn.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--primary-color-content);
+  background: var(--stone-800);
+  color: white;
+  border-color: var(--stone-800);
 }
 .btn.btn-primary:hover:not(:disabled) {
-  background-color: var(--primary-color-alternate);
+  background: var(--stone-900);
+  border-color: var(--stone-900);
+}
+.btn.btn-accent {
+  background: var(--ember);
+  color: white;
+  border-color: var(--ember);
+}
+.btn.btn-accent:hover:not(:disabled) {
+  background: var(--ember-hover);
+  border-color: var(--ember-hover);
 }
 .btn.btn-secondary {
-  background-color: #6c757d;
-  color: white;
+  background: var(--surface);
+  color: var(--ink-secondary);
+  border-color: var(--border);
 }
 .btn.btn-secondary:hover:not(:disabled) {
-  background-color: #5a6268;
+  background: var(--stone-100);
+  color: var(--ink-primary);
+}
+.btn.btn-warn {
+  background: var(--error);
+  color: white;
+  border-color: var(--error);
+}
+.btn.btn-warn:hover:not(:disabled) {
+  background: #b91c1c;
 }
 .btn.btn-small {
-  padding: 4px 10px;
-  font-size: 0.8rem;
+  padding: var(--space-1) var(--space-2);
+  font-size: 12px;
 }
 .btn.btn-small .material-icons {
-  font-size: 16px;
+  font-size: 14px;
+}
+.btn.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ink-secondary);
+}
+.btn.btn-ghost:hover:not(:disabled) {
+  background: rgba(28, 25, 23, 0.06);
+  color: var(--ink-primary);
 }
 
 /* src/clinical-office-styles.scss */
