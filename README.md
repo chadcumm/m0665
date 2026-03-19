@@ -3,9 +3,9 @@
 ## Current Deployment
 
 **Environment:** M0665
-**Version:** v0.0.3
+**Version:** v0.0.4
 **Branch:** main
-**Last Deployed:** 03/19/2026, 00:24:33
+**Last Deployed:** 03/19/2026, 00:44:08
 
 ## About
 
@@ -13,6 +13,7 @@ This directory contains the deployed build artifacts for the co-showcase MPage a
 
 ## Deployment History
 
+- **v0.0.4** | Branch: `main` | Deployed: 03/19/2026, 00:44:08
 - **v0.0.3** | Branch: `main` | Deployed: 03/19/2026, 00:24:33
 - **v0.0.10** | Branch: `develop` | Deployed: 03/18/2026, 01:19:07
 - **v0.0.9** | Branch: `develop` | Deployed: 03/18/2026, 01:09:51
@@ -22,7 +23,6 @@ This directory contains the deployed build artifacts for the co-showcase MPage a
 - **v0.0.5** | Branch: `develop` | Deployed: 03/18/2026, 01:03:21
 - **v0.0.4** | Branch: `develop` | Deployed: 03/18/2026, 00:49:00
 - **v0.0.3** | Branch: `develop` | Deployed: 03/18/2026, 00:35:03
-- **v0.0.2** | Branch: `develop` | Deployed: 03/18/2026, 00:27:06
 
 ---
 

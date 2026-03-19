@@ -60,10 +60,10 @@ var patientGuard = (route) => {
 // src/app/app.routes.ts
 var routes = [
   { path: "", redirectTo: "search", pathMatch: "full" },
-  { path: "search", loadComponent: () => import("./chunk-ZHKGYLMY.js").then((m) => m.Search) },
+  { path: "search", loadComponent: () => import("./chunk-OIXAAW6R.js").then((m) => m.Search) },
   {
     path: "patient/:personId/:encntrId",
-    loadComponent: () => import("./chunk-JE53TQDS.js").then((m) => m.PatientSummary),
+    loadComponent: () => import("./chunk-GCZOUE7M.js").then((m) => m.PatientSummary),
     canActivate: [patientGuard]
   },
   { path: "config", loadComponent: () => import("./chunk-QRJBI6UD.js").then((m) => m.Config) },
@@ -99,7 +99,7 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.3-main";
+var buildVersion = "v0.0.4-main";
 
 // src/app/app.ts
 var _c0 = () => ({ position: "bottom", size: 25 });
