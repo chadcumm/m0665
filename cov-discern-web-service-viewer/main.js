@@ -5968,11 +5968,11 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-WS5VENMT.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-Y2ECBKYU.js").then((m) => m.Executor)
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-FYSLCZD3.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-WNRRF3NY.js").then((m) => m.ServiceManager)
   }
 ];
 
@@ -6006,8 +6006,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.11-feature/reference-service-customservice";
-var packageVersion = "0.0.11";
+var buildVersion = "v0.0.12-feature/reference-service-customservice";
+var packageVersion = "0.0.12";
 var gitBranch = "feature/reference-service-customservice";
 
 // src/app/app-version/app-version.ts
