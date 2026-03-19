@@ -3,7 +3,7 @@ import {
   RouterOutlet,
   provideRouter,
   withHashLocation
-} from "./chunk-I6RTURXQ.js";
+} from "./chunk-QQOIXTP3.js";
 import {
   AddressService,
   AllergyService,
@@ -44,7 +44,7 @@ import {
   ɵɵpureFunction0,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-H5B3TWA2.js";
+} from "./chunk-7XJKXICL.js";
 
 // src/app/guards/patient.guard.ts
 var patientGuard = (route) => {
@@ -60,13 +60,13 @@ var patientGuard = (route) => {
 // src/app/app.routes.ts
 var routes = [
   { path: "", redirectTo: "search", pathMatch: "full" },
-  { path: "search", loadComponent: () => import("./chunk-OIXAAW6R.js").then((m) => m.Search) },
+  { path: "search", loadComponent: () => import("./chunk-O2BDDDIG.js").then((m) => m.Search) },
   {
     path: "patient/:personId/:encntrId",
-    loadComponent: () => import("./chunk-GCZOUE7M.js").then((m) => m.PatientSummary),
+    loadComponent: () => import("./chunk-GWCPDNJR.js").then((m) => m.PatientSummary),
     canActivate: [patientGuard]
   },
-  { path: "config", loadComponent: () => import("./chunk-QRJBI6UD.js").then((m) => m.Config) },
+  { path: "config", loadComponent: () => import("./chunk-HUZSJCOT.js").then((m) => m.Config) },
   { path: "**", redirectTo: "search" }
 ];
 
@@ -99,7 +99,7 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.4-main";
+var buildVersion = "v0.0.5-main";
 
 // src/app/app.ts
 var _c0 = () => ({ position: "bottom", size: 25 });
