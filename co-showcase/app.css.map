@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.scss"],
+  "sourcesContent": [".app-shell {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n}\n\n.app-header {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n  padding: 0.25rem 0.5rem;\n  border-bottom: 1px solid #e0e0e0;\n}\n\n.version-stamp {\n  margin-left: auto;\n  font-size: 0.75rem;\n  color: #999;\n  white-space: nowrap;\n}\n\n.app-content {\n  flex: 1;\n  overflow: auto;\n  padding: 1rem;\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,kBAAA;AACA,UAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;AACA,WAAA,QAAA;AACA,iBAAA,IAAA,MAAA;;AAGF,CAAA;AACE,eAAA;AACA,aAAA;AACA,SAAA;AACA,eAAA;;AAGF,CAAA;AACE,QAAA;AACA,YAAA;AACA,WAAA;;",
+  "names": []
+}
