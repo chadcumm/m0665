@@ -7,7 +7,7 @@ import {
   bootstrapApplication,
   provideHttpClient,
   withFetch
-} from "./chunk-ZY6O5BGM.js";
+} from "./chunk-STV2LTN5.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationRef,
@@ -5968,11 +5968,11 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-4Q5H3DTC.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-WS5VENMT.js").then((m) => m.Executor)
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-ETEB7C35.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-FYSLCZD3.js").then((m) => m.ServiceManager)
   }
 ];
 
@@ -6006,9 +6006,9 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.10-develop";
-var packageVersion = "0.0.10";
-var gitBranch = "develop";
+var buildVersion = "v0.0.11-feature/reference-service-customservice";
+var packageVersion = "0.0.11";
+var gitBranch = "feature/reference-service-customservice";
 
 // src/app/app-version/app-version.ts
 var AppVersion = class _AppVersion {
@@ -6038,12 +6038,12 @@ var AppVersion = class _AppVersion {
       \u0275\u0275advance(2);
       \u0275\u0275textInterpolate(ctx.buildVersion);
     }
-  }, styles: ["\n\n.app-version[_ngcontent-%COMP%] {\n  display: inline-block;\n  padding: 3px 8px;\n  font-size: 11px;\n  color: var(--ink-muted);\n  background: var(--stone-100);\n  border: 1px solid var(--border-subtle);\n  border-radius: var(--radius-sm);\n  font-family: var(--font-mono);\n  letter-spacing: 0.02em;\n}\n/*# sourceMappingURL=app-version.css.map */"], changeDetection: 0 });
+  }, styles: ["\n\n.app-version[_ngcontent-%COMP%] {\n  display: inline-block;\n  padding: 2px 8px;\n  font-size: var(--fusion-text-sm);\n  color: var(--fusion-color-text-secondary);\n  background: var(--fusion-color-bg-canvas);\n  border: 1px solid var(--fusion-color-border);\n  border-radius: var(--fusion-border-radius);\n  font-family: var(--fusion-font-mono);\n}\n/*# sourceMappingURL=app-version.css.map */"], changeDetection: 0 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AppVersion, [{
     type: Component,
-    args: [{ selector: "app-app-version", imports: [], changeDetection: ChangeDetectionStrategy.OnPush, template: '<div class="app-version">\n  <span class="version-text">{{ buildVersion }}</span>\n</div>\n', styles: ["/* src/app/app-version/app-version.scss */\n.app-version {\n  display: inline-block;\n  padding: 3px 8px;\n  font-size: 11px;\n  color: var(--ink-muted);\n  background: var(--stone-100);\n  border: 1px solid var(--border-subtle);\n  border-radius: var(--radius-sm);\n  font-family: var(--font-mono);\n  letter-spacing: 0.02em;\n}\n/*# sourceMappingURL=app-version.css.map */\n"] }]
+    args: [{ selector: "app-app-version", imports: [], changeDetection: ChangeDetectionStrategy.OnPush, template: '<div class="app-version">\n  <span class="version-text">{{ buildVersion }}</span>\n</div>\n', styles: ["/* src/app/app-version/app-version.scss */\n.app-version {\n  display: inline-block;\n  padding: 2px 8px;\n  font-size: var(--fusion-text-sm);\n  color: var(--fusion-color-text-secondary);\n  background: var(--fusion-color-bg-canvas);\n  border: 1px solid var(--fusion-color-border);\n  border-radius: var(--fusion-border-radius);\n  font-family: var(--fusion-font-mono);\n}\n/*# sourceMappingURL=app-version.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -6090,12 +6090,12 @@ var App = class _App {
       \u0275\u0275advance(6);
       \u0275\u0275property("routerLinkActiveOptions", \u0275\u0275pureFunction0(1, _c0));
     }
-  }, dependencies: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--canvas);\n}\n.app-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 48px;\n  padding: 0 var(--space-5);\n  background: var(--surface);\n  border-bottom: 1px solid var(--border);\n  gap: var(--space-5);\n  flex-shrink: 0;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: var(--space-2);\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: -0.01em;\n  color: var(--ink-primary);\n  white-space: nowrap;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 18px;\n  color: var(--ember);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 2px;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--space-1);\n  padding: 6px 12px;\n  border-radius: var(--radius-sm);\n  color: var(--ink-tertiary);\n  text-decoration: none;\n  font-size: 13px;\n  font-weight: 500;\n  transition: all 0.15s ease;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 15px;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  background: rgba(28, 25, 23, 0.04);\n  color: var(--ink-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\n  background: var(--ember-subtle);\n  color: var(--ember);\n}\n.app-header[_ngcontent-%COMP%]   .app-version-container[_ngcontent-%COMP%] {\n  margin-left: auto;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */"] });
+  }, dependencies: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 15px;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-version-container[_ngcontent-%COMP%] {\n  margin-left: auto;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
     type: Component,
-    args: [{ selector: "app-root", standalone: true, imports: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion], template: '<header class="app-header">\n  <div class="app-title">\n    <span class="material-icons">api</span>\n    Discern Web Service Viewer\n  </div>\n  <nav class="app-nav">\n    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">\n      <span class="material-icons">play_arrow</span> Executor\n    </a>\n    <a routerLink="/services" routerLinkActive="active">\n      <span class="material-icons">settings</span> Services\n    </a>\n  </nav>\n  <div class="app-version-container">\n    <app-app-version />\n  </div>\n</header>\n\n<main>\n  <router-outlet />\n</main>\n\n<mpage-log-component />\n', styles: ["/* src/app/app.scss */\n:host {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--canvas);\n}\n.app-header {\n  display: flex;\n  align-items: center;\n  height: 48px;\n  padding: 0 var(--space-5);\n  background: var(--surface);\n  border-bottom: 1px solid var(--border);\n  gap: var(--space-5);\n  flex-shrink: 0;\n}\n.app-header .app-title {\n  display: flex;\n  align-items: center;\n  gap: var(--space-2);\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: -0.01em;\n  color: var(--ink-primary);\n  white-space: nowrap;\n}\n.app-header .app-title .material-icons {\n  font-size: 18px;\n  color: var(--ember);\n}\n.app-header .app-nav {\n  display: flex;\n  gap: 2px;\n}\n.app-header .app-nav a {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--space-1);\n  padding: 6px 12px;\n  border-radius: var(--radius-sm);\n  color: var(--ink-tertiary);\n  text-decoration: none;\n  font-size: 13px;\n  font-weight: 500;\n  transition: all 0.15s ease;\n}\n.app-header .app-nav a .material-icons {\n  font-size: 15px;\n}\n.app-header .app-nav a:hover {\n  background: rgba(28, 25, 23, 0.04);\n  color: var(--ink-primary);\n}\n.app-header .app-nav a.active {\n  background: var(--ember-subtle);\n  color: var(--ember);\n}\n.app-header .app-version-container {\n  margin-left: auto;\n}\nmain {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */\n"] }]
+    args: [{ selector: "app-root", standalone: true, imports: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion], template: '<header class="app-header">\n  <div class="app-title">\n    <span class="material-icons">api</span>\n    Discern Web Service Viewer\n  </div>\n  <nav class="app-nav">\n    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">\n      <span class="material-icons">play_arrow</span> Executor\n    </a>\n    <a routerLink="/services" routerLinkActive="active">\n      <span class="material-icons">settings</span> Services\n    </a>\n  </nav>\n  <div class="app-version-container">\n    <app-app-version />\n  </div>\n</header>\n\n<main>\n  <router-outlet />\n</main>\n\n<mpage-log-component />\n', styles: ["/* src/app/app.scss */\n:host {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header .app-title {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header .app-title .material-icons {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header .app-nav a {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header .app-nav a .material-icons {\n  font-size: 15px;\n}\n.app-header .app-nav a:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav a.active {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header .app-version-container {\n  margin-left: auto;\n}\nmain {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */\n"] }]
   }], null, null);
 })();
 (() => {

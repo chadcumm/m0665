@@ -4,118 +4,127 @@
 
 /* src/styles.scss */
 :root {
-  --stone-50: #fafaf9;
-  --stone-100: #f5f3f0;
-  --stone-200: #e7e5e4;
-  --stone-300: #d6d3d1;
-  --stone-400: #a8a29e;
-  --stone-500: #78716c;
-  --stone-600: #57534e;
-  --stone-700: #44403c;
-  --stone-800: #292524;
-  --stone-900: #1c1917;
-  --ember: #ea580c;
-  --ember-hover: #c2410c;
-  --ember-subtle: rgba(234, 88, 12, 0.08);
-  --success: #16a34a;
-  --success-subtle: rgba(22, 163, 74, 0.08);
-  --error: #dc2626;
-  --error-subtle: rgba(220, 38, 38, 0.08);
-  --canvas: var(--stone-100);
-  --surface: #fff;
-  --surface-raised: var(--stone-50);
-  --surface-inset: #edeae7;
-  --ink-primary: var(--stone-900);
-  --ink-secondary: var(--stone-600);
-  --ink-tertiary: var(--stone-500);
-  --ink-muted: var(--stone-400);
-  --border: rgba(28, 25, 23, 0.10);
-  --border-subtle: rgba(28, 25, 23, 0.06);
-  --border-emphasis: rgba(28, 25, 23, 0.16);
-  --border-focus: var(--ember);
-  --control-bg: var(--surface);
-  --control-border: var(--stone-300);
-  --control-focus-ring: rgba(234, 88, 12, 0.2);
-  --font-family: "Manrope", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-size: 13px;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --text-color: var(--ink-primary);
-  --text-color-alternate: var(--ink-secondary);
+  --fusion-scale: 12px;
+  --fusion-space-very-tight: 3px;
+  --fusion-space-tight: 6px;
+  --fusion-space-base: 12px;
+  --fusion-space-loose: 15px;
+  --fusion-text-max: 2.5rem;
+  --fusion-text-xxxl: 2.0rem;
+  --fusion-text-xxl: 1.667rem;
+  --fusion-text-xl: 1.5rem;
+  --fusion-text-lg: 1.333rem;
+  --fusion-text-md: 1.167rem;
+  --fusion-text-base: 1rem;
+  --fusion-text-sm: 0.85rem;
+  --fusion-line-height-base: 1.4167;
+  --fusion-line-height-small: 1.25;
+  --fusion-color-primary: #0079be;
+  --fusion-color-primary-hover: #006aa3;
+  --fusion-color-primary-active: #005a8c;
+  --fusion-color-secondary: #767676;
+  --fusion-color-secondary-hover: #5c5c5c;
+  --fusion-color-link: #0079be;
+  --fusion-color-link-hover: #005a8c;
+  --fusion-color-error: #d0021b;
+  --fusion-color-warning: #c36d18;
+  --fusion-color-success: #34a853;
+  --fusion-color-info: #0079be;
+  --fusion-color-alert: #e8a623;
+  --fusion-color-text: #1c1f21;
+  --fusion-color-text-secondary: #767676;
+  --fusion-color-text-disabled: #b2b2b2;
+  --fusion-color-border: #d4d4d4;
+  --fusion-color-border-focus: #0079be;
+  --fusion-color-border-error: #d0021b;
+  --fusion-color-bg-anchor: #f4f4f4;
+  --fusion-color-bg-canvas: #ffffff;
+  --fusion-color-bg-hover: #e8f4fd;
+  --fusion-color-bg-selected: #d6ecfa;
+  --fusion-color-bg-disabled: #f4f4f4;
+  --fusion-color-bg-zebra: #fafafa;
+  --fusion-border-radius: 3px;
+  --fusion-shadow-card: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --fusion-shadow-popup: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --fusion-shadow-modal: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --fusion-transition-fast: 150ms ease;
+  --fusion-transition-base: 300ms ease;
+  --fusion-transition-slow: 500ms ease;
+  --fusion-font-family:
+    "Open Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+  --fusion-font-mono: "JetBrains Mono", monospace;
+  --text-color: var(--fusion-color-text);
+  --text-color-alternate: var(--fusion-color-text-secondary);
   --font-generic-name: sans-serif;
-  --primary-color: var(--ember);
+  --primary-color: var(--fusion-color-primary);
   --primary-color-content: white;
-  --primary-color-alternate: var(--ember-hover);
-  --accent-color: var(--ember);
+  --primary-color-alternate: var(--fusion-color-primary-hover);
+  --accent-color: var(--fusion-color-primary);
   --accent-color-content: white;
-  --accent-color-alternate: var(--ember-hover);
-  --warn-color: var(--error);
+  --accent-color-alternate: var(--fusion-color-primary-hover);
+  --warn-color: var(--fusion-color-error);
   --warn-color-content: white;
-  --warn-color-alternate: #b91c1c;
-  --context-background-color: var(--surface);
-  --context-shadow: 0 4px 12px rgba(28, 25, 23, 0.12);
-  --context-dialog-border: 1px solid var(--border);
-  --context-dialog-border-radius: var(--radius-md);
-  --context-hover: var(--stone-200);
-  --default-color: var(--surface);
-  --default-color-content: var(--ink-primary);
-  --default-color-alternate: var(--stone-200);
+  --warn-color-alternate: #a30115;
+  --context-background-color: var(--fusion-color-bg-canvas);
+  --context-shadow: var(--fusion-shadow-popup);
+  --context-dialog-border: 1px solid var(--fusion-color-border);
+  --context-dialog-border-radius: var(--fusion-border-radius);
+  --context-hover: var(--fusion-color-bg-hover);
+  --default-color: var(--fusion-color-bg-canvas);
+  --default-color-content: var(--fusion-color-text);
+  --default-color-alternate: var(--fusion-color-bg-hover);
   --field-min-height: 2.5em;
-  --field-background-color: var(--surface-inset);
-  --field-border: 1px solid var(--control-border);
-  --field-border-radius: var(--radius-sm);
+  --field-background-color: var(--fusion-color-bg-canvas);
+  --field-border: 1px solid var(--fusion-color-border);
+  --field-border-radius: var(--fusion-border-radius);
   --field-box-shadow: unset;
-  --field-required-background-color: rgba(234, 88, 12, 0.06);
-  --field-required-border: 1px solid rgba(234, 88, 12, 0.3);
-  --field-required-border-radius: var(--radius-sm);
+  --field-required-background-color: #fff8f0;
+  --field-required-border: 1px solid var(--fusion-color-warning);
+  --field-required-border-radius: var(--fusion-border-radius);
   --button-min-height: 2.5em;
-  --button-padding: 0 var(--space-4);
-  --button-border: none;
-  --button-border-radius: var(--radius-sm);
+  --button-padding: 0 var(--fusion-space-base);
+  --button-border: 1px solid var(--fusion-color-border);
+  --button-border-radius: var(--fusion-border-radius);
   --button-shadow: none;
   --button-shadow-alternate: none;
-  --notification-padding: var(--space-2);
+  --notification-padding: var(--fusion-space-base);
   --notification-font-weight: 500;
-  --notification-border: 1px solid var(--border);
-  --notification-border-radius: var(--radius-sm);
-  --notification-box-shadow: 0 4px 12px rgba(28, 25, 23, 0.08);
-  --mpage-table-container-border: 1px solid var(--border);
-  --mpage-table-font-size: var(--font-size);
+  --notification-border: 1px solid var(--fusion-color-border);
+  --notification-border-radius: var(--fusion-border-radius);
+  --notification-box-shadow: var(--fusion-shadow-popup);
+  --mpage-table-container-border: 1px solid var(--fusion-color-border);
+  --mpage-table-font-size: var(--fusion-text-base);
   --mpage-table-header-height: 36px;
-  --mpage-table-header-background-color: var(--stone-200);
+  --mpage-table-header-background-color: var(--fusion-color-bg-anchor);
   --mpage-table-row-height: 32px;
-  --mpage-table-background-color: var(--surface);
-  --mpage-table-cell-border: 1px solid var(--border-subtle);
-  --mpage-table-sort-arrow-color: var(--ink-tertiary);
-  --mpage-table-filter-background-color: var(--surface-raised);
+  --mpage-table-background-color: var(--fusion-color-bg-canvas);
+  --mpage-table-cell-border: 1px solid var(--fusion-color-border);
+  --mpage-table-sort-arrow-color: var(--fusion-color-text-secondary);
+  --mpage-table-filter-background-color: var(--fusion-color-bg-anchor);
   --mpage-table-toolbar-box-height: fit-content;
-  --mpage-table-toolbar-background-color: var(--stone-200);
-  --mpage-table-toolbar-border-radius: var(--radius-sm);
+  --mpage-table-toolbar-background-color: var(--fusion-color-bg-anchor);
+  --mpage-table-toolbar-border-radius: var(--fusion-border-radius);
   --mpage-table-toolbar-box-shadow: none;
-  --mpage-table-toolbar-icon-color: var(--ink-secondary);
-  --mpage-table-toolbar-padding: var(--space-2);
-  --mpage-scrollbar-track: var(--stone-100);
-  --mpage-scrollbar-color: var(--stone-300);
+  --mpage-table-toolbar-icon-color: var(--fusion-color-text-secondary);
+  --mpage-table-toolbar-padding: var(--fusion-space-tight);
+  --mpage-scrollbar-track: var(--fusion-color-bg-anchor);
+  --mpage-scrollbar-color: var(--fusion-color-border);
   --mpage-scrollbar-border: none;
   --mpage-scrollbar-shadow: none;
-  --dialog-padding: var(--space-5);
-  --dialog-content-padding: var(--space-4) 0;
+  --dialog-padding: var(--fusion-space-loose);
+  --dialog-content-padding: var(--fusion-space-base) 0;
   --dialog-content-background: inherit;
-  --select-search-border: 1px solid var(--control-border);
+  --select-search-border: 1px solid var(--fusion-color-border);
   --select-field-max-height: 30vh;
   box-sizing: border-box;
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  color: var(--ink-primary);
+  font-family: var(--fusion-font-family);
+  font-size: 12px;
+  line-height: var(--fusion-line-height-base);
+  color: var(--fusion-color-text);
   margin: 0;
   -webkit-font-smoothing: antialiased;
 }
@@ -132,73 +141,90 @@ html,
 body {
   height: 100%;
   overflow: hidden;
-  background: var(--canvas);
+  background: var(--fusion-color-bg-anchor);
 }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-1);
-  padding: var(--space-2) var(--space-4);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: 500;
+  gap: var(--fusion-space-tight);
+  padding: var(--fusion-space-tight) var(--fusion-space-base);
+  border: 1px solid var(--fusion-color-border);
+  border-radius: var(--fusion-border-radius);
+  font-family: var(--fusion-font-family);
+  font-size: var(--fusion-text-base);
+  line-height: var(--fusion-line-height-base);
   cursor: pointer;
-  transition: all 0.15s ease;
-  background: var(--surface);
-  color: var(--ink-primary);
-  line-height: 1.4;
+  transition:
+    background var(--fusion-transition-fast),
+    border-color var(--fusion-transition-fast),
+    color var(--fusion-transition-fast);
+  background: var(--fusion-color-bg-canvas);
+  color: var(--fusion-color-text);
+  white-space: nowrap;
 }
 .btn .material-icons {
   font-size: 16px;
 }
 .btn:hover:not(:disabled) {
-  background: var(--stone-200);
-  border-color: var(--border-emphasis);
+  background: var(--fusion-color-bg-hover);
+  border-color: var(--fusion-color-primary);
+}
+.btn:active:not(:disabled) {
+  background: var(--fusion-color-bg-selected);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--fusion-color-primary);
+  outline-offset: 2px;
 }
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  pointer-events: none;
 }
 .btn.btn-primary {
-  background: var(--stone-800);
-  color: white;
-  border-color: var(--stone-800);
+  background: var(--fusion-color-primary);
+  border-color: var(--fusion-color-primary);
+  color: #ffffff;
 }
 .btn.btn-primary:hover:not(:disabled) {
-  background: var(--stone-900);
-  border-color: var(--stone-900);
+  background: var(--fusion-color-primary-hover);
+  border-color: var(--fusion-color-primary-hover);
+  color: #ffffff;
+}
+.btn.btn-primary:active:not(:disabled) {
+  background: var(--fusion-color-primary-active);
 }
 .btn.btn-accent {
-  background: var(--ember);
-  color: white;
-  border-color: var(--ember);
+  background: var(--fusion-color-primary);
+  border-color: var(--fusion-color-primary);
+  color: #ffffff;
 }
 .btn.btn-accent:hover:not(:disabled) {
-  background: var(--ember-hover);
-  border-color: var(--ember-hover);
+  background: var(--fusion-color-primary-hover);
+  border-color: var(--fusion-color-primary-hover);
+  color: #ffffff;
 }
 .btn.btn-secondary {
-  background: var(--surface);
-  color: var(--ink-secondary);
-  border-color: var(--border);
+  background: transparent;
+  border-color: var(--fusion-color-secondary);
+  color: var(--fusion-color-secondary);
 }
 .btn.btn-secondary:hover:not(:disabled) {
-  background: var(--stone-100);
-  color: var(--ink-primary);
+  background: var(--fusion-color-bg-hover);
+  border-color: var(--fusion-color-primary);
+  color: var(--fusion-color-primary);
 }
 .btn.btn-warn {
-  background: var(--error);
+  background: var(--fusion-color-error);
+  border-color: var(--fusion-color-error);
   color: white;
-  border-color: var(--error);
 }
 .btn.btn-warn:hover:not(:disabled) {
-  background: #b91c1c;
+  background: #a30115;
 }
 .btn.btn-small {
-  padding: var(--space-1) var(--space-2);
-  font-size: 12px;
+  padding: var(--fusion-space-very-tight) var(--fusion-space-tight);
+  font-size: var(--fusion-text-sm);
 }
 .btn.btn-small .material-icons {
   font-size: 14px;
@@ -206,11 +232,12 @@ body {
 .btn.btn-ghost {
   background: transparent;
   border-color: transparent;
-  color: var(--ink-secondary);
+  color: var(--fusion-color-text-secondary);
 }
 .btn.btn-ghost:hover:not(:disabled) {
-  background: rgba(28, 25, 23, 0.06);
-  color: var(--ink-primary);
+  background: var(--fusion-color-bg-hover);
+  color: var(--fusion-color-primary);
+  border-color: transparent;
 }
 
 /* src/clinical-office-styles.scss */

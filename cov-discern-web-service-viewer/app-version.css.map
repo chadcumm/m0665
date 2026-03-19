@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["src/app/app-version/app-version.scss"],
-  "sourcesContent": [".app-version {\n  display: inline-block;\n  padding: 3px 8px;\n  font-size: 11px;\n  color: var(--ink-muted);\n  background: var(--stone-100);\n  border: 1px solid var(--border-subtle);\n  border-radius: var(--radius-sm);\n  font-family: var(--font-mono);\n  letter-spacing: 0.02em;\n}\n"],
-  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,WAAA,IAAA;AACA,aAAA;AACA,SAAA,IAAA;AACA,cAAA,IAAA;AACA,UAAA,IAAA,MAAA,IAAA;AACA,iBAAA,IAAA;AACA,eAAA,IAAA;AACA,kBAAA;;",
+  "sourcesContent": [".app-version {\n  display: inline-block;\n  padding: 2px 8px;\n  font-size: var(--fusion-text-sm);\n  color: var(--fusion-color-text-secondary);\n  background: var(--fusion-color-bg-canvas);\n  border: 1px solid var(--fusion-color-border);\n  border-radius: var(--fusion-border-radius);\n  font-family: var(--fusion-font-mono);\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,WAAA,IAAA;AACA,aAAA,IAAA;AACA,SAAA,IAAA;AACA,cAAA,IAAA;AACA,UAAA,IAAA,MAAA,IAAA;AACA,iBAAA,IAAA;AACA,eAAA,IAAA;;",
   "names": []
 }
