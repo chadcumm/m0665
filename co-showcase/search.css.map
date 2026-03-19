@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["src/app/search/search.scss"],
-  "sourcesContent": [".search-container {\n  height: 100%;\n}\n"],
-  "mappings": ";AAAA,CAAA;AACE,UAAA;;",
+  "sourcesContent": [".search-container {\n  height: 100%;\n\n  mpage-patient-search {\n    display: block;\n    height: 100%;\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,UAAA;;AAEA,CAHF,iBAGE;AACE,WAAA;AACA,UAAA;;",
   "names": []
 }
