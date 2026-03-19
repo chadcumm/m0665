@@ -6006,8 +6006,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.12-feature/reference-service-customservice";
-var packageVersion = "0.0.12";
+var buildVersion = "v0.0.13-feature/reference-service-customservice";
+var packageVersion = "0.0.13";
 var gitBranch = "feature/reference-service-customservice";
 
 // src/app/app-version/app-version.ts
