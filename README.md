@@ -3,9 +3,9 @@
 ## Current Deployment
 
 **Environment:** M0665
-**Version:** v0.0.16
+**Version:** v0.0.17
 **Branch:** feature/reference-service-customservice
-**Last Deployed:** 03/19/2026, 20:38:19
+**Last Deployed:** 03/19/2026, 20:45:19
 
 ## About
 
@@ -13,6 +13,7 @@ This directory contains the deployed build artifacts for the cov-discern-web-ser
 
 ## Deployment History
 
+- **v0.0.17** | Branch: `feature/reference-service-customservice` | Deployed: 03/19/2026, 20:45:19
 - **v0.0.16** | Branch: `feature/reference-service-customservice` | Deployed: 03/19/2026, 20:38:19
 - **v0.0.15** | Branch: `feature/reference-service-customservice` | Deployed: 03/19/2026, 18:46:35
 - **v0.0.14** | Branch: `feature/reference-service-customservice` | Deployed: 03/19/2026, 18:15:57
@@ -22,7 +23,6 @@ This directory contains the deployed build artifacts for the cov-discern-web-ser
 - **v0.0.6** | Branch: `main` | Deployed: 03/19/2026, 00:54:17
 - **v0.0.5** | Branch: `main` | Deployed: 03/19/2026, 00:48:58
 - **v0.0.4** | Branch: `main` | Deployed: 03/19/2026, 00:44:08
-- **v0.0.3** | Branch: `main` | Deployed: 03/19/2026, 00:24:33
 
 ---
 

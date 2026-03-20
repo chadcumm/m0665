@@ -5968,15 +5968,19 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-HPRAU4VC.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-F7TU6VUH.js").then((m) => m.Executor)
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-CFDJAW6W.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-FV7JGENI.js").then((m) => m.ServiceManager)
   },
   {
     path: "parameters",
-    loadComponent: () => import("./chunk-PNKZHBBB.js").then((m) => m.ParameterManager)
+    loadComponent: () => import("./chunk-2X2A7CJP.js").then((m) => m.ParameterManager)
+  },
+  {
+    path: "config",
+    loadComponent: () => import("./chunk-FK3UFVWT.js").then((m) => m.ConfigEditor)
   }
 ];
 
@@ -6010,8 +6014,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.16-feature/reference-service-customservice";
-var packageVersion = "0.0.16";
+var buildVersion = "v0.0.17-feature/reference-service-customservice";
+var packageVersion = "0.0.17";
 var gitBranch = "feature/reference-service-customservice";
 
 // src/app/app-version/app-version.ts
@@ -6065,7 +6069,7 @@ var App = class _App {
   static \u0275fac = function App_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _App)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 23, vars: 2, consts: [[1, "app-header"], [1, "app-title"], [1, "material-icons"], [1, "app-nav"], ["routerLink", "/", "routerLinkActive", "active", 3, "routerLinkActiveOptions"], ["routerLink", "/services", "routerLinkActive", "active"], ["routerLink", "/parameters", "routerLinkActive", "active"], [1, "app-version-container"]], template: function App_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 27, vars: 2, consts: [[1, "app-header"], [1, "app-title"], [1, "material-icons"], [1, "app-nav"], ["routerLink", "/", "routerLinkActive", "active", 3, "routerLinkActiveOptions"], ["routerLink", "/services", "routerLinkActive", "active"], ["routerLink", "/parameters", "routerLinkActive", "active"], ["routerLink", "/config", "routerLinkActive", "active"], [1, "app-version-container"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "header", 0)(1, "div", 1)(2, "span", 2);
       \u0275\u0275text(3, "api");
@@ -6086,14 +6090,19 @@ var App = class _App {
       \u0275\u0275text(16, "tune");
       \u0275\u0275elementEnd();
       \u0275\u0275text(17, " Parameters ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(18, "div", 7);
-      \u0275\u0275element(19, "app-app-version");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(20, "main");
-      \u0275\u0275element(21, "router-outlet");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(22, "mpage-log-component");
+      \u0275\u0275elementStart(18, "a", 7)(19, "span", 2);
+      \u0275\u0275text(20, "code");
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(21, " Config ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(22, "div", 8);
+      \u0275\u0275element(23, "app-app-version");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(24, "main");
+      \u0275\u0275element(25, "router-outlet");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(26, "mpage-log-component");
     }
     if (rf & 2) {
       \u0275\u0275advance(6);
@@ -6104,7 +6113,7 @@ var App = class _App {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
     type: Component,
-    args: [{ selector: "app-root", standalone: true, imports: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion], template: '<header class="app-header">\n  <div class="app-title">\n    <span class="material-icons">api</span>\n    Discern Web Service Viewer\n  </div>\n  <nav class="app-nav">\n    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">\n      <span class="material-icons">play_arrow</span> Executor\n    </a>\n    <a routerLink="/services" routerLinkActive="active">\n      <span class="material-icons">settings</span> Services\n    </a>\n    <a routerLink="/parameters" routerLinkActive="active">\n      <span class="material-icons">tune</span> Parameters\n    </a>\n  </nav>\n  <div class="app-version-container">\n    <app-app-version />\n  </div>\n</header>\n\n<main>\n  <router-outlet />\n</main>\n\n<mpage-log-component />\n', styles: ["/* src/app/app.scss */\n:host {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header .app-title {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header .app-title .material-icons {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header .app-nav a {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header .app-nav a .material-icons {\n  font-size: 15px;\n}\n.app-header .app-nav a:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav a.active {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header .app-version-container {\n  margin-left: auto;\n}\nmain {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */\n"] }]
+    args: [{ selector: "app-root", standalone: true, imports: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion], template: '<header class="app-header">\n  <div class="app-title">\n    <span class="material-icons">api</span>\n    Discern Web Service Viewer\n  </div>\n  <nav class="app-nav">\n    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">\n      <span class="material-icons">play_arrow</span> Executor\n    </a>\n    <a routerLink="/services" routerLinkActive="active">\n      <span class="material-icons">settings</span> Services\n    </a>\n    <a routerLink="/parameters" routerLinkActive="active">\n      <span class="material-icons">tune</span> Parameters\n    </a>\n    <a routerLink="/config" routerLinkActive="active">\n      <span class="material-icons">code</span> Config\n    </a>\n  </nav>\n  <div class="app-version-container">\n    <app-app-version />\n  </div>\n</header>\n\n<main>\n  <router-outlet />\n</main>\n\n<mpage-log-component />\n', styles: ["/* src/app/app.scss */\n:host {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header .app-title {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header .app-title .material-icons {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header .app-nav a {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header .app-nav a .material-icons {\n  font-size: 15px;\n}\n.app-header .app-nav a:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav a.active {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header .app-version-container {\n  margin-left: auto;\n}\nmain {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
