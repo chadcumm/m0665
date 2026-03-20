@@ -5976,7 +5976,7 @@ var routes = [
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-FAOYBAFD.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-MGK4QG64.js").then((m) => m.ServiceManager)
   },
   {
     path: "parameters",
@@ -6029,8 +6029,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.22-develop";
-var packageVersion = "0.0.22";
+var buildVersion = "v0.0.23-develop";
+var packageVersion = "0.0.23";
 var gitBranch = "develop";
 
 // src/app/app-version/app-version.ts
