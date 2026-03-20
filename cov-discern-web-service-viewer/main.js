@@ -5972,15 +5972,15 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-H2AC7M73.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-CBWCWZKM.js").then((m) => m.Executor)
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-MGK4QG64.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-5ADWDLDX.js").then((m) => m.ServiceManager)
   },
   {
     path: "parameters",
-    loadComponent: () => import("./chunk-NO3T2ZEL.js").then((m) => m.ParameterManager)
+    loadComponent: () => import("./chunk-6SZ5IXD7.js").then((m) => m.ParameterManager)
   },
   {
     path: "config",
@@ -6029,8 +6029,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.23-develop";
-var packageVersion = "0.0.23";
+var buildVersion = "v0.0.24-develop";
+var packageVersion = "0.0.24";
 var gitBranch = "develop";
 
 // src/app/app-version/app-version.ts

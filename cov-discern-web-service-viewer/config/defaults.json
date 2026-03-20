@@ -4,7 +4,7 @@
     {
       "key": "outdev",
       "label": "Output Device",
-      "inputType": "hidden",
+      "inputType": "text",
       "description": "Output destination for CCL program",
       "defaultValue": "MINE"
     },
@@ -115,7 +115,7 @@
       "displayName": "Document Activity Extract",
       "description": "Extracts documents and their action audit trails from a given event set hierarchy. Supports facility-wide or single-patient queries.",
       "parameters": [
-        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE" },
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE", "hidden": true },
         { "position": 2, "parameterTypeKey": "event_set_name", "required": true },
         { "position": 3, "parameterTypeKey": "fin", "required": false },
         { "position": 4, "parameterTypeKey": "facility", "required": false },
@@ -129,7 +129,7 @@
       "displayName": "External Rx / Medication Claims",
       "description": "Retrieves external prescription/medication claims data for a patient. Pulls from external contributor systems (pharmacy claims, insurance data).",
       "parameters": [
-        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE" },
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE", "hidden": true },
         { "position": 2, "parameterTypeKey": "fin", "required": false }
       ]
     },
@@ -139,7 +139,7 @@
       "displayName": "Discharge Rx Medications",
       "description": "Extracts discharge prescription medications within a date range. Includes prescriber, pharmacy, drug class, and payer information.",
       "parameters": [
-        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "JSON" },
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "JSON", "hidden": true },
         { "position": 2, "parameterTypeKey": "start_dt_tm", "required": true },
         { "position": 3, "parameterTypeKey": "end_dt_tm", "required": true }
       ]
@@ -150,7 +150,7 @@
       "displayName": "Specialty Rx Medications",
       "description": "Extracts specialty medication prescriptions within a date range. Same structure as discharge meds but filtered to specialty pharmacy medications.",
       "parameters": [
-        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE" },
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE", "hidden": true },
         { "position": 2, "parameterTypeKey": "start_dt_tm", "required": true },
         { "position": 3, "parameterTypeKey": "end_dt_tm", "required": true }
       ]
@@ -161,7 +161,7 @@
       "displayName": "Radiology Order Extract",
       "description": "Extracts radiology orders and exam details within a date range. Includes patient demographics, order status, scheduling info, and facility/department data.",
       "parameters": [
-        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "JSON" },
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "JSON", "hidden": true },
         { "position": 2, "parameterTypeKey": "start_dt_tm", "required": true },
         { "position": 3, "parameterTypeKey": "end_dt_tm", "required": true },
         { "position": 4, "parameterTypeKey": "file_output", "required": false }
