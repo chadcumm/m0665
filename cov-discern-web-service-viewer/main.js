@@ -6042,9 +6042,9 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.33-develop";
-var packageVersion = "0.0.33";
-var gitBranch = "develop";
+var buildVersion = "v0.0.34-main";
+var packageVersion = "0.0.34";
+var gitBranch = "main";
 
 // src/app/app-version/app-version.ts
 var AppVersion = class _AppVersion {
