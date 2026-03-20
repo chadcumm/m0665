@@ -7,7 +7,10 @@ import {
   bootstrapApplication,
   provideHttpClient,
   withFetch
-} from "./chunk-STV2LTN5.js";
+} from "./chunk-HUG4DTJF.js";
+import {
+  ServiceRegistryService
+} from "./chunk-ZPOP7CD7.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationRef,
@@ -49,6 +52,7 @@ import {
   Observable,
   Optional,
   Output,
+  ParameterLibraryService,
   PathLocationStrategy,
   PendingTasksInternal,
   Renderer2,
@@ -132,7 +136,7 @@ import {
   ɵɵsanitizeUrlOrResourceUrl,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-ZHUMCYTK.js";
+} from "./chunk-YANIWAVR.js";
 import {
   __spreadProps,
   __spreadValues
@@ -5968,19 +5972,19 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-F7TU6VUH.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-H2AC7M73.js").then((m) => m.Executor)
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-ETGTVGFB.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-6UDPKAN5.js").then((m) => m.ServiceManager)
   },
   {
     path: "parameters",
-    loadComponent: () => import("./chunk-2X2A7CJP.js").then((m) => m.ParameterManager)
+    loadComponent: () => import("./chunk-NO3T2ZEL.js").then((m) => m.ParameterManager)
   },
   {
     path: "config",
-    loadComponent: () => import("./chunk-WXI6HI3E.js").then((m) => m.ConfigEditor)
+    loadComponent: () => import("./chunk-KYHLWK5S.js").then((m) => m.ConfigEditor)
   }
 ];
 
@@ -6009,13 +6013,24 @@ var appConfig = {
       const configService = inject(ConfigService);
       return configService.loadConfig();
     }),
+    provideAppInitializer(() => {
+      const paramLibrary = inject(ParameterLibraryService);
+      const serviceRegistry = inject(ServiceRegistryService);
+      return fetch("config/defaults.json").then((r) => r.json()).then((data) => {
+        if (data.parameterTypes)
+          paramLibrary.loadDefaults(data.parameterTypes);
+        if (data.services)
+          serviceRegistry.loadDefaults(data.services);
+      }).catch(() => {
+      });
+    }),
     { provide: ErrorHandler, useClass: ErrorHandlerService }
   ]
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.19-develop";
-var packageVersion = "0.0.19";
+var buildVersion = "v0.0.20-develop";
+var packageVersion = "0.0.20";
 var gitBranch = "develop";
 
 // src/app/app-version/app-version.ts

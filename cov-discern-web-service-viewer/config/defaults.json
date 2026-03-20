@@ -1,0 +1,171 @@
+{
+  "version": 2,
+  "parameterTypes": [
+    {
+      "key": "outdev",
+      "label": "Output Device",
+      "inputType": "hidden",
+      "description": "Output destination for CCL program",
+      "defaultValue": "MINE"
+    },
+    {
+      "key": "facility",
+      "label": "Facility",
+      "inputType": "select",
+      "description": "Covenant Health facility",
+      "allowEmpty": true,
+      "options": [
+        { "label": "(None)", "value": "" },
+        { "label": "CMC - Covenant Medical Center", "value": "CMC" },
+        { "label": "FLMC - Claiborne Medical Center", "value": "FLMC" },
+        { "label": "FSR - Fort Sanders Regional", "value": "FSR" },
+        { "label": "LCMC - LeConte Medical Center", "value": "LCMC" },
+        { "label": "MHHS - Morristown-Hamblen Healthcare", "value": "MHHS" },
+        { "label": "MMC - Methodist Medical Center", "value": "MMC" },
+        { "label": "PW - Parkwest Medical Center", "value": "PW" },
+        { "label": "RMC - Roane Medical Center", "value": "RMC" }
+      ]
+    },
+    {
+      "key": "fin",
+      "label": "FIN (Financial Number)",
+      "inputType": "text",
+      "description": "Patient encounter financial number",
+      "placeholder": "Enter FIN (e.g., 5417604143)",
+      "allowEmpty": true
+    },
+    {
+      "key": "event_set_name",
+      "label": "Event Set Name",
+      "inputType": "select",
+      "description": "Clinical event set hierarchy name",
+      "defaultValue": "ClinicalDoc",
+      "options": [
+        { "label": "ClinicalDoc", "value": "ClinicalDoc" },
+        { "label": "PATH REPORT", "value": "PATH REPORT" },
+        { "label": "Radiology", "value": "Radiology" },
+        { "label": "Laboratory", "value": "Laboratory" }
+      ]
+    },
+    {
+      "key": "start_dt_tm",
+      "label": "Start Date/Time",
+      "inputType": "datetime",
+      "description": "Start date and time",
+      "cclFormat": "DD-MMM-YYYY HH:MM:SS",
+      "presets": [
+        { "label": "Today Start", "preset": "today_start" },
+        { "label": "Yesterday Start", "preset": "yesterday_start" },
+        { "label": "Now", "preset": "now" }
+      ]
+    },
+    {
+      "key": "end_dt_tm",
+      "label": "End Date/Time",
+      "inputType": "datetime",
+      "description": "End date and time",
+      "cclFormat": "DD-MMM-YYYY HH:MM:SS",
+      "presets": [
+        { "label": "Today End", "preset": "today_end" },
+        { "label": "Yesterday End", "preset": "yesterday_end" },
+        { "label": "Now", "preset": "now" }
+      ]
+    },
+    {
+      "key": "person_id",
+      "label": "Person ID",
+      "inputType": "number",
+      "description": "Cerner person_id value",
+      "placeholder": "Enter person_id",
+      "allowEmpty": true
+    },
+    {
+      "key": "encntr_id",
+      "label": "Encounter ID",
+      "inputType": "number",
+      "description": "Cerner encntr_id value",
+      "placeholder": "Enter encntr_id",
+      "allowEmpty": true
+    },
+    {
+      "key": "file_output",
+      "label": "File Output",
+      "inputType": "select",
+      "description": "Output to file flag",
+      "defaultValue": "0",
+      "unquoted": true,
+      "options": [
+        { "label": "No", "value": "0" },
+        { "label": "Yes", "value": "1" }
+      ]
+    },
+    {
+      "key": "generic_text",
+      "label": "Text Parameter",
+      "inputType": "text",
+      "description": "Generic text parameter",
+      "placeholder": "Enter value",
+      "allowEmpty": true
+    }
+  ],
+  "services": [
+    {
+      "id": "cov_doc_activity_extract",
+      "programName": "cov_doc_activity_extract",
+      "displayName": "Document Activity Extract",
+      "description": "Extracts documents and their action audit trails from a given event set hierarchy. Supports facility-wide or single-patient queries.",
+      "parameters": [
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE" },
+        { "position": 2, "parameterTypeKey": "event_set_name", "required": true },
+        { "position": 3, "parameterTypeKey": "fin", "required": false },
+        { "position": 4, "parameterTypeKey": "facility", "required": false },
+        { "position": 5, "parameterTypeKey": "start_dt_tm", "required": true },
+        { "position": 6, "parameterTypeKey": "end_dt_tm", "required": true }
+      ]
+    },
+    {
+      "id": "cov_external_rx_svc",
+      "programName": "cov_external_rx_svc",
+      "displayName": "External Rx / Medication Claims",
+      "description": "Retrieves external prescription/medication claims data for a patient. Pulls from external contributor systems (pharmacy claims, insurance data).",
+      "parameters": [
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE" },
+        { "position": 2, "parameterTypeKey": "fin", "required": false }
+      ]
+    },
+    {
+      "id": "cov_pha_disch_rx_meds_svc",
+      "programName": "cov_pha_disch_rx_meds_svc",
+      "displayName": "Discharge Rx Medications",
+      "description": "Extracts discharge prescription medications within a date range. Includes prescriber, pharmacy, drug class, and payer information.",
+      "parameters": [
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "JSON" },
+        { "position": 2, "parameterTypeKey": "start_dt_tm", "required": true },
+        { "position": 3, "parameterTypeKey": "end_dt_tm", "required": true }
+      ]
+    },
+    {
+      "id": "cov_pha_rx_spec_meds_svc",
+      "programName": "cov_pha_rx_spec_meds_svc",
+      "displayName": "Specialty Rx Medications",
+      "description": "Extracts specialty medication prescriptions within a date range. Same structure as discharge meds but filtered to specialty pharmacy medications.",
+      "parameters": [
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "MINE" },
+        { "position": 2, "parameterTypeKey": "start_dt_tm", "required": true },
+        { "position": 3, "parameterTypeKey": "end_dt_tm", "required": true }
+      ]
+    },
+    {
+      "id": "cov_order_radiology_extract",
+      "programName": "cov_order_radiology_extract",
+      "displayName": "Radiology Order Extract",
+      "description": "Extracts radiology orders and exam details within a date range. Includes patient demographics, order status, scheduling info, and facility/department data.",
+      "parameters": [
+        { "position": 1, "parameterTypeKey": "outdev", "required": true, "defaultValueOverride": "JSON" },
+        { "position": 2, "parameterTypeKey": "start_dt_tm", "required": true },
+        { "position": 3, "parameterTypeKey": "end_dt_tm", "required": true },
+        { "position": 4, "parameterTypeKey": "file_output", "required": false }
+      ]
+    }
+  ]
+}
