@@ -5972,7 +5972,7 @@ var routes = [
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-FV7JGENI.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-ETGTVGFB.js").then((m) => m.ServiceManager)
   },
   {
     path: "parameters",
@@ -5980,7 +5980,7 @@ var routes = [
   },
   {
     path: "config",
-    loadComponent: () => import("./chunk-FK3UFVWT.js").then((m) => m.ConfigEditor)
+    loadComponent: () => import("./chunk-WXI6HI3E.js").then((m) => m.ConfigEditor)
   }
 ];
 
@@ -6014,8 +6014,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.17-feature/reference-service-customservice";
-var packageVersion = "0.0.17";
+var buildVersion = "v0.0.18-feature/reference-service-customservice";
+var packageVersion = "0.0.18";
 var gitBranch = "feature/reference-service-customservice";
 
 // src/app/app-version/app-version.ts
