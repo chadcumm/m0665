@@ -4,9 +4,13 @@
     {
       "key": "outdev",
       "label": "Output Device",
-      "inputType": "text",
+      "inputType": "select",
       "description": "Output destination for CCL program",
-      "defaultValue": "MINE"
+      "defaultValue": "MINE",
+      "options": [
+        { "label": "MINE", "value": "MINE" },
+        { "label": "JSON", "value": "JSON" }
+      ]
     },
     {
       "key": "facility",
