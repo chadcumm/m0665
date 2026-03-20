@@ -5972,7 +5972,7 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-A7E76YXO.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-2WV6P6SB.js").then((m) => m.Executor)
   },
   {
     path: "services",
@@ -6029,8 +6029,8 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.27-develop";
-var packageVersion = "0.0.27";
+var buildVersion = "v0.0.28-develop";
+var packageVersion = "0.0.28";
 var gitBranch = "develop";
 
 // src/app/app-version/app-version.ts
