@@ -3,9 +3,9 @@
 ## Current Deployment
 
 **Environment:** M0665
-**Version:** v0.0.32
+**Version:** v0.0.33
 **Branch:** develop
-**Last Deployed:** 03/20/2026, 16:29:45
+**Last Deployed:** 03/20/2026, 18:11:53
 
 ## About
 
@@ -13,6 +13,7 @@ This directory contains the deployed build artifacts for the cov-discern-web-ser
 
 ## Deployment History
 
+- **v0.0.33** | Branch: `develop` | Deployed: 03/20/2026, 18:11:53
 - **v0.0.32** | Branch: `develop` | Deployed: 03/20/2026, 16:29:45
 - **v0.0.31** | Branch: `develop` | Deployed: 03/20/2026, 16:19:57
 - **v0.0.30** | Branch: `develop` | Deployed: 03/20/2026, 16:09:22
@@ -22,7 +23,6 @@ This directory contains the deployed build artifacts for the cov-discern-web-ser
 - **v0.0.26** | Branch: `develop` | Deployed: 03/20/2026, 15:02:56
 - **v0.0.25** | Branch: `develop` | Deployed: 03/20/2026, 14:53:40
 - **v0.0.24** | Branch: `develop` | Deployed: 03/20/2026, 14:51:42
-- **v0.0.23** | Branch: `develop` | Deployed: 03/20/2026, 14:35:51
 
 ---
 

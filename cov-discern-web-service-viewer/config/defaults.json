@@ -21,7 +21,7 @@
       "options": [
         { "label": "(None)", "value": "" },
         { "label": "CMC - Covenant Medical Center", "value": "CMC" },
-        { "label": "FLMC - Claiborne Medical Center", "value": "FLMC" },
+        { "label": "FLMC - Fort Loudoun Medical Center", "value": "FLMC" },
         { "label": "FSR - Fort Sanders Regional", "value": "FSR" },
         { "label": "LCMC - LeConte Medical Center", "value": "LCMC" },
         { "label": "MHHS - Morristown-Hamblen Healthcare", "value": "MHHS" },
