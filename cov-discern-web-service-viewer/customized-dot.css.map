@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/customized-dot/customized-dot.ts"],
+  "sourcesContent": ["\n    .customized-dot-wrapper {\n      display: inline-flex;\n      align-items: center;\n      gap: 4px;\n      cursor: help;\n    }\n    .customized-dot {\n      display: inline-block;\n      width: 6px;\n      height: 6px;\n      border-radius: 50%;\n      background: #f59e0b;\n      flex-shrink: 0;\n    }\n    .reset-link {\n      background: none;\n      border: none;\n      color: #6b7280;\n      font-size: 11px;\n      cursor: pointer;\n      padding: 0;\n      text-decoration: underline;\n    }\n    .reset-link:hover {\n      color: #374151;\n    }\n  "],
+  "mappings": ";AACI,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;AACA,UAAA;;AAEF,CAAA;AACE,WAAA;AACA,SAAA;AACA,UAAA;AACA,iBAAA;AACA,cAAA;AACA,eAAA;;AAEF,CAAA;AACE,cAAA;AACA,UAAA;AACA,SAAA;AACA,aAAA;AACA,UAAA;AACA,WAAA;AACA,mBAAA;;AAEF,CATA,UASA;AACE,SAAA;;",
+  "names": []
+}

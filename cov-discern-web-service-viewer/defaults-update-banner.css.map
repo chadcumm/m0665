@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/defaults-update-banner/defaults-update-banner.ts"],
+  "sourcesContent": ["\n    .defaults-banner {\n      display: flex;\n      align-items: center;\n      gap: 10px;\n      padding: 8px 16px;\n      background: #fef3c7;\n      border-bottom: 1px solid #f59e0b;\n      font-size: 13px;\n      color: #92400e;\n    }\n    .banner-icon {\n      font-size: 18px;\n      color: #f59e0b;\n    }\n    .banner-text {\n      flex: 1;\n    }\n    .banner-actions {\n      display: flex;\n      gap: 6px;\n      flex-shrink: 0;\n    }\n  "],
+  "mappings": ";AACI,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;AACA,WAAA,IAAA;AACA,cAAA;AACA,iBAAA,IAAA,MAAA;AACA,aAAA;AACA,SAAA;;AAEF,CAAA;AACE,aAAA;AACA,SAAA;;AAEF,CAAA;AACE,QAAA;;AAEF,CAAA;AACE,WAAA;AACA,OAAA;AACA,eAAA;;",
+  "names": []
+}

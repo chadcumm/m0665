@@ -1,19 +1,20 @@
 import {
-  ToastService
-} from "./chunk-UFLMDBUL.js";
+  UserConfigService
+} from "./chunk-5W6PGVRE.js";
 import {
   ConfigService,
   ErrorHandlerService,
   MPageService,
   MpageLogComponent,
   Title,
+  ToastService,
   bootstrapApplication,
   provideHttpClient,
   withFetch
-} from "./chunk-CXX4L76V.js";
+} from "./chunk-HDP72ZWW.js";
 import {
   ServiceRegistryService
-} from "./chunk-DFJSJLLI.js";
+} from "./chunk-JO2ZN4L5.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationRef,
@@ -92,6 +93,7 @@ import {
   mergeAll,
   mergeMap,
   of,
+  output,
   performanceMarkFeature,
   pipe,
   provideAppInitializer,
@@ -149,7 +151,7 @@ import {
   ɵɵsanitizeUrlOrResourceUrl,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-7ZRSRWYH.js";
+} from "./chunk-M5ONDEQN.js";
 import {
   __spreadProps,
   __spreadValues
@@ -3585,8 +3587,8 @@ var CREATE_VIEW_TRANSITION = new InjectionToken(ngDevMode ? "view transition hel
 var VIEW_TRANSITION_OPTIONS = new InjectionToken(ngDevMode ? "view transition options" : "");
 function createViewTransition(injector, from2, to) {
   const transitionOptions = injector.get(VIEW_TRANSITION_OPTIONS);
-  const document = injector.get(DOCUMENT);
-  if (!document.startViewTransition || transitionOptions.skipNextTransition) {
+  const document2 = injector.get(DOCUMENT);
+  if (!document2.startViewTransition || transitionOptions.skipNextTransition) {
     transitionOptions.skipNextTransition = false;
     return new Promise((resolve) => setTimeout(resolve));
   }
@@ -3594,7 +3596,7 @@ function createViewTransition(injector, from2, to) {
   const viewTransitionStarted = new Promise((resolve) => {
     resolveViewTransitionStarted = resolve;
   });
-  const transition = document.startViewTransition(() => {
+  const transition = document2.startViewTransition(() => {
     resolveViewTransitionStarted();
     return createRenderPromise(injector);
   });
@@ -5985,19 +5987,19 @@ var VERSION = new Version("20.3.2");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-IKIOVPJB.js").then((m) => m.Executor)
+    loadComponent: () => import("./chunk-34MJL5OW.js").then((m) => m.Executor)
   },
   {
     path: "services",
-    loadComponent: () => import("./chunk-3ICAZKOQ.js").then((m) => m.ServiceManager)
+    loadComponent: () => import("./chunk-RBCQ2MLY.js").then((m) => m.ServiceManager)
   },
   {
     path: "parameters",
-    loadComponent: () => import("./chunk-BD7TPR7I.js").then((m) => m.ParameterManager)
+    loadComponent: () => import("./chunk-XFALHPLO.js").then((m) => m.ParameterManager)
   },
   {
     path: "config",
-    loadComponent: () => import("./chunk-5V5YKMDX.js").then((m) => m.ConfigEditor)
+    loadComponent: () => import("./chunk-ARBE3H5A.js").then((m) => m.ConfigEditor)
   }
 ];
 
@@ -6029,11 +6031,14 @@ var appConfig = {
     provideAppInitializer(() => {
       const paramLibrary = inject(ParameterLibraryService);
       const serviceRegistry = inject(ServiceRegistryService);
+      const userConfig = inject(UserConfigService);
       return fetch("config/defaults.json").then((r) => r.json()).then((data) => {
         if (data.parameterTypes)
           paramLibrary.loadDefaults(data.parameterTypes);
         if (data.services)
           serviceRegistry.loadDefaults(data.services);
+        if (data.defaultsVersion)
+          userConfig.setCurrentDefaultsVersion(data.defaultsVersion);
       }).catch(() => {
       });
     }),
@@ -6042,9 +6047,9 @@ var appConfig = {
 };
 
 // src/app/version.ts
-var buildVersion = "v0.0.34-main";
-var packageVersion = "0.0.34";
-var gitBranch = "main";
+var buildVersion = "v0.0.37-develop";
+var packageVersion = "0.0.37";
+var gitBranch = "develop";
 
 // src/app/app-version/app-version.ts
 var AppVersion = class _AppVersion {
@@ -6164,25 +6169,200 @@ var ToastContainer = class _ToastContainer {
         </div>
       }
     </div>
-  `, styles: ["/* angular:styles/component:scss;532d26518ec1e12db58c8013cf6caf16bfaea0974f8d8ec1c3a556559be44199;/Users/chadcummings/Github/chadcumm/cov-discern-web-service-viewer/src/app/components/toast/toast-container.ts */\n.toast-container {\n  position: fixed;\n  bottom: 12px;\n  right: 12px;\n  z-index: 2000;\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n  pointer-events: none;\n}\n.toast {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 14px;\n  border-radius: 3px;\n  font-family: var(--fusion-font-family);\n  font-size: var(--fusion-text-base);\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n  pointer-events: auto;\n  cursor: pointer;\n  animation: toastSlideIn 200ms ease;\n  max-width: 400px;\n}\n.toast--info {\n  background: #e8f4fd;\n  border-left: 4px solid #0079be;\n  color: #0a4d78;\n}\n.toast--success {\n  background: #e6f4ea;\n  border-left: 4px solid #34a853;\n  color: #1e6e35;\n}\n.toast--error {\n  background: #fde8ea;\n  border-left: 4px solid #d0021b;\n  color: #8b0013;\n}\n.toast-icon {\n  font-size: 18px;\n  flex-shrink: 0;\n}\n.toast-text {\n  flex: 1;\n}\n@keyframes toastSlideIn {\n  from {\n    transform: translateX(100%);\n    opacity: 0;\n  }\n  to {\n    transform: translateX(0);\n    opacity: 1;\n  }\n}\n/*# sourceMappingURL=toast-container.css.map */\n"] }]
+  `, styles: ["/* angular:styles/component:scss;532d26518ec1e12db58c8013cf6caf16bfaea0974f8d8ec1c3a556559be44199;/Users/chadcummings/Github/cov-discern-web-service-viewer/src/app/components/toast/toast-container.ts */\n.toast-container {\n  position: fixed;\n  bottom: 12px;\n  right: 12px;\n  z-index: 2000;\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n  pointer-events: none;\n}\n.toast {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 14px;\n  border-radius: 3px;\n  font-family: var(--fusion-font-family);\n  font-size: var(--fusion-text-base);\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n  pointer-events: auto;\n  cursor: pointer;\n  animation: toastSlideIn 200ms ease;\n  max-width: 400px;\n}\n.toast--info {\n  background: #e8f4fd;\n  border-left: 4px solid #0079be;\n  color: #0a4d78;\n}\n.toast--success {\n  background: #e6f4ea;\n  border-left: 4px solid #34a853;\n  color: #1e6e35;\n}\n.toast--error {\n  background: #fde8ea;\n  border-left: 4px solid #d0021b;\n  color: #8b0013;\n}\n.toast-icon {\n  font-size: 18px;\n  flex-shrink: 0;\n}\n.toast-text {\n  flex: 1;\n}\n@keyframes toastSlideIn {\n  from {\n    transform: translateX(100%);\n    opacity: 0;\n  }\n  to {\n    transform: translateX(0);\n    opacity: 1;\n  }\n}\n/*# sourceMappingURL=toast-container.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ToastContainer, { className: "ToastContainer", filePath: "src/app/components/toast/toast-container.ts", lineNumber: 84 });
 })();
 
+// src/app/components/defaults-update-banner/defaults-update-banner.ts
+var DefaultsUpdateBanner = class _DefaultsUpdateBanner {
+  reviewClicked = output();
+  dismissClicked = output();
+  static \u0275fac = function DefaultsUpdateBanner_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _DefaultsUpdateBanner)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DefaultsUpdateBanner, selectors: [["app-defaults-update-banner"]], outputs: { reviewClicked: "reviewClicked", dismissClicked: "dismissClicked" }, decls: 10, vars: 0, consts: [[1, "defaults-banner"], [1, "material-icons", "banner-icon"], [1, "banner-text"], [1, "banner-actions"], [1, "btn", "btn-small", "btn-primary", 3, "click"], [1, "btn", "btn-small", "btn-ghost", 3, "click"]], template: function DefaultsUpdateBanner_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275domElementStart(0, "div", 0)(1, "span", 1);
+      \u0275\u0275text(2, "info");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(3, "span", 2);
+      \u0275\u0275text(4, " Default configuration has been updated. Some services or parameters may have new options. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(5, "div", 3)(6, "button", 4);
+      \u0275\u0275domListener("click", function DefaultsUpdateBanner_Template_button_click_6_listener() {
+        return ctx.reviewClicked.emit();
+      });
+      \u0275\u0275text(7, " Review Changes ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(8, "button", 5);
+      \u0275\u0275domListener("click", function DefaultsUpdateBanner_Template_button_click_8_listener() {
+        return ctx.dismissClicked.emit();
+      });
+      \u0275\u0275text(9, " Dismiss ");
+      \u0275\u0275domElementEnd()()();
+    }
+  }, styles: ["\n\n.defaults-banner[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  padding: 8px 16px;\n  background: #fef3c7;\n  border-bottom: 1px solid #f59e0b;\n  font-size: 13px;\n  color: #92400e;\n}\n.banner-icon[_ngcontent-%COMP%] {\n  font-size: 18px;\n  color: #f59e0b;\n}\n.banner-text[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.banner-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 6px;\n  flex-shrink: 0;\n}\n/*# sourceMappingURL=defaults-update-banner.css.map */"], changeDetection: 0 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DefaultsUpdateBanner, [{
+    type: Component,
+    args: [{ selector: "app-defaults-update-banner", standalone: true, changeDetection: ChangeDetectionStrategy.OnPush, template: `
+    <div class="defaults-banner">
+      <span class="material-icons banner-icon">info</span>
+      <span class="banner-text">
+        Default configuration has been updated. Some services or parameters may have new options.
+      </span>
+      <div class="banner-actions">
+        <button class="btn btn-small btn-primary" (click)="reviewClicked.emit()">
+          Review Changes
+        </button>
+        <button class="btn btn-small btn-ghost" (click)="dismissClicked.emit()">
+          Dismiss
+        </button>
+      </div>
+    </div>
+  `, styles: ["/* angular:styles/component:scss;76255656c656d8e8a0a623acc12203f11af374b1a09e243cff3c3edc3afd170d;/Users/chadcummings/Github/cov-discern-web-service-viewer/src/app/components/defaults-update-banner/defaults-update-banner.ts */\n.defaults-banner {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  padding: 8px 16px;\n  background: #fef3c7;\n  border-bottom: 1px solid #f59e0b;\n  font-size: 13px;\n  color: #92400e;\n}\n.banner-icon {\n  font-size: 18px;\n  color: #f59e0b;\n}\n.banner-text {\n  flex: 1;\n}\n.banner-actions {\n  display: flex;\n  gap: 6px;\n  flex-shrink: 0;\n}\n/*# sourceMappingURL=defaults-update-banner.css.map */\n"] }]
+  }], null, null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DefaultsUpdateBanner, { className: "DefaultsUpdateBanner", filePath: "src/app/components/defaults-update-banner/defaults-update-banner.ts", lineNumber: 48 });
+})();
+
+// src/app/services/theme.service.ts
+var ThemeService = class _ThemeService {
+  userConfig = inject(UserConfigService);
+  /** The user's theme preference: light, dark, or auto (OS detection) */
+  mode = signal("auto", ...ngDevMode ? [{ debugName: "mode" }] : []);
+  /** The resolved active theme (after auto-detection) */
+  activeTheme = signal("light", ...ngDevMode ? [{ debugName: "activeTheme" }] : []);
+  mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  constructor() {
+    this.mediaQuery.addEventListener("change", () => this.applyTheme());
+  }
+  /** Initialize from saved preferences or default to auto */
+  initialize() {
+    const saved = this.userConfig.loaded() ? this.getSavedPreference() : null;
+    if (saved && ["light", "dark", "auto"].includes(saved)) {
+      this.mode.set(saved);
+    }
+    this.applyTheme();
+  }
+  /** Toggle between light → dark → auto → light */
+  cycle() {
+    const current = this.mode();
+    const next = current === "light" ? "dark" : current === "dark" ? "auto" : "light";
+    this.setMode(next);
+  }
+  /** Set a specific theme mode */
+  setMode(mode) {
+    this.mode.set(mode);
+    this.applyTheme();
+    this.savePreference(mode);
+  }
+  /** Get the Material Icon name for the current mode */
+  get icon() {
+    switch (this.mode()) {
+      case "light":
+        return "light_mode";
+      case "dark":
+        return "dark_mode";
+      case "auto":
+        return "brightness_auto";
+    }
+  }
+  /** Get tooltip text for the toggle button */
+  get tooltip() {
+    switch (this.mode()) {
+      case "light":
+        return "Theme: Light (click for Dark)";
+      case "dark":
+        return "Theme: Dark (click for Auto)";
+      case "auto":
+        return "Theme: Auto (click for Light)";
+    }
+  }
+  applyTheme() {
+    const mode = this.mode();
+    const isDark = mode === "dark" || mode === "auto" && this.mediaQuery.matches;
+    this.activeTheme.set(isDark ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+  }
+  getSavedPreference() {
+    const local = localStorage.getItem("dwsv_theme");
+    if (local)
+      return local;
+    return null;
+  }
+  savePreference(mode) {
+    localStorage.setItem("dwsv_theme", mode);
+    this.userConfig.checkForUnsavedChanges();
+  }
+  static \u0275fac = function ThemeService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ThemeService)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ThemeService, factory: _ThemeService.\u0275fac, providedIn: "root" });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ThemeService, [{
+    type: Injectable,
+    args: [{ providedIn: "root" }]
+  }], () => [], null);
+})();
+
 // src/app/app.ts
 var _c0 = () => ({ exact: true });
+function App_Conditional_28_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-defaults-update-banner", 10);
+    \u0275\u0275listener("reviewClicked", function App_Conditional_28_Template_app_defaults_update_banner_reviewClicked_0_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.reviewDefaultChanges());
+    })("dismissClicked", function App_Conditional_28_Template_app_defaults_update_banner_dismissClicked_0_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.dismissDefaultsNotification());
+    });
+    \u0275\u0275elementEnd();
+  }
+}
 var App = class _App {
   MPage = inject(MPageService);
+  userConfig = inject(UserConfigService);
+  theme = inject(ThemeService);
+  router = inject(Router);
   ngOnInit() {
     this.MPage.setMaxInstances(2, true, "ORGANIZER", false);
     this.MPage.defaultDateFormats = CUSTOM_DATE_FORMATS;
+    this.theme.initialize();
+    this.waitForServiceAndLoadConfig();
+  }
+  reviewDefaultChanges() {
+    this.router.navigate(["/services"]);
+  }
+  async dismissDefaultsNotification() {
+    await this.userConfig.acknowledgeDefaults();
+  }
+  async waitForServiceAndLoadConfig() {
+    const startTime = Date.now();
+    while (!this.MPage.serviceReady && Date.now() - startTime < 5e3) {
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    }
+    if (this.MPage.prsnlId) {
+      await this.userConfig.loadUserConfig(this.MPage.prsnlId);
+    } else {
+      this.MPage.putLog("App: No prsnlId available \u2014 running with defaults only");
+      await this.userConfig.loadUserConfig(0);
+    }
   }
   static \u0275fac = function App_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _App)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 28, vars: 2, consts: [[1, "app-header"], [1, "app-title"], [1, "material-icons"], [1, "app-nav"], ["routerLink", "/", "routerLinkActive", "active", 3, "routerLinkActiveOptions"], ["routerLink", "/services", "routerLinkActive", "active"], ["routerLink", "/parameters", "routerLinkActive", "active"], ["routerLink", "/config", "routerLinkActive", "active"], [1, "app-version-container"]], template: function App_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 32, vars: 5, consts: [[1, "app-header"], [1, "app-title"], [1, "material-icons"], [1, "app-nav"], ["routerLink", "/", "routerLinkActive", "active", 3, "routerLinkActiveOptions"], ["routerLink", "/services", "routerLinkActive", "active"], ["routerLink", "/parameters", "routerLinkActive", "active"], ["routerLink", "/config", "routerLinkActive", "active"], [1, "app-header-actions"], [1, "btn", "btn-ghost", "btn-small", "theme-toggle", 3, "click", "title"], [3, "reviewClicked", "dismissClicked"]], template: function App_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "header", 0)(1, "div", 1)(2, "span", 2);
       \u0275\u0275text(3, "api");
@@ -6209,28 +6389,41 @@ var App = class _App {
       \u0275\u0275elementEnd();
       \u0275\u0275text(21, " Config ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(22, "div", 8);
-      \u0275\u0275element(23, "app-app-version");
+      \u0275\u0275elementStart(22, "div", 8)(23, "button", 9);
+      \u0275\u0275listener("click", function App_Template_button_click_23_listener() {
+        return ctx.theme.cycle();
+      });
+      \u0275\u0275elementStart(24, "span", 2);
+      \u0275\u0275text(25);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(24, "main");
-      \u0275\u0275element(25, "router-outlet");
+      \u0275\u0275element(26, "app-app-version");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(27, "main");
+      \u0275\u0275conditionalCreate(28, App_Conditional_28_Template, 1, 0, "app-defaults-update-banner");
+      \u0275\u0275element(29, "router-outlet");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(26, "mpage-log-component")(27, "app-toast-container");
+      \u0275\u0275element(30, "mpage-log-component")(31, "app-toast-container");
     }
     if (rf & 2) {
       \u0275\u0275advance(6);
-      \u0275\u0275property("routerLinkActiveOptions", \u0275\u0275pureFunction0(1, _c0));
+      \u0275\u0275property("routerLinkActiveOptions", \u0275\u0275pureFunction0(4, _c0));
+      \u0275\u0275advance(17);
+      \u0275\u0275property("title", ctx.theme.tooltip);
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate(ctx.theme.icon);
+      \u0275\u0275advance(3);
+      \u0275\u0275conditional(ctx.userConfig.defaultsChanged() ? 28 : -1);
     }
-  }, dependencies: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion, ToastContainer], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 15px;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-version-container[_ngcontent-%COMP%] {\n  margin-left: auto;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */"] });
+  }, dependencies: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion, ToastContainer, DefaultsUpdateBanner], styles: ["\n\n[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header[_ngcontent-%COMP%]   .app-title[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 15px;\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-nav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header[_ngcontent-%COMP%]   .app-header-actions[_ngcontent-%COMP%] {\n  margin-left: auto;\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n}\n.app-header[_ngcontent-%COMP%]   .theme-toggle[_ngcontent-%COMP%]   .material-icons[_ngcontent-%COMP%] {\n  font-size: 16px;\n}\nmain[_ngcontent-%COMP%] {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
     type: Component,
-    args: [{ selector: "app-root", standalone: true, imports: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion, ToastContainer], template: '<header class="app-header">\n  <div class="app-title">\n    <span class="material-icons">api</span>\n    Discern Web Service Viewer\n  </div>\n  <nav class="app-nav">\n    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">\n      <span class="material-icons">play_arrow</span> Executor\n    </a>\n    <a routerLink="/services" routerLinkActive="active">\n      <span class="material-icons">settings</span> Services\n    </a>\n    <a routerLink="/parameters" routerLinkActive="active">\n      <span class="material-icons">tune</span> Parameters\n    </a>\n    <a routerLink="/config" routerLinkActive="active">\n      <span class="material-icons">code</span> Config\n    </a>\n  </nav>\n  <div class="app-version-container">\n    <app-app-version />\n  </div>\n</header>\n\n<main>\n  <router-outlet />\n</main>\n\n<mpage-log-component />\n<app-toast-container />\n', styles: ["/* src/app/app.scss */\n:host {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header .app-title {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header .app-title .material-icons {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header .app-nav a {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header .app-nav a .material-icons {\n  font-size: 15px;\n}\n.app-header .app-nav a:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav a.active {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header .app-version-container {\n  margin-left: auto;\n}\nmain {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */\n"] }]
+    args: [{ selector: "app-root", standalone: true, imports: [RouterOutlet, RouterLink, RouterLinkActive, MpageLogComponent, AppVersion, ToastContainer, DefaultsUpdateBanner], template: '<header class="app-header">\n  <div class="app-title">\n    <span class="material-icons">api</span>\n    Discern Web Service Viewer\n  </div>\n  <nav class="app-nav">\n    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">\n      <span class="material-icons">play_arrow</span> Executor\n    </a>\n    <a routerLink="/services" routerLinkActive="active">\n      <span class="material-icons">settings</span> Services\n    </a>\n    <a routerLink="/parameters" routerLinkActive="active">\n      <span class="material-icons">tune</span> Parameters\n    </a>\n    <a routerLink="/config" routerLinkActive="active">\n      <span class="material-icons">code</span> Config\n    </a>\n  </nav>\n  <div class="app-header-actions">\n    <button class="btn btn-ghost btn-small theme-toggle" [title]="theme.tooltip" (click)="theme.cycle()">\n      <span class="material-icons">{{ theme.icon }}</span>\n    </button>\n    <app-app-version />\n  </div>\n</header>\n\n<main>\n  @if (userConfig.defaultsChanged()) {\n    <app-defaults-update-banner\n      (reviewClicked)="reviewDefaultChanges()"\n      (dismissClicked)="dismissDefaultsNotification()" />\n  }\n  <router-outlet />\n</main>\n\n<mpage-log-component />\n<app-toast-container />\n', styles: ["/* src/app/app.scss */\n:host {\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background: var(--fusion-color-bg-anchor);\n}\n.app-header {\n  display: flex;\n  align-items: center;\n  height: 40px;\n  padding: 0 var(--fusion-space-loose);\n  background: var(--fusion-color-bg-anchor);\n  border-bottom: 1px solid var(--fusion-color-border);\n  gap: var(--fusion-space-loose);\n  flex-shrink: 0;\n}\n.app-header .app-title {\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  font-size: var(--fusion-text-lg);\n  font-weight: 700;\n  color: var(--fusion-color-text);\n  white-space: nowrap;\n}\n.app-header .app-title .material-icons {\n  font-size: 18px;\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav {\n  display: flex;\n  gap: 0;\n  height: 40px;\n  align-items: stretch;\n}\n.app-header .app-nav a {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n  padding: 0 var(--fusion-space-loose);\n  color: var(--fusion-color-text-secondary);\n  text-decoration: none;\n  font-size: var(--fusion-text-base);\n  font-weight: 600;\n  transition: color var(--fusion-transition-fast);\n  position: relative;\n  border-bottom: 3px solid transparent;\n}\n.app-header .app-nav a .material-icons {\n  font-size: 15px;\n}\n.app-header .app-nav a:hover {\n  color: var(--fusion-color-primary);\n}\n.app-header .app-nav a.active {\n  color: var(--fusion-color-primary);\n  border-bottom-color: var(--fusion-color-primary);\n}\n.app-header .app-header-actions {\n  margin-left: auto;\n  display: flex;\n  align-items: center;\n  gap: var(--fusion-space-tight);\n}\n.app-header .theme-toggle .material-icons {\n  font-size: 16px;\n}\nmain {\n  flex: 1;\n  overflow: hidden;\n}\n/*# sourceMappingURL=app.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/app/app.ts", lineNumber: 15 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/app/app.ts", lineNumber: 18 });
 })();
 
 // src/main.ts

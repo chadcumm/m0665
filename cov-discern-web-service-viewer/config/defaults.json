@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "defaultsVersion": "2.0",
   "parameterTypes": [
     {
       "key": "outdev",
