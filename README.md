@@ -3,9 +3,9 @@
 ## Current Deployment
 
 **Environment:** M0665
-**Version:** v0.0.1
+**Version:** v0.0.3
 **Branch:** main
-**Last Deployed:** 03/23/2026, 12:55:17
+**Last Deployed:** 03/23/2026, 14:37:03
 
 ## About
 
@@ -13,6 +13,7 @@ This directory contains the deployed build artifacts for the cov-mpage-component
 
 ## Deployment History
 
+- **v0.0.3** | Branch: `main` | Deployed: 03/23/2026, 14:37:03
 - **v0.0.1** | Branch: `main` | Deployed: 03/23/2026, 12:55:17
 - **v0.0.11** | Branch: `master` | Deployed: 03/23/2026, 12:43:22
 - **v0.0.38** | Branch: `develop` | Deployed: 03/21/2026, 00:07:14
@@ -22,7 +23,6 @@ This directory contains the deployed build artifacts for the cov-mpage-component
 - **v0.0.32** | Branch: `develop` | Deployed: 03/20/2026, 16:29:45
 - **v0.0.31** | Branch: `develop` | Deployed: 03/20/2026, 16:19:57
 - **v0.0.30** | Branch: `develop` | Deployed: 03/20/2026, 16:09:22
-- **v0.0.29** | Branch: `develop` | Deployed: 03/20/2026, 16:07:43
 
 ---
 

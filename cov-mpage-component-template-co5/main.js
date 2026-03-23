@@ -1,6 +1,59 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 8221
+/*!********************************************!*\
+  !*** ./src/app/app-version/app-version.ts ***!
+  \********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AppVersion: () => (/* binding */ AppVersion)
+/* harmony export */ });
+/* harmony import */ var _version__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../version */ 9454);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 6124);
+
+
+/**
+ * Component to display application version information
+ * Version is auto-generated at build time by scripts/build-version.js
+ */
+let AppVersion = /*#__PURE__*/(() => {
+  class AppVersion {
+    buildVersion = _version__WEBPACK_IMPORTED_MODULE_0__.buildVersion;
+    packageVersion = _version__WEBPACK_IMPORTED_MODULE_0__.packageVersion;
+    gitBranch = _version__WEBPACK_IMPORTED_MODULE_0__.gitBranch;
+    static ɵfac = function AppVersion_Factory(__ngFactoryType__) {
+      return new (__ngFactoryType__ || AppVersion)();
+    };
+    static ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+      type: AppVersion,
+      selectors: [["app-app-version"]],
+      decls: 3,
+      vars: 1,
+      consts: [[1, "app-version"], [1, "version-text"]],
+      template: function AppVersion_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdomElementStart"](0, "div", 0)(1, "span", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdomElementEnd"]()();
+        }
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx.buildVersion);
+        }
+      },
+      styles: [".app-version[_ngcontent-%COMP%] {\n  display: inline-block;\n  padding: 4px 8px;\n  font-size: 0.75rem;\n  color: #666;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  font-family: monospace;\n}\n.app-version[_ngcontent-%COMP%]   .version-text[_ngcontent-%COMP%] {\n  font-weight: 500;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvYXBwLXZlcnNpb24vYXBwLXZlcnNpb24uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtFQUNBLGtCQUFBO0VBQ0Esc0JBQUE7QUFDRjtBQUNFO0VBQ0UsZ0JBQUE7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbIi5hcHAtdmVyc2lvbiB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogNHB4IDhweDtcbiAgZm9udC1zaXplOiAwLjc1cmVtO1xuICBjb2xvcjogIzY2NjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y1ZjVmNTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBmb250LWZhbWlseTogbW9ub3NwYWNlO1xuXG4gIC52ZXJzaW9uLXRleHQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */"],
+      changeDetection: 0
+    });
+  }
+  return AppVersion;
+})();
+
+/***/ },
+
 /***/ 289
 /*!*******************************!*\
   !*** ./src/app/app.config.ts ***!
@@ -14,9 +67,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   appConfig: () => (/* binding */ appConfig)
 /* harmony export */ });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 6124);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ 6264);
-/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.routes */ 2181);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 698);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 4363);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 6264);
+/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.routes */ 2181);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 698);
+/* harmony import */ var _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @clinicaloffice/mpage-developer */ 6407);
+
 
 
 
@@ -24,17 +80,23 @@ __webpack_require__.r(__webpack_exports__);
 // Custom date formats
 const CUSTOM_DATE_FORMATS = {
   parse: {
-    dateInput: 'MM/DD/YYYY'
+    dateInput: ['dd-MMM-yyyy']
   },
   display: {
-    dateInput: 'MM/DD/YYYY',
-    monthYearLabel: 'MMM YYYY',
+    dateInput: 'dd-MMM-yyyy',
+    dateLabel: 'dd-MMM-yyyy',
+    dateTimeLabel: 'dd-MMM-yyyy HH:mm',
+    locale: 'en-US',
+    monthYearLabel: 'MMM yyyy',
     dateA11yLabel: 'LL',
-    monthYearA11yLabel: 'MMMM YYYY'
+    monthYearA11yLabel: 'MMMM yyyy'
   }
 };
 const appConfig = {
-  providers: [(0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.provideZonelessChangeDetection)(), (0,_angular_router__WEBPACK_IMPORTED_MODULE_1__.provideRouter)(_app_routes__WEBPACK_IMPORTED_MODULE_2__.routes, (0,_angular_router__WEBPACK_IMPORTED_MODULE_1__.withHashLocation)()), (0,_angular_common_http__WEBPACK_IMPORTED_MODULE_3__.provideHttpClient)()]
+  providers: [(0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.provideZonelessChangeDetection)(), (0,_angular_router__WEBPACK_IMPORTED_MODULE_2__.provideRouter)(_app_routes__WEBPACK_IMPORTED_MODULE_3__.routes, (0,_angular_router__WEBPACK_IMPORTED_MODULE_2__.withHashLocation)()), (0,_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.provideHttpClient)((0,_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.withFetch)()), (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.provideAppInitializer)(() => {
+    const configService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_5__.ConfigService);
+    return configService.loadConfig();
+  })]
 };
 
 /***/ },
@@ -54,7 +116,7 @@ const routes = [];
 
 /***/ },
 
-/***/ 5517
+/***/ 7898
 /*!************************!*\
   !*** ./src/app/app.ts ***!
   \************************/
@@ -68,8 +130,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 7580);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 4363);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 3305);
-/* harmony import */ var _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @clinicaloffice/mpage-developer */ 6407);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 6124);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.config */ 289);
+/* harmony import */ var _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @clinicaloffice/mpage-developer */ 6407);
+/* harmony import */ var _app_version_app_version__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-version/app-version */ 8221);
+/* harmony import */ var _ccl_test_ccl_test__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ccl-test/ccl-test */ 5577);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 6124);
+
+
+
 
 
 
@@ -80,7 +148,7 @@ const _c0 = () => ({
 let App = /*#__PURE__*/(() => {
   class App {
     activatedRoute = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_angular_router__WEBPACK_IMPORTED_MODULE_2__.ActivatedRoute);
-    MPage = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.MPageService);
+    MPage = (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.inject)(_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.MPageService);
     title = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.input)('default', ...(ngDevMode ? [{
       debugName: "title"
     }] : /* istanbul ignore next */[]));
@@ -95,37 +163,36 @@ let App = /*#__PURE__*/(() => {
         this.MPage.prsnlId = params['userId'] ? parseInt(params['userId']) : this.MPage.prsnlId;
       });
       this.MPage.setMaxInstances(2, true, 'CHART', false);
+      this.MPage.defaultDateFormats = _app_config__WEBPACK_IMPORTED_MODULE_3__.CUSTOM_DATE_FORMATS;
     }
     static ɵfac = function App_Factory(__ngFactoryType__) {
       return new (__ngFactoryType__ || App)();
     };
-    static ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
+    static ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({
       type: App,
       selectors: [["app-root"]],
       inputs: {
         title: [1, "title"],
         path: [1, "path"]
       },
-      features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵProvidersFeature"]([_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.MPageService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.AddressService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.AllergyService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.CodeValueService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.ConfigService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.CustomService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.DiagnosisService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.EncounterService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.Dialog, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.OrganizationService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.PersonService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.PhoneService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.ProblemService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.PrsnlService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.ReferenceService])],
-      decls: 4,
-      vars: 3,
-      consts: [[3, "properties"]],
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵProvidersFeature"]([_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.MPageService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.AddressService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.AllergyService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.CodeValueService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.ConfigService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.CustomService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.DiagnosisService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.EncounterService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.Dialog, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.OrganizationService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.PersonService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.PhoneService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.ProblemService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.PrsnlService, _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.ReferenceService])],
+      decls: 5,
+      vars: 2,
+      consts: [[3, "properties"], [2, "position", "fixed", "bottom", "10px", "right", "10px"]],
       template: function App_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](0, "cov-mpage-component-template-co5 template\n");
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "p");
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](3, "mpage-log-component", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](0, "cov-mpage-component-template-co5 (Edge Component) ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](1, "app-ccl-test")(2, "mpage-log-component", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](3, "footer", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](4, "app-app-version");
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
         }
         if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](ctx.path());
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"]();
-          _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("properties", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpureFunction0"](2, _c0));
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("properties", _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵpureFunction0"](1, _c0));
         }
       },
-      dependencies: [_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_3__.MpageLogComponent],
+      dependencies: [_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_4__.MpageLogComponent, _app_version_app_version__WEBPACK_IMPORTED_MODULE_5__.AppVersion, _ccl_test_ccl_test__WEBPACK_IMPORTED_MODULE_6__.CclTest],
       styles: ["/* Import Clinical Office: MPage Developer Standard Styles */\n/* @use 'clinical-office-styles'; */\n/* Component Variables */\n:host {\n  all: initial;\n  /* Default Text Colors, Font settings */\n  --text-color: black;\n  --text-color-alternate: grey;\n  --font-family: 'Roboto Condensed';\n  --font-generic-name: sans-serif;\n  --font-size: medium;\n  /* Colors for context menus, dialogs and select drop-downs */\n  --context-background-color: white;\n  --context-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);\n  --context-dialog-border: 1px solid grey;\n  --context-dialog-border-radius: 0;\n  --context-hover: grey;\n  /* Specialty Colors */\n  --default-color: white;\n  --default-color-content: black;\n  --default-color-alternate: grey;\n  --primary-color: #5783db;\n  --primary-color-content: white;\n  --primary-color-alternate: darkblue;\n  --accent-color: #55c2da;\n  --accent-color-content: darkblue;\n  --accent-color-alternate: #46697a;\n  --warn-color: #ed0800;\n  --warn-color-content: white;\n  --warn-color-alternate: darkred;\n  /*\n    NOTE: You can add as many specialty color combinations as you desire. Just ensure the variable names are consistent\n    with the pattern of --{{your name}}-color, --{{your name}}-color-content, and --{{your name}}-color-alternate. In\n    addition, you will also need to create matching CSS selectors to support the new colors. More information can be\n    found in the Clinical Office: MPage Developer online documentation.\n   */\n  /* MPage Input Fields */\n  --field-min-height: 3em;\n  --field-background-color: ghostwhite;\n  --field-border: unset;\n  --field-border-radius: 0;\n  --field-box-shadow: unset;\n  --field-required-background-color: rgb(242, 242, 140);\n  --field-required-border: unset;\n  --field-required-border-radius: 0;\n  /* MPage Notification */\n  --notification-padding: 0.5em;\n  --notification-font-weight: bold;\n  --notification-border: unset;\n  --notification-border-radius: 0;\n  --notification-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);\n  /* MPage Select */\n  --select-search-border: 1px solid black;\n  --select-field-max-height: 30vh;\n  /* MPage Tree */\n  --co-tree-indent-margin: 15px;\n  --co-tree-no-expand-margin: 40px;\n  --tree-search-found-background: inherit;\n  --tree-search-found-color: green;\n  /* General Button Styling */\n  --button-min-height: 3em;\n  --button-padding: 0 1em;\n  --button-border: none;\n  --button-border-radius: 0;\n  --button-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n  --button-shadow-alternate: 0 0 8px rgba(0, 0, 0, 0.3);\n  --button-stroke: 2px solid black;\n  --button-stroke-alternate: 2px solid black;\n  /* MPage Scrollbar colors */\n  --mpage-scrollbar-track: white;\n  --mpage-scrollbar-color: grey;\n  --mpage-scrollbar-border: 1px solid grey;\n  --mpage-scrollbar-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n  /* MPage Table */\n  --mpage-table-container-border: 1px solid lightgrey;\n  --mpage-table-font-size: inherit;\n  --mpage-table-header-height: 40px;\n  --mpage-table-header-background-color: rgb(124, 179, 198);\n  --mpage-table-row-height: 36px;\n  --mpage-table-background-color: white;\n  --mpage-table-cell-border: 1px solid lightgrey;\n  --mpage-table-sort-arrow-color: grey;\n  --mpage-table-filter-background-color: whitesmoke;\n  --mpage-table-toolbar-box-height: fit-content;\n  --mpage-table-toolbar-background-color: lightblue;\n  --mpage-table-toolbar-border-radius: 0;\n  --mpage-table-toolbar-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);\n  --mpage-table-toolbar-icon-color: black;\n  --mpage-table-toolbar-padding: 8px;\n  --mpage-table-toolbar-drag-background: lightgrey;\n  --mpage-table-toolbar-drag-padding: 8px;\n  --mpage-table-toolbar-drag-border: unset;\n  --mpage-table-toolbar-drag-border-alternate: 2px solid;\n  --mpage-table-toolbar-drag-border-radius: 0;\n  --mpage-table-empty-space-background: repeating-linear-gradient(-30deg,\n    rgba(0, 0, 0, 0.04),\n    rgba(0, 0, 0, 0.04) 4px,\n    rgba(0, 0, 0, 0.08) 6px,\n    rgba(0, 0, 0, 0.08) 10px);\n  /* Dialog */\n  --dialog-padding: 1em;\n  --dialog-content-padding: 1em 0;\n  --dialog-content-background: inherit;\n  /* Tabbed Menu */\n  --tabbed-menu-border: unset;\n  --tabbed-menu-background: inherit;\n  --tabbed-menu-margin: unset;\n  --tabbed-menu-padding: unset;\n  /* General Application Font/Page Settings */\n  box-sizing: border-box;\n  font-family: var(--font-family), var(--font-generic-name);\n  font-size: var(--font-size);\n  color: var(--text-color);\n  margin: 0;\n}\n:host *,\n:host *::before,\n:host *::after {\n  box-sizing: inherit;\n}\n\n* {\n  padding: 0;\n  margin: 0;\n}\n\n/* Custom Styles for this Page */\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0REFBQTtBQUNBLG1DQUFBO0FBR0Esd0JBQUE7QUFDQTtFQUNFLFlBQUE7RUFFQSx1Q0FBQTtFQUNBLG1CQUFBO0VBQ0EsNEJBQUE7RUFDQSxpQ0FBQTtFQUNBLCtCQUFBO0VBQ0EsbUJBQUE7RUFFQSw0REFBQTtFQUNBLGlDQUFBO0VBQ0EsZ0RBQUE7RUFDQSx1Q0FBQTtFQUNBLGlDQUFBO0VBQ0EscUJBQUE7RUFFQSxxQkFBQTtFQUNBLHNCQUFBO0VBQ0EsOEJBQUE7RUFDQSwrQkFBQTtFQUVBLHdCQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQ0FBQTtFQUVBLHVCQUFBO0VBQ0EsZ0NBQUE7RUFDQSxpQ0FBQTtFQUVBLHFCQUFBO0VBQ0EsMkJBQUE7RUFDQSwrQkFBQTtFQUVBOzs7OztJQUFBO0VBT0EsdUJBQUE7RUFDQSx1QkFBQTtFQUNBLG9DQUFBO0VBQ0EscUJBQUE7RUFDQSx3QkFBQTtFQUNBLHlCQUFBO0VBQ0EscURBQUE7RUFDQSw4QkFBQTtFQUNBLGlDQUFBO0VBRUEsdUJBQUE7RUFDQSw2QkFBQTtFQUNBLGdDQUFBO0VBQ0EsNEJBQUE7RUFDQSwrQkFBQTtFQUNBLHlEQUFBO0VBRUEsaUJBQUE7RUFDQSx1Q0FBQTtFQUNBLCtCQUFBO0VBRUEsZUFBQTtFQUNBLDZCQUFBO0VBQ0EsZ0NBQUE7RUFDQSx1Q0FBQTtFQUNBLGdDQUFBO0VBRUEsMkJBQUE7RUFDQSx3QkFBQTtFQUNBLHVCQUFBO0VBQ0EscUJBQUE7RUFDQSx5QkFBQTtFQUNBLCtDQUFBO0VBQ0EscURBQUE7RUFDQSxnQ0FBQTtFQUNBLDBDQUFBO0VBRUEsMkJBQUE7RUFDQSw4QkFBQTtFQUNBLDZCQUFBO0VBQ0Esd0NBQUE7RUFDQSx3REFBQTtFQUVBLGdCQUFBO0VBQ0EsbURBQUE7RUFDQSxnQ0FBQTtFQUNBLGlDQUFBO0VBQ0EseURBQUE7RUFDQSw4QkFBQTtFQUNBLHFDQUFBO0VBQ0EsOENBQUE7RUFDQSxvQ0FBQTtFQUNBLGlEQUFBO0VBQ0EsNkNBQUE7RUFDQSxpREFBQTtFQUNBLHNDQUFBO0VBQ0EsZ0VBQUE7RUFDQSx1Q0FBQTtFQUNBLGtDQUFBO0VBQ0EsZ0RBQUE7RUFDQSx1Q0FBQTtFQUNBLHdDQUFBO0VBQ0Esc0RBQUE7RUFDQSwyQ0FBQTtFQUNBOzs7OzZCQUFBO0VBTUEsV0FBQTtFQUNBLHFCQUFBO0VBQ0EsK0JBQUE7RUFDQSxvQ0FBQTtFQUVBLGdCQUFBO0VBQ0EsMkJBQUE7RUFDQSxpQ0FBQTtFQUNBLDJCQUFBO0VBQ0EsNEJBQUE7RUFHQSwyQ0FBQTtFQUNBLHNCQUFBO0VBQ0EseURBQUE7RUFDQSwyQkFBQTtFQUNBLHdCQUFBO0VBQ0EsU0FBQTtBQW5CRjtBQXFCRTs7O0VBR0UsbUJBQUE7QUFuQko7O0FBd0JBO0VBQ0UsVUFBQTtFQUNBLFNBQUE7QUFyQkY7O0FBeUJBLGdDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiLyogSW1wb3J0IENsaW5pY2FsIE9mZmljZTogTVBhZ2UgRGV2ZWxvcGVyIFN0YW5kYXJkIFN0eWxlcyAqL1xuLyogQHVzZSAnY2xpbmljYWwtb2ZmaWNlLXN0eWxlcyc7ICovXG5cblxuLyogQ29tcG9uZW50IFZhcmlhYmxlcyAqL1xuOmhvc3Qge1xuICBhbGw6IGluaXRpYWw7XG5cbiAgLyogRGVmYXVsdCBUZXh0IENvbG9ycywgRm9udCBzZXR0aW5ncyAqL1xuICAtLXRleHQtY29sb3I6IGJsYWNrO1xuICAtLXRleHQtY29sb3ItYWx0ZXJuYXRlOiBncmV5O1xuICAtLWZvbnQtZmFtaWx5OiAnUm9ib3RvIENvbmRlbnNlZCc7XG4gIC0tZm9udC1nZW5lcmljLW5hbWU6IHNhbnMtc2VyaWY7XG4gIC0tZm9udC1zaXplOiBtZWRpdW07XG5cbiAgLyogQ29sb3JzIGZvciBjb250ZXh0IG1lbnVzLCBkaWFsb2dzIGFuZCBzZWxlY3QgZHJvcC1kb3ducyAqL1xuICAtLWNvbnRleHQtYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIC0tY29udGV4dC1zaGFkb3c6IDRweCA0cHggOHB4IHJnYmEoMCwgMCwgMCwgMC4zKTtcbiAgLS1jb250ZXh0LWRpYWxvZy1ib3JkZXI6IDFweCBzb2xpZCBncmV5O1xuICAtLWNvbnRleHQtZGlhbG9nLWJvcmRlci1yYWRpdXM6IDA7XG4gIC0tY29udGV4dC1ob3ZlcjogZ3JleTtcblxuICAvKiBTcGVjaWFsdHkgQ29sb3JzICovXG4gIC0tZGVmYXVsdC1jb2xvcjogd2hpdGU7XG4gIC0tZGVmYXVsdC1jb2xvci1jb250ZW50OiBibGFjaztcbiAgLS1kZWZhdWx0LWNvbG9yLWFsdGVybmF0ZTogZ3JleTtcblxuICAtLXByaW1hcnktY29sb3I6ICM1NzgzZGI7XG4gIC0tcHJpbWFyeS1jb2xvci1jb250ZW50OiB3aGl0ZTtcbiAgLS1wcmltYXJ5LWNvbG9yLWFsdGVybmF0ZTogZGFya2JsdWU7XG5cbiAgLS1hY2NlbnQtY29sb3I6ICM1NWMyZGE7XG4gIC0tYWNjZW50LWNvbG9yLWNvbnRlbnQ6IGRhcmtibHVlO1xuICAtLWFjY2VudC1jb2xvci1hbHRlcm5hdGU6ICM0NjY5N2E7XG5cbiAgLS13YXJuLWNvbG9yOiAjZWQwODAwO1xuICAtLXdhcm4tY29sb3ItY29udGVudDogd2hpdGU7XG4gIC0td2Fybi1jb2xvci1hbHRlcm5hdGU6IGRhcmtyZWQ7XG5cbiAgLypcbiAgICBOT1RFOiBZb3UgY2FuIGFkZCBhcyBtYW55IHNwZWNpYWx0eSBjb2xvciBjb21iaW5hdGlvbnMgYXMgeW91IGRlc2lyZS4gSnVzdCBlbnN1cmUgdGhlIHZhcmlhYmxlIG5hbWVzIGFyZSBjb25zaXN0ZW50XG4gICAgd2l0aCB0aGUgcGF0dGVybiBvZiAtLXt7eW91ciBuYW1lfX0tY29sb3IsIC0te3t5b3VyIG5hbWV9fS1jb2xvci1jb250ZW50LCBhbmQgLS17e3lvdXIgbmFtZX19LWNvbG9yLWFsdGVybmF0ZS4gSW5cbiAgICBhZGRpdGlvbiwgeW91IHdpbGwgYWxzbyBuZWVkIHRvIGNyZWF0ZSBtYXRjaGluZyBDU1Mgc2VsZWN0b3JzIHRvIHN1cHBvcnQgdGhlIG5ldyBjb2xvcnMuIE1vcmUgaW5mb3JtYXRpb24gY2FuIGJlXG4gICAgZm91bmQgaW4gdGhlIENsaW5pY2FsIE9mZmljZTogTVBhZ2UgRGV2ZWxvcGVyIG9ubGluZSBkb2N1bWVudGF0aW9uLlxuICAgKi9cblxuICAvKiBNUGFnZSBJbnB1dCBGaWVsZHMgKi9cbiAgLS1maWVsZC1taW4taGVpZ2h0OiAzZW07XG4gIC0tZmllbGQtYmFja2dyb3VuZC1jb2xvcjogZ2hvc3R3aGl0ZTtcbiAgLS1maWVsZC1ib3JkZXI6IHVuc2V0O1xuICAtLWZpZWxkLWJvcmRlci1yYWRpdXM6IDA7XG4gIC0tZmllbGQtYm94LXNoYWRvdzogdW5zZXQ7XG4gIC0tZmllbGQtcmVxdWlyZWQtYmFja2dyb3VuZC1jb2xvcjogcmdiKDI0MiwgMjQyLCAxNDApO1xuICAtLWZpZWxkLXJlcXVpcmVkLWJvcmRlcjogdW5zZXQ7XG4gIC0tZmllbGQtcmVxdWlyZWQtYm9yZGVyLXJhZGl1czogMDtcblxuICAvKiBNUGFnZSBOb3RpZmljYXRpb24gKi9cbiAgLS1ub3RpZmljYXRpb24tcGFkZGluZzogMC41ZW07XG4gIC0tbm90aWZpY2F0aW9uLWZvbnQtd2VpZ2h0OiBib2xkO1xuICAtLW5vdGlmaWNhdGlvbi1ib3JkZXI6IHVuc2V0O1xuICAtLW5vdGlmaWNhdGlvbi1ib3JkZXItcmFkaXVzOiAwO1xuICAtLW5vdGlmaWNhdGlvbi1ib3gtc2hhZG93OiA0cHggNHB4IDhweCByZ2JhKDAsIDAsIDAsIDAuMyk7XG5cbiAgLyogTVBhZ2UgU2VsZWN0ICovXG4gIC0tc2VsZWN0LXNlYXJjaC1ib3JkZXI6IDFweCBzb2xpZCBibGFjaztcbiAgLS1zZWxlY3QtZmllbGQtbWF4LWhlaWdodDogMzB2aDtcblxuICAvKiBNUGFnZSBUcmVlICovXG4gIC0tY28tdHJlZS1pbmRlbnQtbWFyZ2luOiAxNXB4O1xuICAtLWNvLXRyZWUtbm8tZXhwYW5kLW1hcmdpbjogNDBweDtcbiAgLS10cmVlLXNlYXJjaC1mb3VuZC1iYWNrZ3JvdW5kOiBpbmhlcml0O1xuICAtLXRyZWUtc2VhcmNoLWZvdW5kLWNvbG9yOiBncmVlbjtcblxuICAvKiBHZW5lcmFsIEJ1dHRvbiBTdHlsaW5nICovXG4gIC0tYnV0dG9uLW1pbi1oZWlnaHQ6IDNlbTtcbiAgLS1idXR0b24tcGFkZGluZzogMCAxZW07XG4gIC0tYnV0dG9uLWJvcmRlcjogbm9uZTtcbiAgLS1idXR0b24tYm9yZGVyLXJhZGl1czogMDtcbiAgLS1idXR0b24tc2hhZG93OiAycHggMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMyk7XG4gIC0tYnV0dG9uLXNoYWRvdy1hbHRlcm5hdGU6IDAgMCA4cHggcmdiYSgwLCAwLCAwLCAwLjMpO1xuICAtLWJ1dHRvbi1zdHJva2U6IDJweCBzb2xpZCBibGFjaztcbiAgLS1idXR0b24tc3Ryb2tlLWFsdGVybmF0ZTogMnB4IHNvbGlkIGJsYWNrO1xuXG4gIC8qIE1QYWdlIFNjcm9sbGJhciBjb2xvcnMgKi9cbiAgLS1tcGFnZS1zY3JvbGxiYXItdHJhY2s6IHdoaXRlO1xuICAtLW1wYWdlLXNjcm9sbGJhci1jb2xvcjogZ3JleTtcbiAgLS1tcGFnZS1zY3JvbGxiYXItYm9yZGVyOiAxcHggc29saWQgZ3JleTtcbiAgLS1tcGFnZS1zY3JvbGxiYXItc2hhZG93OiAycHggMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMyk7XG5cbiAgLyogTVBhZ2UgVGFibGUgKi9cbiAgLS1tcGFnZS10YWJsZS1jb250YWluZXItYm9yZGVyOiAxcHggc29saWQgbGlnaHRncmV5O1xuICAtLW1wYWdlLXRhYmxlLWZvbnQtc2l6ZTogaW5oZXJpdDtcbiAgLS1tcGFnZS10YWJsZS1oZWFkZXItaGVpZ2h0OiA0MHB4O1xuICAtLW1wYWdlLXRhYmxlLWhlYWRlci1iYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTI0LCAxNzksIDE5OCk7XG4gIC0tbXBhZ2UtdGFibGUtcm93LWhlaWdodDogMzZweDtcbiAgLS1tcGFnZS10YWJsZS1iYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgLS1tcGFnZS10YWJsZS1jZWxsLWJvcmRlcjogMXB4IHNvbGlkIGxpZ2h0Z3JleTtcbiAgLS1tcGFnZS10YWJsZS1zb3J0LWFycm93LWNvbG9yOiBncmV5O1xuICAtLW1wYWdlLXRhYmxlLWZpbHRlci1iYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZXNtb2tlO1xuICAtLW1wYWdlLXRhYmxlLXRvb2xiYXItYm94LWhlaWdodDogZml0LWNvbnRlbnQ7XG4gIC0tbXBhZ2UtdGFibGUtdG9vbGJhci1iYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGJsdWU7XG4gIC0tbXBhZ2UtdGFibGUtdG9vbGJhci1ib3JkZXItcmFkaXVzOiAwO1xuICAtLW1wYWdlLXRhYmxlLXRvb2xiYXItYm94LXNoYWRvdzogMnB4IDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjMpO1xuICAtLW1wYWdlLXRhYmxlLXRvb2xiYXItaWNvbi1jb2xvcjogYmxhY2s7XG4gIC0tbXBhZ2UtdGFibGUtdG9vbGJhci1wYWRkaW5nOiA4cHg7XG4gIC0tbXBhZ2UtdGFibGUtdG9vbGJhci1kcmFnLWJhY2tncm91bmQ6IGxpZ2h0Z3JleTtcbiAgLS1tcGFnZS10YWJsZS10b29sYmFyLWRyYWctcGFkZGluZzogOHB4O1xuICAtLW1wYWdlLXRhYmxlLXRvb2xiYXItZHJhZy1ib3JkZXI6IHVuc2V0O1xuICAtLW1wYWdlLXRhYmxlLXRvb2xiYXItZHJhZy1ib3JkZXItYWx0ZXJuYXRlOiAycHggc29saWQ7XG4gIC0tbXBhZ2UtdGFibGUtdG9vbGJhci1kcmFnLWJvcmRlci1yYWRpdXM6IDA7XG4gIC0tbXBhZ2UtdGFibGUtZW1wdHktc3BhY2UtYmFja2dyb3VuZDogcmVwZWF0aW5nLWxpbmVhci1ncmFkaWVudCgtMzBkZWcsXG4gICAgcmdiYSgwLCAwLCAwLCAwLjA0KSxcbiAgICByZ2JhKDAsIDAsIDAsIDAuMDQpIDRweCxcbiAgICByZ2JhKDAsIDAsIDAsIDAuMDgpIDZweCxcbiAgICByZ2JhKDAsIDAsIDAsIDAuMDgpIDEwcHgpO1xuXG4gIC8qIERpYWxvZyAqL1xuICAtLWRpYWxvZy1wYWRkaW5nOiAxZW07XG4gIC0tZGlhbG9nLWNvbnRlbnQtcGFkZGluZzogMWVtIDA7XG4gIC0tZGlhbG9nLWNvbnRlbnQtYmFja2dyb3VuZDogaW5oZXJpdDtcblxuICAvKiBUYWJiZWQgTWVudSAqL1xuICAtLXRhYmJlZC1tZW51LWJvcmRlcjogdW5zZXQ7XG4gIC0tdGFiYmVkLW1lbnUtYmFja2dyb3VuZDogaW5oZXJpdDtcbiAgLS10YWJiZWQtbWVudS1tYXJnaW46IHVuc2V0O1xuICAtLXRhYmJlZC1tZW51LXBhZGRpbmc6IHVuc2V0O1xuXG5cbiAgLyogR2VuZXJhbCBBcHBsaWNhdGlvbiBGb250L1BhZ2UgU2V0dGluZ3MgKi9cbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgZm9udC1mYW1pbHk6IHZhcigtLWZvbnQtZmFtaWx5KSwgdmFyKC0tZm9udC1nZW5lcmljLW5hbWUpO1xuICBmb250LXNpemU6IHZhcigtLWZvbnQtc2l6ZSk7XG4gIGNvbG9yOiB2YXIoLS10ZXh0LWNvbG9yKTtcbiAgbWFyZ2luOiAwO1xuXG4gICosXG4gICo6OmJlZm9yZSxcbiAgKjo6YWZ0ZXIge1xuICAgIGJveC1zaXppbmc6IGluaGVyaXQ7XG4gIH1cblxufVxuXG4qIHtcbiAgcGFkZGluZzogMDtcbiAgbWFyZ2luOiAwO1xufVxuXG5cbi8qIEN1c3RvbSBTdHlsZXMgZm9yIHRoaXMgUGFnZSAqL1xuXG4vLyBBZGQgeW91ciBjdXN0b20gc3R5bGVzIGhlcmVcbiJdLCJzb3VyY2VSb290IjoiIn0= */", "/*\n    Clinical Office: MPage Developer Standard Styles\n\n    Note: The CSS definitions included in this file are required for the presentation of the standard\n    Clinical Office: MPage Developer components and care should be taken when modifying any values. This said,\n    this is your MPage and we encourage you to make modifications that suit your business needs.\n*/\n.material-icons {\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: inherit;\n  line-height: 1;\n  letter-spacing: normal;\n  text-transform: none;\n  display: inline-block;\n  white-space: nowrap;\n  word-wrap: normal;\n  direction: ltr;\n  -webkit-font-feature-settings: \"liga\";\n  -webkit-font-smoothing: antialiased;\n}\n\n/*\n  --------------------\n  Generic Flex Helpers\n  --------------------\n*/\n.flex, .flex-column {\n  display: flex;\n  min-width: 0;\n  min-height: 0;\n}\n\n.flex-gap {\n  gap: 8px;\n}\n\n.flex-center-items {\n  align-items: center;\n}\n\n.flex-column {\n  flex-direction: column;\n}\n\n.flex-fill {\n  flex: 1 1 auto;\n}\n\n.flex-grow {\n  flex-grow: 1;\n}\n\n/*\n  ---------------\n  Misc Helper CSS\n  ---------------\n*/\n.prevent-select {\n  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */\n  user-select: none; /* Standard syntax */\n}\n\n.disabled {\n  color: var(--text-color-alternate);\n}\n\n.disabled:hover {\n  cursor: not-allowed;\n}\n\n.co-min-width {\n  min-width: 5em;\n}\n\n.co-w5 {\n  width: 5%;\n}\n\n.co-w10 {\n  width: 10%;\n}\n\n.co-w15 {\n  width: 15%;\n}\n\n.co-w20 {\n  width: 20%;\n}\n\n.co-w25 {\n  width: 25%;\n}\n\n.co-w30 {\n  width: 30%;\n}\n\n.co-w40 {\n  width: 40%;\n}\n\n.co-w50 {\n  width: 50%;\n}\n\n.co-w100 {\n  width: 100%;\n}\n\n.co-wdate {\n  width: 11em !important;\n}\n\n/* MPage Table */\ndiv.co-table-container {\n  max-width: 100%;\n  max-height: 100%;\n  overflow-x: auto;\n  overflow-y: clip;\n  border: var(--mpage-table-container-border);\n}\n\ntable.co-table {\n  max-width: 100%;\n  width: fit-content;\n  table-layout: fixed;\n  background-color: var(--mpage-table-background-color);\n  border-collapse: collapse;\n}\ntable.co-table th, table.co-table td {\n  white-space: nowrap;\n  vertical-align: middle;\n  border: var(--mpage-table-cell-border);\n}\ntable.co-table th {\n  height: var(--mpage-table-header-height);\n}\ntable.co-table td {\n  height: var(--mpage-table-row-height);\n  font-size: var(--mpage-table-font-size);\n}\ntable.co-table thead > tr {\n  background-color: var(--mpage-table-header-background-color);\n}\ntable.co-table tbody > tr {\n  background-color: var(--mpage-table-background-color);\n}\ntable.co-table tbody > tr:hover {\n  cursor: pointer;\n  background-color: var(--context-hover);\n}\ntable.co-table .co-table-sort-arrow {\n  color: var(--mpage-table-sort-arrow-color);\n  font-size: 1.5em;\n}\ntable.co-table .cdk-table-sticky {\n  background-color: inherit;\n  border: var(--mpage-table-cell-border);\n}\ntable.co-table th.co-table-sort-header:hover {\n  cursor: pointer;\n}\ntable.co-table .resize-space, table.co-table .resize-column {\n  flex-shrink: 0;\n  width: 4px;\n}\ntable.co-table .resize-column:hover {\n  cursor: w-resize;\n}\n\ndiv.co-table-content, .co-table-filter-content {\n  margin: 4px;\n  flex-shrink: 1;\n  flex-grow: 1;\n  overflow: hidden;\n}\n\n.co-table-filter-content {\n  background-color: var(--mpage-table-filter-background-color);\n  padding: 4px;\n  font-size: smaller;\n}\n.co-table-filter-content > div {\n  width: 100%;\n  justify-content: space-between;\n}\n\n.co-table-empty-space {\n  background: var(--mpage-table-empty-space-background);\n}\n\n.patient-search-fix-table * > .co-table-container {\n  border: unset;\n}\n.patient-search-fix-table * > .co-table-empty-space {\n  background: unset;\n}\n\ndiv.co-table-toolbar {\n  max-width: 100%;\n  flex-shrink: 0;\n  padding: var(--mpage-table-toolbar-padding);\n  color: var(--mpage-table-toolbar-icon-color);\n  background-color: var(--mpage-table-toolbar-background-color);\n  border-radius: var(--mpage-table-toolbar-border-radius);\n  box-shadow: var(--mpage-table-toolbar-box-shadow);\n  height: var(--mpage-table-toolbar-box-height);\n}\ndiv.co-table-toolbar div:first-child {\n  flex-shrink: 0;\n}\ndiv.co-table-toolbar > div:nth-child(2) {\n  flex-shrink: 0;\n  flex-grow: 1;\n  width: fit-content;\n  max-width: fit-content;\n  padding: var(--mpage-table-toolbar-padding);\n}\ndiv.co-table-toolbar .co-table-toolbar-column {\n  border: var(--mpage-table-toolbar-drag-border);\n  border-radius: var(--mpage-table-toolbar-drag-border-radius);\n  padding: var(--mpage-table-toolbar-drag-padding);\n  background: var(--mpage-table-toolbar-drag-background);\n}\ndiv.co-table-toolbar .co-table-toolbar-column:hover {\n  border: var(--mpage-table-toolbar-drag-border-alternate);\n  cursor: grab;\n}\ndiv.co-table-toolbar .co-table-toolbar-column-label {\n  width: 15rem;\n}\n\n.co-table-sidebar-content {\n  overflow-y: auto;\n  width: 26em;\n}\n\n/* MPage Scrollbar */\n.co-scroll-bar {\n  display: inline-flex;\n  width: 100%;\n  height: 100%;\n  background-color: var(--mpage-scrollbar-track);\n  padding: 0;\n  margin: 0;\n}\n\n.co-scroll-bar-thumb {\n  background-color: var(--mpage-scrollbar-color);\n  border: var(--mpage-scrollbar-border);\n  box-shadow: var(--mpage-scrollbar-shadow);\n}\n\n/* End of MPage Scrollbar */\ndiv.co-default-field {\n  display: flex;\n  flex-direction: column;\n  min-height: var(--field-min-height);\n  width: 100%;\n  background-color: var(--field-background-color);\n  border: var(--field-border);\n  border-radius: var(--field-border-radius);\n  box-shadow: var(--field-box-shadow);\n  font: inherit;\n}\ndiv.co-default-field .co-field-label {\n  margin: 0 0.5em;\n  font-size: 0.7em;\n  overflow: clip;\n}\ndiv.co-default-field .co-field-content, div.co-default-field .co-field-input {\n  display: flex;\n  gap: 4px;\n  flex-grow: 1;\n  align-items: center;\n  margin: 0 0.5em;\n  height: 100%;\n}\ndiv.co-default-field .co-input-color {\n  height: 1.5em !important;\n}\ndiv.co-default-field .co-field-input > input, div.co-default-field .co-field-input textarea {\n  background-color: inherit;\n  width: 100%;\n  height: inherit;\n  font: inherit;\n  border: none;\n  outline: none;\n}\n\n.co-default-field-required {\n  background-color: var(--field-required-background-color) !important;\n  border: var(--field-required-border) !important;\n  border-radius: var(--field-required-border-radius) !important;\n}\n\n.co-select-field-input {\n  height: 1.2em;\n  flex-grow: 1;\n  flex-shrink: 1;\n  width: calc(100% - 24px);\n  overflow: clip;\n  overflow-clip-margin: content-box;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\ndiv.co-context-menu {\n  overflow: auto;\n}\ndiv.co-context-menu li {\n  padding: 5px 5px 5px 5px;\n}\n\ndiv.co-select-template li {\n  padding: 5px 5px 5px 25px;\n}\n\ndiv.co-select-template, div.co-context-menu {\n  background-color: var(--context-background-color);\n  box-shadow: var(--context-shadow);\n  padding: 0.4em;\n  max-height: var(--select-field-max-height);\n}\ndiv.co-select-template .co-tree-indent, div.co-context-menu .co-tree-indent {\n  margin-left: var(--co-tree-indent-margin);\n}\ndiv.co-select-template .co-tree-no-expand, div.co-context-menu .co-tree-no-expand {\n  margin-left: var(--co-tree-no-expand-margin);\n}\ndiv.co-select-template ul, div.co-context-menu ul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n  overflow-y: auto;\n}\ndiv.co-select-template ul li, div.co-context-menu ul li {\n  position: relative;\n}\ndiv.co-select-template ul li[aria-selected=true]::before, div.co-context-menu ul li[aria-selected=true]::before {\n  content: \"\";\n  display: block;\n  width: 20px;\n  height: 20px;\n  background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"24\"><path d=\"m9.55 18-5.7-5.7 1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4Z\"/></svg>'); /* stylelint-disable-line */\n  background-size: cover;\n  position: absolute;\n  left: 2px;\n}\ndiv.co-select-template ul li:hover, div.co-context-menu ul li:hover {\n  cursor: pointer;\n  background-color: var(--context-hover);\n}\n\n.co-tree-search-found {\n  background: var(--tree-search-found-background) !important;\n  color: var(--tree-search-found-color) !important;\n}\n\n.co-tabbed-menu {\n  border: var(--tabbed-menu-border);\n  background: var(--tabbed-menu-background);\n  margin: var(--tabbed-menu-margin);\n  padding: var(--tabbed-menu-padding);\n  flex-wrap: wrap;\n  width: auto;\n}\n.co-tabbed-menu > button {\n  white-space: nowrap;\n}\n\n/*\n  ---------------------\n  Global Button styles\n  ---------------------\n*/\nbutton.co-button {\n  border: var(--button-border);\n  background: unset;\n  color: inherit;\n  box-sizing: border-box;\n  overflow: visible;\n  text-align: center;\n  align-items: center;\n  border-radius: var(--button-border-radius);\n  margin: 0;\n}\nbutton.co-button:not(.co-icon-button) {\n  font-size: inherit;\n  min-height: var(--button-min-height);\n  padding: var(--button-padding);\n}\nbutton.co-button:is(.co-icon-button) {\n  font-size: 24px;\n  padding: 0;\n}\nbutton.co-button:disabled {\n  color: var(--text-color-alternate);\n}\nbutton.co-button:disabled:hover {\n  cursor: not-allowed;\n}\nbutton.co-button:enabled:hover {\n  cursor: pointer;\n  color: var(--text-color-alternate);\n}\nbutton.co-button:enabled:active {\n  filter: brightness(0.5);\n}\n\n/* Stroked Button Additional Styling */\nbutton.co-stroked-button {\n  border: var(--button-stroke);\n}\nbutton.co-stroked-button:enabled:hover {\n  border: var(--button-stroke-alternate);\n}\n\n/* Raised Button Additional Styling */\nbutton.co-raised-button {\n  box-shadow: var(--button-shadow);\n}\nbutton.co-raised-button:enabled:hover {\n  box-shadow: var(--button-shadow-alternate);\n}\n\n/* Button Default Color Scheme */\n.co-button-default-color:not(.co-icon-button) {\n  background: var(--default-color);\n  color: var(--default-color-content);\n}\n.co-button-default-color:is(.co-icon-button) {\n  color: var(--default-color-content);\n}\n.co-button-default-color:hover:not(.co-icon-button) {\n  background: var(--default-color-alternate) !important;\n  color: var(--default-color-content) !important;\n}\n.co-button-default-color:hover:is(.co-icon-button) {\n  color: var(--default-color-alternate) !important;\n}\n\n/* Button Primary Color Scheme */\n.co-button-primary-color:not(.co-icon-button) {\n  background: var(--primary-color);\n  color: var(--primary-color-content);\n}\n.co-button-primary-color:is(.co-icon-button) {\n  color: var(--primary-color);\n}\n.co-button-primary-color:hover:not(.co-icon-button) {\n  background: var(--primary-color-alternate) !important;\n  color: var(--primary-color-content) !important;\n}\n.co-button-primary-color:hover:is(.co-icon-button) {\n  color: var(--primary-color-alternate) !important;\n}\n\n/* Button Accent Color Scheme */\n.co-button-accent-color:not(.co-icon-button) {\n  background: var(--accent-color);\n  color: var(--accent-color-content);\n}\n.co-button-accent-color:is(.co-icon-button) {\n  color: var(--accent-color);\n}\n.co-button-accent-color:hover:not(.co-icon-button) {\n  background: var(--accent-color-alternate) !important;\n  color: var(--accent-color-content) !important;\n}\n.co-button-accent-color:hover:is(.co-icon-button) {\n  color: var(--accent-color-alternate) !important;\n}\n\n/* Button Warn Color Scheme */\n.co-button-warn-color:not(.co-icon-button) {\n  background: var(--warn-color);\n  color: var(--warn-color-content);\n}\n.co-button-warn-color:is(.co-icon-button) {\n  color: var(--warn-color);\n}\n.co-button-warn-color:hover:not(.co-icon-button) {\n  background: var(--warn-color-alternate) !important;\n  color: var(--warn-color-content) !important;\n}\n.co-button-warn-color:hover:is(.co-icon-button) {\n  color: var(--warn-color-alternate) !important;\n}\n\n/*\n  ----------------------------\n  End of Global Button styles\n  ----------------------------\n*/\n/*\n  ----------------------------\n  Start of Paginator styles\n  ----------------------------\n*/\n.co-range-paginator {\n  height: 100%;\n  border: 1px solid;\n  border-collapse: collapse;\n}\n\n/*\n  ----------------------------\n  End of Paginator styles\n  ----------------------------\n*/\n/*\n  ----------------------------\n  Start of Dialog styles\n  ----------------------------\n*/\n.co-dialog-container, .co-modal-dialog-container {\n  display: flex;\n  background: unset;\n  border: unset;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n}\n\n.co-modal-dialog-container {\n  height: 100%;\n}\n\n.co-dialog {\n  background: var(--context-background-color);\n  box-shadow: var(--context-shadow);\n  border: var(--context-dialog-border);\n  border-radius: var(--context-dialog-border-radius);\n  padding: var(--dialog-padding);\n}\n\ndiv.dialog-button-bar {\n  display: flex;\n  gap: 4px;\n  justify-content: flex-end;\n}\n\n.dialog-content {\n  padding: var(--dialog-content-padding);\n  background: var(--dialog-content-background);\n}\n\n.co-notification {\n  padding: var(--notification-padding);\n  font-weight: var(--notification-font-weight);\n  border: var(--notification-border);\n  border-radius: var(--notification-border-radius);\n  box-shadow: var(--notification-box-shadow);\n  text-align: center;\n  word-wrap: break-word;\n}\n\n/*\n  ----------------------------\n  End of Dialog styles\n  ----------------------------\n*/\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jbGluaWNhbC1vZmZpY2Utc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztDQUFBO0FBUUE7RUFDRSw2QkFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtFQUNBLGNBQUE7RUFDQSxzQkFBQTtFQUNBLG9CQUFBO0VBQ0EscUJBQUE7RUFDQSxtQkFBQTtFQUNBLGlCQUFBO0VBQ0EsY0FBQTtFQUNBLHFDQUFBO0VBQ0EsbUNBQUE7QUFBRjs7QUFHQTs7OztDQUFBO0FBS0E7RUFDRSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7QUFBRjs7QUFHQTtFQUNFLFFBQUE7QUFBRjs7QUFHQTtFQUNFLG1CQUFBO0FBQUY7O0FBR0E7RUFDRSxzQkFBQTtBQUFGOztBQUdBO0VBQ0UsY0FBQTtBQUFGOztBQUdBO0VBQ0UsWUFBQTtBQUFGOztBQUdBOzs7O0NBQUE7QUFNQTtFQUNFLHlCQUFBLEVBQUEsV0FBQSxFQUNBLG9CQUFBO0VBQ0EsaUJBQUEsRUFBQSxvQkFBQTtBQURGOztBQUlBO0VBQ0Usa0NBQUE7QUFERjs7QUFJQTtFQUNFLG1CQUFBO0FBREY7O0FBSUE7RUFDRSxjQUFBO0FBREY7O0FBSUE7RUFDRSxTQUFBO0FBREY7O0FBSUE7RUFDRSxVQUFBO0FBREY7O0FBSUE7RUFDRSxVQUFBO0FBREY7O0FBSUE7RUFDRSxVQUFBO0FBREY7O0FBSUE7RUFDRSxVQUFBO0FBREY7O0FBSUE7RUFDRSxVQUFBO0FBREY7O0FBSUE7RUFDRSxVQUFBO0FBREY7O0FBSUE7RUFDRSxVQUFBO0FBREY7O0FBSUE7RUFDRSxXQUFBO0FBREY7O0FBSUE7RUFDRSxzQkFBQTtBQURGOztBQUlBLGdCQUFBO0FBQ0E7RUFDRSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsMkNBQUE7QUFERjs7QUFJQTtFQUNFLGVBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0VBQ0EscURBQUE7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RUFDRSwwQkFBQTtBQXJFSjtBQXlFSTtFQUNFLG9EQUFBO0VBQ0EsNkNBQUE7QUF2RU47QUEwRUk7RUFDRSwrQ0FBQTtBQXhFTjs7QUE2RUEsNkJBQUE7QUFFRTtFQUNFLDZCQUFBO0VBQ0EsZ0NBQUE7QUEzRUo7QUE4RUU7RUFDRSx3QkFBQTtBQTVFSjtBQWdGSTtFQUNFLGtEQUFBO0VBQ0EsMkNBQUE7QUE5RU47QUFpRkk7RUFDRSw2Q0FBQTtBQS9FTjs7QUFvRkE7Ozs7Q0FBQTtBQU1BOzs7O0NBQUE7QUFLQTtFQUNFLFlBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQUFBO0FBbEZGOztBQXFGQTs7OztDQUFBO0FBTUE7Ozs7Q0FBQTtBQUtBO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0FBbkZGOztBQXFGQTtFQUNFLFlBQUE7QUFsRkY7O0FBcUZBO0VBQ0UsMkNBQUE7RUFDQSxpQ0FBQTtFQUNBLG9DQUFBO0VBQ0Esa0RBQUE7RUFDQSw4QkFBQTtBQWxGRjs7QUFxRkE7RUFDRSxhQUFBO0VBQ0EsUUFBQTtFQUNBLHlCQUFBO0FBbEZGOztBQXFGQTtFQUNFLHNDQUFBO0VBQ0EsNENBQUE7QUFsRkY7O0FBcUZBO0VBQ0Usb0NBQUE7RUFDQSw0Q0FBQTtFQUNBLGtDQUFBO0VBQ0EsZ0RBQUE7RUFDQSwwQ0FBQTtFQUNBLGtCQUFBO0VBQ0EscUJBQUE7QUFsRkY7O0FBcUZBOzs7O0NBQUEiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICAgIENsaW5pY2FsIE9mZmljZTogTVBhZ2UgRGV2ZWxvcGVyIFN0YW5kYXJkIFN0eWxlc1xuXG4gICAgTm90ZTogVGhlIENTUyBkZWZpbml0aW9ucyBpbmNsdWRlZCBpbiB0aGlzIGZpbGUgYXJlIHJlcXVpcmVkIGZvciB0aGUgcHJlc2VudGF0aW9uIG9mIHRoZSBzdGFuZGFyZFxuICAgIENsaW5pY2FsIE9mZmljZTogTVBhZ2UgRGV2ZWxvcGVyIGNvbXBvbmVudHMgYW5kIGNhcmUgc2hvdWxkIGJlIHRha2VuIHdoZW4gbW9kaWZ5aW5nIGFueSB2YWx1ZXMuIFRoaXMgc2FpZCxcbiAgICB0aGlzIGlzIHlvdXIgTVBhZ2UgYW5kIHdlIGVuY291cmFnZSB5b3UgdG8gbWFrZSBtb2RpZmljYXRpb25zIHRoYXQgc3VpdCB5b3VyIGJ1c2luZXNzIG5lZWRzLlxuKi9cblxuLm1hdGVyaWFsLWljb25zIHtcbiAgZm9udC1mYW1pbHk6ICdNYXRlcmlhbCBJY29ucyc7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgZm9udC1zaXplOiBpbmhlcml0O1xuICBsaW5lLWhlaWdodDogMTtcbiAgbGV0dGVyLXNwYWNpbmc6IG5vcm1hbDtcbiAgdGV4dC10cmFuc2Zvcm06IG5vbmU7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgd29yZC13cmFwOiBub3JtYWw7XG4gIGRpcmVjdGlvbjogbHRyO1xuICAtd2Via2l0LWZvbnQtZmVhdHVyZS1zZXR0aW5nczogJ2xpZ2EnO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbn1cblxuLypcbiAgLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgR2VuZXJpYyBGbGV4IEhlbHBlcnNcbiAgLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiovXG4uZmxleCwgLmZsZXgtY29sdW1uIHtcbiAgZGlzcGxheTogZmxleDtcbiAgbWluLXdpZHRoOiAwO1xuICBtaW4taGVpZ2h0OiAwO1xufVxuXG4uZmxleC1nYXAge1xuICBnYXA6IDhweDtcbn1cblxuLmZsZXgtY2VudGVyLWl0ZW1zIHtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmZsZXgtY29sdW1uIHtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn1cblxuLmZsZXgtZmlsbCB7XG4gIGZsZXg6IDEgMSBhdXRvO1xufVxuXG4uZmxleC1ncm93IHtcbiAgZmxleC1ncm93OiAxO1xufVxuXG4vKlxuICAtLS0tLS0tLS0tLS0tLS1cbiAgTWlzYyBIZWxwZXIgQ1NTXG4gIC0tLS0tLS0tLS0tLS0tLVxuKi9cblxuLnByZXZlbnQtc2VsZWN0IHtcbiAgLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTsgLyogU2FmYXJpICovXG4gIC1tcy11c2VyLXNlbGVjdDogbm9uZTsgLyogSUUgMTAgYW5kIElFIDExICovXG4gIHVzZXItc2VsZWN0OiBub25lOyAvKiBTdGFuZGFyZCBzeW50YXggKi9cbn1cblxuLmRpc2FibGVkIHtcbiAgY29sb3I6IHZhcigtLXRleHQtY29sb3ItYWx0ZXJuYXRlKTtcbn1cblxuLmRpc2FibGVkOmhvdmVyIHtcbiAgY3Vyc29yOiBub3QtYWxsb3dlZDtcbn1cblxuLmNvLW1pbi13aWR0aCB7XG4gIG1pbi13aWR0aDogNWVtO1xufVxuXG4uY28tdzUge1xuICB3aWR0aDogNSU7XG59XG5cbi5jby13MTAge1xuICB3aWR0aDogMTAlO1xufVxuXG4uY28tdzE1IHtcbiAgd2lkdGg6IDE1JTtcbn1cblxuLmNvLXcyMCB7XG4gIHdpZHRoOiAyMCU7XG59XG5cbi5jby13MjUge1xuICB3aWR0aDogMjUlO1xufVxuXG4uY28tdzMwIHtcbiAgd2lkdGg6IDMwJTtcbn1cblxuLmNvLXc0MCB7XG4gIHdpZHRoOiA0MCU7XG59XG5cbi5jby13NTAge1xuICB3aWR0aDogNTAlO1xufVxuXG4uY28tdzEwMCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uY28td2RhdGUge1xuICB3aWR0aDogMTFlbSAhaW1wb3J0YW50O1xufVxuXG4vKiBNUGFnZSBUYWJsZSAqL1xuZGl2LmNvLXRhYmxlLWNvbnRhaW5lciB7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgbWF4LWhlaWdodDogMTAwJTtcbiAgb3ZlcmZsb3cteDogYXV0bztcbiAgb3ZlcmZsb3cteTogY2xpcDtcbiAgYm9yZGVyOiB2YXIoLS1tcGFnZS10YWJsZS1jb250YWluZXItYm9yZGVyKTtcbn1cblxudGFibGUuY28tdGFibGUge1xuICBtYXgtd2lkdGg6IDEwMCU7XG4gIHdpZHRoOiBmaXQtY29udGVudDtcbiAgdGFibGUtbGF5b3V0OiBmaXhlZDtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbXBhZ2UtdGFibGUtYmFja2dyb3VuZC1jb2xvcik7XG5cbiAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcblxuICB0aCwgdGQge1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgICBib3JkZXI6IHZhcigtLW1wYWdlLXRhYmxlLWNlbGwtYm9yZGVyKTtcbiAgfVxuXG4gIHRoIHtcbiAgICBoZWlnaHQ6IHZhcigtLW1wYWdlLXRhYmxlLWhlYWRlci1oZWlnaHQpO1xuICB9XG5cbiAgdGQge1xuICAgIGhlaWdodDogdmFyKC0tbXBhZ2UtdGFibGUtcm93LWhlaWdodCk7XG4gICAgZm9udC1zaXplOiB2YXIoLS1tcGFnZS10YWJsZS1mb250LXNpemUpO1xuICB9XG5cbiAgdGhlYWQgPiB0ciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbXBhZ2UtdGFibGUtaGVhZGVyLWJhY2tncm91bmQtY29sb3IpO1xuICB9XG5cbiAgdGJvZHkgPiB0ciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbXBhZ2UtdGFibGUtYmFja2dyb3VuZC1jb2xvcik7XG4gIH1cblxuICB0Ym9keSA+IHRyOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29udGV4dC1ob3Zlcik7XG4gIH1cblxuICAuY28tdGFibGUtc29ydC1hcnJvdyB7XG4gICAgY29sb3I6IHZhcigtLW1wYWdlLXRhYmxlLXNvcnQtYXJyb3ctY29sb3IpO1xuICAgIGZvbnQtc2l6ZTogMS41ZW07XG4gIH1cblxuICAuY2RrLXRhYmxlLXN0aWNreSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogaW5oZXJpdDtcbiAgICBib3JkZXI6IHZhcigtLW1wYWdlLXRhYmxlLWNlbGwtYm9yZGVyKTtcbiAgfVxuXG4gIHRoLmNvLXRhYmxlLXNvcnQtaGVhZGVyOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gIH1cblxuICAucmVzaXplLXNwYWNlLCAucmVzaXplLWNvbHVtbiB7XG4gICAgZmxleC1zaHJpbms6IDA7XG4gICAgd2lkdGg6IDRweDtcbiAgfVxuXG4gIC5yZXNpemUtY29sdW1uOmhvdmVyIHtcbiAgICBjdXJzb3I6IHctcmVzaXplO1xuICB9XG59XG5cbmRpdi5jby10YWJsZS1jb250ZW50LCAuY28tdGFibGUtZmlsdGVyLWNvbnRlbnQge1xuICBtYXJnaW46IDRweDtcbiAgZmxleC1zaHJpbms6IDE7XG4gIGZsZXgtZ3JvdzogMTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuLmNvLXRhYmxlLWZpbHRlci1jb250ZW50IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbXBhZ2UtdGFibGUtZmlsdGVyLWJhY2tncm91bmQtY29sb3IpO1xuICBwYWRkaW5nOiA0cHg7XG4gIGZvbnQtc2l6ZTogc21hbGxlcjtcblxuICA+IGRpdiB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuXG4gIH1cbn1cblxuLmNvLXRhYmxlLWVtcHR5LXNwYWNlIHtcbiAgYmFja2dyb3VuZDogdmFyKC0tbXBhZ2UtdGFibGUtZW1wdHktc3BhY2UtYmFja2dyb3VuZCk7XG59XG5cblxuLnBhdGllbnQtc2VhcmNoLWZpeC10YWJsZSB7XG4gICogPiAuY28tdGFibGUtY29udGFpbmVyIHtcbiAgICBib3JkZXI6IHVuc2V0O1xuICB9XG4gICogPiAuY28tdGFibGUtZW1wdHktc3BhY2Uge1xuICAgIGJhY2tncm91bmQ6IHVuc2V0XG4gIH1cbn1cblxuZGl2LmNvLXRhYmxlLXRvb2xiYXIge1xuICBtYXgtd2lkdGg6IDEwMCU7XG4gIGZsZXgtc2hyaW5rOiAwO1xuICBwYWRkaW5nOiB2YXIoLS1tcGFnZS10YWJsZS10b29sYmFyLXBhZGRpbmcpO1xuICBjb2xvcjogdmFyKC0tbXBhZ2UtdGFibGUtdG9vbGJhci1pY29uLWNvbG9yKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbXBhZ2UtdGFibGUtdG9vbGJhci1iYWNrZ3JvdW5kLWNvbG9yKTtcbiAgYm9yZGVyLXJhZGl1czogdmFyKC0tbXBhZ2UtdGFibGUtdG9vbGJhci1ib3JkZXItcmFkaXVzKTtcbiAgYm94LXNoYWRvdzogdmFyKC0tbXBhZ2UtdGFibGUtdG9vbGJhci1ib3gtc2hhZG93KTtcbiAgaGVpZ2h0OiB2YXIoLS1tcGFnZS10YWJsZS10b29sYmFyLWJveC1oZWlnaHQpO1xuXG4gIGRpdjpmaXJzdC1jaGlsZCB7XG4gICAgZmxleC1zaHJpbms6IDA7XG4gIH1cblxuICA+IGRpdjpudGgtY2hpbGQoMikge1xuICAgIGZsZXgtc2hyaW5rOiAwO1xuICAgIGZsZXgtZ3JvdzogMTtcbiAgICB3aWR0aDogZml0LWNvbnRlbnQ7XG4gICAgbWF4LXdpZHRoOiBmaXQtY29udGVudDtcbiAgICBwYWRkaW5nOiB2YXIoLS1tcGFnZS10YWJsZS10b29sYmFyLXBhZGRpbmcpO1xuICB9XG5cbiAgLmNvLXRhYmxlLXRvb2xiYXItY29sdW1uIHtcbiAgICBib3JkZXI6IHZhcigtLW1wYWdlLXRhYmxlLXRvb2xiYXItZHJhZy1ib3JkZXIpO1xuICAgIGJvcmRlci1yYWRpdXM6IHZhcigtLW1wYWdlLXRhYmxlLXRvb2xiYXItZHJhZy1ib3JkZXItcmFkaXVzKTtcbiAgICBwYWRkaW5nOiB2YXIoLS1tcGFnZS10YWJsZS10b29sYmFyLWRyYWctcGFkZGluZyk7XG4gICAgYmFja2dyb3VuZDogdmFyKC0tbXBhZ2UtdGFibGUtdG9vbGJhci1kcmFnLWJhY2tncm91bmQpO1xuICB9XG5cbiAgLmNvLXRhYmxlLXRvb2xiYXItY29sdW1uOmhvdmVyIHtcbiAgICBib3JkZXI6IHZhcigtLW1wYWdlLXRhYmxlLXRvb2xiYXItZHJhZy1ib3JkZXItYWx0ZXJuYXRlKTtcbiAgICBjdXJzb3I6IGdyYWI7XG4gIH1cblxuICAuY28tdGFibGUtdG9vbGJhci1jb2x1bW4tbGFiZWwge1xuICAgIHdpZHRoOiAxNXJlbTtcbiAgfVxufVxuXG4uY28tdGFibGUtc2lkZWJhci1jb250ZW50IHtcbiAgb3ZlcmZsb3cteTogYXV0bztcbiAgd2lkdGg6IDI2ZW07XG59XG5cbi8qIE1QYWdlIFNjcm9sbGJhciAqL1xuLmNvLXNjcm9sbC1iYXIge1xuICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbXBhZ2Utc2Nyb2xsYmFyLXRyYWNrKTtcbiAgcGFkZGluZzogMDtcbiAgbWFyZ2luOiAwO1xufVxuXG4uY28tc2Nyb2xsLWJhci10aHVtYiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLW1wYWdlLXNjcm9sbGJhci1jb2xvcik7XG4gIGJvcmRlcjogdmFyKC0tbXBhZ2Utc2Nyb2xsYmFyLWJvcmRlcik7XG4gIGJveC1zaGFkb3c6IHZhcigtLW1wYWdlLXNjcm9sbGJhci1zaGFkb3cpO1xufVxuXG4vKiBFbmQgb2YgTVBhZ2UgU2Nyb2xsYmFyICovXG5cbmRpdi5jby1kZWZhdWx0LWZpZWxkIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgbWluLWhlaWdodDogdmFyKC0tZmllbGQtbWluLWhlaWdodCk7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1maWVsZC1iYWNrZ3JvdW5kLWNvbG9yKTtcbiAgYm9yZGVyOiB2YXIoLS1maWVsZC1ib3JkZXIpO1xuICBib3JkZXItcmFkaXVzOiB2YXIoLS1maWVsZC1ib3JkZXItcmFkaXVzKTtcbiAgYm94LXNoYWRvdzogdmFyKC0tZmllbGQtYm94LXNoYWRvdyk7XG4gIGZvbnQ6IGluaGVyaXQ7XG5cbiAgLmNvLWZpZWxkLWxhYmVsIHtcbiAgICBtYXJnaW46IDAgMC41ZW07XG4gICAgZm9udC1zaXplOiAwLjdlbTtcbiAgICBvdmVyZmxvdzogY2xpcDtcbiAgfVxuXG4gIC5jby1maWVsZC1jb250ZW50LCAuY28tZmllbGQtaW5wdXQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZ2FwOiA0cHg7XG4gICAgZmxleC1ncm93OiAxO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWFyZ2luOiAwIDAuNWVtO1xuICAgIGhlaWdodDogMTAwJTtcbiAgfVxuXG4gIC5jby1pbnB1dC1jb2xvciB7XG4gICAgaGVpZ2h0OiAxLjVlbSAhaW1wb3J0YW50O1xuICB9XG5cbiAgLmNvLWZpZWxkLWlucHV0IHtcbiAgICA+IGlucHV0LCB0ZXh0YXJlYSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBpbmhlcml0O1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICBoZWlnaHQ6IGluaGVyaXQ7XG4gICAgICBmb250OiBpbmhlcml0O1xuICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgb3V0bGluZTogbm9uZTtcbiAgICB9XG4gIH1cbn1cblxuLmNvLWRlZmF1bHQtZmllbGQtcmVxdWlyZWQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1maWVsZC1yZXF1aXJlZC1iYWNrZ3JvdW5kLWNvbG9yKSAhaW1wb3J0YW50O1xuICBib3JkZXI6IHZhcigtLWZpZWxkLXJlcXVpcmVkLWJvcmRlcikgIWltcG9ydGFudDtcbiAgYm9yZGVyLXJhZGl1czogdmFyKC0tZmllbGQtcmVxdWlyZWQtYm9yZGVyLXJhZGl1cykgIWltcG9ydGFudDtcbn1cblxuLmNvLXNlbGVjdC1maWVsZC1pbnB1dCB7XG4gIGhlaWdodDogMS4yZW07XG4gIGZsZXgtZ3JvdzogMTtcbiAgZmxleC1zaHJpbms6IDE7XG4gIHdpZHRoOiBjYWxjKDEwMCUgLSAyNHB4KTtcbiAgb3ZlcmZsb3c6IGNsaXA7XG4gIG92ZXJmbG93LWNsaXAtbWFyZ2luOiBjb250ZW50LWJveDtcbiAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG59XG5cbmRpdi5jby1jb250ZXh0LW1lbnUge1xuICBvdmVyZmxvdzogYXV0bztcblxuICBsaSB7XG4gICAgcGFkZGluZzogNXB4IDVweCA1cHggNXB4O1xuICB9XG5cbn1cblxuZGl2LmNvLXNlbGVjdC10ZW1wbGF0ZSB7XG4gIGxpIHtcbiAgICBwYWRkaW5nOiA1cHggNXB4IDVweCAyNXB4O1xuICB9XG59XG5cbmRpdi5jby1zZWxlY3QtdGVtcGxhdGUsIGRpdi5jby1jb250ZXh0LW1lbnUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb250ZXh0LWJhY2tncm91bmQtY29sb3IpO1xuICBib3gtc2hhZG93OiB2YXIoLS1jb250ZXh0LXNoYWRvdyk7XG4gIHBhZGRpbmc6IDAuNGVtO1xuICBtYXgtaGVpZ2h0OiB2YXIoLS1zZWxlY3QtZmllbGQtbWF4LWhlaWdodCk7XG5cbiAgLmNvLXRyZWUtaW5kZW50IHtcbiAgICBtYXJnaW4tbGVmdDogdmFyKC0tY28tdHJlZS1pbmRlbnQtbWFyZ2luKTtcbiAgfVxuXG4gIC5jby10cmVlLW5vLWV4cGFuZCB7XG4gICAgbWFyZ2luLWxlZnQ6IHZhcigtLWNvLXRyZWUtbm8tZXhwYW5kLW1hcmdpbik7XG4gIH1cblxuICB1bCB7XG4gICAgbGlzdC1zdHlsZTogbm9uZTtcbiAgICBwYWRkaW5nOiAwO1xuICAgIG1hcmdpbjogMDtcbiAgICBvdmVyZmxvdy15OiBhdXRvO1xuXG4gICAgbGkge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIH1cblxuICAgIGxpW2FyaWEtc2VsZWN0ZWQ9J3RydWUnXTo6YmVmb3JlIHtcbiAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICB3aWR0aDogMjBweDtcbiAgICAgIGhlaWdodDogMjBweDtcbiAgICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnZGF0YTppbWFnZS9zdmcreG1sO3V0ZjgsPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgaGVpZ2h0PVwiMjRcIiB3aWR0aD1cIjI0XCI+PHBhdGggZD1cIm05LjU1IDE4LTUuNy01LjcgMS40MjUtMS40MjVMOS41NSAxNS4xNWw5LjE3NS05LjE3NUwyMC4xNSA3LjRaXCIvPjwvc3ZnPicpOyAvKiBzdHlsZWxpbnQtZGlzYWJsZS1saW5lICovXG4gICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMnB4O1xuICAgIH1cblxuICAgIGxpOmhvdmVyIHtcbiAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWNvbnRleHQtaG92ZXIpO1xuICAgIH1cbiAgfVxufVxuXG4uY28tdHJlZS1zZWFyY2gtZm91bmQge1xuICBiYWNrZ3JvdW5kOiB2YXIoLS10cmVlLXNlYXJjaC1mb3VuZC1iYWNrZ3JvdW5kKSAhaW1wb3J0YW50O1xuICBjb2xvcjogdmFyKC0tdHJlZS1zZWFyY2gtZm91bmQtY29sb3IpICFpbXBvcnRhbnQ7XG59XG5cbi5jby10YWJiZWQtbWVudSB7XG4gIGJvcmRlcjogdmFyKC0tdGFiYmVkLW1lbnUtYm9yZGVyKTtcbiAgYmFja2dyb3VuZDogdmFyKC0tdGFiYmVkLW1lbnUtYmFja2dyb3VuZCk7XG4gIG1hcmdpbjogdmFyKC0tdGFiYmVkLW1lbnUtbWFyZ2luKTtcbiAgcGFkZGluZzogdmFyKC0tdGFiYmVkLW1lbnUtcGFkZGluZyk7XG5cbiAgZmxleC13cmFwOiB3cmFwO1xuICB3aWR0aDogYXV0bztcblxuICA+IGJ1dHRvbiB7XG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgfVxufVxuXG5cbi8qXG4gIC0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICBHbG9iYWwgQnV0dG9uIHN0eWxlc1xuICAtLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiovXG5idXR0b24uY28tYnV0dG9uIHtcbiAgYm9yZGVyOiB2YXIoLS1idXR0b24tYm9yZGVyKTtcbiAgYmFja2dyb3VuZDogdW5zZXQ7XG4gIGNvbG9yOiBpbmhlcml0O1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3JkZXItcmFkaXVzOiB2YXIoLS1idXR0b24tYm9yZGVyLXJhZGl1cyk7XG4gIG1hcmdpbjogMDtcblxuICAmOm5vdCguY28taWNvbi1idXR0b24pIHtcbiAgICBmb250LXNpemU6IGluaGVyaXQ7XG4gICAgbWluLWhlaWdodDogdmFyKC0tYnV0dG9uLW1pbi1oZWlnaHQpO1xuICAgIHBhZGRpbmc6IHZhcigtLWJ1dHRvbi1wYWRkaW5nKTtcbiAgfVxuXG4gICY6aXMoLmNvLWljb24tYnV0dG9uKSB7XG4gICAgZm9udC1zaXplOiAyNHB4O1xuICAgIHBhZGRpbmc6IDA7XG4gIH1cblxuICAmOmRpc2FibGVkIHtcbiAgICBjb2xvcjogdmFyKC0tdGV4dC1jb2xvci1hbHRlcm5hdGUpO1xuXG4gICAgJjpob3ZlciB7XG4gICAgICBjdXJzb3I6IG5vdC1hbGxvd2VkO1xuICAgIH1cbiAgfVxuXG4gICY6ZW5hYmxlZCB7XG4gICAgJjpob3ZlciB7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICBjb2xvcjogdmFyKC0tdGV4dC1jb2xvci1hbHRlcm5hdGUpO1xuICAgIH1cblxuICAgICY6YWN0aXZlIHtcbiAgICAgIGZpbHRlcjogYnJpZ2h0bmVzcygwLjUpO1xuICAgIH1cbiAgfVxufVxuXG4vKiBTdHJva2VkIEJ1dHRvbiBBZGRpdGlvbmFsIFN0eWxpbmcgKi9cbmJ1dHRvbi5jby1zdHJva2VkLWJ1dHRvbiB7XG4gIGJvcmRlcjogdmFyKC0tYnV0dG9uLXN0cm9rZSk7XG5cbiAgJjplbmFibGVkOmhvdmVyIHtcbiAgICBib3JkZXI6IHZhcigtLWJ1dHRvbi1zdHJva2UtYWx0ZXJuYXRlKTtcbiAgfVxufVxuXG4vKiBSYWlzZWQgQnV0dG9uIEFkZGl0aW9uYWwgU3R5bGluZyAqL1xuYnV0dG9uLmNvLXJhaXNlZC1idXR0b24ge1xuICBib3gtc2hhZG93OiB2YXIoLS1idXR0b24tc2hhZG93KTtcblxuICAmOmVuYWJsZWQ6aG92ZXIge1xuICAgIGJveC1zaGFkb3c6IHZhcigtLWJ1dHRvbi1zaGFkb3ctYWx0ZXJuYXRlKTtcbiAgfVxufVxuXG4vKiBCdXR0b24gRGVmYXVsdCBDb2xvciBTY2hlbWUgKi9cbi5jby1idXR0b24tZGVmYXVsdC1jb2xvciB7XG4gICY6bm90KC5jby1pY29uLWJ1dHRvbikge1xuICAgIGJhY2tncm91bmQ6IHZhcigtLWRlZmF1bHQtY29sb3IpO1xuICAgIGNvbG9yOiB2YXIoLS1kZWZhdWx0LWNvbG9yLWNvbnRlbnQpO1xuICB9XG5cbiAgJjppcyguY28taWNvbi1idXR0b24pIHtcbiAgICBjb2xvcjogdmFyKC0tZGVmYXVsdC1jb2xvci1jb250ZW50KTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgICY6bm90KC5jby1pY29uLWJ1dHRvbikge1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tZGVmYXVsdC1jb2xvci1hbHRlcm5hdGUpICFpbXBvcnRhbnQ7XG4gICAgICBjb2xvcjogdmFyKC0tZGVmYXVsdC1jb2xvci1jb250ZW50KSAhaW1wb3J0YW50O1xuICAgIH1cblxuICAgICY6aXMoLmNvLWljb24tYnV0dG9uKSB7XG4gICAgICBjb2xvcjogdmFyKC0tZGVmYXVsdC1jb2xvci1hbHRlcm5hdGUpICFpbXBvcnRhbnQ7XG4gICAgfVxuICB9XG59XG5cblxuLyogQnV0dG9uIFByaW1hcnkgQ29sb3IgU2NoZW1lICovXG4uY28tYnV0dG9uLXByaW1hcnktY29sb3Ige1xuICAmOm5vdCguY28taWNvbi1idXR0b24pIHtcbiAgICBiYWNrZ3JvdW5kOiB2YXIoLS1wcmltYXJ5LWNvbG9yKTtcbiAgICBjb2xvcjogdmFyKC0tcHJpbWFyeS1jb2xvci1jb250ZW50KTtcbiAgfVxuXG4gICY6aXMoLmNvLWljb24tYnV0dG9uKSB7XG4gICAgY29sb3I6IHZhcigtLXByaW1hcnktY29sb3IpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgJjpub3QoLmNvLWljb24tYnV0dG9uKSB7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1wcmltYXJ5LWNvbG9yLWFsdGVybmF0ZSkgIWltcG9ydGFudDtcbiAgICAgIGNvbG9yOiB2YXIoLS1wcmltYXJ5LWNvbG9yLWNvbnRlbnQpICFpbXBvcnRhbnQ7XG4gICAgfVxuXG4gICAgJjppcyguY28taWNvbi1idXR0b24pIHtcbiAgICAgIGNvbG9yOiB2YXIoLS1wcmltYXJ5LWNvbG9yLWFsdGVybmF0ZSkgIWltcG9ydGFudDtcbiAgICB9XG4gIH1cbn1cblxuLyogQnV0dG9uIEFjY2VudCBDb2xvciBTY2hlbWUgKi9cbi5jby1idXR0b24tYWNjZW50LWNvbG9yIHtcbiAgJjpub3QoLmNvLWljb24tYnV0dG9uKSB7XG4gICAgYmFja2dyb3VuZDogdmFyKC0tYWNjZW50LWNvbG9yKTtcbiAgICBjb2xvcjogdmFyKC0tYWNjZW50LWNvbG9yLWNvbnRlbnQpO1xuICB9XG5cbiAgJjppcyguY28taWNvbi1idXR0b24pIHtcbiAgICBjb2xvcjogdmFyKC0tYWNjZW50LWNvbG9yKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgICY6bm90KC5jby1pY29uLWJ1dHRvbikge1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tYWNjZW50LWNvbG9yLWFsdGVybmF0ZSkgIWltcG9ydGFudDtcbiAgICAgIGNvbG9yOiB2YXIoLS1hY2NlbnQtY29sb3ItY29udGVudCkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAmOmlzKC5jby1pY29uLWJ1dHRvbikge1xuICAgICAgY29sb3I6IHZhcigtLWFjY2VudC1jb2xvci1hbHRlcm5hdGUpICFpbXBvcnRhbnQ7XG4gICAgfVxuICB9XG59XG5cbi8qIEJ1dHRvbiBXYXJuIENvbG9yIFNjaGVtZSAqL1xuLmNvLWJ1dHRvbi13YXJuLWNvbG9yIHtcbiAgJjpub3QoLmNvLWljb24tYnV0dG9uKSB7XG4gICAgYmFja2dyb3VuZDogdmFyKC0td2Fybi1jb2xvcik7XG4gICAgY29sb3I6IHZhcigtLXdhcm4tY29sb3ItY29udGVudCk7XG4gIH1cblxuICAmOmlzKC5jby1pY29uLWJ1dHRvbikge1xuICAgIGNvbG9yOiB2YXIoLS13YXJuLWNvbG9yKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgICY6bm90KC5jby1pY29uLWJ1dHRvbikge1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0td2Fybi1jb2xvci1hbHRlcm5hdGUpICFpbXBvcnRhbnQ7XG4gICAgICBjb2xvcjogdmFyKC0td2Fybi1jb2xvci1jb250ZW50KSAhaW1wb3J0YW50O1xuICAgIH1cblxuICAgICY6aXMoLmNvLWljb24tYnV0dG9uKSB7XG4gICAgICBjb2xvcjogdmFyKC0td2Fybi1jb2xvci1hbHRlcm5hdGUpICFpbXBvcnRhbnQ7XG4gICAgfVxuICB9XG59XG5cbi8qXG4gIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgRW5kIG9mIEdsb2JhbCBCdXR0b24gc3R5bGVzXG4gIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiovXG5cbi8qXG4gIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgU3RhcnQgb2YgUGFnaW5hdG9yIHN0eWxlc1xuICAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4qL1xuLmNvLXJhbmdlLXBhZ2luYXRvciB7XG4gIGhlaWdodDogMTAwJTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7XG59XG5cbi8qXG4gIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAgRW5kIG9mIFBhZ2luYXRvciBzdHlsZXNcbiAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuKi9cblxuLypcbiAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICBTdGFydCBvZiBEaWFsb2cgc3R5bGVzXG4gIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiovXG4uY28tZGlhbG9nLWNvbnRhaW5lciwgLmNvLW1vZGFsLWRpYWxvZy1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBiYWNrZ3JvdW5kOiB1bnNldDtcbiAgYm9yZGVyOiB1bnNldDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmNvLW1vZGFsLWRpYWxvZy1jb250YWluZXIge1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5jby1kaWFsb2cge1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1jb250ZXh0LWJhY2tncm91bmQtY29sb3IpO1xuICBib3gtc2hhZG93OiB2YXIoLS1jb250ZXh0LXNoYWRvdyk7XG4gIGJvcmRlcjogdmFyKC0tY29udGV4dC1kaWFsb2ctYm9yZGVyKTtcbiAgYm9yZGVyLXJhZGl1czogdmFyKC0tY29udGV4dC1kaWFsb2ctYm9yZGVyLXJhZGl1cyk7XG4gIHBhZGRpbmc6IHZhcigtLWRpYWxvZy1wYWRkaW5nKVxufVxuXG5kaXYuZGlhbG9nLWJ1dHRvbi1iYXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBnYXA6IDRweDtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbn1cblxuLmRpYWxvZy1jb250ZW50IHtcbiAgcGFkZGluZzogdmFyKC0tZGlhbG9nLWNvbnRlbnQtcGFkZGluZyk7XG4gIGJhY2tncm91bmQ6IHZhcigtLWRpYWxvZy1jb250ZW50LWJhY2tncm91bmQpO1xufVxuXG4uY28tbm90aWZpY2F0aW9uIHtcbiAgcGFkZGluZzogdmFyKC0tbm90aWZpY2F0aW9uLXBhZGRpbmcpO1xuICBmb250LXdlaWdodDogdmFyKC0tbm90aWZpY2F0aW9uLWZvbnQtd2VpZ2h0KTtcbiAgYm9yZGVyOiB2YXIoLS1ub3RpZmljYXRpb24tYm9yZGVyKTtcbiAgYm9yZGVyLXJhZGl1czogdmFyKC0tbm90aWZpY2F0aW9uLWJvcmRlci1yYWRpdXMpO1xuICBib3gtc2hhZG93OiB2YXIoLS1ub3RpZmljYXRpb24tYm94LXNoYWRvdyk7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgd29yZC13cmFwOiBicmVhay13b3JkO1xufVxuXG4vKlxuICAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gIEVuZCBvZiBEaWFsb2cgc3R5bGVzXG4gIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiovXG4iXSwic291cmNlUm9vdCI6IiJ9 */"],
       encapsulation: 3,
       changeDetection: 0
@@ -133,6 +200,233 @@ let App = /*#__PURE__*/(() => {
   }
   return App;
 })();
+
+/***/ },
+
+/***/ 5577
+/*!**************************************!*\
+  !*** ./src/app/ccl-test/ccl-test.ts ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CclTest: () => (/* binding */ CclTest)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 4363);
+/* harmony import */ var _clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @clinicaloffice/mpage-developer */ 6407);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 9748);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 6124);
+
+
+
+
+function CclTest_Conditional_9_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](0, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Executing...");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+  }
+}
+function CclTest_Conditional_10_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](0, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Execute CCL Script");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+  }
+}
+function CclTest_Conditional_11_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](0, "button", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomListener"]("click", function CclTest_Conditional_11_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r1);
+      const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r1.clearResults());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " Clear Results ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+  }
+}
+function CclTest_Conditional_12_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](0, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElement"](1, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](2, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3, "Executing CCL script...");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]()();
+  }
+}
+function CclTest_Conditional_13_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](0, "div", 6)(1, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Error");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](3, "pre");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](ctx_r1.error());
+  }
+}
+function CclTest_Conditional_14_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](0, "div", 7)(1, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Script Results");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](3, "div", 10)(4, "pre");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](6, "json");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]()()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](6, 1, ctx_r1.results()));
+  }
+}
+/**
+ * Component to test CustomService CCL script execution
+ * Executes cov_mpage_template:group1 and displays the results
+ */
+let CclTest = /*#__PURE__*/(() => {
+  class CclTest {
+    customService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.inject)(_clinicaloffice_mpage_developer__WEBPACK_IMPORTED_MODULE_1__.CustomService);
+    // Signal to track loading state
+    loading = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.signal)(false, ...(ngDevMode ? [{
+      debugName: "loading"
+    }] : /* istanbul ignore next */[]));
+    // Signal to hold the CCL script results
+    results = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.signal)(null, ...(ngDevMode ? [{
+      debugName: "results"
+    }] : /* istanbul ignore next */[]));
+    // Signal to track error state
+    error = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.signal)(null, ...(ngDevMode ? [{
+      debugName: "error"
+    }] : /* istanbul ignore next */[]));
+    /**
+     * Execute the CCL script cov_mpage_component_template:group1
+     */
+    executeScript() {
+      this.loading.set(true);
+      this.error.set(null);
+      this.results.set(null);
+      // Execute the custom CCL script
+      this.customService.load({
+        customScript: {
+          script: [{
+            name: 'cov_mpage_template:group1',
+            run: 'pre',
+            id: 'testScript',
+            reference: true,
+            parameters: {}
+          }],
+          clearPatientSource: true
+        }
+      }, [{
+        personId: 0,
+        encntrId: 0
+      }], () => {
+        // Callback executed when script completes
+        const response = this.customService.get('testScript');
+        if (response) {
+          if (response.error) {
+            this.error.set(response.error);
+          } else {
+            this.results.set(response);
+          }
+        } else {
+          this.error.set('No response from CCL script');
+        }
+        this.loading.set(false);
+      });
+    }
+    /**
+     * Clear the results
+     */
+    clearResults() {
+      this.results.set(null);
+      this.error.set(null);
+    }
+    static ɵfac = function CclTest_Factory(__ngFactoryType__) {
+      return new (__ngFactoryType__ || CclTest)();
+    };
+    static ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+      type: CclTest,
+      selectors: [["app-ccl-test"]],
+      decls: 15,
+      vars: 6,
+      consts: [[1, "ccl-test-container"], [1, "description"], [1, "button-group"], [1, "btn", "btn-primary", 3, "click", "disabled"], [1, "btn", "btn-secondary"], [1, "status-message", "loading"], [1, "status-message", "error"], [1, "results-container"], [1, "btn", "btn-secondary", 3, "click"], [1, "spinner"], [1, "results-content"]],
+      template: function CclTest_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](0, "div", 0)(1, "h2");
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "CCL Test Component");
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](3, "p", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4, " Test the CustomService by executing ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](5, "code");
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6, "cov_mpage_template:group1");
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]()();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementStart"](7, "div", 2)(8, "button", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomListener"]("click", function CclTest_Template_button_click_8_listener() {
+            return ctx.executeScript();
+          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditionalCreate"](9, CclTest_Conditional_9_Template, 2, 0, "span")(10, CclTest_Conditional_10_Template, 2, 0, "span");
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditionalCreate"](11, CclTest_Conditional_11_Template, 2, 0, "button", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditionalCreate"](12, CclTest_Conditional_12_Template, 4, 0, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditionalCreate"](13, CclTest_Conditional_13_Template, 5, 1, "div", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditionalCreate"](14, CclTest_Conditional_14_Template, 7, 3, "div", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomElementEnd"]();
+        }
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdomProperty"]("disabled", ctx.loading());
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx.loading() ? 9 : 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx.results() || ctx.error() ? 11 : -1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx.loading() ? 12 : -1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx.error() ? 13 : -1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx.results() ? 14 : -1);
+        }
+      },
+      dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.JsonPipe],
+      styles: [".ccl-test-container[_ngcontent-%COMP%] {\n  padding: 20px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.ccl-test-container[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  color: #333;\n  margin-bottom: 10px;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .description[_ngcontent-%COMP%] {\n  color: #666;\n  margin-bottom: 20px;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .description[_ngcontent-%COMP%]   code[_ngcontent-%COMP%] {\n  background-color: #f5f5f5;\n  padding: 2px 6px;\n  border-radius: 3px;\n  font-family: monospace;\n  color: #d73a49;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .button-group[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 10px;\n  margin-bottom: 20px;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .btn[_ngcontent-%COMP%] {\n  padding: 10px 20px;\n  border: none;\n  border-radius: 4px;\n  font-size: 14px;\n  font-weight: 500;\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .btn[_ngcontent-%COMP%]:disabled {\n  opacity: 0.6;\n  cursor: not-allowed;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .btn.btn-primary[_ngcontent-%COMP%] {\n  background-color: #0078d4;\n  color: white;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .btn.btn-primary[_ngcontent-%COMP%]:hover:not(:disabled) {\n  background-color: #005a9e;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .btn.btn-secondary[_ngcontent-%COMP%] {\n  background-color: #6c757d;\n  color: white;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .btn.btn-secondary[_ngcontent-%COMP%]:hover {\n  background-color: #5a6268;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .status-message[_ngcontent-%COMP%] {\n  padding: 15px;\n  border-radius: 4px;\n  margin-bottom: 20px;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .status-message.loading[_ngcontent-%COMP%] {\n  background-color: #e7f3ff;\n  border: 1px solid #b3d9ff;\n  color: #0056b3;\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .status-message.loading[_ngcontent-%COMP%]   .spinner[_ngcontent-%COMP%] {\n  width: 20px;\n  height: 20px;\n  border: 3px solid #b3d9ff;\n  border-top-color: #0056b3;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .status-message.error[_ngcontent-%COMP%] {\n  background-color: #f8d7da;\n  border: 1px solid #f5c6cb;\n  color: #721c24;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .status-message.error[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 10px;\n  color: #721c24;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .status-message.error[_ngcontent-%COMP%]   pre[_ngcontent-%COMP%] {\n  margin: 0;\n  white-space: pre-wrap;\n  word-wrap: break-word;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .results-container[_ngcontent-%COMP%] {\n  background-color: #f8f9fa;\n  border: 1px solid #dee2e6;\n  border-radius: 4px;\n  padding: 15px;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .results-container[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 15px;\n  color: #333;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .results-container[_ngcontent-%COMP%]   .results-content[_ngcontent-%COMP%] {\n  background-color: white;\n  border: 1px solid #dee2e6;\n  border-radius: 4px;\n  padding: 15px;\n  max-height: 500px;\n  overflow: auto;\n}\n.ccl-test-container[_ngcontent-%COMP%]   .results-container[_ngcontent-%COMP%]   .results-content[_ngcontent-%COMP%]   pre[_ngcontent-%COMP%] {\n  margin: 0;\n  font-family: \"Courier New\", monospace;\n  font-size: 12px;\n  line-height: 1.5;\n  white-space: pre-wrap;\n  word-wrap: break-word;\n  color: #333;\n}\n\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvY2NsLXRlc3QvY2NsLXRlc3Quc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxpQkFBQTtFQUNBLGNBQUE7QUFDRjtBQUNFO0VBQ0UsV0FBQTtFQUNBLG1CQUFBO0FBQ0o7QUFFRTtFQUNFLFdBQUE7RUFDQSxtQkFBQTtBQUFKO0FBRUk7RUFDRSx5QkFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSxzQkFBQTtFQUNBLGNBQUE7QUFBTjtBQUlFO0VBQ0UsYUFBQTtFQUNBLFNBQUE7RUFDQSxtQkFBQTtBQUZKO0FBS0U7RUFDRSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7RUFDQSx5QkFBQTtBQUhKO0FBS0k7RUFDRSxZQUFBO0VBQ0EsbUJBQUE7QUFITjtBQU1JO0VBQ0UseUJBQUE7RUFDQSxZQUFBO0FBSk47QUFNTTtFQUNFLHlCQUFBO0FBSlI7QUFRSTtFQUNFLHlCQUFBO0VBQ0EsWUFBQTtBQU5OO0FBUU07RUFDRSx5QkFBQTtBQU5SO0FBV0U7RUFDRSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtBQVRKO0FBV0k7RUFDRSx5QkFBQTtFQUNBLHlCQUFBO0VBQ0EsY0FBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLFNBQUE7QUFUTjtBQVdNO0VBQ0UsV0FBQTtFQUNBLFlBQUE7RUFDQSx5QkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQ0FBQTtBQVRSO0FBYUk7RUFDRSx5QkFBQTtFQUNBLHlCQUFBO0VBQ0EsY0FBQTtBQVhOO0FBYU07RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxjQUFBO0FBWFI7QUFjTTtFQUNFLFNBQUE7RUFDQSxxQkFBQTtFQUNBLHFCQUFBO0FBWlI7QUFpQkU7RUFDRSx5QkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxhQUFBO0FBZko7QUFpQkk7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0FBZk47QUFrQkk7RUFDRSx1QkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxhQUFBO0VBQ0EsaUJBQUE7RUFDQSxjQUFBO0FBaEJOO0FBa0JNO0VBQ0UsU0FBQTtFQUNBLHFDQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EscUJBQUE7RUFDQSxxQkFBQTtFQUNBLFdBQUE7QUFoQlI7O0FBc0JBO0VBQ0U7SUFDRSx1QkFBQTtFQW5CRjtFQXFCQTtJQUNFLHlCQUFBO0VBbkJGO0FBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyIuY2NsLXRlc3QtY29udGFpbmVyIHtcbiAgcGFkZGluZzogMjBweDtcbiAgbWF4LXdpZHRoOiAxMjAwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xuXG4gIGgyIHtcbiAgICBjb2xvcjogIzMzMztcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICB9XG5cbiAgLmRlc2NyaXB0aW9uIHtcbiAgICBjb2xvcjogIzY2NjtcbiAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuXG4gICAgY29kZSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmNWY1O1xuICAgICAgcGFkZGluZzogMnB4IDZweDtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgICAgIGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7XG4gICAgICBjb2xvcjogI2Q3M2E0OTtcbiAgICB9XG4gIH1cblxuICAuYnV0dG9uLWdyb3VwIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGdhcDogMTBweDtcbiAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICB9XG5cbiAgLmJ0biB7XG4gICAgcGFkZGluZzogMTBweCAyMHB4O1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAmOmRpc2FibGVkIHtcbiAgICAgIG9wYWNpdHk6IDAuNjtcbiAgICAgIGN1cnNvcjogbm90LWFsbG93ZWQ7XG4gICAgfVxuXG4gICAgJi5idG4tcHJpbWFyeSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA3OGQ0O1xuICAgICAgY29sb3I6IHdoaXRlO1xuXG4gICAgICAmOmhvdmVyOm5vdCg6ZGlzYWJsZWQpIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzAwNWE5ZTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmLmJ0bi1zZWNvbmRhcnkge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzZjNzU3ZDtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcblxuICAgICAgJjpob3ZlciB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM1YTYyNjg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLnN0YXR1cy1tZXNzYWdlIHtcbiAgICBwYWRkaW5nOiAxNXB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuXG4gICAgJi5sb2FkaW5nIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNlN2YzZmY7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCAjYjNkOWZmO1xuICAgICAgY29sb3I6ICMwMDU2YjM7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgIGdhcDogMTBweDtcblxuICAgICAgLnNwaW5uZXIge1xuICAgICAgICB3aWR0aDogMjBweDtcbiAgICAgICAgaGVpZ2h0OiAyMHB4O1xuICAgICAgICBib3JkZXI6IDNweCBzb2xpZCAjYjNkOWZmO1xuICAgICAgICBib3JkZXItdG9wLWNvbG9yOiAjMDA1NmIzO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgICAgIGFuaW1hdGlvbjogc3BpbiAxcyBsaW5lYXIgaW5maW5pdGU7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5lcnJvciB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjhkN2RhO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgI2Y1YzZjYjtcbiAgICAgIGNvbG9yOiAjNzIxYzI0O1xuXG4gICAgICBoMyB7XG4gICAgICAgIG1hcmdpbi10b3A6IDA7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gICAgICAgIGNvbG9yOiAjNzIxYzI0O1xuICAgICAgfVxuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIHdoaXRlLXNwYWNlOiBwcmUtd3JhcDtcbiAgICAgICAgd29yZC13cmFwOiBicmVhay13b3JkO1xuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5yZXN1bHRzLWNvbnRhaW5lciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjlmYTtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGVlMmU2O1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBwYWRkaW5nOiAxNXB4O1xuXG4gICAgaDMge1xuICAgICAgbWFyZ2luLXRvcDogMDtcbiAgICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XG4gICAgICBjb2xvcjogIzMzMztcbiAgICB9XG5cbiAgICAucmVzdWx0cy1jb250ZW50IHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgI2RlZTJlNjtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgIHBhZGRpbmc6IDE1cHg7XG4gICAgICBtYXgtaGVpZ2h0OiA1MDBweDtcbiAgICAgIG92ZXJmbG93OiBhdXRvO1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGZvbnQtZmFtaWx5OiAnQ291cmllciBOZXcnLCBtb25vc3BhY2U7XG4gICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDEuNTtcbiAgICAgICAgd2hpdGUtc3BhY2U6IHByZS13cmFwO1xuICAgICAgICB3b3JkLXdyYXA6IGJyZWFrLXdvcmQ7XG4gICAgICAgIGNvbG9yOiAjMzMzO1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuXG5Aa2V5ZnJhbWVzIHNwaW4ge1xuICAwJSB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gIH1cbiAgMTAwJSB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */"],
+      changeDetection: 0
+    });
+  }
+  return CclTest;
+})();
+
+/***/ },
+
+/***/ 9454
+/*!****************************!*\
+  !*** ./src/app/version.ts ***!
+  \****************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   buildVersion: () => (/* binding */ buildVersion),
+/* harmony export */   gitBranch: () => (/* binding */ gitBranch),
+/* harmony export */   packageVersion: () => (/* binding */ packageVersion)
+/* harmony export */ });
+// Auto-generated build version file
+// Generated on: 2026-03-23T19:36:59.147Z
+const buildVersion = 'v0.0.3-main';
+const packageVersion = '0.0.3';
+const gitBranch = 'main';
 
 /***/ },
 
@@ -2913,7 +3207,7 @@ let App = /*#__PURE__*/(() => {
 (function (root, factory, undef) {
   if (true) {
     // CommonJS
-    module.exports = exports = factory(__webpack_require__(/*! ./core */ 6609), __webpack_require__(/*! ./x64-core */ 9396), __webpack_require__(/*! ./lib-typedarrays */ 3180), __webpack_require__(/*! ./enc-utf16 */ 35), __webpack_require__(/*! ./enc-base64 */ 7929), __webpack_require__(/*! ./enc-base64url */ 5249), __webpack_require__(/*! ./md5 */ 3728), __webpack_require__(/*! ./sha1 */ 867), __webpack_require__(/*! ./sha256 */ 2021), __webpack_require__(/*! ./sha224 */ 19), __webpack_require__(/*! ./sha512 */ 5232), __webpack_require__(/*! ./sha384 */ 369), __webpack_require__(/*! ./sha3 */ 357), __webpack_require__(/*! ./ripemd160 */ 7396), __webpack_require__(/*! ./hmac */ 2541), __webpack_require__(/*! ./pbkdf2 */ 7191), __webpack_require__(/*! ./evpkdf */ 5814), __webpack_require__(/*! ./cipher-core */ 3161), __webpack_require__(/*! ./mode-cfb */ 7898), __webpack_require__(/*! ./mode-ctr */ 8335), __webpack_require__(/*! ./mode-ctr-gladman */ 536), __webpack_require__(/*! ./mode-ofb */ 1889), __webpack_require__(/*! ./mode-ecb */ 1258), __webpack_require__(/*! ./pad-ansix923 */ 5445), __webpack_require__(/*! ./pad-iso10126 */ 7821), __webpack_require__(/*! ./pad-iso97971 */ 7726), __webpack_require__(/*! ./pad-zeropadding */ 8983), __webpack_require__(/*! ./pad-nopadding */ 7624), __webpack_require__(/*! ./format-hex */ 5901), __webpack_require__(/*! ./aes */ 9183), __webpack_require__(/*! ./tripledes */ 3504), __webpack_require__(/*! ./rc4 */ 5021), __webpack_require__(/*! ./rabbit */ 3878), __webpack_require__(/*! ./rabbit-legacy */ 7436), __webpack_require__(/*! ./blowfish */ 9148));
+    module.exports = exports = factory(__webpack_require__(/*! ./core */ 6609), __webpack_require__(/*! ./x64-core */ 9396), __webpack_require__(/*! ./lib-typedarrays */ 3180), __webpack_require__(/*! ./enc-utf16 */ 35), __webpack_require__(/*! ./enc-base64 */ 7929), __webpack_require__(/*! ./enc-base64url */ 5249), __webpack_require__(/*! ./md5 */ 3728), __webpack_require__(/*! ./sha1 */ 867), __webpack_require__(/*! ./sha256 */ 2021), __webpack_require__(/*! ./sha224 */ 19), __webpack_require__(/*! ./sha512 */ 5232), __webpack_require__(/*! ./sha384 */ 369), __webpack_require__(/*! ./sha3 */ 357), __webpack_require__(/*! ./ripemd160 */ 7396), __webpack_require__(/*! ./hmac */ 2541), __webpack_require__(/*! ./pbkdf2 */ 7191), __webpack_require__(/*! ./evpkdf */ 5814), __webpack_require__(/*! ./cipher-core */ 3161), __webpack_require__(/*! ./mode-cfb */ 5517), __webpack_require__(/*! ./mode-ctr */ 8335), __webpack_require__(/*! ./mode-ctr-gladman */ 536), __webpack_require__(/*! ./mode-ofb */ 1889), __webpack_require__(/*! ./mode-ecb */ 1258), __webpack_require__(/*! ./pad-ansix923 */ 5445), __webpack_require__(/*! ./pad-iso10126 */ 7821), __webpack_require__(/*! ./pad-iso97971 */ 7726), __webpack_require__(/*! ./pad-zeropadding */ 8983), __webpack_require__(/*! ./pad-nopadding */ 7624), __webpack_require__(/*! ./format-hex */ 5901), __webpack_require__(/*! ./aes */ 9183), __webpack_require__(/*! ./tripledes */ 3504), __webpack_require__(/*! ./rc4 */ 5021), __webpack_require__(/*! ./rabbit */ 3878), __webpack_require__(/*! ./rabbit-legacy */ 7436), __webpack_require__(/*! ./blowfish */ 9148));
   } else // removed by dead control flow
 {}
 })(this, function (CryptoJS) {
@@ -3224,7 +3518,7 @@ let App = /*#__PURE__*/(() => {
 
 /***/ },
 
-/***/ 7898
+/***/ 5517
 /*!********************************************!*\
   !*** ./node_modules/crypto-js/mode-cfb.js ***!
   \********************************************/
@@ -88894,7 +89188,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ 4967);
 /* harmony import */ var _app_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/app.config */ 289);
-/* harmony import */ var _app_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app */ 5517);
+/* harmony import */ var _app_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app */ 7898);
 /* harmony import */ var _angular_elements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/elements */ 5764);
 
 
