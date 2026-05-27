@@ -3761,6 +3761,9 @@ class LocationConfigComponent {
         idCounts.set(key, (idCounts.get(key) ?? 0) + 1);
       }
       for (const fs of sets) {
+        // 'All Locations' (id 'all') is a "show everything" sentinel with intentionally
+        // empty filters — exempt it so it never blocks saving the rest of the scope.
+        if ((0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.isAllLocationsSentinel)(fs)) continue;
         const messages = [];
         const idKey = (fs.id ?? '').toLowerCase();
         if (!fs.id || !fs.id.trim()) {
@@ -4136,6 +4139,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   PRIOR_AUTH_WORKFLOW_MEANING: () => (/* binding */ PRIOR_AUTH_WORKFLOW_MEANING),
 /* harmony export */   cascadeMappingRemoval: () => (/* binding */ cascadeMappingRemoval),
 /* harmony export */   filterLocationsInScope: () => (/* binding */ filterLocationsInScope),
+/* harmony export */   isAllLocationsSentinel: () => (/* binding */ isAllLocationsSentinel),
 /* harmony export */   isUniqueId: () => (/* binding */ isUniqueId),
 /* harmony export */   normalizeCountFields: () => (/* binding */ normalizeCountFields),
 /* harmony export */   toRawSubroute: () => (/* binding */ toRawSubroute)
@@ -4160,6 +4164,16 @@ function toRawSubroute(route, uiSubroute) {
     return uiSubroute === 'incoming' ? 'outgoing' : 'incoming';
   }
   return uiSubroute;
+}
+/**
+ * The seeded "All Locations" option (id 'all') is a sentinel meaning "no location
+ * filter — show everything". It intentionally carries no filter option / data
+ * element and is the default selection, so it must be exempt from the
+ * filter-option/data-element validation (otherwise its scope can never be saved).
+ * Detection mirrors ColumnConfigService (id 'all' or label 'All Locations').
+ */
+function isAllLocationsSentinel(fs) {
+  return fs.id === 'all' || fs.label === 'All Locations';
 }
 function findWorkflow(config, workflowMeaning) {
   return config.workflows?.find(w => w.meaning === workflowMeaning);
@@ -40412,9 +40426,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2026-05-27T19:55:00.119Z
-const buildVersion = 'v1.0.62-feature/location-config-admin-panel';
-const packageVersion = '1.0.62';
+// Generated on: 2026-05-27T20:01:06.115Z
+const buildVersion = 'v1.0.63-feature/location-config-admin-panel';
+const packageVersion = '1.0.63';
 const gitBranch = 'feature/location-config-admin-panel';
 
 /***/ }),
@@ -40425,7 +40439,7 @@ const gitBranch = 'feature/location-config-admin-panel';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.62","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","vanilla-jsoneditor":"^3.12.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.63","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","vanilla-jsoneditor":"^3.12.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
