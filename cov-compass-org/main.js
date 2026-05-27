@@ -3701,8 +3701,9 @@ class LocationConfigComponent {
   constructor(adminService, messaging) {
     this.adminService = adminService;
     this.messaging = messaging;
+    // The "Prior Auth" workflow is stored under the GLIDIAN meaning in the backend config.
     this.workflowOptions = [{
-      value: 'PRIORAUTH',
+      value: _location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.PRIOR_AUTH_WORKFLOW_MEANING,
       label: 'Prior Auth'
     }];
     this.subrouteOptions = [{
@@ -3718,12 +3719,13 @@ class LocationConfigComponent {
     this.loadError = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.signal)(null);
     this.saving = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.signal)(false);
     this.saveError = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.signal)(null);
-    this.selectedWorkflow = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.signal)('PRIORAUTH');
+    this.selectedWorkflow = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.signal)(_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.PRIOR_AUTH_WORKFLOW_MEANING);
     this.selectedSubroute = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.signal)('incoming');
     this.locationsInScope = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.computed)(() => {
       const cfg = this._config();
       if (!cfg) return [];
-      return (0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.filterLocationsInScope)(cfg, this.selectedWorkflow(), 'prior-auth', this.selectedSubroute());
+      const rawSubroute = (0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.toRawSubroute)('prior-auth', this.selectedSubroute());
+      return (0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.filterLocationsInScope)(cfg, this.selectedWorkflow(), 'prior-auth', rawSubroute);
     });
     this.inScopeCount = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.computed)(() => this.locationsInScope().length);
     this.lastSaved = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.computed)(() => this._originalConfig()?.updtDtTm ?? null);
@@ -3912,16 +3914,18 @@ class LocationConfigComponent {
     const cfg = this._config();
     if (!cfg) return;
     const newId = this.generateUniqueId(cfg);
+    const uiSubroute = this.selectedSubroute();
     const newLoc = {
       id: newId,
       label: 'New Location',
       route: 'prior-auth',
-      subroute: this.selectedSubroute(),
+      subroute: (0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.toRawSubroute)('prior-auth', uiSubroute),
       type: 'LocationOption',
       isDefault: 0,
       sortOrder: 0,
+      // Incoming tab edits scheduling locations, Outgoing tab edits ordering locations (mirrors filter bar).
       filters: [{
-        dataElement: 'schedulingLocation',
+        dataElement: uiSubroute === 'incoming' ? 'schedulingLocation' : 'orderingLocation',
         options: [{
           item: ''
         }]
@@ -4061,7 +4065,8 @@ class LocationConfigComponent {
     const base = 'new-location';
     let candidate = base;
     let n = 1;
-    while (!(0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.isUniqueId)(cfg, this.selectedWorkflow(), 'prior-auth', this.selectedSubroute(), candidate, null)) {
+    const rawSubroute = (0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.toRawSubroute)('prior-auth', this.selectedSubroute());
+    while (!(0,_location_config_helpers__WEBPACK_IMPORTED_MODULE_0__.isUniqueId)(cfg, this.selectedWorkflow(), 'prior-auth', rawSubroute, candidate, null)) {
       candidate = `${base}-${n++}`;
     }
     return candidate;
@@ -4106,11 +4111,34 @@ class LocationConfigComponent {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   PRIOR_AUTH_WORKFLOW_MEANING: () => (/* binding */ PRIOR_AUTH_WORKFLOW_MEANING),
 /* harmony export */   cascadeMappingRemoval: () => (/* binding */ cascadeMappingRemoval),
 /* harmony export */   filterLocationsInScope: () => (/* binding */ filterLocationsInScope),
 /* harmony export */   isUniqueId: () => (/* binding */ isUniqueId),
-/* harmony export */   normalizeCountFields: () => (/* binding */ normalizeCountFields)
+/* harmony export */   normalizeCountFields: () => (/* binding */ normalizeCountFields),
+/* harmony export */   toRawSubroute: () => (/* binding */ toRawSubroute)
 /* harmony export */ });
+/**
+ * Backend `meaning` of the workflow that owns prior-auth location options.
+ * The UI labels this workflow "Prior Auth", but in the configuration it is the
+ * GLIDIAN ("Glidian Prior Authorization") workflow — there is no 'PRIORAUTH'
+ * workflow, so looking one up by that meaning silently returns nothing.
+ */
+const PRIOR_AUTH_WORKFLOW_MEANING = 'GLIDIAN';
+/**
+ * Maps a user-facing subroute (what the admin picks, matching the prior-auth
+ * filter bar's Incoming/Outgoing tabs) to the raw `subroute` value stored on the
+ * filter set. For route 'prior-auth' the two are swapped — this mirrors
+ * ColumnConfigService.processCompassConfiguration so the editor reads and writes
+ * exactly the locations users see under the same tab (Incoming = scheduling
+ * locations, Outgoing = ordering locations).
+ */
+function toRawSubroute(route, uiSubroute) {
+  if (route === 'prior-auth') {
+    return uiSubroute === 'incoming' ? 'outgoing' : 'incoming';
+  }
+  return uiSubroute;
+}
 function findWorkflow(config, workflowMeaning) {
   return config.workflows?.find(w => w.meaning === workflowMeaning);
 }
@@ -40362,9 +40390,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2026-05-27T11:55:20.293Z
-const buildVersion = 'v1.0.60-feature/location-config-admin-panel';
-const packageVersion = '1.0.60';
+// Generated on: 2026-05-27T14:31:14.745Z
+const buildVersion = 'v1.0.61-feature/location-config-admin-panel';
+const packageVersion = '1.0.61';
 const gitBranch = 'feature/location-config-admin-panel';
 
 /***/ }),
@@ -40375,7 +40403,7 @@ const gitBranch = 'feature/location-config-admin-panel';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.60","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","vanilla-jsoneditor":"^3.12.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.61","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","vanilla-jsoneditor":"^3.12.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
