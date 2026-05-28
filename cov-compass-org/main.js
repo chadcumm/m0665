@@ -3781,9 +3781,9 @@ class LocationConfigComponent {
         // This catches: (a) mapping exists for the first option but target is empty,
         // (b) a stray row was created with empty source while target was typed.
         const firstSource = opts[0]?.item;
-        const matchingMapping = firstSource ? cfg.mapping?.find(mm => mm.keyRefValue === firstSource) : undefined;
-        const hasEmptySourceRow = (cfg.mapping ?? []).some(mm => !mm.keyRefValue?.trim() && !!mm.valueRefValue?.trim());
-        if (matchingMapping && !matchingMapping.valueRefValue?.trim()) {
+        const matchingMapping = firstSource ? cfg.mapping?.find(mm => mm.keyRef === firstSource) : undefined;
+        const hasEmptySourceRow = (cfg.mapping ?? []).some(mm => !mm.keyRef?.trim() && !!mm.value?.trim());
+        if (matchingMapping && !matchingMapping.value?.trim()) {
           messages.push('mapping requires both location and facility');
         } else if (hasEmptySourceRow && fs === sets[0]) {
           // Surface orphan-row error once, on the first location in the scope (so it isn't repeated for every location).
@@ -3856,10 +3856,10 @@ class LocationConfigComponent {
       if (!loc || !cfg) return null;
       const source = loc.filters?.[0]?.options?.[0]?.item;
       if (!source) return null;
-      const m = cfg.mapping?.find(x => x.keyRefValue === source);
+      const m = cfg.mapping?.find(x => x.keyRef === source);
       return m ? {
-        source: m.keyRefValue,
-        target: m.valueRefValue
+        source: m.keyRef,
+        target: m.value
       } : null;
     });
     this.dataElementOptions = (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.computed)(() => {
@@ -4023,22 +4023,22 @@ class LocationConfigComponent {
     this._config.update(c => {
       if (!c) return c;
       const mapping = Array.isArray(c.mapping) ? [...c.mapping] : [];
-      const idx = lookupKey ? mapping.findIndex(m => m.keyRefValue === lookupKey) : -1;
+      const idx = lookupKey ? mapping.findIndex(m => m.keyRef === lookupKey) : -1;
       if (next === null) {
         if (idx >= 0) mapping.splice(idx, 1);
       } else if (idx >= 0) {
         mapping[idx] = {
           ...mapping[idx],
-          keyRefValue: next.source,
-          valueRefValue: next.target
+          keyRef: next.source,
+          value: next.target
         };
       } else {
         mapping.push({
           type: 'Scheduling Location',
           keyRefType: 'CODE_VALUE_DISPLAY',
-          keyRefValue: next.source,
-          valueRefType: 'FACILITY_DISPLAY',
-          valueRefValue: next.target
+          keyRef: next.source,
+          valueType: 'FACILITY_DISPLAY',
+          value: next.target
         });
       }
       return {
@@ -4214,7 +4214,7 @@ function normalizeCountFields(config) {
   if (Array.isArray(config.mapping)) config.mappingCnt = config.mapping.length;
 }
 /**
- * Removes a mapping entry whose `keyRefValue` equals `mappingSource` when no other
+ * Removes a mapping entry whose `keyRef` equals `mappingSource` when no other
  * LocationOption filter set (besides the one being removed) still references that
  * source value. Only LocationOption filter sets are checked because mappings are
  * exclusively paired with location options in this workflow. Mutates the config in place.
@@ -4225,8 +4225,7 @@ function cascadeMappingRemoval(config, mappingSource, removedLocationId) {
   // FilterSetOption is always { item: string } per the model
   f.options.some(opt => opt.item === mappingSource))));
   if (!stillReferenced) {
-    // Use keyRefValue — the correct field on ConfigurationMapping (fix #1)
-    config.mapping = config.mapping.filter(m => m.keyRefValue !== mappingSource);
+    config.mapping = config.mapping.filter(m => m.keyRef !== mappingSource);
   }
 }
 
@@ -40374,9 +40373,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   packageVersion: () => (/* binding */ packageVersion)
 /* harmony export */ });
 // Auto-generated build version file
-// Generated on: 2026-05-27T20:12:49.543Z
-const buildVersion = 'v1.0.65-feature/location-config-admin-panel';
-const packageVersion = '1.0.65';
+// Generated on: 2026-05-28T15:06:55.260Z
+const buildVersion = 'v1.0.66-feature/location-config-admin-panel';
+const packageVersion = '1.0.66';
 const gitBranch = 'feature/location-config-admin-panel';
 
 /***/ }),
@@ -40387,7 +40386,7 @@ const gitBranch = 'feature/location-config-admin-panel';
   \**********************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.65","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","vanilla-jsoneditor":"^3.12.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"cov-compass-org","version":"1.0.66","scripts":{"ng":"ng","start":"ng serve","prebuild":"npm --no-git-tag-version version patch","prebuild:p0665":"npm --no-git-tag-version version patch","prebuild:m0665":"npm --no-git-tag-version version patch","prebuild:c0665":"npm --no-git-tag-version version patch","prebuild:b0665":"npm --no-git-tag-version version patch","generate-version":"node scripts/build-version.js","build":"npm run generate-version && ng build --configuration development","build:local":"npm run generate-version && ng build --configuration development","build:prod":"npm run generate-version && ng build --configuration production","build:p0665":"npm run generate-version && ng build --configuration production","build:m0665":"npm run generate-version && ng build --configuration development","build:c0665":"npm run generate-version && ng build --configuration development","build:b0665":"npm run generate-version && ng build --configuration development","build:p0665:local":"npm run generate-version && ng build --configuration production","build:m0665:local":"npm run generate-version && ng build --configuration development","build:c0665:local":"npm run generate-version && ng build --configuration development","build:b0665:local":"npm run generate-version && ng build --configuration development","watch":"ng build --watch --configuration development","test":"ng test","deploy:p0665":"npm run build:p0665 && node scripts/deploy.js p0665","deploy:m0665":"npm run build:m0665 && node scripts/deploy.js m0665","deploy:c0665":"npm run build:c0665 && node scripts/deploy.js c0665","deploy:b0665":"npm run build:b0665 && node scripts/deploy.js b0665","postbuild:p0665":"node scripts/deploy.js p0665","postbuild:m0665":"node scripts/deploy.js m0665","postbuild:c0665":"node scripts/deploy.js c0665","postbuild:b0665":"node scripts/deploy.js b0665"},"private":true,"dependencies":{"@angular/animations":"^16.0.0","@angular/cdk":"^16.0.0","@angular/common":"^16.0.0","@angular/compiler":"^16.0.0","@angular/core":"^16.0.0","@angular/forms":"^16.0.0","@angular/material":"^16.0.0","@angular/material-luxon-adapter":"^16.0.0","@angular/platform-browser":"^16.0.0","@angular/platform-browser-dynamic":"^16.0.0","@angular/router":"^16.0.0","@clinicaloffice/clinical-office-mpage-core":">=0.0.1","@ctrl/tinycolor":"^4.1.0","fast-sort":"^3.4.0","luxon":"^3.3.0","ng-zorro-antd":"^16.2.2","rxjs":"~7.8.0","tslib":"^2.3.0","vanilla-jsoneditor":"^3.12.0","zone.js":"~0.13.0"},"devDependencies":{"@angular-devkit/build-angular":"^16.0.2","@angular/cli":"~16.0.2","@angular/compiler-cli":"^16.0.0","@types/jasmine":"~4.3.0","@types/luxon":"^3.3.0","concat":"^1.0.3","fs-extra":"^11.1.1","jasmine-core":"~4.6.0","karma":"~6.4.0","karma-chrome-launcher":"~3.2.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","ng-packagr":"^16.0.1","typescript":"~5.0.2"}}');
 
 /***/ })
 
