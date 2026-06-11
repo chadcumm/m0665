@@ -49,5 +49,11 @@
     "returnToClinic": {
       "catalogCd": 272124601,
       "orderMnemonic": "Return to Clinic"
-    }
+    },
+    "rtcIntervalQual": [
+      { "display": "1 month", "days": 30, "defaultInd": 0 },
+      { "display": "2 months", "days": 60, "defaultInd": 0 },
+      { "display": "3 months", "days": 90, "defaultInd": 0 },
+      { "display": "6 months", "days": 180, "defaultInd": 1 }
+    ]
   }
